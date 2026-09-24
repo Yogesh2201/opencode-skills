@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TD Power Systems — Company Profile · Plain (Sep 20, 2026)</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7;
+    --surface: #fcfcfb;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --baseline: #c3c2b7;
+    --accent: #2a78d6;
+    --accent-deep: #1c5cab;
+    --seq-2: #86b6ef;
+    --context: #898781;
+    --orange: #eb6834;
+    --crit: #d03b3b;
+    --warn: #eda100;
+    --good: #008300;
+    --hairline: rgba(11,11,11,0.10);
+    --nav-h: 46px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--page); color: var(--ink); line-height: 1.65; padding-bottom: 72px; }
+  ::selection { background: rgba(42,120,214,0.18); }
+
+  /* ---------- chrome: progress + nav ---------- */
+  .progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; background: var(--accent); z-index: 70; }
+  .topnav { position: sticky; top: 0; z-index: 40; height: var(--nav-h); background: rgba(249,249,247,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--hairline); transition: box-shadow .2s ease; }
+  .topnav.scrolled { box-shadow: 0 6px 18px rgba(11,11,11,0.07); }
+  .topnav .inner { max-width: 1150px; margin: 0 auto; height: 100%; display: flex; align-items: center; gap: 6px; padding: 0 20px; overflow-x: auto; scrollbar-width: none; }
+  .topnav .inner::-webkit-scrollbar { display: none; }
+  .topnav .brand { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap; margin-right: 10px; padding-right: 14px; border-right: 1px solid var(--hairline); }
+  .topnav a.jump { display: inline-flex; align-items: baseline; font-size: 0.76rem; font-weight: 600; color: var(--ink-2); text-decoration: none; white-space: nowrap; padding: 4px 10px; border-radius: 999px; border: 1px solid transparent; }
+  .topnav a.jump b { color: var(--accent); font-weight: 700; margin-right: 6px; font-size: 0.7rem; font-variant-numeric: tabular-nums; }
+  .topnav a.jump:hover { background: rgba(42,120,214,0.08); color: var(--accent-deep); }
+  .topnav a.jump.active { background: rgba(42,120,214,0.12); color: var(--accent-deep); border-color: rgba(42,120,214,0.45); }
+  .topnav a.jump:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- header ---------- */
+  header { text-align: center; padding: 54px 0 40px; border-bottom: 1px solid var(--hairline); margin-bottom: 40px; position: relative; }
+  header::after { content: ""; position: absolute; left: 50%; bottom: -2px; transform: translateX(-50%); width: 56px; height: 3px; border-radius: 2px; background: var(--accent); }
+  .meta-chips { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .meta-chips span { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em; color: var(--ink-2); background: var(--surface); border: 1px solid var(--hairline); border-radius: 999px; padding: 4px 12px; font-variant-numeric: tabular-nums; }
+  .meta-chips span.hot { color: var(--accent-deep); border-color: rgba(42,120,214,0.45); background: rgba(42,120,214,0.08); }
+  .kicker { color: var(--muted); font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 16px; }
+  h1 { color: var(--ink); font-size: clamp(1.9rem, 4.6vw, 2.7rem); font-weight: 750; letter-spacing: -0.028em; line-height: 1.12; margin: 0 auto 16px; max-width: 20ch; }
+  .subtitle { color: var(--ink-2); font-size: 1rem; max-width: 700px; margin: 0 auto; }
+
+  /* ---------- lede ---------- */
+  .lede { font-size: 1.05rem; background: var(--surface); border: 1px solid var(--hairline); border-left: 4px solid var(--accent); border-radius: 0 12px 12px 0; padding: 20px 24px; box-shadow: 0 1px 3px rgba(11,11,11,0.05); }
+
+  /* ---------- section headers ---------- */
+  h2 { display: flex; align-items: center; gap: 12px; color: var(--ink); font-size: 1.32rem; font-weight: 700; letter-spacing: -0.01em; margin-top: 64px; margin-bottom: 8px; scroll-margin-top: calc(var(--nav-h) + 16px); }
+  h2 .num { flex: none; font-size: 0.78rem; font-weight: 700; color: var(--accent-deep); background: rgba(42,120,214,0.10); border: 1px solid rgba(42,120,214,0.45); border-radius: 6px; padding: 3px 9px; font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+  h2 .h2-rule { flex: 1; height: 1px; background: var(--hairline); }
+  .section-note { color: var(--ink-2); font-size: 0.9rem; margin-bottom: 22px; border-left: 3px solid var(--grid); padding-left: 12px; }
+
+  /* ---------- KPI tiles ---------- */
+  .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 28px 0 8px; }
+  .tile { background: var(--surface); border: 1px solid var(--hairline); border-top: 3px solid var(--grid); border-radius: 12px; padding: 16px 16px 14px; box-shadow: 0 1px 2px rgba(11,11,11,0.04); transition: box-shadow .15s ease, transform .15s ease; }
+  .tile:hover { box-shadow: 0 6px 18px rgba(11,11,11,0.09); transform: translateY(-2px); }
+  .tile .label { color: var(--muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 8px; font-weight: 700; }
+  .tile .value { color: var(--ink); font-size: clamp(1.35rem, 2.4vw, 1.8rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .tile .context { color: var(--ink-2); font-size: 0.76rem; margin-top: 8px; line-height: 1.45; }
+  .tile .delta { font-size: 0.78rem; margin-top: 6px; color: var(--accent-deep); font-weight: 700; }
+  .tile.hero-tile { border: 1px solid rgba(42,120,214,0.45); border-top: 3px solid var(--accent); background: linear-gradient(180deg, rgba(42,120,214,0.06), rgba(42,120,214,0) 70%); box-shadow: 0 2px 14px rgba(42,120,214,0.16); }
+  .tile.hero-tile .value { color: var(--accent-deep); }
+
+  /* ---------- cards ---------- */
+  .card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: 28px 30px; margin: 20px 0; box-shadow: 0 1px 2px rgba(11,11,11,0.04), 0 12px 32px rgba(11,11,11,0.05); }
+  .card h3 { color: var(--ink); font-size: 1.04rem; font-weight: 700; margin-bottom: 2px; }
+  .card h3::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 2px; background: var(--accent); margin-right: 10px; transform: translateY(-1px); }
+  .card .sub { color: var(--ink-2); font-size: 0.84rem; margin-bottom: 18px; }
+  .derived-flag { display: inline-block; background: rgba(42,120,214,0.10); border: 1px solid rgba(42,120,214,0.45); color: var(--accent-deep); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 999px; padding: 1px 9px; margin-left: 8px; vertical-align: middle; font-weight: 600; }
+
+  /* ---------- bar rows ---------- */
+  .bar-row { display: grid; grid-template-columns: 150px 1fr auto; align-items: center; gap: 12px; margin: 10px 0; }
+  .bar-row .cat { color: var(--ink-2); font-size: 0.85rem; text-align: right; }
+  .bar-row .track { position: relative; height: 22px; border-left: 1px solid var(--baseline); background: rgba(11,11,11,0.03); border-radius: 0 4px 4px 0; }
+  .bar-row .fill { position: absolute; left: 0; top: 0; height: 22px; border-radius: 0 4px 4px 0; transform: scaleX(0); transform-origin: left center; transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+  .in .bar-row .fill { transform: scaleX(1); }
+  .bar-row .val { color: var(--ink); font-size: 0.84rem; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  .fill.emph { background: var(--accent); }
+  .fill.dim { background: var(--context); opacity: .82; }
+  .fill.subj { background: var(--orange); }
+  .axis-note { color: var(--muted); font-size: 0.76rem; margin-top: 12px; line-height: 1.5; }
+  .hairline-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px); background-size: 25% 100%; }
+
+  /* ---------- product / misc grids ---------- */
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+  .pcard { background: var(--surface); border: 1px solid var(--hairline); border-radius: 10px; padding: 16px; box-shadow: 0 1px 2px rgba(11,11,11,0.04); transition: box-shadow .15s ease, transform .15s ease; }
+  .pcard:hover { box-shadow: 0 6px 16px rgba(11,11,11,0.08); transform: translateY(-2px); }
+  .pcard h4 { font-size: 0.92rem; font-weight: 700; margin-bottom: 6px; }
+  .pcard p { font-size: 0.82rem; color: var(--ink-2); line-height: 1.5; }
+  .pcard p strong { color: var(--ink); }
+  .pcard .spec { display: inline-block; margin-top: 8px; font-size: 0.72rem; font-weight: 700; color: var(--accent-deep); background: rgba(42,120,214,0.09); border: 1px solid rgba(42,120,214,0.35); border-radius: 999px; padding: 3px 10px; }
+
+  /* ---------- flow diagram ---------- */
+  .flow { margin-top: 18px; background: var(--page); border: 1px solid var(--hairline); border-radius: 12px; padding: 16px; display: grid; grid-template-columns: 1fr auto 1.2fr auto 1fr; gap: 10px; align-items: center; text-align: center; }
+  .flow .fnode { background: var(--surface); border: 1px solid var(--hairline); border-radius: 8px; padding: 12px 10px; }
+  .flow .fnode.core { background: rgba(42,120,214,0.06); border-color: rgba(42,120,214,0.35); }
+  .flow .fnode .flabel { font-size: 0.7rem; color: var(--muted); font-weight: 700; letter-spacing: 0.06em; }
+  .flow .fnode.core .flabel { color: var(--accent-deep); }
+  .flow .fnode .ftitle { font-size: 0.84rem; font-weight: 700; margin-top: 4px; }
+  .flow .fnode .fsub { font-size: 0.76rem; color: var(--muted); }
+  .flow .arr { color: var(--accent); font-weight: 700; font-size: 1.05rem; }
+  .flow .fchip { margin-top: 6px; font-size: 0.68rem; background: var(--surface); border: 1px solid var(--hairline); border-radius: 999px; padding: 2px 8px; display: inline-block; letter-spacing: 0.04em; }
+
+  /* ---------- donut & mini viz ---------- */
+  .seg { display: flex; gap: 6px; flex-wrap: wrap; margin: 14px 0 12px; }
+  .seg button { font: inherit; font-size: 0.76rem; font-weight: 600; border: 1px solid var(--hairline); background: var(--surface); color: var(--ink-2); padding: 5px 12px; border-radius: 999px; cursor: pointer; transition: background .15s ease, color .15s ease; }
+  .seg button:hover { border-color: rgba(42,120,214,0.45); color: var(--accent-deep); }
+  .seg button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .donutwrap { display: grid; grid-template-columns: 180px 1fr; gap: 18px; align-items: center; margin-top: 8px; }
+  .donut { position: relative; width: 180px; height: 180px; margin: 0 auto; }
+  .donut svg { width: 100%; height: 100%; }
+  .donut .mid { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; }
+  .donut .mid b { display: block; font-size: 1.35rem; font-weight: 700; color: var(--ink); }
+  .donut .mid span { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
+  .legend { display: flex; flex-direction: column; gap: 7px; font-size: 0.84rem; }
+  .leg { display: flex; align-items: center; gap: 8px; }
+  .dot { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  .mini-panel { background: var(--page); border: 1px solid var(--hairline); border-radius: 10px; padding: 14px; }
+  .mini-panel .mp-title { font-size: 0.82rem; font-weight: 700; }
+  .mini-panel .mp-sub { font-size: 0.76rem; color: var(--muted); }
+  .mini-panel .mp-head { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+
+  /* ---------- quote ---------- */
+  .quote { position: relative; border-left: 3px solid var(--accent); background: var(--surface); padding: 14px 18px 14px 44px; margin: 18px 0; color: var(--ink); font-size: 0.97rem; font-style: italic; border-radius: 0 10px 10px 0; }
+  .quote::before { content: "\201C"; position: absolute; left: 14px; top: 2px; font-size: 2.2rem; line-height: 1; color: var(--accent); font-style: normal; font-weight: 700; }
+  .quote .who { display: block; color: var(--muted); font-style: normal; font-size: 0.8rem; margin-top: 6px; }
+
+  /* ---------- details / table ---------- */
+  details.table-view { margin-top: 22px; }
+  details.table-view summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 9px; color: var(--accent-deep); font-size: 0.85rem; font-weight: 600; border: 1px dashed rgba(42,120,214,0.5); border-radius: 8px; padding: 9px 16px; transition: background .15s ease; }
+  details.table-view summary::-webkit-details-marker { display: none; }
+  details.table-view summary::before { content: "+"; display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; border: 1px solid rgba(42,120,214,0.5); font-weight: 700; transition: transform .2s ease; }
+  details.table-view[open] summary::before { transform: rotate(45deg); }
+  details.table-view summary:hover { background: rgba(42,120,214,0.06); }
+  table { width: 100%; border-collapse: collapse; margin-top: 14px; background: var(--surface); border-radius: 8px; overflow: hidden; border: 1px solid var(--hairline); }
+  th { background: rgba(42,120,214,0.09); color: var(--accent-deep); text-align: left; padding: 10px 14px; font-weight: 700; border-bottom: 2px solid var(--accent); font-size: 0.82rem; }
+  td { padding: 9px 14px; border-bottom: 1px solid var(--grid); color: var(--ink); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+  td:first-child { font-variant-numeric: normal; }
+  td i { color: var(--ink-2); }
+  tbody tr:hover td { background: rgba(42,120,214,0.04); }
+
+  /* ---------- tooltips ---------- */
+  [data-tip] { position: relative; outline: none; }
+  [data-tip]:hover::after, [data-tip]:focus-visible::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: clamp(-70vw, calc(50% - 130px), calc(100% - 130px)); background: var(--ink); color: #fff; border-radius: 6px; padding: 7px 11px; font-size: 0.75rem; line-height: 1.45; white-space: pre-line; width: max-content; max-width: 260px; z-index: 30; pointer-events: none; box-shadow: 0 6px 20px rgba(11,11,11,0.35); font-style: normal; font-weight: 400; }
+
+  /* ---------- takeaway ---------- */
+  .hero-takeaway { margin-top: 64px; padding: 40px 36px; background: var(--ink); background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 22px 22px; border-radius: 14px; text-align: center; box-shadow: 0 10px 30px rgba(11,11,11,0.22); scroll-margin-top: calc(var(--nav-h) + 16px); }
+  .hero-takeaway .label { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 14px; font-weight: 700; }
+  .hero-takeaway .line { color: #fff; font-size: 1.24rem; line-height: 1.55; font-weight: 500; max-width: 700px; margin: 0 auto; }
+  .hero-takeaway .rule { width: 44px; height: 3px; border-radius: 2px; background: var(--orange); margin: 0 auto 18px; opacity: .85; }
+
+  /* ---------- footer / totop ---------- */
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--hairline); color: var(--muted); font-size: 0.79rem; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; }
+  footer p { margin-bottom: 7px; }
+  footer p.wide { grid-column: 1 / -1; }
+  footer code { color: var(--accent-deep); background: rgba(42,120,214,0.08); padding: 1px 5px; border-radius: 4px; }
+  a { color: var(--accent-deep); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+  .totop { position: fixed; right: 18px; bottom: 18px; width: 42px; height: 42px; border-radius: 50%; background: var(--ink); color: #fff; border: none; cursor: pointer; font-size: 1rem; display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; transform: translateY(6px); z-index: 50; box-shadow: 0 6px 18px rgba(11,11,11,0.25); }
+  .totop.show { opacity: .92; pointer-events: auto; transform: none; }
+  .totop:hover { opacity: 1; }
+
+  /* ---------- reveal motion ---------- */
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity .55s ease, transform .55s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 860px) {
+    .kpi-row { grid-template-columns: repeat(3, 1fr); }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .vision-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .msg-grid { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media (max-width: 720px) {
+    footer { grid-template-columns: 1fr; }
+    .flow { grid-template-columns: 1fr; }
+    .flow .arr { transform: rotate(90deg); justify-self: center; }
+    .donutwrap { grid-template-columns: 1fr; }
+    .two-col { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .topnav .brand { display: none; }
+    .kpi-row { grid-template-columns: repeat(2, 1fr); }
+    .bar-row { grid-template-columns: 92px 1fr auto; gap: 8px; }
+    .bar-row .cat { font-size: 0.74rem; }
+    .bar-row .val { font-size: 0.74rem; }
+    .product-grid { grid-template-columns: 1fr; }
+    .vision-grid { grid-template-columns: 1fr !important; }
+    .msg-grid { grid-template-columns: 1fr !important; }
+    .card { padding: 20px 18px; }
+    .hero-takeaway { padding: 28px 20px; }
+    .hero-takeaway .line { font-size: 1.05rem; }
+    .section-note { font-size: 0.85rem; }
+    .seg { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
+    .seg button { white-space: nowrap; }
+    .legend { font-size: 0.8rem; }
+    .fc-kpis { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 420px) { .kpi-row { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    .bar-row .fill { transform: none; }
+  }
+  @media print {
+    .topnav, .progress, .totop { display: none; }
+    body { padding-bottom: 0; }
+  }
+
+  /* =========================================================
+     TDPS-v4 components on Plain tokens
+     (vision / messages / spectrum / trends / forecast charts)
+     ========================================================= */
+  .vision-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+  .kpi-row .tile .value { font-size: clamp(1.05rem, 1.7vw, 1.4rem); }
+  .cc { color: var(--muted); font-size: 0.7em; font-weight: 700; letter-spacing: 0.06em; vertical-align: 0.08em; }
+  .msg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+
+  .spectrum { display: flex; align-items: stretch; gap: 2px; min-height: 46px; margin-top: 8px; font-size: 0.76rem; text-align: center; }
+  .spectrum > div { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6px 8px; }
+  .spectrum .sp-1 { flex: 1; background: var(--surface); border: 1px solid var(--hairline); border-radius: 8px 0 0 8px; }
+  .spectrum .sp-2 { flex: 2; background: var(--seq-2); }
+  .spectrum .sp-3 { flex: 1.5; background: var(--baseline); }
+  .spectrum .sp-4 { flex: 4; background: var(--accent); color: #fff; border-radius: 0 8px 8px 0; font-weight: 700; }
+
+  .trend-cta { display: inline-flex; align-items: center; gap: 7px; font-size: 0.84rem; font-weight: 600; color: var(--accent-deep); background: var(--surface); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 13px; margin-top: 12px; }
+  .trend-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
+  .trend-nav .tp-count { font-size: 0.76rem; color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 600; }
+  .trend-nav .tp-btns { display: flex; gap: 8px; }
+  .trend-nav button.tp-arrow { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--hairline); background: var(--surface); cursor: pointer; display: grid; place-items: center; color: var(--ink-2); font-size: 1rem; line-height: 1; }
+  .trend-nav button.tp-arrow:hover { border-color: rgba(42,120,214,0.45); color: var(--accent-deep); }
+  .trend-panel { background: var(--page); border: 1px solid var(--hairline); border-radius: 10px; padding: 18px 20px; min-height: 170px; margin-top: 12px; }
+  .trend-panel .tp-kicker { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); font-weight: 700; }
+  .trend-panel h4 { margin: 6px 0 8px; font-size: 1.05rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+  .trend-panel p.tp-body { margin: 0; font-size: 0.92rem; color: var(--ink-2); line-height: 1.6; }
+  .trend-panel p.tp-body b { color: var(--ink); font-weight: 700; }
+
+  /* ---------- 06 forecast ---------- */
+  .fc-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+  .fc-kpi { background: var(--page); border: 1px solid var(--hairline); border-top: 3px solid var(--baseline); border-radius: 12px; padding: 14px 15px; transition: box-shadow .15s ease, transform .15s ease; }
+  .fc-kpi:hover { box-shadow: 0 6px 18px rgba(11,11,11,0.09); transform: translateY(-2px); }
+  .fc-kpi.bear { border-top-color: var(--crit); }
+  .fc-kpi.base { border-top-color: var(--accent); }
+  .fc-kpi.bull { border-top-color: var(--good); }
+  .fc-kpi .k-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); font-weight: 700; }
+  .fc-kpi .k-price { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin-top: 6px; font-variant-numeric: tabular-nums; }
+  .fc-kpi.base .k-price { color: var(--accent-deep); }
+  .fc-kpi .k-row { display: flex; justify-content: space-between; gap: 8px; font-size: 0.76rem; color: var(--ink-2); margin-top: 7px; }
+  .fc-kpi .k-row b { font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .fc-note { background: var(--page); border: 1px solid var(--hairline); border-radius: 12px; padding: 14px; font-size: 0.86rem; color: var(--ink-2); line-height: 1.6; margin-top: 14px; }
+  .fc-stack { display: flex; flex-direction: column; gap: 16px; }
+  .fc-panel { background: var(--surface); border: 1px solid var(--hairline); border-radius: 12px; padding: 16px 16px 12px; box-shadow: 0 1px 2px rgba(11,11,11,0.04); }
+  .fc-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .fc-title { font-size: 0.92rem; font-weight: 700; color: var(--ink); }
+  .fc-sub { font-size: 0.75rem; color: var(--muted); margin-top: 3px; }
+  .fc-badge { font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; color: var(--accent-deep); background: rgba(42,120,214,0.08); border: 1px solid rgba(42,120,214,0.35); border-radius: 999px; padding: 4px 10px; white-space: nowrap; }
+  .fc-legend { display: flex; gap: 7px; margin-top: 12px; flex-wrap: wrap; }
+  .fc-chip { font: inherit; font-size: 0.75rem; font-weight: 600; border: 1px solid var(--hairline); background: var(--surface); color: var(--ink-2); padding: 5px 12px; border-radius: 999px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; transition: background .15s ease, border-color .15s ease, opacity .15s ease; }
+  .fc-chip:hover { border-color: rgba(42,120,214,0.45); color: var(--accent-deep); }
+  .fc-chip .dot { width: 9px; height: 9px; border-radius: 3px; flex: none; }
+  .fc-chip[aria-pressed="false"] { opacity: .45; background: var(--page); }
+  .fc-plot { position: relative; margin-top: 8px; }
+  .fc-plot svg { display: block; width: 100%; height: auto; touch-action: pan-y; cursor: crosshair; }
+  .fc-line { fill: none; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; transition: opacity .2s ease; }
+  .fc-area { transition: opacity .9s ease .45s; }
+  .fc-end { transition: opacity .2s ease; }
+  .fc-dot { stroke: var(--surface); stroke-width: 1.4; opacity: 0; transition: opacity .35s ease; }
+  .fc-dot.on { opacity: 1; }
+  .fc-guide { opacity: 0; transition: opacity .12s ease; pointer-events: none; }
+  .fc-guide.on { opacity: 1; }
+  .fc-panel[data-off~="bear"] .fc-line[data-s="bear"], .fc-panel[data-off~="bear"] .fc-end[data-s="bear"], .fc-panel[data-off~="bear"] .fc-dot[data-s="bear"],
+  .fc-panel[data-off~="base"] .fc-line[data-s="base"], .fc-panel[data-off~="base"] .fc-end[data-s="base"], .fc-panel[data-off~="base"] .fc-dot[data-s="base"],
+  .fc-panel[data-off~="bull"] .fc-line[data-s="bull"], .fc-panel[data-off~="bull"] .fc-end[data-s="bull"], .fc-panel[data-off~="bull"] .fc-dot[data-s="bull"] { opacity: .1; }
+  .fc-tip { position: absolute; top: 6px; pointer-events: none; background: var(--ink); color: #fff; border-radius: 10px; padding: 9px 12px; font-size: 0.75rem; line-height: 1.55; box-shadow: 0 6px 20px rgba(11,11,11,0.30); opacity: 0; transform: translateY(-3px); transition: opacity .12s ease, transform .12s ease; z-index: 5; min-width: 138px; }
+  .fc-tip.on { opacity: 1; transform: none; }
+  .fc-tip .t-h { font-weight: 700; font-size: 0.67rem; letter-spacing: 0.07em; text-transform: uppercase; color: #b9b7b0; margin-bottom: 6px; }
+  .fc-tip .t-r { display: flex; justify-content: space-between; gap: 16px; font-variant-numeric: tabular-nums; }
+  .fc-tip .t-r span { display: flex; align-items: center; gap: 7px; color: #e6e5e1; }
+  .fc-tip .t-r i { width: 8px; height: 8px; border-radius: 2px; display: inline-block; flex: none; }
+  .fc-tip .t-r b { font-weight: 700; }
+  .fc-tip .t-r.hi b { color: #8ab4f8; }
+  .fc-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 8px; font-size: 0.74rem; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { .fc-line { transition: none; } }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<nav class="topnav" aria-label="Section navigation">
+  <div class="inner">
+    <span class="brand">&#9889; TD Power Systems &middot; Company Profile</span>
+    <a class="jump" href="#s01"><b>01</b>What they do</a>
+    <a class="jump" href="#s02"><b>02</b>Competitors</a>
+    <a class="jump" href="#s03"><b>03</b>Products</a>
+    <a class="jump" href="#s04"><b>04</b>Vision</a>
+    <a class="jump" href="#s05"><b>05</b>Trends</a>
+    <a class="jump" href="#s06"><b>06</b>Forecast</a>
+    <a class="jump" href="#s09">Takeaway</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<header>
+  <div class="meta-chips">
+    <span class="hot">Filings-only</span>
+    <span>NSE: TDPOWERSYS</span>
+    <span>BSE: 533553</span>
+    <span>Dabaspet &middot; Bengaluru</span>
+    <span>20 Sep 2026</span>
+    <span>Plain</span>
+  </div>
+  <div class="kicker">Engineered-to-Order AC Generators &middot; 1 to 250 MVA &middot; 111 Countries</div>
+  <h1>TD Power Systems</h1>
+  <div class="subtitle">India&apos;s <strong>engineered-to-order AC generator pioneer</strong> &mdash; <strong>1 to 250 MVA</strong> for every prime mover, <strong>111 countries</strong>, <strong>7,200+ installations</strong>. Not a catalog box-shipper. A project OEM that engineers the machine to the turbine, then services it for 20 years.</div>
+</header>
+
+<p class="lede"><strong>Filings-only portrait.</strong> No DCF, no price target &mdash; just the business as the Annual Report FY25 and BSE filings describe it. Figures are traced to the filing page; global peers are shown as a geography share of one peer-group pot (not a TAM claim). <span style="color:var(--muted); font-size:0.9rem;">Structure: <code style="color:var(--accent-deep);">TDPS_Gemini-v4-forecast.html</code> &middot; surface: Plain.</span></p>
+
+<!-- KPI ROW -->
+<div class="kpi-row">
+  <div class="tile hero-tile" data-tip="TTM from Screener: Sales &#8377;2,124 Cr TTM vs &#8377;1,856 Cr FY26. +54% TTM is the momentum print." tabindex="0">
+    <div class="label">&#128176; Revenue TTM</div>
+    <div class="value">&#8377;2,124 Cr</div>
+    <div class="context">FY26 &#8377;1,856 Cr &middot; TTM +54% YoY</div>
+  </div>
+  <div class="tile" data-tip="Operating margin TTM 18% on &#8377;383 Cr operating profit. ROCE 34.0%, ROE 24.7%. Almost debt-free (Screener)." tabindex="0">
+    <div class="label">&#128202; Operating quality</div>
+    <div class="value">18.0%</div>
+    <div class="context">ROCE 34.0% &middot; margin not price</div>
+  </div>
+  <div class="tile" data-tip="tdps.co.in + AR FY25: generators in 111 countries, 7,200+ machines, 60 service partners, 45 OEM customers." tabindex="0">
+    <div class="label">&#127758; Global footprint</div>
+    <div class="value">111</div>
+    <div class="context">countries &middot; 7,200+ installs</div>
+  </div>
+  <div class="tile" data-tip="Market cap ~&#8377;23,864 Cr at &#8377;764 (Screener 18 Sep 2026 close, +5.77%). 86.8&times; P/E reflects growth premium." tabindex="0">
+    <div class="label">&#127991; Market cap</div>
+    <div class="value">&#8377;23,864 Cr</div>
+    <div class="delta">&#8377;764 &middot; almost debt-free</div>
+  </div>
+  <div class="tile" data-tip="Order book &#8377;2,208 Cr at 30 Jun 2026 &mdash; 3.4&times; cover on FY26 revenue. &#8377;1,929 Cr generators &amp; motors; Q1 FY27 inflow 93% export." tabindex="0">
+    <div class="label">&#128230; Order book</div>
+    <div class="value">&#8377;2,208 Cr</div>
+    <div class="context">Q1 FY27 &middot; 93% export inflow</div>
+  </div>
+</div>
+
+<!-- 01 WHAT THEY DO -->
+<h2 id="s01"><span class="num">01</span> &#127970; What the company does <span class="h2-rule" aria-hidden="true"></span></h2>
+<p class="section-note">Engineered-to-order, not catalog. TDPS custom-designs the generator to the prime mover and the site &mdash; then monetizes the relationship for the machine&apos;s lifetime.</p>
+
+<div class="card">
+  <h3>The idea in one line</h3>
+  <div class="sub">The business is <strong style="color:var(--ink)">engineering hours + precision metal</strong> sold through long-cycle OEM partnerships.</div>
+  <p style="margin-bottom:12px">TD Power Systems <strong>designs and builds AC generators (1 to 250 MVA) and motors that are custom-engineered to the turbine or engine</strong> &mdash; steam, gas, hydro, wind, diesel, gas &mdash; and to the site&apos;s altitude, temperature, and grid code. Customers are the <strong>~45 global OEMs</strong> who build the prime mover (turbine/engine maker); TDPS is their generator specialist. Revenue is project sales plus services, spares, and refurbishment over a 20&ndash;30 year life. When a German site needs a 67.5 MVA 4-pole steam generator for Maxau, or a US engine OEM needs a 6.36 MVA J624 gas-engine generator, TDPS engineers the rotor, stator, and cooling for that exact duty &mdash; under one roof in Dabaspet (3 plants), optimizing efficiency and lead time. <small style="color:var(--muted)">[AR FY25 Corporate Overview; tdps.co.in/generators]</small></p>
+
+  <div class="product-grid" style="margin-top:0;">
+    <div class="pcard" style="border-left:3px solid var(--accent);">
+      <h4>&#9881;&#65039; Engineered-to-Order</h4>
+      <p>FEA-optimized rotors/stators, specialized cooling. Every machine spec&apos;d to turbine, grid, powerhouse.</p>
+      <span class="spec">1 &rarr; 250 MVA spectrum</span>
+    </div>
+    <div class="pcard" style="border-left:3px solid var(--accent);">
+      <h4>&#127760; Export engine</h4>
+      <p><strong>68%</strong> of FY25 inflow from exports + deemed exports &mdash; the growth driver. Q1 FY27 hit 93%.</p>
+      <span class="spec">45 OEMs &middot; 60 partners, 6 continents</span>
+    </div>
+    <div class="pcard" style="border-left:3px solid var(--accent);">
+      <h4>&#128737;&#65039; Mission-critical</h4>
+      <p>Grid, data centre, desalination, marine, loco &mdash; where uptime is non-negotiable.</p>
+      <span class="spec">7,200+ in field &middot; 111 countries</span>
+    </div>
+  </div>
+
+  <div class="flow">
+    <div class="fnode"><div class="flabel">PRIME MOVERS</div><div class="ftitle">Steam &middot; Gas &middot; Hydro</div><div class="fsub">Wind &middot; Diesel &middot; Gas Engine</div></div>
+    <div class="arr" aria-hidden="true">&rarr;</div>
+    <div class="fnode core"><div class="flabel">TDPS GENERATOR</div><div class="ftitle">Custom rotor &amp; stator</div><div class="fsub">1&ndash;250 MVA &middot; FEA &middot; cooling</div><div class="fchip">ENGINEERED HERE</div></div>
+    <div class="arr" aria-hidden="true">&rarr;</div>
+    <div class="fnode"><div class="flabel">END USE</div><div class="ftitle">Grid &middot; Data centre</div><div class="fsub">Desalination &middot; Loco &middot; Marine</div></div>
+  </div>
+  <div class="axis-note" style="text-align:center;">Examples: 5.25 MVA mobile power &middot; 67.5 MVA Maxau (largest 4-pole) &middot; 9&times;8.586 MVA UAE barge desalination</div>
+
+  <div class="mini-panel" style="margin-top:14px; background:var(--surface);">
+    <div style="font-size:0.78rem; font-weight:700; color:var(--ink);">&#128176; Where money comes from &mdash; tap to switch proxy <span class="derived-flag">Segmented view</span></div>
+    <div style="font-size:0.78rem; color:var(--ink-2);">Revenue by region not disclosed &mdash; these are order/installed proxies (not revenue). Inter-company eliminations mean components don&apos;t sum.</div>
+    <div class="seg" id="seg" role="group" aria-label="Switch money proxy"></div>
+    <div class="donutwrap"><div class="donut" id="donut" role="img" aria-label="Order mix donut chart"></div><div class="legend" id="leg"></div></div>
+    <div id="donutnote" style="margin-top:8px; color:var(--muted); font-size:0.78rem;"></div>
+    <div style="margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:10px" class="two-col">
+      <div class="mini-panel" style="text-align:center"><div class="mp-title">&#128202; Q1 FY26 vs Q1 FY27 order inflow</div><div class="mp-sub">&#8377; Cr &mdash; exports up 2.7&times;, domestic down &gt;50%</div><div id="groupedMini" style="margin-top:8px"></div></div>
+      <div class="mini-panel" style="text-align:center"><div class="mp-title">&#128201; FY25 &rarr; FY26 pivot</div><div class="mp-sub">India ~&#8377;8.48B &rarr; ~&#8377;3.0B; Export ~&#8377;8.09B &rarr; ~&#8377;15.6B</div><div style="margin-top:8px; font-size:0.7rem; color:var(--muted); text-align:left;">FY25 &middot; 51% India / 49% export</div><div style="margin-top:4px; height:10px; background:var(--page); border:1px solid var(--hairline); border-radius:999px; display:flex; overflow:hidden"><div style="width:51%; background:var(--context)"></div><div style="width:49%; background:var(--accent)"></div></div><div style="margin-top:6px; font-size:0.7rem; color:var(--muted); text-align:left;">FY26 &middot; 16% India / 84% export</div><div style="margin-top:4px; height:10px; background:var(--page); border:1px solid var(--hairline); border-radius:999px; display:flex; overflow:hidden"><div style="width:16%; background:var(--context)"></div><div style="width:84%; background:var(--accent)"></div></div></div>
+    </div>
+  </div>
+
+  <div class="quote">Business model in one sentence: TDPS converts <em>engineering hours + precision manufacturing</em> into <em>high-margin, low-volume, high-reliability</em> machines sold through OEM partnerships &mdash; the opposite of commoditized genset assembly. Exports and services carry the margin; scale is in know-how.<span class="who">&mdash; MD letter, AR FY25: &ldquo;When the world powers down, we power up.&rdquo;</span></div>
+</div>
+
+<!-- 02 COMPETITORS -->
+<h2 id="s02"><span class="num">02</span> &#127758; Geographical competitors &mdash; revenue % wise <span class="h2-rule" aria-hidden="true"></span></h2>
+<p class="section-note">One peer-group pot (~$82B). Share = TTM revenue &divide; sum of this table. All revenues from filings. FX: &euro;1 = $1.08 &middot; R$1 = $0.18 &middot; &#8377;83 = $1. Generator slice inside each giant differs &mdash; see overlap. <span class="derived-flag">Orange = TDPS hinge only</span></p>
+
+<div class="card">
+  <h3>Peer-group revenue share &mdash; who is how big, geographically</h3>
+  <div class="sub">Listed groups only. Private giants (Harbin, Shanghai Electric, Andritz, Voith) excluded where filing not separable &mdash; adding them would shrink all shares proportionally. Cummins Power Systems estimated as ~15% of Cummins Inc. total.</div>
+
+  <div class="bar-row"><span class="cat" data-tip="GE Vernova — 10-K 2025: Revenue $38.068B (total). Power + Electrification." tabindex="0">GE Vernova <span class="cc">US</span></span><span class="track"><span class="hairline-grid"></span><span class="fill emph" style="width:46.3%"></span></span><span class="val"><b>$38.1B</b> &middot; 46.3%</span></div>
+  <div class="bar-row"><span class="cat" data-tip="Siemens Energy — AR24: Revenue &#8364;34.465B → ~$37.3B. GT + Grid + Siemens Gamesa." tabindex="0">Siemens Energy <span class="cc">DE</span></span><span class="track"><span class="hairline-grid"></span><span class="fill emph" style="width:45.3%"></span></span><span class="val"><b>$37.3B</b> &middot; 45.3%</span></div>
+  <div class="bar-row"><span class="cat" data-tip="WEG — 2024 NOR R$37.987B → ~$6.8B. Mid-range alternators/motors; closest direct peer on technology and delivery." tabindex="0">WEG <span class="cc">BR</span></span><span class="track"><span class="hairline-grid"></span><span class="fill dim" style="width:8.3%"></span></span><span class="val">$6.8B &middot; 8.3%</span></div>
+  <div class="bar-row"><span class="cat" data-tip="Cummins Inc. total $34.1B; Power Systems subset ~$5.2B est. (15%). Diesel/gas gensets." tabindex="0">Cummins Power <span class="cc">US</span></span><span class="track"><span class="hairline-grid"></span><span class="fill dim" style="width:6.3%"></span></span><span class="val">~$5.2B &middot; 6.3%</span></div>
+  <div class="bar-row"><span class="cat" data-tip="BHEL — FY25 supplemental: Revenue from Operations &#8377;28,339 Cr → ~$3.4B. India turnkey + power EPC." tabindex="0">BHEL <span class="cc">IN</span></span><span class="track"><span class="hairline-grid"></span><span class="fill dim" style="width:4.1%"></span></span><span class="val">$3.4B &middot; 4.1%</span></div>
+  <div class="bar-row"><span class="cat" style="color:var(--orange); font-weight:700;" data-tip="TD Power Systems — Screener TTM Sales &#8377;2,124 Cr (FY26 &#8377;1,856 Cr) → ~$0.24B. 1–250 MVA custom." tabindex="0">TD Power Systems <span class="cc" style="color:var(--orange)">IN</span></span><span class="track"><span class="hairline-grid"></span><span class="fill subj" style="width:2.2%"></span></span><span class="val" style="color:var(--orange); font-weight:700;">$0.24B &middot; 0.29%</span></div>
+  <div class="axis-note">Bars share one linear axis (0 &rarr; ~$40B). At true scale TDPS&apos;s bar is &lt;1% &mdash; enlarged to 2.2% for visibility. <strong style="color:var(--ink);">That&apos;s the point:</strong> group revenue &ne; generator revenue. TDPS&apos;s relevance is <em>specialization</em> in the mid-range custom niche, not share of the giants&apos; conglomerate sales. <span style="color:var(--orange)">Orange appears only here &mdash; the one hinge that marks the subject, not weakness.</span></div>
+
+  <details class="table-view">
+    <summary>&#128203; Table view &mdash; peer geography &amp; overlap (accessibility twin)</summary>
+    <table>
+      <tr><th>Peer</th><th>HQ Geography</th><th style="text-align:right">TTM Revenue</th><th style="text-align:right">Share</th><th>Overlap with TDPS</th></tr>
+      <tr><td><strong>GE Vernova</strong></td><td>USA &mdash; Cambridge, MA</td><td style="text-align:right">$38.1B</td><td style="text-align:right">46.3%</td><td><i>Utility &mdash; TDPS plays below 50 MW where GE less tailored</i></td></tr>
+      <tr><td><strong>Siemens Energy</strong></td><td>Germany &mdash; Munich</td><td style="text-align:right">$37.3B</td><td style="text-align:right">45.3%</td><td><i>GT + Grid + Gamesa wind &mdash; direct at utility scale</i></td></tr>
+      <tr><td><strong>WEG</strong></td><td>Brazil &mdash; Jaragu&aacute; do Sul</td><td style="text-align:right">$6.8B</td><td style="text-align:right">8.3%</td><td><i style="color:var(--accent-deep); font-weight:600;">Closest direct &mdash; alternators, spares, delivery</i></td></tr>
+      <tr><td><strong>Cummins Power</strong></td><td>USA &mdash; Columbus, IN</td><td style="text-align:right">~$5.2B</td><td style="text-align:right">6.3%</td><td><i>Diesel/gas gensets &mdash; engine-adjacent demand</i></td></tr>
+      <tr><td><strong>BHEL</strong></td><td>India &mdash; New Delhi</td><td style="text-align:right">$3.4B</td><td style="text-align:right">4.1%</td><td><i>India tenders / localization</i></td></tr>
+      <tr><td><strong style="color:var(--orange);">TD Power Systems</strong></td><td>India &mdash; Bengaluru</td><td style="text-align:right; color:var(--orange); font-weight:700;">$0.24B</td><td style="text-align:right; color:var(--orange); font-weight:700;">0.29%</td><td><i style="color:var(--orange);">Niche &mdash; 1&ndash;250 MVA custom</i></td></tr>
+    </table>
+  </details>
+
+  <div class="mini-panel" style="margin-top:14px; text-align:center;">
+    <div class="mp-head">&#127758; HQ geography share of the pot</div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:10px;">
+      <span style="background:var(--surface); border:1px solid var(--hairline); border-radius:999px; padding:5px 12px; font-size:0.78rem;">USA 52.6%</span>
+      <span style="background:var(--surface); border:1px solid var(--hairline); border-radius:999px; padding:5px 12px; font-size:0.78rem;">Germany 45.3%</span>
+      <span style="background:var(--surface); border:1px solid var(--hairline); border-radius:999px; padding:5px 12px; font-size:0.78rem;">Brazil 8.3%</span>
+      <span style="background:var(--surface); border:1px solid var(--hairline); border-radius:999px; padding:5px 12px; font-size:0.78rem;">India 4.4%</span>
+    </div>
+    <div style="font-size:0.82rem; color:var(--ink-2); max-width:560px; margin:10px auto 0;">TDPS is headquartered in India but sells <strong style="color:var(--ink)">into the US/EU pot</strong> &mdash; 68% export inflow. Headquarters geography &ne; revenue geography.</div>
+    <div style="margin-top:8px; font-size:0.72rem; color:var(--muted);">Map: HQ geography. The bars above measure the peer-group pot, not HQ.</div>
+  </div>
+</div>
+
+<!-- 03 KEY PRODUCTS -->
+<h2 id="s03"><span class="num">03</span> &#128736;&#65039; Key products <span class="h2-rule" aria-hidden="true"></span></h2>
+<p class="section-note">Six generator families + motors. One engineering core. Every product is a system &mdash; rotor + stator + cooling + controls &mdash; tailored to the prime mover.</p>
+
+<div class="card">
+  <div class="product-grid" style="margin-top:0;">
+    <div class="pcard"><h4>&#128293; Steam Turbine Generators</h4><p><strong>Up to 250 MVA</strong> &mdash; 2-pole &amp; 4-pole, specialized rotors for broad site/operating range. The workhorse for IPPs, co-gen, industrial steam.</p><span class="spec">67.5 MVA Maxau &mdash; largest 4-pole</span></div>
+    <div class="pcard"><h4>&#128168; Gas Turbine Generators</h4><p><strong>Up to 250 MVA</strong> &mdash; high-speed rotors balanced for centrifugal forces. Key growth: fracking, US data-centre gas demand.</p><span class="spec">8&times; 9.1 MW &middot; 1800 rpm &middot; US OEM</span></div>
+    <div class="pcard"><h4>&#128167; Hydro Generators</h4><p><strong>Up to 45 MVA</strong> &mdash; engineered per turbine type, grid &amp; powerhouse. Sustainable, stable, pumped-storage relevant.</p><span class="spec">Custom per head &amp; grid</span></div>
+    <div class="pcard"><h4>&#127744;&#65039; Wind Turbine Generators</h4><p><strong>3 solutions:</strong> PMG, synchronous, doubly-fed induction &mdash; for clean, reliable delivery across global wind markets.</p><span class="spec">PMG &middot; Sync &middot; DFIG</span></div>
+    <div class="pcard"><h4>&#9981; Gas Engine Generators</h4><p><strong>Up to 25 MVA</strong> &mdash; proprietary tech for critical environments. <strong>500+</strong> supplied to a major engine OEM.</p><span class="spec">J612 2.5 &middot; J624 6.36 &middot; J920 15 MVA</span></div>
+    <div class="pcard"><h4>&#128682; Diesel Engine Generators</h4><p><strong>Up to 25 MVA</strong> &mdash; FEA-designed to handle cyclic loads &amp; vibration. Barge-mounted desalination proven.</p><span class="spec">9&times; 8.586 MVA &middot; UAE barge</span></div>
+  </div>
+  <div class="product-grid">
+    <div class="pcard" style="background:var(--page);"><h4>&#9889; Induction Motors</h4><p>Industrial drives, custom-built to spec.</p></div>
+    <div class="pcard" style="background:var(--page);"><h4>&#128644; Synchronous &amp; Traction</h4><p>Sync + traction for rail/marine/locomotive.</p></div>
+    <div class="pcard" style="background:var(--page);"><h4>&#128300; Special Applications</h4><p>Geothermal &middot; solar thermal &middot; oil &amp; gas &middot; transformer testing.</p></div>
+  </div>
+
+  <div class="mini-panel" style="margin-top:16px;">
+    <div class="mp-head">&#128207; MVA spectrum &mdash; where each family lives</div>
+    <div class="spectrum">
+      <div class="sp-1"><b>1</b><span style="font-size:0.68rem; color:var(--muted);">MVA min</span></div>
+      <div class="sp-2">25 MVA Engine</div>
+      <div class="sp-3">45 MVA Hydro</div>
+      <div class="sp-4">Steam &amp; Gas &rarr; 250 MVA</div>
+    </div>
+    <div style="text-align:center; margin-top:6px; font-size:0.72rem; color:var(--muted);">Company does not split revenue by product in filings; mix is project-driven (gas/hydro/motors as FY25 growth contributors).</div>
+  </div>
+</div>
+
+<!-- 04 VISION -->
+<h2 id="s04"><span class="num">04</span> &#127919; Company vision <span class="h2-rule" aria-hidden="true"></span></h2>
+<p class="section-note">Verbatim from filings, then the funded pillars that make it real.</p>
+
+<div class="card">
+  <div class="quote" style="margin-top:0;">&ldquo;We power every possibility. We power the world.&rdquo;
+    <span class="who">&mdash; TD Power Systems, Annual Report FY25, Corporate Overview (pp. 2&ndash;5). Together, these ideas form the foundation of TDPS&apos; purpose and shape how the Company builds, scales, and adapts. Machines &ldquo;do far more than generate electricity &mdash; they support the lifelines of economies,&rdquo; from data centres and oilfields to remote hydro plants and emerging industrial hubs, &ldquo;built to serve where reliability is non-negotiable.&rdquo;</span>
+  </div>
+
+  <div class="vision-grid">
+    <div class="tile" style="border-top-color:var(--accent);">
+      <div class="label">&#127919; Scale where it matters</div>
+      <div style="font-size:1.05rem; font-weight:700; color:var(--accent-deep);">40&ndash;45 MW Class</div>
+      <div class="context">For US data-centre &amp; gas surge &mdash; <strong>100 GW</strong> US spike by 2030; deliveries FY26, scale-up FY27+.</div>
+      <div style="margin-top:10px;"><span style="display:inline-block; font-size:0.72rem; font-weight:700; color:var(--accent-deep); background:rgba(42,120,214,0.09); border:1px solid rgba(42,120,214,0.35); border-radius:999px; padding:3px 10px;">Growth bet</span></div>
+    </div>
+    <div class="tile" style="border-top-color:var(--accent);">
+      <div class="label">&#129512; Engineering depth</div>
+      <div style="font-size:1.05rem; font-weight:700;">UK Design Centre</div>
+      <div class="context">Closer to key global OEMs, localisation, advanced compliance. <strong>Investing ahead of revenue.</strong></div>
+      <div style="margin-top:10px;"><span style="display:inline-block; font-size:0.72rem; font-weight:700; color:var(--accent-deep); background:rgba(42,120,214,0.09); border:1px solid rgba(42,120,214,0.35); border-radius:999px; padding:3px 10px;">Moat</span></div>
+    </div>
+    <div class="tile" style="border-top-color:var(--accent);">
+      <div class="label">&#129309; Global partnerships</div>
+      <div style="font-size:1.05rem; font-weight:700;">~45 OEMs</div>
+      <div class="context">Diversified across steam/gas/hydro/motors &mdash; <strong>111 countries</strong>, 60 service partners.</div>
+      <div style="margin-top:10px;"><span style="display:inline-block; font-size:0.72rem; font-weight:700; color:var(--accent-deep); background:rgba(42,120,214,0.09); border:1px solid rgba(42,120,214,0.35); border-radius:999px; padding:3px 10px;">Network</span></div>
+    </div>
+    <div class="tile" style="border-top-color:var(--accent);">
+      <div class="label">&#127981; Capacity readiness</div>
+      <div style="font-size:1.05rem; font-weight:700;">Q4 FY26 Ramp</div>
+      <div class="context">Third plant commissioned &mdash; under-one-roof control. Guidance FY26 <strong>&#8377;18B &rarr; FY27 &#8377;22B</strong>.</div>
+      <div style="margin-top:10px;"><span style="display:inline-block; font-size:0.72rem; font-weight:700; color:#fff; background:var(--ink); border-radius:999px; padding:3px 10px;">Capex</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px; background:rgba(42,120,214,0.06); border:1px solid rgba(42,120,214,0.35); border-radius:10px; padding:14px; text-align:center; font-size:0.92rem; color:var(--ink-2);">
+    &#128161; <strong style="color:var(--ink);">Vision in one line:</strong> TDPS makes <strong style="color:var(--ink)">uninterrupted power possible in impossible places</strong> &mdash; &ldquo;powering every possibility&rdquo; is the engineering promise; &ldquo;powering the world&rdquo; is the distribution promise.
+  </div>
+</div>
+
+<!-- 05 TRENDS -->
+<h2 id="s05"><span class="num">05</span> &#128200; Key trends &amp; big messages <span class="h2-rule" aria-hidden="true"></span></h2>
+<p class="section-note">What AR FY25 and BSE filings say is moving the market &mdash; and what management repeats in every filing. Filings-only.</p>
+
+<div class="card">
+  <h3>Five trends the filings name &mdash; and the management line on each</h3>
+  <div class="sub">Each card is one filed trend + the big message underneath. Sources: AR FY25 MD letter + &ldquo;Sector in Sync&rdquo; + BSE Jan 29 2026 outlook.</div>
+
+  <div class="seg" id="trendTabs" role="tablist" aria-label="Key trends" style="margin-top:0;">
+    <button class="trend-tab" role="tab" aria-pressed="true" data-t="0">1 &middot; Demand supercycle</button>
+    <button class="trend-tab" role="tab" aria-pressed="false" data-t="1">2 &middot; Hybrid transition</button>
+    <button class="trend-tab" role="tab" aria-pressed="false" data-t="2">3 &middot; Export engine</button>
+    <button class="trend-tab" role="tab" aria-pressed="false" data-t="3">4 &middot; Capacity bet</button>
+    <button class="trend-tab" role="tab" aria-pressed="false" data-t="4">5 &middot; Volatility</button>
+  </div>
+
+  <div class="trend-panel" id="tp" role="tabpanel" aria-live="polite">
+    <div class="tp-kicker" id="tpKicker"></div>
+    <h4 id="tpTitle"></h4>
+    <p class="tp-body" id="tpBody"></p>
+    <div><span class="trend-cta" id="tpCta"></span></div>
+    <div class="trend-nav">
+      <span class="tp-count" id="tpCount">1 / 5</span>
+      <span class="tp-btns">
+        <button class="tp-arrow" id="tpPrev" aria-label="Previous trend">&lsaquo;</button>
+        <button class="tp-arrow" id="tpNext" aria-label="Next trend">&rsaquo;</button>
+      </span>
+    </div>
+  </div>
+
+  <div style="margin-top:18px; background:rgba(42,120,214,0.06); border:1px solid rgba(42,120,214,0.35); border-radius:10px; padding:16px;">
+    <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted); font-weight:700; margin-bottom:10px;">&#128227; Big messages &mdash; what management repeats in every filing</div>
+    <div class="msg-grid">
+      <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#128681; Growth</div><div style="font-size:0.86rem; margin-top:4px;">&ldquo;We step into FY26 with conviction &mdash; healthy order book, solid balance sheet. <strong>We guide &#8377;18B FY26 &rarr; &#8377;22B FY27.</strong>&rdquo;</div><div style="margin-top:6px; font-size:0.72rem; color:var(--muted);">&mdash; MD letter + BSE outlook</div></div>
+      <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#127760; Positioning</div><div style="font-size:0.86rem; margin-top:4px;">&ldquo;Export growth will drive FY27 &amp; FY28. Diversified range, <strong>~45 OEMs</strong> across all segments.&rdquo;</div><div style="margin-top:6px; font-size:0.72rem; color:var(--muted);">&mdash; BSE Jan 29 2026</div></div>
+      <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#127959;&#65039; Capability</div><div style="font-size:0.86rem; margin-top:4px;">&ldquo;Third plant commissioned, ramp from <strong>Q4 FY26</strong>. UK Design Centre for innovation.&rdquo;</div><div style="margin-top:6px; font-size:0.72rem; color:var(--muted);">&mdash; AR FY25</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 FORECAST -->
+<h2 id="s06"><span class="num">06</span> &#128302; 5-year forecast &mdash; illustrative scenarios <span class="h2-rule" aria-hidden="true"></span></h2>
+<p class="section-note">Adapted from <code style="color:var(--accent-deep);">Forecast/forecast-01.md</code> Bear / Base / Bull discipline, rebuilt for a manufacturer: <strong>Revenue &rarr; PAT margin &rarr; EPS &rarr; P/E &rarr; Price &rarr; MCap</strong> (the bank path Loans &rarr; ROE &rarr; BVPS &rarr; P/B does not apply). Anchor is TTM Sep-26. Hover a chart to read any year. Not a price target.</p>
+
+<div class="card">
+  <div class="fc-head">
+    <div>
+      <h3 style="margin-bottom:4px;">FY31E outcomes <span class="derived-flag">Illustrative &middot; not advice</span></h3>
+      <div class="sub" style="margin-bottom:0;">Anchor: &#8377;764 &middot; MCap &#8377;23,864 Cr &middot; shares ~31.24 Cr &middot; TTM sales &#8377;2,124 Cr &middot; EPS ~&#8377;8.8 &middot; P/E ~86.8&times; &middot; guidance FY26 &#8377;1,856 Cr &rarr; FY27 &#8377;2,200 Cr &middot; OPM 18%</div>
+    </div>
+    <span class="fc-badge">5-yr horizon</span>
+  </div>
+
+  <div class="fc-kpis">
+    <div class="fc-kpi bear">
+      <div class="k-label">&#128034; Bear &middot; FY31E price</div>
+      <div class="k-price">&#8377;444</div>
+      <div class="k-row"><span>CAGR <b style="color:var(--crit)">&minus;10.3%</b></span><span>MCap <b>&#8377;13,854 Cr</b></span></div>
+    </div>
+    <div class="fc-kpi base">
+      <div class="k-label">&#9878;&#65039; Base &middot; FY31E price</div>
+      <div class="k-price">&#8377;1,315</div>
+      <div class="k-row"><span>CAGR <b style="color:var(--accent-deep)">+11.5%</b></span><span>MCap <b>&#8377;41,060 Cr</b></span></div>
+    </div>
+    <div class="fc-kpi bull">
+      <div class="k-label">&#128038; Bull &middot; FY31E price</div>
+      <div class="k-price">&#8377;2,407</div>
+      <div class="k-row"><span>CAGR <b style="color:var(--good)">+25.8%</b></span><span>MCap <b>&#8377;75,190 Cr</b></span></div>
+    </div>
+  </div>
+
+  <div class="fc-note">Bank template says credit-cost + multiple drive outcomes. TDPS analogue: <strong style="color:var(--ink)">export order flow + PAT margin + the P/E the market grants</strong>. Sales CAGR matters less than whether 18% OPM holds as exports scale and the third plant ramps from Q4 FY26. Base 18% tracks guidance (+18.5% FY26&rarr;27) then sustains on 68&ndash;93% export inflow + 40&ndash;45 MW US data-centre scale-up.</div>
+
+  <div class="fc-stack" style="margin-top:18px;">
+    <div class="fc-panel" data-fc="price">
+      <div class="fc-head">
+        <div>
+          <div class="fc-title">&#128200; Stock price &mdash; 5 years (&#8377;)</div>
+          <div class="fc-sub">TTM &#8377;764 &rarr; FY31E &middot; hover for a year readout</div>
+        </div>
+        <span class="fc-badge">Interactive line</span>
+      </div>
+      <div class="fc-legend" role="group" aria-label="Toggle scenarios on the price chart">
+        <button class="fc-chip" data-s="bear" aria-pressed="true"><span class="dot" style="background:var(--crit)"></span>Bear &minus;10.3%</button>
+        <button class="fc-chip" data-s="base" aria-pressed="true"><span class="dot" style="background:var(--accent)"></span>Base +11.5%</button>
+        <button class="fc-chip" data-s="bull" aria-pressed="true"><span class="dot" style="background:var(--good)"></span>Bull +25.8%</button>
+      </div>
+      <div class="fc-plot"><div class="fc-tip" aria-hidden="true"></div></div>
+      <div class="fc-foot"><span>&#8377; per share &middot; shares flat ~31.24 Cr (no dilution)</span><span>dashed = today &#8377;764</span></div>
+    </div>
+
+    <div class="fc-panel" data-fc="mcap">
+      <div class="fc-head">
+        <div>
+          <div class="fc-title">&#128202; Market cap &mdash; 5 years (&#8377; Cr)</div>
+          <div class="fc-sub">TTM &#8377;23,864 Cr &rarr; FY31E &middot; hover for a year readout</div>
+        </div>
+        <span class="fc-badge">Interactive line</span>
+      </div>
+      <div class="fc-legend" role="group" aria-label="Toggle scenarios on the market cap chart">
+        <button class="fc-chip" data-s="bear" aria-pressed="true"><span class="dot" style="background:var(--crit)"></span>Bear</button>
+        <button class="fc-chip" data-s="base" aria-pressed="true"><span class="dot" style="background:var(--accent)"></span>Base</button>
+        <button class="fc-chip" data-s="bull" aria-pressed="true"><span class="dot" style="background:var(--good)"></span>Bull</button>
+      </div>
+      <div class="fc-plot"><div class="fc-tip" aria-hidden="true"></div></div>
+      <div class="fc-foot"><span>MCap = price &times; ~31.24 Cr shares</span><span>Base 1.7&times; in 5y on earnings, not re-rating</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:20px; overflow-x:auto;">
+    <table>
+      <tr><th>Assumption</th><th>Bear</th><th>Base</th><th>Bull</th></tr>
+      <tr><td><strong>Sales CAGR (5y)</strong></td><td>10%</td><td>18%</td><td>25%</td></tr>
+      <tr><td><strong>FY31 sales</strong></td><td>&#8377;3,421 Cr</td><td>&#8377;4,859 Cr</td><td>&#8377;6,482 Cr</td></tr>
+      <tr><td><strong>PAT margin FY31</strong></td><td>9.0%</td><td>13.0%</td><td>14.5%</td></tr>
+      <tr><td><strong>Exit P/E (FY31)</strong></td><td>45&times;</td><td>65&times;</td><td>80&times;</td></tr>
+      <tr><td><strong>FY31 EPS</strong></td><td>&#8377;9.9</td><td>&#8377;20.2</td><td>&#8377;30.1</td></tr>
+      <tr><td><strong>FY31 price</strong></td><td style="color:var(--crit); font-weight:700;">&#8377;444</td><td style="color:var(--accent-deep); font-weight:700;">&#8377;1,315</td><td style="color:var(--good); font-weight:700;">&#8377;2,407</td></tr>
+      <tr><td><strong>FY31 MCap</strong></td><td>&#8377;13,854 Cr</td><td>&#8377;41,060 Cr</td><td>&#8377;75,190 Cr</td></tr>
+      <tr><td><strong>Price CAGR</strong></td><td style="color:var(--crit);">&minus;10.3%</td><td style="color:var(--accent-deep);">+11.5%</td><td style="color:var(--good);">+25.8%</td></tr>
+    </table>
+  </div>
+  <div class="axis-note">Shares flat at ~31.24 Cr &mdash; almost debt-free, no dilution assumed (Bull at 25% growth is the case that could need capital). Bear = export deferral + OPM slip + derate to 45&times;. Bull = data-centre gas surge + UK design-centre localisation, P/E held at 80&times;.</div>
+
+  <div class="quote">Key insight, borrowed from the bank file: the EPS spread (&#8377;9.9 &rarr; &#8377;30.1, ~3&times;) is smaller than the price spread (&#8377;444 &rarr; &#8377;2,407, ~5.4&times;). <strong>The multiple does the heavy lifting.</strong> A Bear EPS at Base multiple (&#8377;9.9 &times; 65&times; &asymp; &#8377;640) still trails a Base EPS at Bear multiple (&#8377;20.2 &times; 45&times; &asymp; &#8377;910) &mdash; earnings quality first, re-rating second.<span class="who">&mdash; Method note: watch P/E belief, not just dispatches.</span></div>
+  <div class="axis-note">Year path (price &#8377;): Bear 764 &rarr; 602 &rarr; 518 &rarr; 471 &rarr; 454 &rarr; 444 &middot; Base 764 &rarr; 834 &rarr; 923 &rarr; 1,017 &rarr; 1,165 &rarr; 1,315 &middot; Bull 764 &rarr; 975 &rarr; 1,249 &rarr; 1,546 &rarr; 1,936 &rarr; 2,407. MCap (&#8377; Cr): Bear 23,864 &rarr; 18,808 &rarr; 16,191 &rarr; 14,701 &rarr; 14,180 &rarr; 13,854 &middot; Base 23,864 &rarr; 26,066 &rarr; 28,835 &rarr; 31,757 &rarr; 36,403 &rarr; 41,060 &middot; Bull 23,864 &rarr; 30,466 &rarr; 39,029 &rarr; 48,304 &rarr; 60,484 &rarr; 75,190. Monitor quarterly: export inflow %, order book cover, OPM vs 18%, PAT margin vs 13%, P/E vs exit, third-plant ramp, UK centre spend.</div>
+</div>
+
+<!-- TAKEAWAY -->
+<div class="hero-takeaway" id="s09">
+  <div class="label">&#127919; One-line takeaway &middot; &#128993; Illustrative scenarios &middot; filings-only</div>
+  <div class="rule" aria-hidden="true"></div>
+  <div class="line">TD Power Systems doesn&apos;t sell generators &mdash; it sells <strong>certainty of power where failure is not an option</strong>, and the filings say the next chapter is <strong>US data-centre gas power at 40&ndash;45 MW + hydro stability + export OEM depth</strong> &mdash; engineered in Bengaluru, designed in the UK, installed in 111 countries.</div>
+</div>
+
+<footer>
+  <p><strong>Method &mdash; Plain.</strong> Filings-only portrait. Structure copied from <code>TDPS_Gemini-v4-forecast.html</code>: 01 what they do &rarr; 02 competitors &rarr; 03 products &rarr; 04 vision &rarr; 05 trends &rarr; <strong>06 five-year forecast</strong> &rarr; takeaway. Overview + products + vision + trends from AR FY25 (BSE PDF), BSE filings 2026-01-29 (Business Outlook, guidance &#8377;18B&rarr;&#8377;22B) and 2026-05-20 (Q4), <code>tdps.co.in/generators</code>. TTM figures from <code>screener.in/company/TDPOWERSYS/consolidated</code> (TTM sales &#8377;2,124 Cr, FY26 &#8377;1,856 Cr, OPM 18%, ROCE 34%). Peer revenues from filings: GE Vernova 10-K 2025 ($38.1B), Siemens Energy AR24 (&euro;34.465B), WEG 2024 NOR (R$37.987B), BHEL FY25 supplemental (&#8377;28,339 Cr), Cummins group filing.</p>
+  <p><strong>Palette.</strong> Neutral light surface (<code>#fcfcfb</code> on <code>#f9f9f7</code>) with two-hue encoding: blue <code>#2a78d6</code> carries TDPS, warm gray <code>#898781</code> carries context; orange <code>#eb6834</code> is the one hinge &mdash; the TDPS subject bar + the closing rule. Forecast encoding: bear <code>#d03b3b</code> &middot; base <code>#2a78d6</code> &middot; bull <code>#008300</code>. Gray grid <code>#e1e0d9</code>, hairline <code>rgba(11,11,11,0.10)</code>.</p>
+  <p class="wide"><em>Disclaimer: Educational only, not investment advice. Section 06 is an illustrative Bear/Base/Bull walk &mdash; no price target. Consult a SEBI-registered advisor.</em> Peer % is illustrative share of one pot, not a TAM.</p>
+  <p class="wide">Rendered 2026-09-20 &middot; Company_Overview/TDPS_Plain-v4-forecast.html &middot; Plain surface &middot; TD Power Systems &middot; NSE: TDPOWERSYS &middot; Live &#8377;764 &middot; Cap &#8377;23,864 Cr &middot; ~31.24 Cr shares</p>
+</footer>
+
+</div>
+
+<button class="totop" id="totop" aria-label="Back to top" title="Back to top">&uarr;</button>
+
+<script>
+// segmented donut — Plain palette only: blue + context gray (TDPS content)
+const views={
+  q1:{label:'Q1 FY27 inflow',mid:['93%','export'],items:[{name:'Export & deemed',val:93.1,c:'var(--accent)',x:'Rs.684 Cr'},{name:'Domestic',val:6.9,c:'var(--context)',x:'Rs.51 Cr'}],note:'Q1 FY27 Rs.734 Cr total — 93% export pivot (accelerating vs FY25 68%).'},
+  fy26:{label:'FY26 inflow',mid:['79%','export'],items:[{name:'Export & deemed',val:79,c:'var(--accent)',x:'~Rs.1,730 Cr'},{name:'Domestic',val:21,c:'var(--context)',x:'~Rs.510 Cr'}],note:'FY26 inflow Rs.2,238 Cr (full year).'},
+  book:{label:'Order book',mid:['69.5%','export'],items:[{name:'Exports',val:69.5,c:'var(--accent)',x:'Rs.1,533 Cr'},{name:'Domestic',val:17.9,c:'var(--context)',x:'Rs.395 Cr'},{name:'Railway',val:9.6,c:'var(--muted)',x:'Rs.211 Cr'},{name:'Remainder',val:3.0,c:'var(--grid)',x:''}],note:'Book Rs.2,208 Cr at 30 Jun 2026. Railway may overlap with reported export/domestic.'},
+  base:{label:'Installed base',mid:['8,375','units'],items:[{name:'Asia',val:5522,c:'var(--context)',x:'5,522'},{name:'Europe',val:1556,c:'var(--accent)',x:'1,556'},{name:'N. America',val:674,c:'var(--muted)',x:'674'},{name:'Rest',val:623,c:'var(--grid)',x:'623'}],note:'Cumulative since inception — current flow far more US-weighted.'}
+};
+function showView(k){
+  const v=views[k]; const tot=v.items.reduce((a,b)=>a+b.val,0);
+  let a=0; const segs=v.items.map(it=>{ const p=it.val/tot*100, len=Math.max(p-0.7,0); const s=`<circle r="15.9155" cx="21" cy="21" fill="none" stroke-width="6" style="stroke:${it.c}" stroke-dasharray="${len} ${100-len}" stroke-dashoffset="${-a}"><title>${it.name}: ${p.toFixed(1)}%</title></circle>`; a+=p; return s; }).join('');
+  document.getElementById('donut').innerHTML=`<svg viewBox="0 0 42 42"><circle r="15.9155" cx="21" cy="21" fill="none" stroke-width="6" style="stroke:var(--page)"/><g transform="rotate(-90 21 21)">${segs}</g></svg><div class="mid"><div><b>${v.mid[0]}</b><span>${v.mid[1]}</span></div></div>`;
+  document.getElementById('leg').innerHTML=v.items.map(it=>`<div class="leg"><span class="dot" style="background:${it.c}"></span><span style="flex:1">${it.name}</span><span style="font-weight:700">${(it.val/tot*100).toFixed(1)}%</span><span style="color:var(--muted); font-size:0.78rem">${it.x}</span></div>`).join('');
+  document.getElementById('donutnote').textContent=v.note;
+  document.querySelectorAll('#seg button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.k===k));
+}
+document.getElementById('seg').innerHTML=Object.keys(views).map(k=>`<button data-k="${k}">${views[k].label}</button>`).join('');
+document.querySelectorAll('#seg button').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.k)));
+showView('q1');
+
+// grouped mini bars — Q1 FY26 vs Q1 FY27 order inflow (two hues only)
+(function(){
+  const c=document.getElementById('groupedMini');
+  if(!c) return;
+  const W=300,H=90,L=36,B=18,T=8,max=750;
+  const y=v=>H-B-(v/max)*(H-B-T);
+  const data=[{k:'Export',a:257,b:684},{k:'Domestic',a:135,b:51}];
+  let s='';
+  const gw=(W-L-8)/data.length;
+  data.forEach((d,i)=>{
+    const x0=L+i*gw+gw*0.16, bw=gw*0.28;
+    s+=`<rect x="${x0}" y="${y(d.a)}" width="${bw}" height="${H-B-y(d.a)}" rx="3" style="fill:var(--context)" opacity="0.7"/><rect x="${x0+bw+6}" y="${y(d.b)}" width="${bw}" height="${H-B-y(d.b)}" rx="3" style="fill:var(--accent)"/>`;
+    s+=`<text x="${x0+bw/2}" y="${y(d.a)-4}" text-anchor="middle" font-size="9" style="fill:var(--ink)" font-weight="600">Rs.${d.a}</text><text x="${x0+bw*1.5+6}" y="${y(d.b)-4}" text-anchor="middle" font-size="9" style="fill:var(--ink)" font-weight="600">Rs.${d.b}</text>`;
+    s+=`<text x="${L+i*gw+gw/2}" y="${H-4}" text-anchor="middle" font-size="9" style="fill:var(--muted)">${d.k}</text>`;
+  });
+  c.innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:100%; height:auto">${s}</svg>`;
+})();
+</script>
+
+<script>
+/* 06 Forecast — interactive scenario charts (vanilla SVG, Plain palette) */
+(function () {
+  var YEARS = ["TTM", "FY27E", "FY28E", "FY29E", "FY30E", "FY31E"];
+  var W = 640, H = 360, X0 = 64, X1 = 616, Y0 = 20, Y1 = 310;
+  var COLORS = { bear: "#d03b3b", base: "#2a78d6", bull: "#008300" };
+  var NAMES = { bear: "Bear", base: "Base", bull: "Bull" };
+  var ORDER = ["bear", "base", "bull"];
+  var CF = {
+    price: {
+      ymax: 2600, ticks: [0, 500, 1000, 1500, 2000, 2500], unit: "\u20B9 / share",
+      tickFmt: function (v) { return v ? (v >= 1000 ? (v / 1000) + "k" : "" + v) : "0"; },
+      fmt: function (v) { return "\u20B9" + Math.round(v).toLocaleString("en-IN"); },
+      series: { bear: [764, 602, 518, 471, 454, 444], base: [764, 834, 923, 1017, 1165, 1315], bull: [764, 975, 1249, 1546, 1936, 2407] }
+    },
+    mcap: {
+      ymax: 80000, ticks: [0, 20000, 40000, 60000, 80000], unit: "\u20B9 Cr",
+      tickFmt: function (v) { return v ? (v / 1000) + "k" : "0"; },
+      fmt: function (v) { return "\u20B9" + Math.round(v).toLocaleString("en-IN") + " Cr"; },
+      series: { bear: [23864, 18808, 16191, 14701, 14180, 13854], base: [23864, 26066, 28835, 31757, 36403, 41060], bull: [23864, 30466, 39029, 48304, 60484, 75190] }
+    }
+  };
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function xs(i) { return X0 + (X1 - X0) * i / 5; }
+  function ys(v, ymax) { return Y1 - (Y1 - Y0) * v / ymax; }
+
+  document.querySelectorAll("[data-fc]").forEach(function (panel) {
+    var kind = panel.getAttribute("data-fc"), cfg = CF[kind], S = cfg.series;
+    var plot = panel.querySelector(".fc-plot"), tip = panel.querySelector(".fc-tip");
+    var g = "";
+
+    cfg.ticks.forEach(function (t) {
+      var y = ys(t, cfg.ymax);
+      g += '<line x1="' + X0 + '" y1="' + y + '" x2="' + X1 + '" y2="' + y + '" style="stroke:var(--grid);stroke-width:1"/>';
+      g += '<text x="' + (X0 - 10) + '" y="' + (y + 3.5) + '" text-anchor="end" font-size="10" style="fill:var(--muted)">' + cfg.tickFmt(t) + '</text>';
+    });
+    g += '<text x="' + (X0 - 10) + '" y="' + (Y0 - 7) + '" text-anchor="end" font-size="9.5" font-weight="700" letter-spacing=".05em" style="fill:var(--muted)">' + cfg.unit + '</text>';
+    YEARS.forEach(function (yr, i) {
+      g += '<line x1="' + xs(i) + '" y1="' + Y0 + '" x2="' + xs(i) + '" y2="' + Y1 + '" style="stroke:var(--grid);stroke-width:1;opacity:.6"/>';
+    });
+    g += '<line x1="' + X0 + '" y1="' + Y1 + '" x2="' + X1 + '" y2="' + Y1 + '" style="stroke:var(--baseline);stroke-width:1"/>';
+    YEARS.forEach(function (yr, i) {
+      g += '<text x="' + xs(i) + '" y="' + (Y1 + 24) + '" text-anchor="middle" font-size="10" style="fill:var(--muted)">' + yr + '</text>';
+    });
+
+    var ty = ys(S.base[0], cfg.ymax);
+    g += '<line x1="' + X0 + '" y1="' + ty + '" x2="' + X1 + '" y2="' + ty + '" stroke-dasharray="5 4" style="stroke:var(--muted);stroke-width:1"/>';
+    g += '<text x="' + (X1 - 4) + '" y="' + (ty - 7) + '" text-anchor="end" font-size="9.5" style="fill:var(--muted);stroke:var(--surface);stroke-width:3;paint-order:stroke;stroke-linejoin:round">today ' + cfg.fmt(S.base[0]) + '</text>';
+
+    var area = "M " + S.base.map(function (v, i) { return xs(i) + "," + ys(v, cfg.ymax); }).join(" L ") + " L " + X1 + "," + Y1 + " L " + X0 + "," + Y1 + " Z";
+    g += '<path class="fc-area" d="' + area + '" fill="url(#fcGrad' + kind + ')" opacity="0"/>';
+
+    ORDER.forEach(function (k) {
+      var p = S[k].map(function (v, i) { return xs(i) + "," + ys(v, cfg.ymax); }).join(" ");
+      g += '<polyline class="fc-line" data-s="' + k + '" points="' + p + '" style="stroke:' + COLORS[k] + '"/>';
+    });
+    ORDER.forEach(function (k) {
+      S[k].forEach(function (v, i) {
+        g += '<circle class="fc-dot" data-s="' + k + '" cx="' + xs(i) + '" cy="' + ys(v, cfg.ymax) + '" r="3.2" style="fill:' + COLORS[k] + '"/>';
+      });
+    });
+    ORDER.forEach(function (k) {
+      var y = ys(S[k][5], cfg.ymax);
+      g += '<g class="fc-end" data-s="' + k + '"><circle cx="' + X1 + '" cy="' + y + '" r="4.5" style="fill:' + COLORS[k] + ';stroke:var(--surface);stroke-width:2"/>'
+         + '<text x="' + (X1 - 9) + '" y="' + (y - 10) + '" text-anchor="end" font-size="11" font-weight="700" style="fill:' + COLORS[k] + ';stroke:var(--surface);stroke-width:3.5;paint-order:stroke;stroke-linejoin:round">' + cfg.fmt(S[k][5]) + '</text></g>';
+    });
+    g += '<circle cx="' + X0 + '" cy="' + ty + '" r="4.5" style="fill:var(--ink);stroke:var(--surface);stroke-width:2"/>';
+
+    g += '<g class="fc-guide"><line class="g-line" y1="' + Y0 + '" y2="' + Y1 + '" style="stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3"/>'
+       + ORDER.map(function (k) { return '<circle class="g-dot" data-s="' + k + '" r="5" style="fill:' + COLORS[k] + ';stroke:var(--surface);stroke-width:2"/>'; }).join("")
+       + '</g>';
+
+    plot.insertAdjacentHTML("afterbegin",
+      '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + (kind === "price" ? "Stock price" : "Market cap") + ' scenario paths TTM to FY31E, bear base bull">'
+      + '<defs><linearGradient id="fcGrad' + kind + '" x1="0" y1="0" x2="0" y2="1">'
+      + '<stop offset="0" stop-color="#2a78d6" stop-opacity=".22"/><stop offset="1" stop-color="#2a78d6" stop-opacity="0"/>'
+      + '</linearGradient></defs>' + g + '</svg>');
+
+    var svg = plot.querySelector("svg"),
+        guide = svg.querySelector(".fc-guide"),
+        gline = svg.querySelector(".g-line"),
+        gdots = svg.querySelectorAll(".g-dot"),
+        lines = svg.querySelectorAll(".fc-line"),
+        vdots = svg.querySelectorAll(".fc-dot"),
+        areaEl = svg.querySelector(".fc-area");
+
+    function reveal() {
+      lines.forEach(function (ln) { ln.style.strokeDashoffset = 0; });
+      vdots.forEach(function (d, i) {
+        d.style.transitionDelay = (0.5 + (i % 6) * 0.14) + "s";
+        d.classList.add("on");
+      });
+      areaEl.style.opacity = 1;
+    }
+    if (!reduce && "IntersectionObserver" in window) {
+      lines.forEach(function (ln, i) {
+        try {
+          var len = ln.getTotalLength();
+          ln.style.strokeDasharray = len; ln.style.strokeDashoffset = len;
+          ln.style.transition = "stroke-dashoffset 1.1s cubic-bezier(.2,0,0,1) " + (i * 0.14) + "s";
+        } catch (e) {}
+      });
+      var io = new IntersectionObserver(function (ents) {
+        ents.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          reveal(); io.disconnect();
+        });
+      }, { threshold: 0.35 });
+      io.observe(svg);
+      setTimeout(reveal, 4000);
+    } else {
+      areaEl.style.opacity = 1;
+      vdots.forEach(function (d) { d.classList.add("on"); });
+    }
+
+    function show(i) {
+      var x = xs(i);
+      guide.classList.add("on");
+      gline.setAttribute("x1", x); gline.setAttribute("x2", x);
+      gdots.forEach(function (d, j) {
+        var k = ORDER[j];
+        d.setAttribute("cx", x); d.setAttribute("cy", ys(S[k][i], cfg.ymax));
+        d.style.opacity = panel.hasAttribute("data-off") && panel.getAttribute("data-off").indexOf(k) > -1 ? 0 : 1;
+      });
+      var rows = ORDER.map(function (k) {
+        var hidden = panel.getAttribute("data-off") && panel.getAttribute("data-off").indexOf(k) > -1;
+        return '<div class="t-r' + (k === "base" ? " hi" : "") + '" style="' + (hidden ? "opacity:.4" : "") + '"><span><i style="background:' + COLORS[k] + '"></i>' + NAMES[k] + '</span><b>' + cfg.fmt(S[k][i]) + '</b></div>';
+      }).join("");
+      tip.innerHTML = '<div class="t-h">' + YEARS[i] + '</div>' + rows;
+      tip.classList.add("on");
+      var pw = plot.clientWidth, tw = tip.offsetWidth, left = xs(i) / W * pw;
+      tip.style.left = Math.max(4, Math.min(left - tw / 2, pw - tw - 4)) + "px";
+    }
+    function hide() { guide.classList.remove("on"); tip.classList.remove("on"); }
+    svg.addEventListener("pointermove", function (e) {
+      var r = svg.getBoundingClientRect(), px = (e.clientX - r.left) / r.width * W;
+      var best = 1e9, idx = 0;
+      for (var i = 0; i < 6; i++) { var d = Math.abs(xs(i) - px); if (d < best) { best = d; idx = i; } }
+      show(idx);
+    });
+    svg.addEventListener("pointerleave", hide);
+
+    panel.querySelectorAll(".fc-chip").forEach(function (c) {
+      c.addEventListener("click", function () {
+        var on = c.getAttribute("aria-pressed") === "true";
+        var off = (panel.getAttribute("data-off") || "").split(" ").filter(Boolean);
+        var k = c.getAttribute("data-s");
+        if (on) { if (off.indexOf(k) < 0) off.push(k); }
+        else off = off.filter(function (v) { return v !== k; });
+        if (off.length) panel.setAttribute("data-off", off.join(" "));
+        else panel.removeAttribute("data-off");
+        c.setAttribute("aria-pressed", on ? "false" : "true");
+      });
+    });
+  });
+})();
+</script>
+
+<script>
+/* 05 Key trends — tabbed interactive (Plain pills) */
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('#trendTabs .trend-tab'));
+  if (!tabs.length) return;
+  var kicker = document.getElementById('tpKicker'), title = document.getElementById('tpTitle'),
+      body = document.getElementById('tpBody'), cta = document.getElementById('tpCta'),
+      count = document.getElementById('tpCount');
+  var trends = [
+    { kick: 'Trend 1 · demand supercycle', h: 'Data centre & gas turbine surge', b: 'Global generator market <b>$51.99B (2025) &rarr; $72.66B (2029)</b>. AI farms + fracking + Ukraine rebuild. Data centre alone &rarr; <b>100 GW</b> US spike by 2030.', c: '&rarr; TDPS: 40–45 MW generators, deliveries FY26.' },
+    { kick: 'Trend 2 · hybrid transition', h: 'Energy transition = "and", not "or"', b: 'Not wind <em>or</em> gas &mdash; wind <em>and</em> gas <em>and</em> hydro. Grids need dispatchable + renewable. TDPS portfolio hits all three.', c: '&rarr; Hydro stable + wind PMG/DFIG + gas bridge' },
+    { kick: 'Trend 3 · export supercycle', h: 'Export is the growth engine', b: 'Highest-ever inflow <b>&#8377;14,783M (+41% YoY)</b> in FY25 &mdash; <b>68%</b> exports/deemed exports. Q1 FY27 hit 93%. "Will drive FY27 &amp; FY28."', c: '&rarr; 45 OEMs · healthy order book into FY26' },
+    { kick: 'Trend 4 · capacity bet', h: 'Engineering & capacity ahead of revenue', b: 'UK Design Centre + third plant (ramp <b>Q4 FY26</b>) + motors. FY25 EBITDA <b>&#8377;2,544M (+38.6%)</b>, PAT <b>&#8377;1,746M (+47.5%)</b> on mix + leverage.', c: '&rarr; Capex precedes margin — watch Q4 ramp' },
+    { kick: 'Trend 5 · volatility demands adaptability', h: 'Volatility demands adaptability', b: 'Global growth easing to <b>2.8% (2025)</b> vs <b>3.3% (2024)</b>; demand uneven &mdash; India offers scale/stability/opportunity. TDPS line: "Solutions that function across complex environments and adapt to changing needs, without pause or compromise."', c: '&rarr; Custom engineering as risk hedge' }
+  ];
+  var cur = 0;
+  function show(i) {
+    cur = (i + trends.length) % trends.length;
+    var t = trends[cur];
+    kicker.textContent = t.kick;
+    title.textContent = t.h;
+    body.innerHTML = t.b;
+    cta.innerHTML = t.c;
+    count.textContent = (cur + 1) + ' / ' + trends.length;
+    tabs.forEach(function (b, j) { b.setAttribute('aria-pressed', j === cur ? 'true' : 'false'); });
+  }
+  tabs.forEach(function (b, j) {
+    b.addEventListener('click', function () { show(j); });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(j + 1); tabs[(j + 1 + tabs.length) % tabs.length].focus(); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); show(j - 1); tabs[(j - 1 + tabs.length) % tabs.length].focus(); }
+    });
+  });
+  document.getElementById('tpPrev').addEventListener('click', function () { show(cur - 1); });
+  document.getElementById('tpNext').addEventListener('click', function () { show(cur + 1); });
+  show(0);
+})();
+
+// ---------- UI chrome: progress, scrollspy, reveal, back-to-top ----------
+(function(){
+  const prog=document.getElementById('progress');
+  const nav=document.querySelector('.topnav');
+  const totop=document.getElementById('totop');
+  function onScroll(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    prog.style.width=(max>0 ? (h.scrollTop/max)*100 : 0)+'%';
+    nav.classList.toggle('scrolled', h.scrollTop>8);
+    totop.classList.toggle('show', h.scrollTop>700);
+  }
+  addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  totop.addEventListener('click', ()=>scrollTo({top:0, behavior:'smooth'}));
+
+  const links=[...document.querySelectorAll('.topnav a.jump')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if('IntersectionObserver' in window){
+    const spy=new IntersectionObserver(es=>{
+      es.forEach(e=>{
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.toggle('active', l.getAttribute('href')==='#'+e.target.id));
+        }
+      });
+    },{rootMargin:'-35% 0px -55% 0px'});
+    secs.forEach(s=>spy.observe(s));
+
+    const rev=new IntersectionObserver(es=>{
+      es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); rev.unobserve(e.target); } });
+    },{threshold:0.08});
+    document.querySelectorAll('.card, .kpi-row, .hero-takeaway, .meter-wrap, details.table-view, .lede').forEach(el=>{
+      el.classList.add('reveal'); rev.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.card, .kpi-row, .hero-takeaway, .meter-wrap, details.table-view, .lede').forEach(el=>el.classList.add('in'));
+  }
+})();
+</script>
+
+</body>
+</html>
