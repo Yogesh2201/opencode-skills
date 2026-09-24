@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-anim="cycle">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TD Power Systems — Company Profile · Gemini v2 (polished)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..500,0,0&display=swap" rel="stylesheet">
+<style>
+/* ================================================================
+   GEMINI SURFACE — tokens.css v0.5 inlined (single-file rule).
+   Source: UI-Design/tokens.css + UI-Design/templates/gemini-report.html
+   Sweep budget (max 3): ① sparkle mark ② gradient h1 ③ hero-tile ring.
+   ================================================================ */
+@property --orb-1   { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --orb-2   { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --orb-3   { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --wash-1  { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --wash-2  { syntax: "<color>"; inherits: true; initial-value: transparent; }
+:root {
+  color-scheme: light;
+  --bg:#fbfbfd; --surface:#ffffff; --surface-2:#f0f4f9; --surface-3:#e9eef6;
+  --ink:#1f1f1f; --ink-2:#444746; --ink-3:#8f909c; --ink-inv:#ffffff;
+  --line:#e3e3e3; --line-strong:#c5c7c9;
+  --ok:#1e8e3e; --warn:#b06000; --bad:#d93025;
+  --gemini-sweep: linear-gradient(90deg,#4285F4 0%,#5961F0 25%,#9B72CB 50%,#D96570 75%,#FFA756 100%);
+  --sweep-1:#4285F4; --sweep-2:#5961F0; --sweep-3:#9B72CB; --sweep-4:#D96570; --sweep-5:#FFA756;
+  --r-sm:12px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --sh-1:0 1px 2px rgba(0,0,0,.06);
+  --sh-2:0 1px 2px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);
+  --sh-3:0 2px 4px rgba(0,0,0,.06),0 16px 40px rgba(0,0,0,.08);
+  --font:"Google Sans","Outfit","Segoe UI Variable",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,0,0,1); --dur-1:.15s; --dur-2:.3s;
+  --drift-period:36s; --cycle-period:48s; --of:68%;
+  --field-op:1; --blur:40px;
+  --chart-blue:#4285F4; --chart-blue-deep:#1967d2; --chart-then:#a8c7fa; --chart-context:#b3b5be;
+  --orb-1:rgba(47,124,240,.96); --orb-2:rgba(74,152,248,.93); --orb-3:rgba(148,192,250,.85);
+  --wash-1:rgba(172,208,248,.62); --wash-2:rgba(219,236,251,.32);
+}
+:root[data-t="green-white"] { --orb-1:rgba(38,140,228,.96); --orb-2:rgba(60,168,240,.93); --orb-3:rgba(138,205,242,.85); --wash-1:rgba(163,217,243,.62); --wash-2:rgba(211,238,248,.32); }
+:root[data-t="green"]       { --orb-1:rgba(26,148,82,.96);  --orb-2:rgba(64,176,116,.93);  --orb-3:rgba(148,210,170,.85); --wash-1:rgba(168,224,180,.62); --wash-2:rgba(213,240,221,.32); }
+:root[data-t="sunrise"]     { --orb-1:rgba(248,174,16,.97); --orb-2:rgba(252,203,44,.94);  --orb-3:rgba(252,224,138,.88); --wash-1:rgba(252,219,138,.62); --wash-2:rgba(253,236,188,.32); }
+:root[data-t="dusk"]        { --orb-1:rgba(76,70,222,.94);  --orb-2:rgba(132,86,198,.90);  --orb-3:rgba(184,170,238,.80); --wash-1:rgba(184,178,240,.56); --wash-2:rgba(219,214,246,.28); }
+:root[data-t="none"] { --orb-1:transparent; --orb-2:transparent; --orb-3:transparent; --wash-1:transparent; --wash-2:transparent; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--font); overscroll-behavior-y:contain; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+body::before {
+  content:""; position:fixed; inset:-20%; z-index:-1;
+  pointer-events:none; contain:strict; will-change:transform; transform:translateZ(0); backface-visibility:hidden;
+  background:
+    radial-gradient(26% 15% at 43% 9%, var(--orb-1) 0%, transparent var(--of)),
+    radial-gradient(26% 15% at 58% 8%, var(--orb-2) 0%, transparent var(--of)),
+    radial-gradient(52% 34% at 51% 12%, var(--orb-3) 0%, transparent calc(var(--of) + 10%)),
+    linear-gradient(180deg, var(--wash-1) 0%, var(--wash-2) 35%, transparent 68%);
+  filter: blur(var(--blur));
+  opacity: var(--field-op);
+  animation: gemini-drift var(--drift-period) ease-in-out infinite alternate;
+}
+@keyframes gemini-drift { to { transform: translate3d(1.5%,1%,0) scale(1.04); } }
+@keyframes gemini-cycle {
+  0%   { --orb-1:rgba(47,124,240,.96); --orb-2:rgba(74,152,248,.93); --orb-3:rgba(148,192,250,.85); --wash-1:rgba(172,208,248,.62); --wash-2:rgba(219,236,251,.32); }
+  25%  { --orb-1:rgba(38,140,228,.96); --orb-2:rgba(60,168,240,.93); --orb-3:rgba(138,205,242,.85); --wash-1:rgba(163,217,243,.62); --wash-2:rgba(211,238,248,.32); }
+  50%  { --orb-1:rgba(26,148,82,.96);   --orb-2:rgba(64,176,116,.93);  --orb-3:rgba(148,210,170,.85); --wash-1:rgba(168,224,180,.62); --wash-2:rgba(213,240,221,.32); }
+  75%  { --orb-1:rgba(248,174,16,.97);  --orb-2:rgba(252,203,44,.94);  --orb-3:rgba(252,224,138,.88); --wash-1:rgba(252,219,138,.62); --wash-2:rgba(253,236,188,.32); }
+  100% { --orb-1:rgba(47,124,240,.96); --orb-2:rgba(74,152,248,.93); --orb-3:rgba(148,192,250,.85); --wash-1:rgba(172,208,248,.62); --wash-2:rgba(219,236,251,.32); }
+}
+:root[data-anim="cycle"] { animation: gemini-cycle var(--cycle-period) linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation:none; }
+  :root[data-anim="cycle"] { animation:none; }
+}
+:root[data-aurora="flat"] { --of:100%; }
+:root[data-aurora="flat"] body::before { filter:none; animation:none; }
+:root[data-aurora="flat"][data-anim="cycle"] { animation:none; }
+.msr { font-family:"Material Symbols Rounded"; font-weight:300; font-size:20px; line-height:1; font-feature-settings:"liga"; -webkit-font-feature-settings:"liga"; font-variation-settings:'FILL' 0, 'wght' 400; vertical-align:-4px; }
+html { scroll-behavior:smooth; scroll-padding-top:72px; scrollbar-gutter:stable; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+:target { scroll-margin-top:80px; }
+html.has-smooth { scroll-behavior:auto; }
+.wrap { max-width:880px; margin:0 auto; padding:0 24px 72px; }
+.topbar { position:sticky; top:0; z-index:40; background:rgba(251,251,253,.82); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--line); will-change:transform; transform:translateZ(0); backface-visibility:hidden; isolation:isolate; }
+.card, .tile, .timeline, .risk-grid, .kpi-row { content-visibility:auto; contain-intrinsic-size:auto 420px; }
+@media (max-width: 640px) { body::before { filter:blur(20px) !important; } }
+.topbar .inner { max-width:880px; margin:0 auto; height:56px; display:flex; align-items:center; gap:12px; padding:0 24px; overflow-x:auto; scrollbar-width:none; }
+.topbar .inner::-webkit-scrollbar { display:none; }
+.brand { display:flex; align-items:center; gap:8px; font-weight:500; font-size:.86rem; color:var(--ink-2); white-space:nowrap; }
+.chip-jump { font-size:.78rem; font-weight:500; color:var(--ink-2); text-decoration:none; white-space:nowrap; padding:6px 13px; border-radius:var(--r-pill); transition:background var(--dur-1) var(--ease); }
+.chip-jump:hover { background:var(--surface-2); color:var(--ink); }
+.chip-jump:focus-visible { outline:2px solid var(--chart-blue); outline-offset:1px; }
+header.masthead { text-align:center; padding:64px 0 44px; }
+.kicker { color:var(--ink-3); font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; font-weight:500; margin-bottom:16px; }
+h1 { font-size:2.9rem; font-weight:350; letter-spacing:-.02em; line-height:1.12; margin-bottom:14px; background:var(--gemini-sweep); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
+.subtitle { color:var(--ink-2); font-size:1.02rem; font-weight:300; max-width:640px; margin:0 auto; }
+h2 { color:var(--ink); font-size:1.32rem; font-weight:500; letter-spacing:-.01em; margin-top:64px; margin-bottom:8px; scroll-margin-top:74px; }
+h2 .num { color:var(--ink-3); font-weight:400; margin-right:10px; font-variant-numeric:tabular-nums; font-size:.95em; }
+.section-note { color:var(--ink-2); font-size:.94rem; font-weight:300; margin-bottom:22px; max-width:760px; }
+.card { background:var(--surface); border:none; border-radius:var(--r-md); padding:26px 28px; margin:20px 0; box-shadow:var(--sh-2); }
+.card h3 { color:var(--ink); font-size:1.02rem; font-weight:500; margin-bottom:2px; }
+.card .sub { color:var(--ink-3); font-size:.84rem; font-weight:300; margin-bottom:18px; }
+.derived-flag { display:inline-block; background:var(--surface-2); border:none; color:var(--ink-2); font-size:.66rem; letter-spacing:.05em; text-transform:uppercase; border-radius:var(--r-pill); padding:2px 10px; margin-left:8px; vertical-align:middle; font-weight:500; }
+.kpi-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:8px 0 10px; }
+.tile { background:var(--surface); border:none; border-radius:var(--r-md); padding:18px; box-shadow:var(--sh-1); transition:box-shadow var(--dur-1) var(--ease); }
+.tile:hover { box-shadow:var(--sh-2); }
+.tile .label { color:var(--ink-3); font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; margin-bottom:8px; font-weight:500; }
+.tile .value { color:var(--ink); font-size:1.9rem; font-weight:400; letter-spacing:-.02em; line-height:1.1; font-variant-numeric:tabular-nums; }
+.tile .context { color:var(--ink-2); font-size:.78rem; font-weight:300; margin-top:8px; line-height:1.45; }
+.tile .delta { font-size:.78rem; margin-top:4px; color:var(--chart-blue-deep); font-weight:500; }
+.tile-hero-ring { background:var(--gemini-sweep); border-radius:calc(var(--r-md) + 2px); padding:2px; box-shadow:var(--sh-2); display:flex; }
+.tile-hero-ring .tile { flex:1; box-shadow:none; }
+.tile-hero-ring .tile .value { color:var(--chart-blue-deep); }
+.bar-row { display:grid; grid-template-columns:128px 1fr 96px; align-items:center; gap:10px; margin:9px 0; }
+.bar-row .cat { color:var(--ink-2); font-size:.86rem; text-align:right; font-weight:300; overflow:hidden; text-overflow:ellipsis; }
+.bar-row .track { position:relative; height:20px; border-left:1px solid var(--line-strong); background:var(--surface-2); border-radius:0 var(--r-sm) var(--r-sm) 0; overflow:hidden; }
+.bar-row .fill { position:absolute; left:0; top:0; height:20px; border-radius:0 var(--r-sm) var(--r-sm) 0; }
+.bar-row .fill.dim { background:var(--chart-context); }
+.bar-row .fill.emph { background:var(--chart-blue); }
+.bar-row .fill.purple { background:var(--sweep-3); }
+.bar-row .val { color:var(--ink); font-size:.84rem; font-variant-numeric:tabular-nums; text-align:right; line-height:1.25; }
+.bar-row .val small { color:var(--ink-3); font-size:.74rem; }
+table.dt { width:100%; border-collapse:collapse; margin:0; background:transparent; font-size:.84rem; }
+table.dt th { text-align:left; font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-3); font-weight:500; padding:8px 10px; border-bottom:2px solid var(--chart-blue); }
+table.dt td { padding:9px 10px; border-bottom:1px solid var(--line); color:var(--ink); font-variant-numeric:tabular-nums; vertical-align:top; }
+table.dt tr:last-child td { border-bottom:none; }
+table.dt tbody tr:hover td { background:var(--surface-2); }
+[data-tip] { position:relative; }
+[data-tip]:hover::after, [data-tip]:focus-visible::after { content:attr(data-tip); position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); background:var(--ink); color:#fff; border-radius:8px; padding:8px 12px; font-size:.75rem; line-height:1.45; width:max-content; max-width:250px; white-space:normal; z-index:30; pointer-events:none; box-shadow:var(--sh-3); font-weight:300; }
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px; }
+.grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:16px; }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.msg-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+.spectrum { display:flex; align-items:stretch; gap:2px; min-height:46px; margin-top:8px; font-size:.76rem; text-align:center; }
+.spectrum > div { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:6px 8px; }
+.spectrum .sp-1 { flex:1; background:var(--surface); border:1px solid var(--line); border-radius:8px 0 0 8px; }
+.spectrum .sp-2 { flex:2; background:var(--chart-then); border-radius:0; }
+.spectrum .sp-3 { flex:1.5; background:#cbd5e1; border-radius:0; }
+.spectrum .sp-4 { flex:4; background:var(--chart-blue); color:#fff; border-radius:0 8px 8px 0; font-weight:500; }
+.trend-panel .tp-body, .trend-panel h4, .trend-panel .tp-kicker { animation:tpFade .25s var(--ease); }
+@keyframes tpFade { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:none; } }
+@media (max-width:860px) { .grid-4 { grid-template-columns:repeat(2,1fr); } .msg-3 { grid-template-columns:1fr 1fr; } }
+@media print { .topbar, .gp-fab, .gp-panel, .trend-nav, .trend-tabs { display:none !important; } .card { box-shadow:none; break-inside:avoid; } body::before { display:none; } }
+.axis-note { color:var(--ink-3); font-size:.76rem; font-weight:300; margin-top:12px; line-height:1.5; }
+.hairline-grid { position:absolute; inset:0; background-image:linear-gradient(to right, var(--surface-3) 1px, transparent 1px); background-size:25% 100%; }
+.product-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:16px; }
+.pcard { background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md); padding:16px; box-shadow:var(--sh-1); transition:box-shadow var(--dur-1) var(--ease); }
+.pcard:hover { box-shadow:var(--sh-2); }
+.pcard .picon { width:40px; height:40px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:var(--surface-2); margin-bottom:10px; }
+.pcard .picon .msr { color:var(--chart-blue-deep); }
+.pcard h4 { margin:0 0 6px; font-size:.92rem; font-weight:500; }
+.pcard p { margin:0; font-size:.82rem; color:var(--ink-2); line-height:1.5; font-weight:300; }
+.pcard .pill { display:inline-block; margin-top:8px; font-size:.7rem; font-weight:500; color:var(--chart-blue-deep); background:var(--surface-2); border-radius:var(--r-pill); padding:3px 10px; }
+.quote { border-left:3px solid var(--chart-blue); background:var(--surface); box-shadow:var(--sh-1); padding:14px 18px; margin:18px 0; color:var(--ink); font-size:.97rem; font-style:italic; font-weight:300; border-radius:0 var(--r-sm) var(--r-sm) 0; }
+.quote .who { display:block; color:var(--ink-3); font-style:normal; font-size:.8rem; margin-top:6px; }
+.money-panel { margin-top:14px; background:var(--surface-2); border-radius:var(--r-md); padding:16px; }
+.money-panel .money-title { font-size:.86rem; font-weight:500; color:var(--ink); }
+.money-panel .money-sub { font-size:.78rem; color:var(--ink-2); font-weight:300; margin-top:2px; }
+.seg { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; }
+.seg button { font:inherit; font-size:.76rem; font-weight:500; border:1px solid var(--line); background:var(--surface); color:var(--ink-2); padding:6px 13px; border-radius:var(--r-pill); cursor:pointer; transition:background var(--dur-1) var(--ease); }
+.seg button:hover { border-color:var(--chart-blue); color:var(--chart-blue-deep); }
+.seg button[aria-pressed="true"] { background:var(--chart-blue); color:#fff; border-color:var(--chart-blue); }
+.donutwrap { display:grid; grid-template-columns:170px 1fr; gap:16px; align-items:center; margin-top:6px; }
+.donut { position:relative; width:170px; height:170px; margin:0 auto; }
+.donut svg { width:100%; height:100%; }
+.donut .mid { position:absolute; inset:0; display:grid; place-items:center; text-align:center; }
+.donut .mid b { display:block; font-size:1.3rem; font-weight:500; color:var(--ink); letter-spacing:-.02em; }
+.donut .mid span { font-size:.68rem; color:var(--ink-3); text-transform:uppercase; letter-spacing:.06em; font-weight:500; }
+.legend { display:flex; flex-direction:column; gap:7px; font-size:.84rem; font-weight:300; color:var(--ink-2); }
+.leg { display:flex; align-items:center; gap:8px; }
+.dot { width:10px; height:10px; border-radius:3px; flex:none; }
+.money-note { margin-top:8px; font-size:.76rem; font-weight:300; color:var(--ink-3); line-height:1.5; }
+.money-grid { margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.money-mini { background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md); padding:12px; text-align:center; }
+.money-mini .mp-title { font-size:.8rem; font-weight:500; color:var(--ink); }
+.money-mini .mp-sub { font-size:.72rem; color:var(--ink-3); font-weight:300; margin-top:2px; }
+.pivot-track { margin-top:8px; height:10px; background:var(--surface-2); border:1px solid var(--line); border-radius:var(--r-pill); display:flex; overflow:hidden; }
+@media (max-width:640px) { .donutwrap { grid-template-columns:1fr; } .money-grid { grid-template-columns:1fr; } }
+.timeline { position:relative; margin:26px 0 6px; }
+.tl-item { display:grid; grid-template-columns:74px 26px 1fr; margin-bottom:15px; }
+.tl-year { color:var(--chart-blue-deep); font-weight:500; font-size:.85rem; text-align:right; padding-right:14px; padding-top:1px; font-variant-numeric:tabular-nums; }
+.tl-node { position:relative; }
+.tl-node::before { content:""; position:absolute; left:11px; top:2px; bottom:-16px; width:2px; background:var(--surface-3); }
+.tl-item:last-child .tl-node::before { display:none; }
+.tl-node::after { content:""; position:absolute; left:6px; top:5px; width:12px; height:12px; border-radius:50%; background:var(--chart-blue); border:2px solid var(--surface); box-shadow:0 0 0 1px var(--line); }
+.tl-body { font-size:.9rem; color:var(--ink); font-weight:300; }
+.tl-body strong { font-weight:500; }
+.tl-body .fig { color:var(--chart-blue-deep); font-weight:500; }
+.matrix { display:grid; grid-template-columns:132px 1fr 1fr; gap:10px; margin-top:14px; }
+.matrix .mh { color:var(--ink-3); font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; padding:0 4px 2px; font-weight:500; }
+.matrix .rh { color:var(--ink); font-size:.88rem; font-weight:500; padding:12px 10px; display:flex; flex-direction:column; justify-content:center; }
+.matrix .rh small { color:var(--ink-3); font-weight:300; font-size:.74rem; }
+.matrix .cell { background:var(--surface-2); border-radius:var(--r-sm); padding:12px 14px; font-size:.84rem; font-weight:300; color:var(--ink-2); }
+.matrix .cell .tag { display:block; margin-bottom:4px; color:var(--ink); font-weight:500; font-size:.84rem; }
+.risk-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; margin-top:18px; }
+.risk { background:var(--surface); border:none; border-top:3px solid var(--chart-blue); border-radius:var(--r-md); padding:18px; box-shadow:var(--sh-1); }
+.risk.warn { border-top-color:var(--warn); }
+.risk .rhead { font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3); margin-bottom:6px; font-weight:500; }
+.risk .rhead .msr { font-size:18px; margin-right:5px; vertical-align:-3px; }
+.risk h4 { color:var(--ink); font-size:.95rem; margin-bottom:6px; font-weight:500; }
+.risk p { font-size:.85rem; font-weight:300; color:var(--ink-2); }
+.risk p b { color:var(--ink); font-weight:500; }
+.trend-tabs { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 12px; }
+.trend-tab { font:inherit; display:inline-flex; align-items:center; gap:7px; font-size:.78rem; font-weight:500; border:1px solid var(--line); background:var(--surface); color:var(--ink-2); padding:8px 14px; border-radius:var(--r-pill); cursor:pointer; transition:background var(--dur-1) var(--ease), color var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease); }
+.trend-tab .msr { font-size:17px; }
+.trend-tab:hover { border-color:var(--chart-blue); color:var(--chart-blue-deep); }
+.trend-tab[aria-selected="true"] { background:var(--chart-blue); border-color:var(--chart-blue); color:#fff; }
+.trend-tab[aria-selected="true"] .msr { color:#fff; }
+.trend-panel { background:var(--surface-2); border-radius:var(--r-md); padding:20px 22px; min-height:170px; }
+.trend-panel .tp-kicker { font-size:.7rem; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3); font-weight:500; display:flex; align-items:center; gap:7px; margin-bottom:8px; }
+.trend-panel .tp-kicker .msr { font-size:18px; color:var(--chart-blue-deep); }
+.trend-panel h4 { margin:0 0 8px; font-size:1.05rem; font-weight:500; color:var(--ink); letter-spacing:-.01em; }
+.trend-panel p.tp-body { margin:0; font-size:.92rem; font-weight:300; color:var(--ink-2); line-height:1.6; }
+.trend-panel p.tp-body b { color:var(--ink); font-weight:500; }
+.trend-panel .tp-cta { margin-top:12px; display:inline-flex; align-items:center; gap:7px; font-size:.85rem; font-weight:500; color:var(--chart-blue-deep); background:var(--surface); border:1px solid var(--line); border-radius:var(--r-pill); padding:7px 13px; }
+.trend-panel .tp-cta.purple { color:var(--sweep-3); }
+.trend-panel .tp-cta.amber { color:var(--warn); }
+.trend-nav { display:flex; align-items:center; justify-content:space-between; margin-top:12px; }
+.trend-nav .tp-count { font-size:.76rem; color:var(--ink-3); font-variant-numeric:tabular-nums; }
+.trend-nav .tp-btns { display:flex; gap:8px; }
+.trend-nav button.tp-arrow { width:32px; height:32px; border-radius:50%; border:1px solid var(--line); background:var(--surface); cursor:pointer; display:grid; place-items:center; color:var(--ink-2); }
+.trend-nav button.tp-arrow:hover { border-color:var(--chart-blue); color:var(--chart-blue-deep); }
+.trend-nav button.tp-arrow .msr { font-size:18px; }
+.hero-takeaway { margin-top:64px; padding:44px 36px 40px; border-radius:var(--r-lg); text-align:center; position:relative; overflow:hidden;
+  background:
+    radial-gradient(60% 90% at 20% 0%, rgba(66,133,244,.35) 0%, transparent 70%),
+    radial-gradient(55% 85% at 82% 10%, rgba(155,114,203,.28) 0%, transparent 70%),
+    radial-gradient(70% 100% at 50% 115%, rgba(255,167,86,.20) 0%, transparent 70%),
+    #131120;
+  box-shadow:var(--sh-3); }
+.hero-takeaway .label { color:#c3c0d6; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; margin-bottom:14px; font-weight:500; }
+.hero-takeaway .line { color:var(--ink-inv); font-size:1.26rem; line-height:1.55; font-weight:300; max-width:680px; margin:0 auto; }
+.hero-takeaway .line strong { font-weight:500; }
+footer { margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--ink-3); font-size:.79rem; font-weight:300; }
+footer p { margin-bottom:7px; }
+footer strong { font-weight:500; color:var(--ink-2); }
+a { color:var(--chart-blue-deep); text-decoration:none; }
+:focus-visible { outline:2px solid var(--chart-blue); outline-offset:2px; }
+.gp-fab { position:fixed; right:20px; bottom:20px; z-index:60; width:48px; height:48px; border-radius:var(--r-pill); border:1px solid var(--line); background:var(--surface); box-shadow:var(--sh-3); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:transform var(--dur-1) var(--ease); }
+.gp-fab:hover { transform:scale(1.06); }
+.gp-fab .msr { font-size:24px; color:var(--ink-2); }
+.gp-fab[aria-expanded="true"] .msr { color:var(--chart-blue-deep); }
+.gp-panel { position:fixed; right:20px; bottom:80px; z-index:60; width:280px; padding:18px; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-lg); box-shadow:var(--sh-3); font-size:.82rem; transition:opacity var(--dur-2) var(--ease), transform var(--dur-2) var(--ease); }
+.gp-panel[hidden] { display:block; opacity:0; transform:translateY(8px) scale(.98); pointer-events:none; visibility:hidden; }
+.gp-panel h4 { font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-3); font-weight:500; margin:16px 0 8px; }
+.gp-panel h4:first-child { margin-top:0; }
+.gp-swatches { display:flex; gap:8px; flex-wrap:wrap; }
+.gp-sw { width:34px; height:34px; border-radius:var(--r-pill); border:2px solid var(--line); cursor:pointer; padding:0; transition:transform var(--dur-1) var(--ease); position:relative; }
+.gp-sw:hover { transform:scale(1.1); }
+.gp-sw[aria-pressed="true"] { border-color:var(--ink); box-shadow:0 0 0 2px var(--surface) inset; }
+.gp-sw[aria-pressed="true"]::after { content:""; position:absolute; inset:-6px; border-radius:var(--r-pill); border:1.5px solid var(--ink); }
+.gp-sw.t-none { background:var(--bg); display:flex; align-items:center; justify-content:center; }
+.gp-sw.t-none .msr { font-size:16px; color:var(--ink-3); }
+.gp-row { display:flex; align-items:center; justify-content:space-between; gap:10px; margin:8px 0; color:var(--ink-2); font-weight:300; }
+.gp-row b { font-weight:500; color:var(--ink); }
+.gp-panel input[type="range"] { width:100%; accent-color:var(--chart-blue); height:24px; }
+.gp-switch { position:relative; width:42px; height:24px; border-radius:var(--r-pill); border:1px solid var(--line-strong); background:var(--surface-2); cursor:pointer; padding:0; flex:none; transition:background var(--dur-1) var(--ease); }
+.gp-switch::after { content:""; position:absolute; top:2px; left:2px; width:18px; height:18px; border-radius:50%; background:var(--ink-3); transition:left var(--dur-1) var(--ease), background var(--dur-1) var(--ease); }
+.gp-switch[aria-pressed="true"] { background:#e8f0fe; border-color:var(--chart-blue); }
+.gp-switch[aria-pressed="true"]::after { left:20px; background:var(--chart-blue); }
+.gp-reset { margin-top:14px; width:100%; padding:8px 0; border-radius:var(--r-pill); border:1px solid var(--line); background:var(--surface); color:var(--ink-2); font-family:inherit; font-size:.78rem; font-weight:500; cursor:pointer; }
+.gp-reset:hover { background:var(--surface-2); }
+@media (max-width:640px) {
+  h1 { font-size:2.1rem; }
+  header.masthead { padding:44px 0 32px; }
+  .wrap { padding:0 14px 56px; }
+  .bar-row { grid-template-columns:84px 1fr 72px; }
+  .bar-row .cat { font-size:.74rem; }
+  .bar-row .val { font-size:.74rem; }
+  .product-grid { grid-template-columns:1fr; }
+  .grid-3, .grid-4, .grid-2, .msg-3, .flow-3 { grid-template-columns:1fr; }
+  .brand span.brand-text { display:none; }
+  .spectrum { flex-wrap:wrap; }
+  .spectrum > div { flex:1 1 40%; border-radius:8px !important; }
+  .matrix { grid-template-columns:1fr; gap:0; background:var(--surface-2); border-radius:var(--r-sm); padding:6px; }
+  .matrix .mh { display:none; }
+  .matrix .rh { padding:10px 8px 4px; }
+  .matrix .cell { margin:4px; }
+  .card { padding:18px 16px; }
+  .trend-panel { padding:16px; }
+  .hero-takeaway { padding:32px 18px 28px; }
+  .hero-takeaway .line { font-size:1.05rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="topbar" aria-label="Section navigation">
+  <div class="inner">
+    <span class="brand">
+      <svg viewBox="0 0 28 28" width="20" height="20" aria-hidden="true">
+        <defs><linearGradient id="gsweep" x1="0" y1="0" x2="28" y2="28">
+          <stop offset="0" stop-color="#4285F4"/><stop offset=".25" stop-color="#5961F0"/>
+          <stop offset=".5" stop-color="#9B72CB"/><stop offset=".75" stop-color="#D96570"/>
+          <stop offset="1" stop-color="#FFA756"/>
+        </linearGradient></defs>
+        <path fill="url(#gsweep)" d="M14 0 C15.2 8.4 18.6 12.8 28 14 C18.6 15.2 15.2 19.6 14 28 C12.8 19.6 9.4 15.2 0 14 C9.4 12.8 12.8 8.4 14 0 Z"/>
+      </svg>
+      TD Power Systems · <span class="brand-text">Company Profile</span>
+    </span>
+    <a class="chip-jump" href="#s01">01 What they do</a>
+    <a class="chip-jump" href="#s02">02 Competitors</a>
+    <a class="chip-jump" href="#s03">03 Products</a>
+    <a class="chip-jump" href="#s04">04 Vision</a>
+    <a class="chip-jump" href="#s05">05 Trends</a>
+    <a class="chip-jump" href="#s09">Takeaway</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="kicker">Filings-only · NSE: TDPOWERSYS · BSE: 533553 · Dabaspet, Bengaluru</div>
+  <h1>TD Power Systems</h1>
+  <div class="subtitle">India's engineered-to-order AC generator pioneer — <strong>1 to 250 MVA</strong> for every prime mover, <strong>111 countries</strong>, <strong>7,200+ installations</strong>. Not a catalog box-shipper. A project OEM that engineers the machine to the turbine, then services it for 20 years.</div>
+</header>
+
+<div class="card" style="display:flex; align-items:center; gap:14px; padding:14px 18px;">
+  <span style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:12px; background:var(--surface-2);"><span class="msr" style="color:var(--chart-blue-deep)">info</span></span>
+  <div style="font-size:.88rem; color:var(--ink-2); font-weight:300; line-height:1.5"><strong style="font-weight:500; color:var(--ink)">Filings-only portrait.</strong> No DCF, no price target — just the business as the Annual Report FY25 and BSE filings describe it. Figures are traced to the filing page; global peers are shown as a geography share of one peer-group pot (not a TAM claim).</div>
+  <span style="margin-left:auto; white-space:nowrap; font-size:.76rem; background:var(--surface-2); border-radius:var(--r-pill); padding:6px 12px; color:var(--ink-2);">20 Sep 2026</span>
+</div>
+
+<!-- KPI ROW -->
+<div class="kpi-row">
+  <div class="tile-hero-ring"><div class="tile" data-tip="TTM from Screener: Sales ₹2,124 Cr TTM vs ₹1,856 Cr FY26. +54% TTM is the momentum print." tabindex="0">
+    <div class="label">Revenue TTM</div>
+    <div class="value">₹2,124 Cr</div>
+    <div class="context">FY26 ₹1,856 Cr · TTM +54% YoY</div>
+  </div></div>
+  <div class="tile" data-tip="Operating margin TTM 18% on ₹383 Cr operating profit. ROCE 34.0%, ROE 24.7%. Almost debt-free (Screener)." tabindex="0">
+    <div class="label">Operating quality</div>
+    <div class="value">18.0%</div>
+    <div class="context">ROCE 34.0% · margin not price</div>
+  </div>
+  <div class="tile" data-tip="tdps.co.in + AR FY25: generators in 111 countries, 7,200+ machines, 60 service partners, 45 OEM customers." tabindex="0">
+    <div class="label">Global footprint</div>
+    <div class="value">111</div>
+    <div class="context">countries · 7,200+ installs</div>
+  </div>
+  <div class="tile" data-tip="Market cap ~₹23,864 Cr at ₹764 (Screener 18 Sep 2026 close, +5.77%). 86.8× P/E reflects growth premium." tabindex="0">
+    <div class="label">Market cap</div>
+    <div class="value">₹23,864 Cr</div>
+    <div class="delta">₹764 · almost debt-free</div>
+  </div>
+  <div class="tile" data-tip="Order book ₹2,208 Cr at 30 Jun 2026 — 3.4× cover on FY26 revenue. ₹1,929 Cr generators & motors; Q1 FY27 inflow 93% export." tabindex="0">
+    <div class="label">Order book</div>
+    <div class="value">₹2,208 Cr</div>
+    <div class="context">Q1 FY27 · 93% export inflow</div>
+  </div>
+</div>
+
+<!-- 01 WHAT THEY DO -->
+<h2 id="s01"><span class="num">01</span> What the company does</h2>
+<p class="section-note">Engineered-to-order, not catalog. TDPS custom-designs the generator to the prime mover and the site — then monetizes the relationship for the machine's lifetime.</p>
+
+<div class="card">
+  <h3>The idea in one line</h3>
+  <div class="sub">The business is <strong style="color:var(--ink)">engineering hours + precision metal</strong> sold through long-cycle OEM partnerships.</div>
+  <p style="font-weight:300; line-height:1.65">TD Power Systems <strong style="font-weight:500">designs and builds AC generators (1 to 250 MVA) and motors that are custom-engineered to the turbine or engine</strong> — steam, gas, hydro, wind, diesel, gas — and to the site's altitude, temperature, and grid code. Customers are the <strong style="font-weight:500">~45 global OEMs</strong> who build the prime mover (turbine/engine maker); TDPS is their generator specialist. Revenue is project sales plus services, spares, and refurbishment over a 20–30 year life. When a German site needs a 67.5 MVA 4-pole steam generator for Maxau, or a US engine OEM needs a 6.36 MVA J624 gas-engine generator, TDPS engineers the rotor, stator, and cooling for that exact duty — under one roof in Dabaspet (3 plants), optimizing efficiency and lead time.</p>
+  <div class="grid-3">
+    <div class="tile" style="box-shadow:none; background:var(--surface-2);">
+      <div class="label"><span class="msr" style="font-size:16px; vertical-align:-2px; margin-right:4px;">precision_manufacturing</span> Engineered-to-Order</div>
+      <div style="font-size:.86rem; color:var(--ink-2); font-weight:300; margin-top:6px">FEA-optimized rotors/stators, specialized cooling. Every machine spec'd to turbine, grid, powerhouse.</div>
+      <div style="margin-top:10px"><span style="font-size:.72rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-pill); padding:4px 10px;">1 → 250 MVA spectrum</span></div>
+    </div>
+    <div class="tile" style="box-shadow:none; background:var(--surface-2);">
+      <div class="label"><span class="msr" style="font-size:16px; vertical-align:-2px; margin-right:4px;">public</span> Export engine</div>
+      <div style="font-size:.86rem; color:var(--ink-2); font-weight:300; margin-top:6px"><strong style="color:var(--chart-blue-deep)">68%</strong> of FY25 inflow from exports + deemed exports — the growth driver.</div>
+      <div style="margin-top:10px"><span style="font-size:.72rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-pill); padding:4px 10px;">45 OEMs · 60 partners, 6 continents</span></div>
+    </div>
+    <div class="tile" style="box-shadow:none; background:var(--surface-2);">
+      <div class="label"><span class="msr" style="font-size:16px; vertical-align:-2px; margin-right:4px;">shield</span> Mission-critical</div>
+      <div style="font-size:.86rem; color:var(--ink-2); font-weight:300; margin-top:6px">Grid, data centre, desalination, marine, loco — where uptime is non-negotiable.</div>
+      <div style="margin-top:10px"><span style="font-size:.72rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-pill); padding:4px 10px;">7,200+ in field · 111 countries</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:20px; background:var(--surface-2); border-radius:var(--r-md); padding:16px;">
+    <div style="font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3); font-weight:500; margin-bottom:10px;">How value flows — from prime mover to power</div>
+    <div class="flow-3" style="display:grid; grid-template-columns:1fr 1.2fr 1fr; gap:10px; text-align:center; align-items:center;">
+      <div style="background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px;">
+        <div class="msr" style="color:var(--ink-3)">local_fire_department</div>
+        <div style="font-size:.86rem; font-weight:500; margin-top:4px">Prime Movers</div>
+        <div style="font-size:.76rem; color:var(--ink-3); font-weight:300">Steam · Gas · Hydro<br>Wind · Diesel · Gas Engine</div>
+      </div>
+      <div style="background:linear-gradient(135deg, rgba(66,133,244,.08), rgba(155,114,203,.08)); border:1px solid rgba(66,133,244,.14); border-radius:12px; padding:12px;">
+        <div class="msr" style="color:var(--chart-blue-deep)">bolt</div>
+        <div style="font-size:.86rem; font-weight:500; color:var(--chart-blue-deep)">TDPS Generator</div>
+        <div style="font-size:.76rem; color:var(--ink-3); font-weight:300">Custom rotor & stator<br>1–250 MVA · FEA · cooling</div>
+        <div style="margin-top:6px"><span style="font-size:.7rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-pill); padding:3px 8px; color:var(--ink-2)">ENGINEERED HERE</span></div>
+      </div>
+      <div style="background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px;">
+        <div class="msr" style="color:var(--ink-3)">factory</div>
+        <div style="font-size:.86rem; font-weight:500; margin-top:4px">End Use</div>
+        <div style="font-size:.76rem; color:var(--ink-3); font-weight:300">Grid · Data centre<br>Desalination · Loco · Marine</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:8px; font-size:.72rem; color:var(--ink-3); font-weight:300">Examples: 5.25 MVA mobile power · 67.5 MVA Maxau (largest 4-pole) · 9×8.586 MVA UAE barge desalination</div>
+  </div>
+
+  <div class="money-panel">
+    <div class="money-title">Where money comes from — tap to switch proxy <span class="derived-flag">Segmented view</span></div>
+    <div class="money-sub">Revenue by region not disclosed — these are order/installed proxies (not revenue). Inter-company eliminations mean components don't sum.</div>
+    <div class="seg" id="seg" role="group" aria-label="Switch money proxy"></div>
+    <div class="donutwrap"><div class="donut" id="donut"></div><div class="legend" id="leg"></div></div>
+    <div class="money-note" id="donutnote"></div>
+    <div class="money-grid">
+      <div class="money-mini"><div class="mp-title">Q1 FY26 vs Q1 FY27 order inflow</div><div class="mp-sub">₹ Cr — exports up 2.7×, domestic down &gt;50%</div><div id="groupedMini" style="margin-top:8px"></div></div>
+      <div class="money-mini"><div class="mp-title">FY25 → FY26 pivot</div><div class="mp-sub">India ~₹8.48B → ~₹3.0B; Export ~₹8.09B → ~₹15.6B</div><div class="pivot-track" style="margin-top:10px;"><div style="width:51%; background:var(--chart-context)"></div><div style="width:49%; background:var(--chart-blue)"></div></div><div class="pivot-track"><div style="width:16%; background:var(--chart-context)"></div><div style="width:84%; background:var(--chart-blue)"></div></div><div class="mp-sub" style="margin-top:6px;">Top bar FY25 mix · bottom bar FY26 mix (export blue)</div></div>
+    </div>
+  </div>
+
+  <div class="quote">Business model in one sentence: TDPS converts <em>engineering hours + precision manufacturing</em> into <em>high-margin, low-volume, high-reliability</em> machines sold through OEM partnerships — the opposite of commoditized genset assembly. Exports and services carry the margin; scale is in know-how.<span class="who">— MD letter, AR FY25: "When the world powers down, we power up."</span></div>
+</div>
+
+<!-- 02 COMPETITORS -->
+<h2 id="s02"><span class="num">02</span> Geographical competitors — revenue % wise</h2>
+<p class="section-note">One peer-group pot (~$82B). Share = TTM revenue ÷ sum of this table. All revenues from filings. FX: €1 = $1.08 · R$1 = $0.18 · ₹83 = $1. Generator slice inside each giant differs — see overlap.</p>
+
+<div class="card">
+  <h3>Peer-group revenue share — who is how big, geographically</h3>
+  <div class="sub">Listed groups only. Private giants (Harbin, Shanghai Electric, Andritz, Voith) excluded where filing not separable — adding them would shrink all shares proportionally. Cummins Power Systems estimated as ~15% of Cummins Inc. total.</div>
+
+  <div class="bar-row"><span class="cat" data-tip="GE Vernova — 10-K 2025: Revenue $38.068B (total). Power + Electrification." tabindex="0">GE Vernova 🇺🇸</span><span class="track"><span class="hairline-grid"></span><span class="fill emph" style="width:46.3%"></span></span><span class="val"><b>$38.1B</b><br><span style="color:var(--ink-3); font-size:.76rem">46.3%</span></span></div>
+  <div class="bar-row"><span class="cat" data-tip="Siemens Energy — AR24: Revenue €34.465B → ~$37.3B. GT + Grid + Siemens Gamesa." tabindex="0">Siemens Energy 🇩🇪</span><span class="track"><span class="hairline-grid"></span><span class="fill emph" style="width:45.3%"></span></span><span class="val"><b>$37.3B</b><br><span style="color:var(--ink-3); font-size:.76rem">45.3%</span></span></div>
+  <div class="bar-row"><span class="cat" data-tip="WEG — 2024 NOR R$37.987B → ~$6.8B. Mid-range alternators/motors; closest direct peer on technology and delivery." tabindex="0">WEG 🇧🇷</span><span class="track"><span class="hairline-grid"></span><span class="fill dim" style="width:8.3%"></span></span><span class="val"><b>$6.8B</b><br><span style="color:var(--ink-3); font-size:.76rem">8.3%</span></span></div>
+  <div class="bar-row"><span class="cat" data-tip="Cummins Inc. total $34.1B; Power Systems subset ~$5.2B est. (15%). Diesel/gas gensets." tabindex="0">Cummins Power 🇺🇸</span><span class="track"><span class="hairline-grid"></span><span class="fill dim" style="width:6.3%"></span></span><span class="val">~$5.2B<br><span style="color:var(--ink-3); font-size:.76rem">6.3%</span></span></div>
+  <div class="bar-row"><span class="cat" data-tip="BHEL — FY25 supplemental: Revenue from Operations ₹28,339 Cr → ~$3.4B. India turnkey + power EPC." tabindex="0">BHEL 🇮🇳</span><span class="track"><span class="hairline-grid"></span><span class="fill dim" style="width:4.1%"></span></span><span class="val">$3.4B<br><span style="color:var(--ink-3); font-size:.76rem">4.1%</span></span></div>
+  <div class="bar-row"><span class="cat" style="color:var(--chart-blue-deep); font-weight:500;" data-tip="TD Power Systems — Screener TTM Sales ₹2,124 Cr (FY26 ₹1,856 Cr) → ~$0.24B. 1–250 MVA custom." tabindex="0">TD Power Systems 🇮🇳</span><span class="track"><span class="hairline-grid"></span><span class="fill purple" style="width:2.2%"></span></span><span class="val"><b style="color:var(--chart-blue-deep)">$0.24B</b><br><span style="color:var(--chart-blue-deep); font-size:.76rem">0.29%</span></span></div>
+  <div class="axis-note">Bars share one linear axis (0 → ~$40B). At true scale TDPS's bar is &lt;1% — enlarged to 2.2% for visibility. <strong style="color:var(--ink); font-weight:500">That's the point:</strong> group revenue ≠ generator revenue. TDPS's relevance is <em>specialization</em> in the mid-range custom niche, not share of the giants' conglomerate sales.</div>
+
+  <div class="grid-2" style="margin-top:22px;">
+    <div style="background:var(--surface-2); border-radius:var(--r-md); padding:14px;">
+      <div style="font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3); font-weight:500; margin-bottom:10px;">Detailed table — geography</div>
+      <table class="dt">
+        <tr><th>Peer</th><th>HQ</th><th style="text-align:right">Revenue</th><th>Overlap</th></tr>
+        <tr><td><strong>GE Vernova</strong></td><td>USA</td><td style="text-align:right">$38.1B</td><td style="font-size:.78rem; color:var(--ink-2)">Utility — TDPS plays below 50 MW where GE less tailored</td></tr>
+        <tr><td><strong>Siemens Energy</strong></td><td>Germany</td><td style="text-align:right">$37.3B</td><td style="font-size:.78rem; color:var(--ink-2)">GT + Grid + wind — direct at utility scale</td></tr>
+        <tr><td><strong>WEG</strong></td><td>Brazil</td><td style="text-align:right">$6.8B</td><td style="font-size:.78rem; color:var(--chart-blue-deep); font-weight:500">Closest direct — alternators, spares, delivery</td></tr>
+        <tr><td><strong>BHEL</strong></td><td>India</td><td style="text-align:right">$3.4B</td><td style="font-size:.78rem; color:var(--ink-2)">India tenders / localization</td></tr>
+        <tr><td><strong style="color:var(--chart-blue-deep)">TDPS</strong></td><td>India</td><td style="text-align:right; color:var(--chart-blue-deep); font-weight:500">$0.24B</td><td style="font-size:.78rem; color:var(--chart-blue-deep)">Niche — 1–250 MVA custom</td></tr>
+      </table>
+    </div>
+    <div style="background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md); padding:14px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+      <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:12px;">
+        <span style="background:var(--surface-2); border-radius:var(--r-pill); padding:6px 12px; font-size:.78rem;"><span style="font-size:14px">🇺🇸</span> USA 52.6%</span>
+        <span style="background:var(--surface-2); border-radius:var(--r-pill); padding:6px 12px; font-size:.78rem;"><span style="font-size:14px">🇩🇪</span> Germany 45.3%</span>
+        <span style="background:var(--surface-2); border-radius:var(--r-pill); padding:6px 12px; font-size:.78rem;"><span style="font-size:14px">🇧🇷</span> Brazil 8.3%</span>
+        <span style="background:var(--surface-2); border-radius:var(--r-pill); padding:6px 12px; font-size:.78rem;"><span style="font-size:14px">🇮🇳</span> India 4.4%</span>
+      </div>
+      <div style="font-size:.82rem; color:var(--ink-2); font-weight:300; max-width:280px;">TDPS is headquartered in India but sells <strong style="color:var(--ink)">into the US/EU pot</strong> — 68% export inflow. Headquarters geography ≠ revenue geography.</div>
+      <div style="margin-top:10px; font-size:.72rem; color:var(--ink-3);">Map: HQ geography. Peer-group pot geography is what the bar above measures.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 03 KEY PRODUCTS -->
+<h2 id="s03"><span class="num">03</span> Key products</h2>
+<p class="section-note">Six generator families + motors. One engineering core. Every product is a system — rotor + stator + cooling + controls — tailored to the prime mover.</p>
+
+<div class="card">
+  <div class="product-grid">
+    <div class="pcard">
+      <div class="picon"><span class="msr">local_fire_department</span></div>
+      <h4>Steam Turbine Generators</h4>
+      <p><strong>Up to 250 MVA</strong> — 2-pole & 4-pole, specialized rotors for broad site/operating range. The workhorse for IPPs, co-gen, industrial steam.</p>
+      <span class="pill">67.5 MVA Maxau — largest 4-pole</span>
+    </div>
+    <div class="pcard">
+      <div class="picon"><span class="msr">air</span></div>
+      <h4>Gas Turbine Generators</h4>
+      <p><strong>Up to 250 MVA</strong> — high-speed rotors balanced for centrifugal forces. Key growth: fracking, US data-centre gas demand.</p>
+      <span class="pill">8× 9.1 MW · 1800 rpm · US OEM</span>
+    </div>
+    <div class="pcard">
+      <div class="picon"><span class="msr">water_drop</span></div>
+      <h4>Hydro Generators</h4>
+      <p><strong>Up to 45 MVA</strong> — engineered per turbine type, grid & powerhouse. Sustainable, stable, pumped-storage relevant.</p>
+      <span class="pill">Custom per head & grid</span>
+    </div>
+    <div class="pcard">
+      <div class="picon"><span class="msr">wind_power</span></div>
+      <h4>Wind Turbine Generators</h4>
+      <p><strong>3 solutions:</strong> PMG, synchronous, doubly-fed induction — for clean, reliable delivery across global wind markets.</p>
+      <span class="pill">PMG · Sync · DFIG</span>
+    </div>
+    <div class="pcard">
+      <div class="picon"><span class="msr">propane_tank</span></div>
+      <h4>Gas Engine Generators</h4>
+      <p><strong>Up to 25 MVA</strong> — proprietary tech for critical environments. <strong>500+</strong> supplied to a major engine OEM.</p>
+      <span class="pill">J612 2.5 · J624 6.36 · J920 15 MVA</span>
+    </div>
+    <div class="pcard">
+      <div class="picon"><span class="msr">oil_barrel</span></div>
+      <h4>Diesel Engine Generators</h4>
+      <p><strong>Up to 25 MVA</strong> — FEA-designed to handle cyclic loads & vibration. Barge-mounted desalination proven.</p>
+      <span class="pill">9× 8.586 MVA · UAE barge</span>
+    </div>
+  </div>
+  <div style="margin-top:14px" class="product-grid">
+    <div class="pcard" style="background:var(--surface-2); box-shadow:none;">
+      <div class="picon"><span class="msr">electrical_services</span></div>
+      <h4>Induction Motors</h4>
+      <p>Industrial drives, custom-built to spec.</p>
+    </div>
+    <div class="pcard" style="background:var(--surface-2); box-shadow:none;">
+      <div class="picon"><span class="msr">train</span></div>
+      <h4>Synchronous & Traction</h4>
+      <p>Sync + traction for rail/marine/locomotive.</p>
+    </div>
+    <div class="pcard" style="background:var(--surface-2); box-shadow:none;">
+      <div class="picon"><span class="msr">science</span></div>
+      <h4>Special Applications</h4>
+      <p>Geothermal · solar thermal · oil & gas · transformer testing.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:18px; background:var(--surface-2); border-radius:var(--r-md); padding:14px;">
+    <div style="font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3); font-weight:500;">MVA spectrum — where each family lives</div>
+    <div class="spectrum">
+      <div class="sp-1"><b>1</b><span style="font-size:.68rem; color:var(--ink-3)">MVA min</span></div>
+      <div class="sp-2">25 MVA Engine</div>
+      <div class="sp-3">45 MVA Hydro</div>
+      <div class="sp-4">Steam & Gas → 250 MVA</div>
+    </div>
+    <div style="text-align:center; margin-top:6px; font-size:.72rem; color:var(--ink-3); font-weight:300">Company does not split revenue by product in filings; mix is project-driven (gas/hydro/motors as FY25 growth contributors).</div>
+  </div>
+</div>
+
+<!-- 04 VISION -->
+<h2 id="s04"><span class="num">04</span> Company vision</h2>
+<p class="section-note">Verbatim from filings, then the funded pillars that make it real.</p>
+
+<div class="card">
+  <div class="quote">“We power every possibility. We power the world.”
+    <span class="who">— TD Power Systems, Annual Report FY25, Corporate Overview (pp. 2–5). Together, these ideas form the foundation of TDPS' purpose and shape how the Company builds, scales, and adapts. Machines "do far more than generate electricity — they support the lifelines of economies," from data centres and oilfields to remote hydro plants and emerging industrial hubs, "built to serve where reliability is non-negotiable."</span>
+  </div>
+
+  <div class="grid-4">
+    <div class="tile" style="box-shadow:none; background:var(--surface-2);">
+      <div class="label"><span class="msr" style="font-size:16px; vertical-align:-2px; margin-right:4px;">target</span> Scale where it matters</div>
+      <div style="font-size:.84rem; color:var(--ink-2); font-weight:300; margin-top:6px">Develop <strong style="color:var(--chart-blue-deep)">40–45 MW</strong> class for US data-centre & gas surge — deliveries FY26, scale-up FY27+.</div>
+      <div style="margin-top:8px; font-size:.72rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-pill); padding:4px 10px; display:inline-block;">100 GW US spike by 2030</div>
+    </div>
+    <div class="tile" style="box-shadow:none; background:var(--surface-2);">
+      <div class="label"><span class="msr" style="font-size:16px; vertical-align:-2px; margin-right:4px;">biotech</span> Engineering depth</div>
+      <div style="font-size:.84rem; color:var(--ink-2); font-weight:300; margin-top:6px"><strong>Design & Engineering Centre in the UK</strong> — closer to key OEMs, localisation, advanced compliance.</div>
+      <div style="margin-top:8px; font-size:.72rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-pill); padding:4px 10px; display:inline-block;">Investing ahead of revenue</div>
+    </div>
+    <div class="tile" style="box-shadow:none; background:var(--surface-2);">
+      <div class="label"><span class="msr" style="font-size:16px; vertical-align:-2px; margin-right:4px;">handshake</span> Global partnerships</div>
+      <div style="font-size:.84rem; color:var(--ink-2); font-weight:300; margin-top:6px">Serve <strong>~45 OEMs</strong> — diversified across steam/gas/hydro/motors.</div>
+      <div style="margin-top:8px; font-size:.72rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-pill); padding:4px 10px; display:inline-block;">111 countries · 60 partners</div>
+    </div>
+    <div class="tile" style="box-shadow:none; background:var(--surface-2);">
+      <div class="label"><span class="msr" style="font-size:16px; vertical-align:-2px; margin-right:4px;">factory</span> Capacity readiness</div>
+      <div style="font-size:.84rem; color:var(--ink-2); font-weight:300; margin-top:6px">Third plant commissioned — ramp from <strong>Q4 FY26</strong>. Under-one-roof control.</div>
+      <div style="margin-top:8px; font-size:.72rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-pill); padding:4px 10px; display:inline-block;">FY26 ₹18B → FY27 ₹22B</div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px; background:linear-gradient(135deg, rgba(66,133,244,.06), rgba(155,114,203,.06)); border:1px solid rgba(66,133,244,.12); border-radius:var(--r-md); padding:14px; text-align:center; font-size:.92rem; font-weight:300; color:var(--ink-2);">
+    <span class="msr" style="color:var(--chart-blue-deep)">lightbulb</span> Vision in one line: TDPS makes <strong style="color:var(--ink)">uninterrupted power possible in impossible places</strong> — "powering every possibility" is the engineering promise; "powering the world" is the distribution promise.
+  </div>
+</div>
+
+<!-- 05 TRENDS -->
+<h2 id="s05"><span class="num">05</span> Key trends & big messages</h2>
+<p class="section-note">What AR FY25 and BSE filings say is moving the market — and what management repeats in every filing. Filings-only.</p>
+
+<div class="card">
+  <h3>Five trends the filings name — and the management line on each</h3>
+  <div class="sub">Each card is one filed trend + the big message underneath. Sources: AR FY25 MD letter + "Sector in Sync" + BSE Jan 29 2026 outlook.</div>
+
+  <div class="trend-tabs" role="tablist" aria-label="Key trends">
+    <button class="trend-tab" role="tab" id="tt1" aria-selected="true" aria-controls="tp" data-t="0"><span class="msr">trending_up</span>1 · Demand supercycle</button>
+    <button class="trend-tab" role="tab" id="tt2" aria-selected="false" aria-controls="tp" data-t="1"><span class="msr">energy</span>2 · Hybrid transition</button>
+    <button class="trend-tab" role="tab" id="tt3" aria-selected="false" aria-controls="tp" data-t="2"><span class="msr">public</span>3 · Export engine</button>
+    <button class="trend-tab" role="tab" id="tt4" aria-selected="false" aria-controls="tp" data-t="3"><span class="msr">engineering</span>4 · Capacity bet</button>
+    <button class="trend-tab" role="tab" id="tt5" aria-selected="false" aria-controls="tp" data-t="4"><span class="msr">warning</span>5 · Volatility</button>
+  </div>
+
+  <div class="trend-panel" id="tp" role="tabpanel" aria-live="polite">
+    <div class="tp-kicker" id="tpKicker"></div>
+    <h4 id="tpTitle"></h4>
+    <p class="tp-body" id="tpBody"></p>
+    <div><span class="tp-cta" id="tpCta"></span></div>
+    <div class="trend-nav">
+      <span class="tp-count" id="tpCount">1 / 5</span>
+      <span class="tp-btns">
+        <button class="tp-arrow" id="tpPrev" aria-label="Previous trend"><span class="msr">chevron_left</span></button>
+        <button class="tp-arrow" id="tpNext" aria-label="Next trend"><span class="msr">chevron_right</span></button>
+      </span>
+    </div>
+  </div>
+
+  <div style="margin-top:18px; background:linear-gradient(135deg, rgba(66,133,244,.06), rgba(155,114,203,.06)); border:1px solid rgba(66,133,244,.12); border-radius:var(--r-md); padding:16px;">
+    <div style="font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3); font-weight:500; margin-bottom:10px;">Big messages — what management repeats in every filing</div>
+    <div class="msg-3">
+      <div style="background:var(--surface); border-radius:12px; padding:12px; border:1px solid var(--line);">
+        <div style="font-size:.78rem; font-weight:500; color:var(--chart-blue-deep)"><span class="msr" style="font-size:16px; vertical-align:-2px; margin-right:4px;">flag</span> Growth</div>
+        <div style="font-size:.86rem; margin-top:4px; font-weight:300;">"We step into FY26 with conviction — healthy order book, solid balance sheet. <strong style="font-weight:500">We guide ₹18B FY26 → ₹22B FY27.</strong>"</div>
+        <div style="margin-top:6px; font-size:.72rem; color:var(--ink-3);">— MD letter + BSE outlook</div>
+      </div>
+      <div style="background:var(--surface); border-radius:12px; padding:12px; border:1px solid var(--line);">
+        <div style="font-size:.78rem; font-weight:500; color:var(--chart-blue-deep)"><span class="msr" style="font-size:16px; vertical-align:-2px; margin-right:4px;">hub</span> Positioning</div>
+        <div style="font-size:.86rem; margin-top:4px; font-weight:300;">"Export growth will drive FY27 & FY28. Diversified range, <strong style="font-weight:500">~45 OEMs</strong> across all segments."</div>
+        <div style="margin-top:6px; font-size:.72rem; color:var(--ink-3);">— BSE Jan 29 2026</div>
+      </div>
+      <div style="background:var(--surface); border-radius:12px; padding:12px; border:1px solid var(--line);">
+        <div style="font-size:.78rem; font-weight:500; color:var(--chart-blue-deep)"><span class="msr" style="font-size:16px; vertical-align:-2px; margin-right:4px;">build</span> Capability</div>
+        <div style="font-size:.86rem; margin-top:4px; font-weight:300;">"Third plant commissioned, ramp from <strong style="font-weight:500">Q4 FY26</strong>. UK Design Centre for innovation."</div>
+        <div style="margin-top:6px; font-size:.72rem; color:var(--ink-3);">— AR FY25</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAKEAWAY -->
+<div class="hero-takeaway" id="s09">
+  <div class="spark" aria-hidden="true">
+    <svg viewBox="0 0 28 28" width="26" height="26">
+      <path fill="url(#gsweep)" d="M14 0 C15.2 8.4 18.6 12.8 28 14 C18.6 15.2 15.2 19.6 14 28 C12.8 19.6 9.4 15.2 0 14 C9.4 12.8 12.8 8.4 14 0 Z"/>
+    </svg>
+  </div>
+  <div class="label">One-line takeaway</div>
+  <div class="line">TDPS doesn't sell generators — it sells <strong>certainty of power where failure is not an option</strong>, and the filings say the next chapter is <strong>US data-centre gas power at 40–45 MW + hydro stability + export OEM depth</strong> — engineered in Bengaluru, designed in the UK, installed in 111 countries.</div>
+</div>
+
+<footer>
+  <p><strong>Method.</strong> Filings-only portrait. What-company-does + products + vision + trends sourced from TD Power Systems AR FY25 (Scribd/BSE PDF), BSE filings 2026-01-29 (Business Outlook, guidance ₹18B→₹22B) and 2026-05-20 (Q4), <code>tdps.co.in/generators</code>. TTM figures from <code>screener.in/company/TDPOWERSYS/consolidated</code> (TTM sales ₹2,124 Cr, FY26 ₹1,856 Cr, OPM 18%, ROCE 34%). Peer revenues from filings: GE Vernova 10-K 2025 ($38.1B), Siemens Energy AR24 (€34.465B), WEG 2024 NOR R$37.987B, BHEL FY25 supplemental (₹28,339 Cr), Cummins group filing.</p>
+  <p><strong>Surface.</strong> Gemini-style skin (UI-Design/tokens.css v0.5, inlined): top-center orb field with 48s blue→aqua→green→gold cycle (static under prefers-reduced-motion; add <code>data-aurora="flat"</code> to disable blur). White surfaces, neutral gray structure, Outfit type. Hero gradient appears exactly three times — sparkle mark, headline, hero-tile ring — and never as status. Chart encoding: blue <code>#4285F4</code> = TDPS (the subject), gray = context.</p>
+  <p>Rendered 2026-09-20 · Company-Briefs/2026-09/TD-Power-Systems_September_20_2026.html · Gemini report surface (Phase 4) · every figure traced to the filing line; peer % is illustrative of one pot, not a TAM.</p>
+</footer>
+
+</div>
+
+<!-- Gradient control panel -->
+<button class="gp-fab" id="gpFab" aria-expanded="false" aria-controls="gpPanel" title="Gradient controls" aria-label="Open gradient controls">
+  <span class="msr" aria-hidden="true">gradient</span>
+</button>
+<section class="gp-panel" id="gpPanel" hidden aria-label="Gradient field controls">
+  <h4>Orb color <span style="text-transform:none; letter-spacing:0;">(stops cycle)</span></h4>
+  <div class="gp-swatches" role="group" aria-label="Theme variant">
+    <button class="gp-sw" data-theme-pick="aurora-blue" aria-pressed="true" title="Aurora blue" style="background:radial-gradient(circle at 40% 40%, #2f7cf0, #94c0fa);"></button>
+    <button class="gp-sw" data-theme-pick="green-white" aria-pressed="false" title="Aqua / cyan" style="background:radial-gradient(circle at 40% 40%, #268ce4, #8acdf2);"></button>
+    <button class="gp-sw" data-theme-pick="green" aria-pressed="false" title="Green" style="background:radial-gradient(circle at 40% 40%, #1a9452, #94d2aa);"></button>
+    <button class="gp-sw" data-theme-pick="sunrise" aria-pressed="false" title="Sunrise gold" style="background:radial-gradient(circle at 40% 40%, #f8ae10, #fce08a);"></button>
+    <button class="gp-sw" data-theme-pick="dusk" aria-pressed="false" title="Dusk indigo" style="background:radial-gradient(circle at 40% 40%, #4c46de, #b8aaee);"></button>
+    <button class="gp-sw t-none" data-theme-pick="none" aria-pressed="false" title="No gradient — plain surface"><span class="msr" aria-hidden="true">format_color_reset</span></button>
+  </div>
+  <h4>Dynamics</h4>
+  <div class="gp-row"><span>Auto-cycle <b id="cycState">on</b></span><button class="gp-switch" id="cycToggle" aria-pressed="true" aria-label="Toggle 48-second color cycle"></button></div>
+  <div class="gp-row"><span>Soft blur <b id="blurState">on</b></span><button class="gp-switch" id="blurToggle" aria-pressed="true" aria-label="Toggle background blur"></button></div>
+  <h4>Intensity</h4>
+  <div class="gp-row"><span>Field opacity <b id="opVal">100%</b></span></div>
+  <input type="range" id="opRange" min="0" max="100" value="100" aria-label="Gradient field opacity">
+  <div class="gp-row"><span>Orb size <b id="ofVal">68%</b></span></div>
+  <input type="range" id="ofRange" min="20" max="100" value="68" aria-label="Orb falloff size">
+  <button class="gp-reset" id="gpReset"><span class="msr" style="font-size:15px; vertical-align:-3px; margin-right:4px;">restart_alt</span>Reset to sampled defaults</button>
+</section>
+
+<script>
+(function () {
+  const root = document.documentElement;
+  const fab = document.getElementById('gpFab');
+  const panel = document.getElementById('gpPanel');
+  const swatches = panel.querySelectorAll('[data-theme-pick]');
+  const cycToggle = document.getElementById('cycToggle');
+  const cycState = document.getElementById('cycState');
+  const blurToggle = document.getElementById('blurToggle');
+  const blurState = document.getElementById('blurState');
+  const opRange = document.getElementById('opRange');
+  const opVal = document.getElementById('opVal');
+  const ofRange = document.getElementById('ofRange');
+  const ofVal = document.getElementById('ofVal');
+  function setPressed(btn, on) { btn.setAttribute('aria-pressed', on ? 'true' : 'false'); }
+  function applyTheme(name) {
+    if (name === 'aurora-blue') root.removeAttribute('data-t');
+    else root.setAttribute('data-t', name);
+    swatches.forEach(b => setPressed(b, b.dataset.themePick === name));
+  }
+  function applyCycle(on) {
+    if (on) root.setAttribute('data-anim', 'cycle');
+    else root.removeAttribute('data-anim');
+    setPressed(cycToggle, on);
+    cycState.textContent = on ? 'on' : 'off';
+  }
+  function applyBlur(on) {
+    root.style.setProperty('--blur', on ? '40px' : '0px');
+    setPressed(blurToggle, on);
+    blurState.textContent = on ? 'on' : 'off';
+  }
+  fab.addEventListener('click', () => {
+    const open = panel.hidden;
+    panel.hidden = !open;
+    fab.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !panel.hidden) { panel.hidden = true; fab.setAttribute('aria-expanded', 'false'); fab.focus(); }
+  });
+  swatches.forEach(b => b.addEventListener('click', () => {
+    applyTheme(b.dataset.themePick);
+    if (b.dataset.themePick !== 'none') applyCycle(false);
+  }));
+  cycToggle.addEventListener('click', () => applyCycle(cycToggle.getAttribute('aria-pressed') !== 'true'));
+  blurToggle.addEventListener('click', () => applyBlur(blurToggle.getAttribute('aria-pressed') !== 'true'));
+  opRange.addEventListener('input', () => {
+    root.style.setProperty('--field-op', (opRange.value / 100).toFixed(2));
+    opVal.textContent = opRange.value + '%';
+  });
+  ofRange.addEventListener('input', () => {
+    root.style.setProperty('--of', ofRange.value + '%');
+    ofVal.textContent = ofRange.value + '%';
+  });
+  document.getElementById('gpReset').addEventListener('click', () => {
+    applyTheme('aurora-blue');
+    applyCycle(true);
+    applyBlur(true);
+    opRange.value = 100; root.style.setProperty('--field-op', '1'); opVal.textContent = '100%';
+    ofRange.value = 68;  root.style.setProperty('--of', '68%');     ofVal.textContent = '68%';
+  });
+})();
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (matchMedia('(max-width: 640px)').matches && 'ontouchstart' in window) return;
+  let target = window.scrollY, cur = target, rafId = null;
+  const clamp = v => Math.max(0, Math.min(v, document.documentElement.scrollHeight - window.innerHeight));
+  function tick() {
+    const diff = target - cur;
+    if (Math.abs(diff) < 0.4) { cur = target; window.scrollTo(0, cur); rafId = null; return; }
+    cur += diff * 0.085;
+    window.scrollTo(0, cur);
+    rafId = requestAnimationFrame(tick);
+  }
+  window.addEventListener('wheel', e => {
+    if (e.ctrlKey) return;
+    let el = e.target;
+    while (el && el !== document.documentElement) {
+      if (el.scrollHeight > el.clientHeight && getComputedStyle(el).overflowY !== 'visible') {
+        const atTop = el.scrollTop <= 0, atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
+        if (!(atTop && e.deltaY < 0 || atBottom && e.deltaY > 0)) return;
+      }
+      el = el.parentElement;
+    }
+    target = clamp(target + e.deltaY);
+    if (rafId === null) { document.documentElement.classList.add('has-smooth'); rafId = requestAnimationFrame(tick); }
+    e.preventDefault();
+  }, { passive: false });
+  window.addEventListener('scroll', () => { if (rafId === null) target = cur = window.scrollY; }, { passive: true });
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
+    setTimeout(() => { target = cur = window.scrollY; if (rafId) { cancelAnimationFrame(rafId); rafId=null; } document.documentElement.classList.remove('has-smooth'); }, 600);
+  }));
+})();
+/* Where money comes from — segmented proxy (ported from new05.html, Gemini tokens) */
+(function () {
+  const segEl = document.getElementById('seg');
+  const donutEl = document.getElementById('donut');
+  if (!segEl || !donutEl) return;
+  const views = {
+    q1: { label: 'Q1 FY27 inflow', mid: ['93%', 'export'], items: [{ name: 'Export & deemed', val: 93.1, c: 'var(--chart-blue)', x: '₹684 Cr' }, { name: 'Domestic', val: 6.9, c: 'var(--chart-context)', x: '₹51 Cr' }], note: 'Q1 FY27 ₹734 Cr total — 93% export pivot (accelerating vs FY25 68%).' },
+    fy26: { label: 'FY26 inflow', mid: ['79%', 'export'], items: [{ name: 'Export & deemed', val: 79, c: 'var(--chart-blue)', x: '≈₹1,730 Cr' }, { name: 'Domestic', val: 21, c: 'var(--chart-context)', x: '≈₹510 Cr' }], note: 'FY26 inflow ₹2,238 Cr (full year).' },
+    book: { label: 'Order book', mid: ['69.5%', 'export'], items: [{ name: 'Exports', val: 69.5, c: 'var(--chart-blue)', x: '₹1,533 Cr' }, { name: 'Domestic', val: 17.9, c: 'var(--chart-context)', x: '₹395 Cr' }, { name: 'Railway', val: 9.6, c: 'var(--ink-3)', x: '₹211 Cr' }, { name: 'Remainder', val: 3.0, c: 'var(--surface-3)', x: '' }], note: 'Book ₹2,208 Cr at 30 Jun 2026. Railway may overlap with reported export/domestic.' },
+    base: { label: 'Installed base', mid: ['8,375', 'units'], items: [{ name: 'Asia', val: 5522, c: 'var(--chart-context)', x: '5,522' }, { name: 'Europe', val: 1556, c: 'var(--chart-blue)', x: '1,556' }, { name: 'N. America', val: 674, c: 'var(--ink-3)', x: '674' }, { name: 'Rest', val: 623, c: 'var(--surface-3)', x: '623' }], note: 'Cumulative since inception — current flow far more US-weighted.' }
+  };
+  function showView(k) {
+    const v = views[k];
+    const tot = v.items.reduce((a, b) => a + b.val, 0);
+    let a = 0;
+    const segs = v.items.map(it => {
+      const p = it.val / tot * 100, len = Math.max(p - 0.7, 0);
+      const s = '<circle r="15.9155" cx="21" cy="21" fill="none" stroke-width="6" style="stroke:' + it.c + '" stroke-dasharray="' + len + ' ' + (100 - len) + '" stroke-dashoffset="' + (-a) + '"><title>' + it.name + ': ' + p.toFixed(1) + '%</title></circle>';
+      a += p;
+      return s;
+    }).join('');
+    donutEl.innerHTML = '<svg viewBox="0 0 42 42"><circle r="15.9155" cx="21" cy="21" fill="none" stroke-width="6" style="stroke:var(--surface-2)"/><g transform="rotate(-90 21 21)">' + segs + '</g></svg><div class="mid"><div><b>' + v.mid[0] + '</b><span>' + v.mid[1] + '</span></div></div>';
+    document.getElementById('leg').innerHTML = v.items.map(it => '<div class="leg"><span class="dot" style="background:' + it.c + '"></span><span style="flex:1">' + it.name + '</span><span style="font-weight:500; color:var(--ink)">' + (it.val / tot * 100).toFixed(1) + '%</span><span style="color:var(--ink-3); font-size:.78rem">' + it.x + '</span></div>').join('');
+    document.getElementById('donutnote').textContent = v.note;
+    segEl.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.k === k ? 'true' : 'false'));
+  }
+  segEl.innerHTML = Object.keys(views).map(k => '<button data-k="' + k + '">' + views[k].label + '</button>').join('');
+  segEl.querySelectorAll('button').forEach(b => b.addEventListener('click', () => showView(b.dataset.k)));
+  showView('q1');
+  const c = document.getElementById('groupedMini');
+  if (c) {
+    const W = 300, H = 90, L = 36, B = 18, T = 8, max = 750;
+    const y = v => H - B - (v / max) * (H - B - T);
+    const data = [{ k: 'Export', a: 257, b: 684 }, { k: 'Domestic', a: 135, b: 51 }];
+    let s = '';
+    const gw = (W - L - 8) / data.length;
+    data.forEach((d, i) => {
+      const x0 = L + i * gw + gw * 0.16, bw = gw * 0.28;
+      s += '<rect x="' + x0 + '" y="' + y(d.a) + '" width="' + bw + '" height="' + (H - B - y(d.a)) + '" rx="3" style="fill:var(--chart-context)" opacity="0.75"/><rect x="' + (x0 + bw + 6) + '" y="' + y(d.b) + '" width="' + bw + '" height="' + (H - B - y(d.b)) + '" rx="3" style="fill:var(--chart-blue)"/>';
+      s += '<text x="' + (x0 + bw / 2) + '" y="' + (y(d.a) - 4) + '" text-anchor="middle" font-size="9" style="fill:var(--ink)" font-weight="600">₹' + d.a + '</text><text x="' + (x0 + bw * 1.5 + 6) + '" y="' + (y(d.b) - 4) + '" text-anchor="middle" font-size="9" style="fill:var(--ink)" font-weight="600">₹' + d.b + '</text>';
+      s += '<text x="' + (L + i * gw + gw / 2) + '" y="' + (H - 4) + '" text-anchor="middle" font-size="9" style="fill:var(--ink-3)">' + d.k + '</text>';
+    });
+    c.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%; height:auto">' + s + '</svg>';
+  }
+})();
+/* Key trends — tabbed interactive */
+(function () {
+  const tabs = Array.from(document.querySelectorAll('.trend-tab'));
+  if (!tabs.length) return;
+  const kicker = document.getElementById('tpKicker'), title = document.getElementById('tpTitle'),
+        body = document.getElementById('tpBody'), cta = document.getElementById('tpCta'),
+        count = document.getElementById('tpCount');
+  const trends = [
+    { kick: 'Trend 1 · demand supercycle', icon: 'trending_up', h: 'Data centre & gas turbine surge', b: 'Global generator market <b>$51.99B (2025) → $72.66B (2029)</b>. AI farms + fracking + Ukraine rebuild. Data centre alone → <b>100 GW</b> US spike by 2030.', c: '→ TDPS: 40–45 MW generators, deliveries FY26.', cls: '' },
+    { kick: 'Trend 2 · hybrid transition', icon: 'energy', h: 'Energy transition = "and", not "or"', b: 'Not wind <em>or</em> gas — wind <em>and</em> gas <em>and</em> hydro. Grids need dispatchable + renewable. TDPS portfolio hits all three.', c: '→ Hydro stable + wind PMG/DFIG + gas bridge', cls: 'purple' },
+    { kick: 'Trend 3 · export supercycle', icon: 'public', h: 'Export is the growth engine', b: 'Highest-ever inflow <b>₹14,783M (+41% YoY)</b> in FY25 — <b>68%</b> exports/deemed exports. "Will drive FY27 & FY28."', c: '→ 45 OEMs · healthy order book into FY26', cls: 'amber' },
+    { kick: 'Trend 4 · capacity bet', icon: 'engineering', h: 'Engineering & capacity ahead of revenue', b: 'UK Design Centre + third plant (ramp <b>Q4 FY26</b>) + motors. FY25 EBITDA <b>₹2,544M (+38.6%)</b>, PAT <b>₹1,746M (+47.5%)</b> on mix + leverage.', c: '→ Capex precedes margin — watch Q4 ramp', cls: 'amber' },
+    { kick: 'Trend 5 · volatility demands adaptability', icon: 'warning', h: 'Volatility demands adaptability', b: 'Global growth easing to <b>2.8% (2025)</b> vs <b>3.3% (2024)</b>; demand uneven — India offers scale/stability/opportunity. TDPS line: "Solutions that function across complex environments and adapt to changing needs, without pause or compromise."', c: '→ Custom engineering as risk hedge', cls: 'amber' }
+  ];
+  let cur = 0;
+  function show(i) {
+    cur = (i + trends.length) % trends.length;
+    const t = trends[cur];
+    kicker.innerHTML = '<span class="msr">' + t.icon + '</span>' + t.kick;
+    title.textContent = t.h;
+    body.innerHTML = t.b;
+    cta.textContent = t.c;
+    cta.className = 'tp-cta' + (t.cls ? ' ' + t.cls : '');
+    count.textContent = (cur + 1) + ' / ' + trends.length;
+    tabs.forEach((b, j) => b.setAttribute('aria-selected', j === cur ? 'true' : 'false'));
+  }
+  tabs.forEach((b, j) => b.addEventListener('click', () => show(j)));
+  tabs.forEach((b, j) => b.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); show(j + 1); tabs[(j + 1 + tabs.length) % tabs.length].focus(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); show(j - 1); tabs[(j - 1 + tabs.length) % tabs.length].focus(); }
+  }));
+  document.getElementById('tpPrev').addEventListener('click', () => show(cur - 1));
+  document.getElementById('tpNext').addEventListener('click', () => show(cur + 1));
+  show(0);
+})();
+</script>
+</body>
+</html>
