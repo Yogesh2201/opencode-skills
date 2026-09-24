@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITC — Equity Research Dashboard — UI Design (Purple)</title>
+<style>
+  :root{
+    --bg:#f8f9fb; --surface:#ffffff; --surface-2:#f1f5f9; --border:#e2e8f0;
+    --border-strong:rgba(105,45,154,0.18); --border-blue:rgba(11,95,192,0.18);
+    --text:#1F1B2E; --muted:#64748b; --faint:#94a3b8;
+    --blue:#0B5FC0; --blue-e:#0C7CFC; --blue-soft:rgba(11,95,192,0.06);
+    --purple:#692D9A; --purple-2:#4A1F7A; --purple-soft:rgba(105,45,154,0.07); --purple-border:rgba(105,45,154,0.32); --purple-glow:#D667F9; --purple-core:#AA4DE6;
+    --ink:#1F1B2E; --black:#000000; --frost:#F4EDF6; --radius:14px;
+  }
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;background:linear-gradient(180deg, #f8f9fb 0%, #f1f3f8 100%);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--purple);text-decoration:none;border-bottom:1px solid var(--purple-border)}
+  .topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;padding:10px 18px}
+  .topbar b{font-size:13px;letter-spacing:-0.01em;color:var(--purple)} .topbar .spacer{flex:1}
+  .topbar nav{display:flex;gap:6px;flex-wrap:wrap}
+  .topbar a{font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;border:1px solid transparent;color:var(--muted)}
+  .topbar a.active{background:var(--purple-soft);border-color:var(--purple-border);color:var(--purple)}
+  .btn{appearance:none;border:1px solid var(--purple);background:var(--purple);color:#fff;font-weight:700;font-size:12px;padding:7px 12px;border-radius:999px;cursor:pointer}
+  .btn.ghost{background:var(--surface);color:var(--purple);border-color:var(--purple-border)}
+  .wrap{max-width:1120px;margin:0 auto;padding:22px 18px 56px;display:grid;grid-template-columns:280px 1fr;gap:18px}
+  @media(max-width:980px){.wrap{grid-template-columns:1fr} .sidenav{position:static}}
+  .sidenav{position:sticky;top:64px;align-self:start;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;box-shadow:0 1px 3px rgba(15,23,42,0.04)}
+  .sidenav h4{margin:0 0 8px;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted)}
+  .sidenav a{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;font-size:13px;font-weight:600;color:var(--muted);border:1px solid transparent}
+  .sidenav a.active{background:var(--purple-soft);border-color:var(--purple-border);color:var(--purple)}
+  .sidenav a .dot{width:7px;height:7px;border-radius:50%;background:var(--border)}
+  .sidenav a.active .dot{background:var(--purple-glow);box-shadow:0 0 0 4px rgba(105,45,154,0.12)}
+  .kicker{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+  .pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:5px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted)}
+  .pill.purple{border-color:var(--purple-border);background:var(--purple-soft);color:var(--purple)}
+  .pill.blue{border-color:var(--border-blue);background:var(--blue-soft);color:var(--blue)}
+  .pill.dot::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--purple-glow);box-shadow:0 0 0 5px rgba(105,45,154,0.12)}
+  h1{margin:0 0 8px;font-size:clamp(24px,4vw,32px);line-height:1.05;letter-spacing:-0.02em;font-weight:850;color:var(--purple);border-bottom:2px solid var(--purple-border);padding-bottom:10px}
+  .subtitle{color:var(--muted);font-size:13.5px;line-height:1.6;border-left:3px solid var(--purple);padding:8px 12px;margin:12px 0 16px;background:var(--purple-soft);border-radius:0 8px 8px 0}
+  .subtitle strong{color:var(--text)}
+  .section{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 16px 14px;margin:14px 0;box-shadow:0 1px 2px rgba(15,23,42,0.04)}
+  .section h2{margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:-0.01em;color:var(--blue);border-bottom:1px solid rgba(11,95,192,0.18);padding-bottom:6px;display:flex;align-items:center;gap:8px}
+  .section h2.purple{color:var(--purple);border-bottom-color:var(--border-strong)} .section h2 .icon{width:22px;height:22px;display:grid;place-items:center;border-radius:6px;background:var(--blue-soft);border:1px solid var(--border-blue);color:var(--blue);font-size:12px;flex-shrink:0} .section h2.purple .icon{background:var(--purple-soft);border-color:var(--purple-border);color:var(--purple)}
+  table{width:100%;border-collapse:collapse;margin:10px 0 6px;font-size:12.8px}
+  th{color:var(--blue);border-bottom:2px solid var(--blue);padding:8px 8px;text-align:left;background:var(--blue-soft);font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;font-weight:800}
+  th.purple{color:var(--purple);border-bottom-color:var(--purple);background:var(--purple-soft)}
+  td{padding:8px 8px;border-bottom:1px solid rgba(105,45,154,0.10);color:var(--text);vertical-align:top} td:first-child{font-weight:600}
+  code{color:var(--purple);background:var(--purple-soft);padding:1px 5px;border-radius:4px;font-family:"SF Mono", monospace;font-size:0.88em;font-weight:700}
+  code.blue{color:var(--blue);background:var(--blue-soft)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .kpi{display:flex;flex-direction:column;gap:4px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:12px}
+  .kpi .label{font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .kpi .value{font-size:18px;font-weight:850;letter-spacing:-0.02em;color:var(--text)}
+  .kpi .value span{color:var(--purple)}
+  .kpi .value .blue{color:var(--blue)}
+  .kpi .note{font-size:12px;color:var(--muted)}
+  .quote{color:var(--purple-2);font-style:italic;border-left:3px solid var(--purple);padding:8px 12px;margin:10px 0;background:var(--purple-soft);border-radius:0 8px 8px 0;font-size:13px}
+  .warn{border-left-color:#B91C1C;background:rgba(185,28,28,0.06)}
+  .hero{margin:16px 0;background:linear-gradient(90deg, rgba(105,45,154,0.09), transparent), var(--surface);border:1px solid var(--purple-border);border-left:4px solid var(--purple);border-radius:12px;padding:16px 18px;box-shadow:0 4px 16px rgba(105,45,154,0.10)}
+  .hero-k{font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--purple);margin-bottom:6px;display:flex;align-items:center;gap:7px}
+  .hero-k::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--purple);box-shadow:0 0 0 5px rgba(105,45,154,0.14)}
+  .hero p{margin:0;font-size:15px;font-weight:700;line-height:1.45;color:var(--purple-2);font-style:italic}
+  .hero .sub{margin-top:6px;font-size:12.5px;color:var(--muted);font-style:normal}
+  .state{border:1px dashed var(--border);border-radius:12px;padding:12px;background:var(--surface-2);font-size:13px;color:var(--muted);display:none}
+  .state.show{display:block}
+  .tabs{display:flex;gap:6px;margin:10px 0;flex-wrap:wrap}
+  .tab{padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);font-size:12px;font-weight:700;color:var(--muted);cursor:pointer}
+  .tab.active{background:var(--purple);color:#fff;border-color:var(--purple)}
+  pre{background:#14141C;color:#E9E2EB;border-radius:8px;padding:12px;overflow:auto;font-size:12px;line-height:1.5;border:1px solid rgba(244,237,246,0.08)}
+  pre code{color:#E9E2EB;background:none;padding:0;font-weight:400}
+  .foot{margin-top:18px;padding-top:12px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;color:var(--faint);font-size:12px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <b style="color:var(--purple)">ITC</b><span style="color:var(--muted);font-size:12px">NSE: ITC · ₹267 · Sep 10, 2026</span>
+  <span class="spacer" style="flex:1"></span>
+  <nav>
+    <a href="#overview" class="active">Overview</a>
+    <a href="#financials">Financials</a>
+    <a href="#valuation">Valuation</a>
+    <a href="#risks">Red Flags</a>
+    <a href="#verdict">Verdict</a>
+  </nav>
+  <button class="btn" onclick="document.getElementById('verdict').scrollIntoView({behavior:'smooth'})">Buy Zone ₹262</button>
+</div>
+
+<div class="wrap" style="max-width:1120px;margin:0 auto;padding:22px 18px 56px;display:grid;grid-template-columns:280px 1fr;gap:18px">
+
+  <aside class="sidenav">
+    <h4>On this page</h4>
+    <a href="#overview" class="active"><span class="dot"></span> 1. Company Overview</a>
+    <a href="#strengths"><span class="dot"></span> 2. Strengths</a>
+    <a href="#financials"><span class="dot"></span> 3. Financial Snapshot</a>
+    <a href="#valuation"><span class="dot"></span> 4. Multiples · 5. DCF</a>
+    <a href="#risks"><span class="dot"></span> 6. Red Flags</a>
+    <a href="#verdict"><span class="dot"></span> 7. Verdict</a>
+    <hr style="border:none;border-top:1px solid var(--border);margin:12px 0">
+    <h4>Key actions</h4>
+    <button class="btn" style="width:100%" onclick="alert('Added to watchlist — Buy Zone ₹262 (1.9% below spot)')">Add to watchlist</button>
+    <button class="btn ghost" style="width:100%;margin-top:8px" onclick="document.getElementById('state-empty').classList.toggle('show')">Toggle empty state</button>
+    <p style="font-size:11px;color:var(--muted);margin-top:10px">Source: <code>Stock/ITC_September_10_2026.md</code> · Template: <code class="blue">purple/YK_Template_04</code> · ui-design operate · No skill changed</p>
+  </aside>
+
+  <main>
+
+    <div class="kicker">
+      <span class="pill purple">Equity Research — Dashboard</span>
+      <span class="pill blue">Purple — no mixing</span>
+      <span class="pill dot">Purple hero · Blue structure</span>
+    </div>
+
+    <h1>ITC LIMITED — Fortress Cash Compounder</h1>
+    <div class="subtitle">
+      <strong>India's legislated cigarette cash-compounder funding FMCG/Paper/Agri</strong> — <code>₹89,258 Cr</code> gross revenue fortress where <code>~55%</code> EBIT-margin tobacco (<code>~80%</code> of PBIT) funds all else. At <code>₹267</code> the debate: <code>Feb 1, 2026</code> <code>+50%</code> cigarette tax reset — 12–18 month reset or structural de-rating of <code>₹22,246 Cr</code> cigarette EBIT?
+    </div>
+
+    <div class="grid2">
+      <div class="kpi"><div class="label">Live Price</div><div class="value">₹267 <span style="font-size:12px;background:rgba(185,28,28,0.08);color:#B91C1C;padding:2px 6px;border-radius:999px">-36% from ₹427 high</span></div><div class="note">52W Low ₹256 · -1 SD to 10Y P/E</div></div>
+      <div class="kpi"><div class="label">Blended Intrinsic</div><div class="value"><span>₹328</span> · +22.8%</div><div class="note">DCF ₹313 + Peer 16x ₹343 · Buy Zone ₹262</div></div>
+      <div class="kpi"><div class="label">ROCE / ROE</div><div class="value">38.9% / 29.3%</div><div class="note">3Y ROE avg 35.2% · Top 4% NSE</div></div>
+      <div class="kpi"><div class="label">Dividend Yield</div><div class="value"><span>5.4%</span></div><div class="note">Top 2% NSE · DPS ₹14.50 · Payout 74.5%</div></div>
+    </div>
+
+    <div id="overview" class="section">
+      <h2 class="purple"><span class="icon">1</span> Company Overview — two engines</h2>
+      <p><strong>One monopoly wearing a conglomerate costume.</strong> Behind 4 reported segments sits a single engine — the <code>~80%</code> of profit from cigarettes — that monetises through per-stick excise pass-through.</p>
+      <table>
+        <tr><th class="purple">Vertical</th><th class="purple">Nature</th><th class="purple">FY26 Revenue</th><th class="purple">Share</th></tr>
+        <tr><td>🚬 Cigarettes</td><td>Legally-entrenched <code>80%</code> profit pool; <code>54.8%</code> EBIT margin</td><td><code>₹40,601 Cr</code></td><td><code>44.9%</code></td></tr>
+        <tr><td>🍪 FMCG — Others</td><td>Aashirvaad/Sunfeast/Bingo + Infotech <code>₹4,835 Cr</code> at <code>18.5%</code> EBITDA</td><td><code>₹24,322 Cr</code></td><td><code>26.9%</code></td></tr>
+        <tr><td>📄 Paperboards</td><td>#1 value-added paperboard; captive packaging</td><td><code>₹8,766 Cr</code></td><td><code>9.7%</code></td></tr>
+        <tr><td>🌾 Agri</td><td>Leaf/wheat/spices; nicotine plant <code>+60%</code> 3Y</td><td><code>₹20,787 Cr</code></td><td><code>23.0%</code></td></tr>
+      </table>
+      <div class="quote"><strong>Strategic Position:</strong> <code>₹3.35T</code> mcap, <code>₹89,258 Cr</code> revenue, near-zero-debt compounder at <code>38.9%</code> ROCE — debate is whether <code>Feb 1, 2026</code> tax reset is 12–18 month reset or structural de-rating.</div>
+    </div>
+
+    <div id="strengths" class="section">
+      <h2><span class="icon">2</span> Key Competitive Strengths — durability ranked</h2>
+      <table>
+        <tr><th>Strength</th><th>Details</th></tr>
+        <tr><td>🛡️ Regulatory Tollbooth</td><td><code>~80%</code> of PBIT; <code>+7.2%</code> PBIT in Q4 even as excise <code>₹1,611 Cr → ₹5,997 Cr</code> — only <code>50-55%</code> of hike passed</td></tr>
+        <tr><td>🌐 Distribution Moat</td><td><code>~7M</code> touchpoints + <code>₹1,500 Cr</code> ARR digital-first (<code>+60% YoY</code>); FMCG <code>+15%</code> Q4</td></tr>
+        <tr><td>💰 Cash Conversion</td><td>OCF <code>₹18,464 Cr</code> / PAT <code>₹21,018 Cr</code> (<code>88%</code>) → FCF <code>~₹16,281 Cr</code> (<code>4.9%</code> yield)</td></tr>
+        <tr><td>🏦 Balance-Sheet Fortress</td><td>Net cash <code>~₹26,588 Cr</code>, D/E <code>0.03x</code>, Current <code>3.04x</code>, Interest <code>247.7x</code></td></tr>
+      </table>
+    </div>
+
+    <div id="financials" class="section">
+      <h2><span class="icon">3</span> Financial Snapshot & Quality Read</h2>
+      <div class="tabs"><button class="tab active">Snapshot</button><button class="tab" onclick="document.getElementById('state-loading').classList.toggle('show')">Loading</button><button class="tab" onclick="document.getElementById('state-error').classList.toggle('show')">Error</button></div>
+      <div id="state-loading" class="state">Loading financials… <span style="display:inline-block;width:12px;height:12px;border:2px solid var(--border);border-top-color:var(--purple);border-radius:50%;animation:spin 0.8s linear infinite;vertical-align:middle"></span></div>
+      <div id="state-error" class="state" style="border-color:rgba(185,28,28,0.22);background:rgba(185,28,28,0.06);color:#7f1d1d">Failed to load live price — showing Sep 8 close <code>₹267</code> (cached). <a href="#" onclick="document.getElementById('state-error').classList.remove('show');return false">Retry</a></div>
+      <table>
+        <tr><th>Metric</th><th>TTM Value</th><th>% of MCap</th><th>Interpretation</th></tr>
+        <tr><td><strong>Market Cap</strong></td><td><code>₹3,34,796 Cr</code></td><td><code>100.0%</code></td><td>Down <code>~36%</code> from <code>₹427</code>; near <code>₹256</code> low</td></tr>
+        <tr><td><strong>Revenue (Gross FY26)</strong></td><td><code>₹89,258 Cr</code></td><td><code>26.7%</code></td><td><code>3.75x</code> P/S — cheap vs FMCG <code>~6-7x</code></td></tr>
+        <tr><td><strong>Net Profit</strong></td><td><code>₹21,018 Cr</code></td><td><code>6.3%</code></td><td><code>6.3%</code> Earnings Yield — <code>16.9x</code> P/E</td></tr>
+        <tr><td><strong>FCF</strong></td><td><code>~₹16,281 Cr</code></td><td><code>4.9%</code></td><td>Dividend <code>₹18,271 Cr</code> &gt; FCF (<code>112%</code> payout)</td></tr>
+      </table>
+      <div id="state-empty" class="state">No additional financial rows — this is the complete TTM snapshot.</div>
+      <div class="quote warn"><strong>⚠️ BALANCE-SHEET WARNING</strong> — Growth NOT the problem (<code>+10.1%</code> YoY). Warning is earnings quality through regulatory reset. Reported Gross Revenue inflated by <code>₹5,997 Cr</code> excise in Q4 (<code>vs ₹1,611 Cr</code> YoY) after GST <code>28% → 40%</code> — net revenue fell <code>-14.4%</code> in Q1 FY27. Inventories <code>₹2,985 Cr</code> up, short-term borrowings <code>23x</code> to <code>₹2,126 Cr</code> to bridge <code>₹18,168 Cr</code> dividend. BUT: ROCE <code>38.9%</code>/ROE <code>29.3%</code> — fortress intact. Watch Q2 FY27 volume + FMCG margin &gt;<code>10.5%</code>.</div>
+    </div>
+
+    <div id="valuation" class="section">
+      <h2><span class="icon">4</span> Valuation Multiples</h2>
+      <table>
+        <tr><th>Metric</th><th>Value</th><th>Benchmark</th><th>Read</th></tr>
+        <tr><td><strong>Trailing P/E</strong></td><td><code>16.9x</code></td><td>ITC 10Y <code>~24-26x</code>; FMCG <code>51.0x</code></td><td>🟢 Cheap</td></tr>
+        <tr><td><strong>Forward P/E</strong></td><td><code>17.6x to 18.2x</code></td><td>NSE FMCG <code>~35-40x</code></td><td>🟢 Cheap</td></tr>
+        <tr><td><strong>EV / EBITDA</strong></td><td><code>~11.0x</code></td><td>Quality FMCG <code>~22-30x</code></td><td>🟢 At trough</td></tr>
+        <tr><td><strong>Dividend Yield</strong></td><td><code class="blue">5.38% to 5.43%</code></td><td>NSE 5Y <code>3.64%</code></td><td>🟢 Top 2%</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2 class="purple"><span class="icon">5</span> DCF & Intrinsic Valuation</h2>
+      <table>
+        <tr><th class="purple">Valuation Approach</th><th class="purple">Intrinsic / Share</th><th class="purple">vs <code>₹267</code></th></tr>
+        <tr><td><strong>DCF (WACC 10.0%, g 4.5%)</strong></td><td><code>₹313</code></td><td>🟢 <strong>Undervalued by 17.2%</strong></td></tr>
+        <tr><td><strong>Relative Peer Multiples (16x EV/EBITDA)</strong></td><td><code>₹343</code></td><td>🟢 <strong>Undervalued by 28.5%</strong></td></tr>
+        <tr><td><strong>Blended Intrinsic</strong></td><td><code>₹328</code></td><td>🟢 <strong>Undervalued by 22.8%</strong></td></tr>
+        <tr><td><strong>Buy Zone (20% Safety)</strong></td><td><code>₹262</code></td><td>🎯 <strong>At entry — <code>₹5</code> below spot</strong></td></tr>
+      </table>
+      <pre>  WS LOW       CURRENT          BUY ZN    IV         DCF
+  ₹290         ₹267             ₹262      ₹328       ₹313
+  |-------------|-----------------|---------|----------|-----------|</pre>
+    </div>
+
+    <div id="risks" class="section">
+      <h2><span class="icon">6</span> Red Flags — ranked</h2>
+      <table>
+        <tr><th>#</th><th>Red Flag</th><th>Severity</th><th>Evidence</th></tr>
+        <tr><td><strong>1</strong></td><td>Regulatory tax reset — <code>Feb 1, 2026</code> (<code>~+50%</code>)</td><td>🔴 High</td><td>Gross <code>+28%</code> vs Net <code>-14.4%</code>; Excise <code>₹5,997 Cr</code> vs <code>₹1,611 Cr</code>; PBIT <code>-35%</code></td></tr>
+        <tr><td><strong>2</strong></td><td>Volume & illicit surge — illicit <code>~1/3</code> legal</td><td>🔴 High</td><td>Margin <code>54.8%</code> vs <code>58.8%</code> (<code>-400 bps</code>)</td></tr>
+        <tr><td><strong>3</strong></td><td>FMCG margin stall — West Asia inputs</td><td>🟡 Medium</td><td>FMCG EBITDA <code>11%</code> Q4; watch &lt;<code>10.5%</code></td></tr>
+        <tr><td><strong>4</strong></td><td>Working-capital & dividend &gt; FCF</td><td>🟡 Medium</td><td>Inventory <code>+₹2,985 Cr</code>; CCC <code>146→164d</code>; ST debt <code>23x</code></td></tr>
+      </table>
+    </div>
+
+    <div id="verdict" class="hero">
+      <div class="hero-k">Verdict — purple hero, once, earned</div>
+      <p>“At ₹267 ITC is a 38.9% ROCE tollbooth priced as if FY27 depressed earnings never recover — if volumes bottom in Q2 FY27 and FMCG holds 10.5%, ₹328 blended intrinsic is +23% plus 5.4% yield while you wait; tape says add on weakness around ₹262, not chase.”</p>
+      <div class="sub">Quality says add-on-weakness around <code>₹262</code>; tape says wait for Q2 FY27 volume bottom before chasing. — Numbers bold, template purple, skill untouched. <a href="./ITC_September_10_2026.md">MD source</a> · <a href="./ITC_September_10_2026_Purple.html">Purple light</a> · <a href="./ITC_September_10_2026_Purple_Dark.html">Purple dark</a></div>
+    </div>
+
+    <div class="foot" style="margin-top:18px;padding-top:12px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;color:var(--faint);font-size:12px">
+      <span>UI Design — operate playbook · Dense tables · Sticky nav · States (loading/error/empty) · One primary action (Buy Zone) · YK purple tokens — no skill changed</span>
+      <span>Purple hero · Blue structure</span>
+    </div>
+
+  </main>
+</div>
+
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+<script>
+const links=[...document.querySelectorAll('.sidenav a'), ...document.querySelectorAll('.topbar nav a')];
+const ids=['overview','strengths','financials','valuation','risks','verdict'];
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active', a.hash==='#'+e.target.id))}})},{rootMargin:'-40% 0px -50% 0px',threshold:0});
+ids.forEach(id=>{const el=document.getElementById(id); if(el) obs.observe(el)});
+</script>
+</body>
+</html>
