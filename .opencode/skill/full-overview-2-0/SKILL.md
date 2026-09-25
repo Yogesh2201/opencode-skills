@@ -55,17 +55,19 @@ would exceed ~50 KB. Never leave a build marker in the delivered file.
 
 ## Step 3 — Structure shared by all three versions
 
-Section order and anchors are fixed (identical across the trio):
+Section order and anchors are fixed (identical across the trio — Sep 26 2026 update adds Financial snapshot, Valuation, Red flags, header FC toggle):
 
 ```
 header meta-chips → kicker → H1 → subtitle → lede → 5-tile KPI row
-01 What the company does   (idea line, 3 pillars, flow, money proxies, quote)
+  └─ top nav: 01 What they do → 02 Competitors → 03 Products → 04 Vision → 04 Valuation → 05 Trends → 06 Forecast → Takeaway + far-right 06 FC toggle pill (Bear/Base/Bull, #hdrFcToggle)
+01 What the company does   (idea line, 3 pillars, flow, money proxies [#seg/#donut/#leg], quote)
 02 Geographical competitors (peer share bars + HQ geography + accessibility table)
-03 Key products             (6 generator families + 3 extras + MVA spectrum)
+03 Key products             (6 generator families + 3 extras + MVA spectrum + Financial snapshot & quality read — 5-row MCap/Revenue/NP/Op Profit+FCF/Net Cash + warning)
 04 Company vision           (verbatim quote + 4 funded pillars)
-05 Key trends & big messages (5 trends + 3 management messages)
-06 5-year forecast          (Bear/Base/Bull, assumptions, year path, insight)
-one-line takeaway           (dark/orange hero block)
+04 Valuation + DCF  (#s04v) (multiples 4 rows + 4 tiles DCF 812/Fwd 637/EV 694 → Blended 714→Buy 571 + blended table + methodology + val-visual bar)
+05 Key trends & big messages (5 trends tabbed + 3 management messages + Red flags 2H·3M + flag-grid + Bottom line six lenses)
+06 5-year forecast  (#s06)  (Bear/Base/Bull outcomes + assumptions + year path + insight; twin interactive charts [data-fc=price|mcap] with per-panel .fc-chip + global header hfc-chip sync)
+one-line takeaway  (#s09)   (dark/orange hero block)
 footer                      (method, palette, disclaimer, render date)
 ```
 

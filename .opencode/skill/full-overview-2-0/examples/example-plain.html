@@ -297,6 +297,19 @@
   .fc-tip .t-r b { font-weight: 700; }
   .fc-tip .t-r.hi b { color: #8ab4f8; }
   .fc-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 8px; font-size: 0.74rem; color: var(--muted); }
+  /* ---- valuation + flags (Plain adaptation of Gemini v2) ---- */
+  .val-visual { background:var(--page); border:1px solid var(--hairline); border-radius:12px; padding:16px; margin-top:14px; }
+  .bar-track { height:10px; background:var(--surface); border:1px solid var(--hairline); border-radius:999px; position:relative; overflow:hidden; margin:14px 0 8px; }
+  .bar-fill { position:absolute; left:0; top:0; bottom:0; width:58%; background:linear-gradient(90deg,var(--accent),var(--orange)); border-radius:999px; }
+  .bar-marks { display:flex; justify-content:space-between; font-size:0.72rem; color:var(--muted); font-weight:700; }
+  .flag-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-top:12px; }
+  .flag { background:var(--page); border:1px solid var(--hairline); border-radius:10px; padding:10px 6px; text-align:center; }
+  .flag b { font-size:0.70rem; letter-spacing:0.05em; color:var(--ink); display:block; line-height:1.3; }
+  .flag .sev { font-size:0.74rem; font-weight:700; margin-top:4px; display:inline-block; padding:2px 8px; border-radius:999px; }
+  .sev.high { background:rgba(208,59,59,0.10); color:var(--crit); border:1px solid rgba(208,59,59,0.35); }
+  .sev.med { background:rgba(237,161,0,0.12); color:#7a5200; border:1px solid rgba(237,161,0,0.35); }
+  .hfc-chip[aria-pressed="false"] { background:var(--surface) !important; color:var(--muted) !important; border-color:var(--hairline) !important; }
+  @media (max-width:640px) { .flag-grid{grid-template-columns:repeat(3,1fr);} .topnav .inner{gap:6px;} }
   @media (prefers-reduced-motion: reduce) { .fc-line { transition: none; } }
 </style>
 </head>
@@ -311,9 +324,17 @@
     <a class="jump" href="#s02"><b>02</b>Competitors</a>
     <a class="jump" href="#s03"><b>03</b>Products</a>
     <a class="jump" href="#s04"><b>04</b>Vision</a>
+    <a class="jump" href="#s04v"><b>04</b>Valuation</a>
     <a class="jump" href="#s05"><b>05</b>Trends</a>
     <a class="jump" href="#s06"><b>06</b>Forecast</a>
     <a class="jump" href="#s09">Takeaway</a>
+    <span style="width:1px; height:18px; background:var(--hairline); margin:0 2px 0 6px; flex:none; display:inline-block;"></span>
+    <div id="hdrFcToggle" style="display:inline-flex; align-items:center; gap:5px; background:var(--page); border:1px solid var(--hairline); border-radius:999px; padding:3px 4px 3px 10px; white-space:nowrap; flex:none;">
+      <span style="font-size:0.68rem; font-weight:700; letter-spacing:0.07em; color:var(--muted);">06 FC</span>
+      <button type="button" class="hfc-chip" data-hfc="bear" aria-pressed="true" title="Toggle Bear" style="font:inherit; font-size:0.70rem; font-weight:700; border:1px solid var(--crit); background:var(--crit); color:#fff; padding:4px 9px; border-radius:999px; cursor:pointer; line-height:1;">Bear</button>
+      <button type="button" class="hfc-chip" data-hfc="base" aria-pressed="true" title="Toggle Base" style="font:inherit; font-size:0.70rem; font-weight:700; border:1px solid var(--accent); background:var(--accent); color:#fff; padding:4px 9px; border-radius:999px; cursor:pointer; line-height:1;">Base</button>
+      <button type="button" class="hfc-chip" data-hfc="bull" aria-pressed="true" title="Toggle Bull" style="font:inherit; font-size:0.70rem; font-weight:700; border:1px solid var(--good); background:var(--good); color:#fff; padding:4px 9px; border-radius:999px; cursor:pointer; line-height:1;">Bull</button>
+    </div>
   </div>
 </nav>
 
@@ -486,6 +507,22 @@
     </div>
     <div style="text-align:center; margin-top:6px; font-size:0.72rem; color:var(--muted);">Company does not split revenue by product in filings; mix is project-driven (gas/hydro/motors as FY25 growth contributors).</div>
   </div>
+
+  <div style="margin-top:18px;">
+    <h3>Financial snapshot &amp; quality read</h3>
+    <div class="sub">TTM to Sep 18, 2026 — growth vs premium: Revenue +54% TTM on 18% OPM. ROCE 34.0% fuels the multiple.</div>
+    <div style="overflow-x:auto;">
+    <table>
+      <tr><th>Metric</th><th style="text-align:right">TTM</th><th style="text-align:right">% MCap</th><th>Read</th></tr>
+      <tr><td><strong>Market Cap</strong></td><td style="text-align:right">&#8377;23,864 Cr</td><td style="text-align:right">100%</td><td><i>&#8377;764 &middot; 86.8&times; P/E &middot; almost debt-free &middot; +5.77% Sep 18 close</i></td></tr>
+      <tr><td><strong>Revenue</strong></td><td style="text-align:right">&#8377;2,124 Cr</td><td style="text-align:right">8.9%</td><td><i>11.24&times; P/S &mdash; premium for 34% ROCE &middot; FY26 guidance &#8377;1,856 Cr &rarr; FY27 &#8377;2,200 Cr</i></td></tr>
+      <tr><td><strong>Net Profit</strong></td><td style="text-align:right">~&#8377;275 Cr</td><td style="text-align:right">1.15%</td><td><i>1.15% yield &middot; EPS ~&#8377;8.8 (31.24 Cr shares) &middot; PAT &#8377;174.6 Cr FY25 (+47.5%)</i></td></tr>
+      <tr><td><strong>Op. Profit / FCF est.</strong></td><td style="text-align:right">&#8377;383 Cr / ~&#8377;192 Cr</td><td style="text-align:right">1.6% / 0.8%</td><td><i>OPM 18% &middot; EBITDA &#8377;254 Cr FY25 &middot; FCF ~0.8% yield</i></td></tr>
+      <tr><td><strong style="color:var(--accent-deep)">Net Cash est.</strong></td><td style="text-align:right; color:var(--accent-deep); font-weight:700;">+&#8377;612 Cr</td><td style="text-align:right">2.6%</td><td><i style="color:var(--accent-deep)">D/E ~0.02 &middot; cash ~&#8377;640 Cr &minus; debt ~&#8377;28 Cr &middot; order cover 3.4&times; (&#8377;2,208 Cr book)</i></td></tr>
+    </table>
+    </div>
+    <div class="quote" style="border-left-color:var(--warn);">&#9888;&#65039; ORDER &amp; MARGIN WATCH: 68% &rarr; 93% export inflow (+41% YoY to &#8377;14,783M FY25) &mdash; concentration + lumpiness is the real FY26-27 risk; <strong>18% OPM must hold as third plant ramps Q4 FY26</strong> and UK Design Centre spends ahead of revenue. Project biz = FCF choppy, not annuity.<span class="who">&mdash; ROCE 34.0% &middot; ROE 24.7% &middot; almost debt-free. Watch export deferral + working capital, not just dispatches.</span></div>
+  </div>
 </div>
 
 <!-- 04 VISION -->
@@ -529,6 +566,73 @@
   </div>
 </div>
 
+<!-- 04b VALUATION + DCF -->
+<h2 id="s04v"><span class="num">04</span> &#128176; Valuation + DCF <span class="h2-rule" aria-hidden="true"></span></h2>
+<p class="section-note">Read as a system — market prices export supercycle + 18% OPM, not execution failure. Needs FY27 guidance (&#8377;22B) + OPM hold as third plant ramps Q4 FY26.</p>
+
+<div class="card">
+  <div class="quote">&ldquo;Own the engineering, but let a scare give you the price.&rdquo;
+    <span class="who">&mdash; Thesis: 86.8&times; P/E prices the 40&ndash;45 MW US data-centre supercycle. Bull = execution on 68&rarr;93% export + OPM hold. *Approximate benchmarks.</span>
+  </div>
+
+  <h3>Valuation multiples — 4 rows only</h3>
+  <div class="sub">P/B, P/S, PEG removed here by spec — P/S 11.24&times; (&#8377;23,864 / &#8377;2,124) lives in Financial snapshot only. Trailing P/E = &#8377;23,864 / ~&#8377;275 &asymp; 86.8&times;.</div>
+  <div style="overflow-x:auto;">
+  <table>
+    <tr><th>Metric</th><th style="text-align:right">Value</th><th>Benchmark*</th><th>Read</th></tr>
+    <tr><td><strong>Trailing P/E</strong></td><td style="text-align:right">86.8&times;</td><td><i>Quality ~28&ndash;32&times;* &middot; WEG ~25&times;*</i></td><td style="color:var(--crit); font-weight:700;">&#128308; Growth priced</td></tr>
+    <tr><td><strong>Forward P/E</strong></td><td style="text-align:right">~78&times;</td><td><i>65&times; exit* &middot; +18.5% FY27E</i></td><td style="color:var(--warn); font-weight:700;">&#128993; Elevated</td></tr>
+    <tr><td><strong>EV/EBITDA</strong></td><td style="text-align:right">~60.7&times;</td><td><i>Quality ~28&times; / PSU ~14&times;*</i></td><td style="color:var(--crit); font-weight:700;">&#128308; Premium to quality</td></tr>
+    <tr><td><strong>OPM</strong></td><td style="text-align:right">18% TTM</td><td><i>3yr ~17&ndash;19%* &middot; Industrials ~18&ndash;22%*</i></td><td style="color:var(--good); font-weight:700;">&#128994; At plan — must hold</td></tr>
+  </table>
+  </div>
+
+  <div class="vision-grid" style="margin-top:14px;">
+    <div class="tile">
+      <div class="label">&#127919; DCF base</div>
+      <div style="font-size:1.35rem; font-weight:700; color:var(--accent-deep);">&#8377;812</div>
+      <div style="font-size:0.78rem; color:var(--muted); margin-top:4px">WACC 10.5% &middot; g 6.0% &middot; +6.3%</div>
+    </div>
+    <div class="tile">
+      <div class="label">&#128200; Forward P/E</div>
+      <div style="font-size:1.35rem; font-weight:700;">&#8377;637</div>
+      <div style="font-size:0.78rem; color:var(--muted); margin-top:4px">65&times; &times; FY27E EPS &#8377;9.8 &middot; -16.6%</div>
+    </div>
+    <div class="tile">
+      <div class="label">&#127981; EV/EBITDA</div>
+      <div style="font-size:1.35rem; font-weight:700;">&#8377;694</div>
+      <div style="font-size:0.78rem; color:var(--muted); margin-top:4px">55&times; &times; EBITDA &#8377;383 Cr &middot; -9.2%</div>
+    </div>
+    <div class="tile" style="border-top-color:var(--accent);">
+      <div class="label">&#9878;&#65039; Blended &rarr; Buy</div>
+      <div style="font-size:1.35rem; font-weight:700; color:var(--accent-deep);">&#8377;714 &rarr; &#8377;571</div>
+      <div style="font-size:0.78rem; color:var(--muted); margin-top:4px">-6.5% &middot; 20% MOS &middot; 33.8% above buy</div>
+    </div>
+  </div>
+
+  <div style="margin-top:14px; overflow-x:auto;">
+    <table>
+      <tr><th>Approach</th><th style="text-align:right">IV / Share</th><th>vs &#8377;764</th></tr>
+      <tr><td><strong>DCF Base (WACC 10.5%, g 6.0%)</strong></td><td style="text-align:right">&#8377;812</td><td>&#128994; +6.3%</td></tr>
+      <tr><td><strong>Forward P/E (65&times; &times; &#8377;9.8)</strong></td><td style="text-align:right">&#8377;637</td><td>&#128308; -16.6%</td></tr>
+      <tr><td><strong>EV/EBITDA (55&times; &times; &#8377;383 Cr)</strong></td><td style="text-align:right">&#8377;694</td><td>&#128308; -9.2%</td></tr>
+      <tr><td><strong>Blended IV</strong></td><td style="text-align:right; color:var(--accent-deep); font-weight:700;">&#8377;714</td><td>&#128308; -6.5%</td></tr>
+      <tr><td><strong>Buy Zone (20% MOS)</strong></td><td style="text-align:right">&#8377;571</td><td>&#127919; 33.8% above</td></tr>
+    </table>
+  </div>
+
+  <div class="quote">&#128204; METHODOLOGY: Independently modelled — base FCF ~&#8377;192 Cr (OPM 18% &rarr; PAT 13% fade), 14%&rarr;6% fade 10Y (14/13/12, 11/10/9/8, 6%), WACC 10.50% (Rf 6.80%, ERP 6.00%, Beta 1.10), terminal 6.00%, net cash +&#8377;612 Cr. Blended = equal-weight DCF / Fwd P/E / EV/EBITDA.<span class="who">&mdash; No vendor DCF available. Screener TTM Sep 18 close. Shares 31.24 Cr (FV &#8377;2). Guidance FY26 &#8377;1,856 Cr &rarr; FY27 &#8377;2,200 Cr (+18.5%).</span></div>
+
+  <div class="val-visual">
+    <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted); font-weight:700;">&#128200; Valuation bar — blended &#8377;714 (-6.5%) &middot; buy &#8377;571 &middot; DCF &#8377;812</div>
+    <div style="display:flex; justify-content:space-between; font-size:0.72rem; color:var(--muted); margin-top:8px; flex-wrap:wrap; gap:6px;"><span>LOW &#8377;350</span><span>CURRENT &#8377;764</span><span>BUY &#8377;571</span><span>IV &#8377;714</span><span>DCF &#8377;812</span><span>FWD &#8377;637</span></div>
+    <div class="bar-track"><div class="bar-fill"></div></div>
+    <div class="bar-marks"><span>&#8377;350</span><span>IV &#8377;714</span><span>&#8377;812</span></div>
+    <div style="font-size:0.78rem; color:var(--ink-2); margin-top:8px;">Blended <strong style="color:var(--ink)">&#8377;714</strong> fairly valued to modestly overvalued — buy <strong style="color:var(--ink)">&#8377;571</strong> needs a scare. DCF &#8377;812 = quality-holding bull; Fwd &#8377;637 = derate if FY27 guidance slips.</div>
+    <div style="font-size:0.72rem; color:var(--muted); margin-top:6px;">Bear FY31 444 &middot; Base 1,315 &middot; Bull 2,407 &middot; Shares 31.24 Cr (FV &#8377;2) &middot; DCF Sep 18 &middot; Price Sep 18 close</div>
+  </div>
+</div>
+
 <!-- 05 TRENDS -->
 <h2 id="s05"><span class="num">05</span> &#128200; Key trends &amp; big messages <span class="h2-rule" aria-hidden="true"></span></h2>
 <p class="section-note">What AR FY25 and BSE filings say is moving the market &mdash; and what management repeats in every filing. Filings-only.</p>
@@ -565,6 +669,41 @@
       <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#128681; Growth</div><div style="font-size:0.86rem; margin-top:4px;">&ldquo;We step into FY26 with conviction &mdash; healthy order book, solid balance sheet. <strong>We guide &#8377;18B FY26 &rarr; &#8377;22B FY27.</strong>&rdquo;</div><div style="margin-top:6px; font-size:0.72rem; color:var(--muted);">&mdash; MD letter + BSE outlook</div></div>
       <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#127760; Positioning</div><div style="font-size:0.86rem; margin-top:4px;">&ldquo;Export growth will drive FY27 &amp; FY28. Diversified range, <strong>~45 OEMs</strong> across all segments.&rdquo;</div><div style="margin-top:6px; font-size:0.72rem; color:var(--muted);">&mdash; BSE Jan 29 2026</div></div>
       <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#127959;&#65039; Capability</div><div style="font-size:0.86rem; margin-top:4px;">&ldquo;Third plant commissioned, ramp from <strong>Q4 FY26</strong>. UK Design Centre for innovation.&rdquo;</div><div style="margin-top:6px; font-size:0.72rem; color:var(--muted);">&mdash; AR FY25</div></div>
+    </div>
+  </div>
+
+  <div style="margin-top:18px;">
+    <h3>Red flags — 2 HIGH · 3 MEDIUM</h3>
+    <div class="sub">Severity: HIGH breaks thesis · MEDIUM pressures it. Project lumpiness + export concentration already prices execution risk at 86.8&times;.</div>
+    <div style="overflow-x:auto;">
+    <table>
+      <tr><th>#</th><th>Red flag</th><th>Severity</th><th>Evidence</th></tr>
+      <tr><td><strong>1</strong></td><td><strong>Export concentration</strong></td><td style="color:var(--crit); font-weight:700;">&#128308; High</td><td><i>68% FY25 &rarr; 93% Q1 FY27 &middot; US/EU tariff + FX &middot; &#8377;14,783M inflow (+41%)</i></td></tr>
+      <tr><td><strong>2</strong></td><td><strong>Valuation premium</strong></td><td style="color:var(--crit); font-weight:700;">&#128308; High</td><td><i>86.8&times; P/E &middot; 11.24&times; P/S &middot; 60.7&times; EV/EBITDA vs WEG ~25&times;*</i></td></tr>
+      <tr><td><strong>3</strong></td><td><strong>Order lumpiness</strong></td><td style="color:var(--warn); font-weight:700;">&#128993; Med</td><td><i>Project rev &middot; 3.4&times; cover (&#8377;2,208 Cr) but Q1 domestic 135&rarr;51 Cr (-62%) &middot; 93% swing</i></td></tr>
+      <tr><td><strong>4</strong></td><td><strong>Margin / execution</strong></td><td style="color:var(--warn); font-weight:700;">&#128993; Med</td><td><i>18% OPM must hold as 3rd plant ramps Q4 FY26 + UK centre spend ahead</i></td></tr>
+      <tr><td><strong>5</strong></td><td><strong>Working capital stretch</strong></td><td style="color:var(--warn); font-weight:700;">&#128993; Med</td><td><i>45 OEMs diversified but top-5 concentration &middot; receivables on long-cycle builds</i></td></tr>
+    </table>
+    </div>
+    <div class="flag-grid">
+      <div class="flag"><b>EXPORT<br>CONCEN</b><span class="sev high">&#128308; HIGH</span></div>
+      <div class="flag"><b>VALUAT<br>PREMIUM</b><span class="sev high">&#128308; HIGH</span></div>
+      <div class="flag"><b>ORDER<br>LUMPY</b><span class="sev med">&#128993; MEDIUM</span></div>
+      <div class="flag"><b>MARGIN<br>EXECUTN</b><span class="sev med">&#128993; MEDIUM</span></div>
+      <div class="flag"><b>WORK CAP<br>STRETCH</b><span class="sev med">&#128993; MEDIUM</span></div>
+    </div>
+    <div style="text-align:center; margin-top:8px; font-size:0.72rem; color:var(--muted); font-weight:700; letter-spacing:0.07em;">2 HIGH · 3 MEDIUM · 0 LOW</div>
+  </div>
+
+  <div style="margin-top:18px; background:rgba(42,120,214,0.06); border:1px solid rgba(42,120,214,0.35); border-radius:10px; padding:16px;">
+    <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted); font-weight:700; margin-bottom:10px;">Bottom line — six lenses</div>
+    <div class="msg-grid">
+      <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#129504; Core idea</div><div style="font-size:0.84rem; margin-top:4px;">Not a genset assembler — <strong>engineered-to-order</strong> 1–250 MVA specialist on every prime mover.</div></div>
+      <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#128260; What changed</div><div style="font-size:0.84rem; margin-top:4px;">Export-led &rarr; <strong>supercycle growth</strong>: 68% &rarr; 93% export &middot; +54% TTM.</div></div>
+      <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#128064; Hidden insight</div><div style="font-size:0.84rem; margin-top:4px;">Watch <strong>18% OPM hold</strong> — UK centre + 3rd plant test if scale pays before it costs.</div></div>
+      <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#9888;&#65039; What breaks</div><div style="font-size:0.84rem; margin-top:4px;"><strong>Export deferral</strong> + domestic lull &rarr; 18% slips, 86.8&times; compresses quickly.</div></div>
+      <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#10067; Open question</div><div style="font-size:0.84rem; margin-top:4px;">Hold <strong>18%</strong> through Q4 FY26 ramp and still land &#8377;22B FY27?</div></div>
+      <div style="background:var(--surface); border-radius:8px; padding:12px; border:1px solid var(--hairline); border-left:3px solid var(--accent);"><div style="font-size:0.78rem; font-weight:700; color:var(--accent-deep);">&#127919; Takeaway</div><div style="font-size:0.84rem; margin-top:4px;">Don&apos;t chase 86&times; — <strong>own engineering, wait price.</strong></div></div>
     </div>
   </div>
 </div>
@@ -872,6 +1011,42 @@ showView('q1');
 })();
 </script>
 
+<script>
+/* Header 06 Forecast toggle — global Bear/Base/Bull (Plain) */
+(function () {
+  const hdrChips = document.querySelectorAll('#hdrFcToggle .hfc-chip');
+  if (!hdrChips.length) return;
+  function applyGlobalOff(offList) {
+    document.querySelectorAll('[data-fc]').forEach(panel => {
+      if (offList.length) panel.setAttribute('data-off', offList.join(' '));
+      else panel.removeAttribute('data-off');
+      panel.querySelectorAll('.fc-chip').forEach(c => {
+        const k = c.getAttribute('data-s');
+        c.setAttribute('aria-pressed', offList.includes(k) ? 'false' : 'true');
+      });
+    });
+  }
+  function currentOff() { return Array.from(hdrChips).filter(c => c.getAttribute('aria-pressed') === 'false').map(c => c.dataset.hfc); }
+  hdrChips.forEach(ch => {
+    ch.addEventListener('click', () => {
+      const wasOn = ch.getAttribute('aria-pressed') === 'true';
+      ch.setAttribute('aria-pressed', wasOn ? 'false' : 'true');
+      applyGlobalOff(currentOff());
+      const fc = document.getElementById('s06');
+      if (fc && wasOn) {
+        const r = fc.getBoundingClientRect();
+        if (r.top < 56 || r.top > window.innerHeight * 0.6) fc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+  document.querySelectorAll('[data-fc] .fc-chip').forEach(c => {
+    c.addEventListener('click', () => setTimeout(() => {
+      const off = (document.querySelector('[data-fc]').getAttribute('data-off') || '').split(' ').filter(Boolean);
+      hdrChips.forEach(h => h.setAttribute('aria-pressed', off.includes(h.dataset.hfc) ? 'false' : 'true'));
+    }, 10));
+  });
+})();
+</script>
 <script>
 /* 05 Key trends — tabbed interactive (Plain pills) */
 (function () {

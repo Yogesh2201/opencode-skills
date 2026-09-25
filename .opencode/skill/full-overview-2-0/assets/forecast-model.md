@@ -1,3 +1,28 @@
+# Forecast & Valuation models — sections 04 + 06 (identical numbers in every version)
+
+## Valuation — section 04 (independently modelled, filings-only)
+
+**Anchor:** same as forecast (₹764 / ₹23,864 Cr / 31.24 Cr shares). Base FCF ~₹192 Cr (OPM 18% → PAT 13% fade).
+
+| Metric | Value | Benchmark* | Read |
+|---|---|---|---|
+| Trailing P/E | 86.8× | Quality ~28–32×* · WEG ~25×* | 🔴 Growth priced |
+| Forward P/E | ~78× | 65× exit* | 🟡 Elevated |
+| EV/EBITDA | ~60.7× | Quality ~28× / PSU ~14×* | 🔴 Premium |
+| OPM | 18% TTM | 3yr ~17–19%* | 🟢 At plan |
+
+| Approach | IV / Share | vs ₹764 |
+|---|---|---|
+| DCF Base (WACC 10.5%, g 6.0%) | ₹812 | 🟢 +6.3% |
+| Forward P/E (65× × ₹9.8) | ₹637 | 🔴 -16.6% |
+| EV/EBITDA (55× × ₹383 Cr) | ₹694 | 🔴 -9.2% |
+| **Blended IV** | **₹714** | 🔴 -6.5% |
+| **Buy Zone (20% MOS)** | ₹571 | 🎯 33.8% above |
+
+**DCF:** 14%→6% fade 10Y (14/13/12, 11/10/9/8, 6%), WACC 10.50% (Rf 6.80%, ERP 6.00%, Beta 1.10), terminal 6.00%, net cash +₹612 Cr, equal-weight blended. Bar: LOW ₹350 — CURRENT ₹764 — BUY ₹571 — IV ₹714 — DCF ₹812 (fill ~58%). Methodology disclosed in `quote` block.
+
+---
+
 # Forecast model — section 06 (identical numbers in every version)
 
 **Path:** Revenue → PAT margin → EPS → P/E → Price → MCap.
