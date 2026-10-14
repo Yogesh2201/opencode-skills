@@ -1,0 +1,233 @@
+{
+  "meta": {
+    "company": "Tanla Platforms",
+    "short": "Tanla",
+    "nse": "TANLA",
+    "bse": "532790",
+    "hq": "Hyderabad",
+    "kicker": "Filings-only · NSE: TANLA · BSE: 532790 · Hyderabad",
+    "render_date": "2026-09-27",
+    "source_note": "FY26 results 24-Apr-2026 + Q1 FY27 22-Jul-2026 + screener.in/company/TANLA (25 Sep 2026 close) + AlphaSpread DCF/Multiples (7yr Net Income, Discount 11%)"
+  },
+  "price": {
+    "current": 495,
+    "high_52w": 766.0,
+    "low_52w": 365.9,
+    "mcap_cr": 6561,
+    "shares_cr": 13.26,
+    "bv": 187.6,
+    "pe_ttm": 12.9,
+    "pb": 2.64,
+    "face_value": 1,
+    "eps_ttm": 38.39,
+    "dividend_yield": 2.43
+  },
+  "ey": {
+    "price": 495,
+    "mcap_cr": 6561,
+    "pat_cr": 509,
+    "shares_cr": 13.26,
+    "eps": 38.39,
+    "yield_pct": 7.76,
+    "yield_target_pct": 3.7,
+    "pe_current": 12.89,
+    "pe_target": 27.027,
+    "mcap_target_cr": 13756.76,
+    "price_target": 1037.46,
+    "diff_pp": "+4.06pp",
+    "diff_pct": "-52.3%",
+    "diff_pe_pct": "-52.3%",
+    "low_price": 366,
+    "iv": 598
+  },
+  "company_kpis": {
+    "sales_fy26_cr": 4418,
+    "sales_fy25_cr": 4028,
+    "sales_growth_yoy": 9.7,
+    "gross_profit_fy26_cr": 1175,
+    "gross_margin_fy26": 26.6,
+    "ebitda_fy26_cr": 724,
+    "ebitda_margin_fy26": 16.4,
+    "pat_fy26_cr": 509,
+    "pat_margin_fy26": 11.5,
+    "eps_fy26": 38.36,
+    "fcf_fy26_cr": 477,
+    "fcf_per_pat": 94,
+    "cash_cr": 1089,
+    "net_debt_cr": -2127,
+    "roe": 21.41,
+    "roce": 26.3,
+    "opm_ttm": 16.4,
+    "net_margin_ttm": 11.5,
+    "debt_to_equity": 0.02,
+    "enterprises": 3200,
+    "india_cpaas_share": 35,
+    "telcos": 20,
+    "q1fy27_revenue_cr": 1226,
+    "q1fy27_pat_cr": 142,
+    "dividend_fy26_per_share": 12,
+    "payout_pct": 30
+  },
+  "peers_cpaas": {
+    "pot_cr": 11067,
+    "pot_label": "Listed India CPaaS/enterprise-comms revenue pot ~₹11,067 Cr (FY25-26)",
+    "peers": [
+      { "name": "Route Mobile", "hq": "Mumbai", "revenue_cr": 4576, "share_pct": 41.3, "overlap": "Pure-play CPaaS — Proximus-owned; A2P messaging + OTT, ~50% India", "is_subject": false },
+      { "name": "Tanla Platforms", "hq": "Hyderabad", "revenue_cr": 4418, "share_pct": 39.9, "overlap": "CPaaS leader — Wisely + Trubloq + Karix; ~35% India share", "is_subject": true },
+      { "name": "Affle India", "hq": "Gurugram", "revenue_cr": 2073, "share_pct": 18.7, "overlap": "Mobile ad-tech adjacency — consumer intelligence, programmatic", "is_subject": false },
+      { "name": "Sinch (context)", "hq": "Stockholm", "revenue_cr": null, "share_pct": null, "overlap": "Global CPaaS — ~8x Tanla scale; pricing + product benchmark", "is_subject": false },
+      { "name": "Infobip (context)", "hq": "Vodnjan", "revenue_cr": null, "share_pct": null, "overlap": "Global CPaaS — Gartner Leader; sets OTT/RCS frontier", "is_subject": false }
+    ]
+  },
+  "products": {
+    "families": [
+      { "name": "Wisely Platform", "icon": "hub", "ticket": "Platform-of-platforms", "desc": "Single API-led intelligent hub for all digital interactions — marketplace + network, blockchain SSOT.", "pill": "Single API · Marketplace · SSOT" },
+      { "name": "Trubloq", "icon": "shield", "ticket": "DLT anti-spam", "desc": "World's first blockchain-enabled comms stack — DLT scrubbing, consent + header registry, all top telcos.", "pill": "100% top telcos · 50k+ enterprises" },
+      { "name": "Wisely Anti-Phishing (ATP)", "icon": "verified", "ticket": "SMS-phishing kill", "desc": "End-to-end AI/ML anti-phishing — real-time scam kill; 3 bank deals incl. Bandhan; Indosat 100Mn users.", "pill": "AI/ML · Banks · Indosat 100Mn" },
+      { "name": "Enterprise Communications", "icon": "chat", "ticket": "Karix scale engine", "desc": "SMS + Voice + OTT at billions-message scale — Meta Growth Partner of Year x2; NRR ~125% embedded.", "pill": "A2P · OTT · NRR 125%" },
+      { "name": "Marketing Automation", "icon": "campaign", "ticket": "Gamooga suite", "desc": "Journey builder + smart campaigns + channel-affinity intelligence — convert, don't just send.", "pill": "Journeys · Affinity · Omnichannel" },
+      { "name": "Conversational AI", "icon": "smart_toy", "ticket": "Surbo + RCS/MaaP", "desc": "Surbo conversational AI + RCS business messaging + chatbots — WhatsApp/Truecaller/RCS frontier.", "pill": "Surbo · RCS · Chatbots" }
+    ],
+    "extras": [
+      { "name": "Wisely Consent", "icon": "fact_check", "desc": "Omnichannel consent management — QR/web/OTT capture, immutable DLT register." },
+      { "name": "OTT & Voice Suite", "icon": "call", "desc": "WhatsApp Business API, Truecaller, Email, Voice, URL shortener, location services." },
+      { "name": "Wise Albert + Core Stack", "icon": "psychology", "desc": "GenAI intelligence layer + cloud-agnostic core (routing, queuing, self-heal, SLA)." }
+    ],
+    "spectrum": {
+      "min": "SMS A2P base",
+      "mid1": "Voice + Email + URL",
+      "mid2": "WhatsApp · RCS · Truecaller",
+      "max": "Wisely ATP → Trust infrastructure"
+    }
+  },
+  "financial_snapshot": {
+    "mcap_cr": 6561,
+    "sales_ttm_cr": 4418,
+    "op_profit_ttm_cr": 724,
+    "pat_ttm_cr": 509,
+    "net_worth_cr": 2488,
+    "debt_to_equity": 0.02,
+    "note": "TTM to 25 Sep 2026 — cash-compounder check: Sales +9.7% FY26 on 16.4% EBITDA margin. FCF 94% of PAT funds the 30% payout."
+  },
+  "vision": {
+    "quote": "Shaping trusted digital interactions to empower consumers and enable companies.",
+    "quote_source": "Tanla Platforms — Our Purpose (tanla.com/values); Founder Chairman & CEO Uday Reddy. Mission: build a trustworthy, transparent ecosystem for enterprise-user digital interaction.",
+    "pillars": [
+      { "icon": "hub", "label": "Wisely at scale", "text": "One API-led platform-of-platforms — marketplace + network with blockchain SSOT; 3,200+ enterprises incl. Google, Meta, Truecaller.", "tag": "~35% India CPaaS · 20+ telcos" },
+      { "icon": "shield", "label": "Trust infrastructure", "text": "Trubloq (DLT anti-spam) + Wisely ATP (AI anti-phishing) — 3 bank ATP deals; Indosat shields 100Mn users from 2Bn+ scams.", "tag": "Gartner Visionary 2025 + 2026" },
+      { "icon": "public", "label": "Beyond India", "text": "Replicate the playbook — Middle East, SE Asia, Europe; LBS case study on Indosat deployment; OTT (WhatsApp) recognised by Meta.", "tag": "Meta Growth Partner x2 (Karix)" },
+      { "icon": "psychology", "label": "AI-native core", "text": "Wise Albert GenAI layer under every product + new platform launch guided; profitable growth that converts into cash (FCF 94-101% PAT).", "tag": "FCF ₹477 Cr FY26 · Net cash" }
+    ],
+    "oneline": "Tanla makes enterprise messaging trustworthy where spam and phishing destroy value — “trusted digital interactions” is the promise; Wisely + Trubloq + ATP is the delivery."
+  },
+  "valuation": {
+    "source": "AlphaSpread",
+    "url": "https://www.alphaspread.com/security/nse/tanla/dcf-valuation/base-case",
+    "relative_url": "https://www.alphaspread.com/security/nse/tanla/relative-valuation",
+    "summary_url": "https://www.alphaspread.com/security/nse/tanla/summary",
+    "price_current": 493.65,
+    "price_anchor": 495,
+    "dcf_value": 689.56,
+    "dcf_undervaluation_pct": 28,
+    "multiples_value": 714.85,
+    "multiples_undervaluation_pct": 25,
+    "intrinsic_value": 597.69,
+    "intrinsic_undervaluation_pct": 7,
+    "buy_zone_20pct": 478.15,
+    "buy_zone_note": "20% below Intrinsic Value (AlphaSpread) — ₹478.15",
+    "wall_st_target": 734.4,
+    "dcf_assumptions": {
+      "revenue_growth": 10.6,
+      "revenue_growth_5y_hist": 13.5,
+      "revenue_growth_wallst_3y": 12.4,
+      "net_margin": 12.1,
+      "net_margin_start": 11.5,
+      "net_margin_5y_hist": 13.6,
+      "net_margin_wallst_3y": 11.7,
+      "forecast_period_years": 7,
+      "template": "Net Income",
+      "discount_rate": 11.0,
+      "exit_multiple": null,
+      "exit_multiple_type": "Terminal Growth 0%"
+    },
+    "multiples": {
+      "pe_ttm": 12.9,
+      "pb": 2.64,
+      "ps": 1.59,
+      "ev_ebitda": 7.09,
+      "pe_3y_avg": 21.17
+    },
+    "tiles": {
+      "dcf": { "value": 689.56, "label": "DCF Value", "note": "7yr Net Income · Rev 10.6% · Margin 11.5→12.1% · 11% · +39.3% vs ₹495", "vs": "+39.3%" },
+      "multiples": { "value": 714.85, "label": "Multiples-Based", "note": "P/E, P/S, EV/EBIT etc. vs peers/history · +44.4%", "vs": "+44.4%" },
+      "intrinsic": { "value": 597.69, "label": "Intrinsic Value", "note": "AlphaSpread selected method · +20.7% · 7% undervalued", "vs": "+20.7%" },
+      "blended": { "value": 597.69, "label": "AlphaSpread Intrinsic → Buy", "note": "+20.7% · 20% MOS → Buy ₹478.15", "buy_zone": 478.15 }
+    },
+    "methodology": "AlphaSpread DCF — 7-year forecast via Net Income template, Revenue Growth 10.6% (vs 5Y hist 13.5%, Wall St 3Y 12.4%), Net Margin 11.5%→12.1% (vs 5Y 13.6%, Wall St 3Y 11.7%), Discount Rate 11.0%, Terminal Growth 0%. Multiples-Based Value from P/E, P/S, EV/Sales/EBITDA/EBIT etc. vs peers/history. Intrinsic Value = AlphaSpread selected method for Tanla. Wall St target ₹734.4 sits above both. History: 3Y avg P/E 21.17x vs 12.9x today — derated into the result.",
+    "local_crosscheck": {
+      "earnings_yield": 7.76,
+      "earnings_yield_target": 3.7,
+      "ey_price_target": 1037.46,
+      "forward_pe": 12.9,
+      "note": "Local earnings-yield cross-check: PAT ₹509 Cr on ₹6,561 Cr MCap = 7.76% yield (12.9x) vs 3.7% benchmark (27.027x) → EY-implied ₹1,037 — deeper value than AlphaSpread DCF ₹689.56; gap reflects growth + margin scepticism priced into the derate."
+    },
+    "trailing_pe": 12.9,
+    "forward_pe": 12.9,
+    "pb": 2.64,
+    "roa": 10.64,
+    "roe": 21.41
+  },
+  "trends": [
+    { "kick": "Trend 1 · OTT mix shift", "icon": "chat", "title": "OTT outgrows SMS", "body": "WhatsApp + RCS + Truecaller carry incremental growth — <b>Karix Meta Growth Partner of the Year x2</b>; OTT recognised by Meta as partner of the year.", "cta": "→ Watch OTT vs SMS mix + Karix growth", "cls": "" },
+    { "kick": "Trend 2 · trust infrastructure", "icon": "shield", "title": "Spam-to-trust monetisation", "body": "Trubloq DLT + <b>Wisely ATP: 3 bank deals (incl. Bandhan)</b> + Indosat shields <b>100Mn users from 2Bn+ scams</b> — LBS case study.", "cta": "→ ATP bank count + Indosat scale-up", "cls": "purple" },
+    { "kick": "Trend 3 · international replication", "icon": "public", "title": "Export the playbook", "body": "Middle East + SE Asia + Europe — <b>Q1 FY27 revenue +17.8% YoY</b> with gross profit +25.1% (quality up); Gartner Visionary 2025 + 2026.", "cta": "→ Intl revenue share + new logos", "cls": "amber" },
+    { "kick": "Trend 4 · AI-native platform", "icon": "psychology", "title": "Wise Albert inside everything", "body": "GenAI layer under all products + <b>new platform launch guided</b> (Q4 FY26 call) — build over buy in AI voice (valuations too high).", "cta": "→ New platform launch + AI-voice M&A", "cls": "amber" },
+    { "kick": "Trend 5 · cash compounding", "icon": "savings", "title": "FCF ≈ PAT, every year", "body": "FCF <b>₹477 Cr = 94% of PAT FY26</b> (101% FY25) — net cash ~₹2,127 Cr, <b>30% dividend payout</b>, div yield ~2.4%.", "cta": "→ FCF/PAT + payout + buybacks", "cls": "amber" }
+  ],
+  "big_messages": [
+    { "icon": "savings", "label": "Quality of growth", "text": "“Our objective isn't revenue growth at any cost. <strong>It's profitable growth that consistently converts into cash.</strong>”", "source": "— Uday Reddy, Founder Chairman & CEO, Q1 FY27 (22-Jul-2026)" },
+    { "icon": "shield", "label": "Execution", "text": "“FY26 reflects the strength of our execution, <strong>delivering 9.7% revenue growth and strong free cashflow generation.</strong>”", "source": "— Uday Reddy, FY26 results (24-Apr-2026)" },
+    { "icon": "trending_up", "label": "Runway", "text": "“CPaaS grows <strong>8–10% annually; Tanla expects to capture larger share — more than 10% per year.</strong>”", "source": "— Deepak Goyal, Exec. Director, Q4 FY26 call" }
+  ],
+  "red_flags": {
+    "summary": "2 HIGH · 3 MEDIUM · 0 LOW",
+    "flags": [
+      { "id": "SMS PRICING", "severity": "HIGH", "evidence": "EBITDA margin ~16-17% sliding since FY22 highs; pricing pressure in SMS despite volume growth (Q4 FY26 call)" },
+      { "id": "TELCO/REGULATORY", "severity": "HIGH", "evidence": "TRAI/DLT dependence; UPI-SMS notification rule change risk flagged; domestic A2P concentration" },
+      { "id": "PLATFORM GROWTH", "severity": "MEDIUM", "evidence": "Digital Platforms single-digit/de-grew in FY25 (-1.2% YoY Q1 FY25); enterprise comms carries the number" },
+      { "id": "FX EXPOSURE", "severity": "MEDIUM", "evidence": "₹12 Cr FX loss Q4 FY26 on USD-INR; international scale-up raises currency volatility" },
+      { "id": "CLIENT CONCENTRATION", "severity": "MEDIUM", "evidence": "Top enterprises/OTT + telco reliance (Google, Meta, telcos); Vi history shows carrier risk is real" }
+    ]
+  },
+  "bottom_line": {
+    "core_idea": "Not an SMS vendor — <strong>trust infrastructure</strong> (Wisely + Trubloq + ATP) on a CPaaS cash engine.",
+    "what_changed": "Bulk SMS → <strong>AI-native platform</strong>: OTT mix + ATP bank deals + Indosat 100Mn + Gartner Visionary.",
+    "hidden_insight": "Watch <strong>gross-profit growth vs revenue growth</strong> — Q1 FY27 25.1% vs 17.8% is the quality signal.",
+    "what_breaks": "<strong>SMS price war + EBITDA <15%</strong> with ATP stalled → derate sticks below 12x.",
+    "open_question": "Can <strong>OTT + ATP + international</strong> hold >10% growth with FCF ≈ PAT intact?",
+    "takeaway": "Don't pay SaaS multiples -> <strong>own the cash compounder near the AlphaSpread buy zone ₹478.</strong>"
+  },
+  "forecast": {
+    "anchor": { "price": 495, "mcap_cr": 6561, "shares_cr": 13.26, "sales_ttm_cr": 4418, "eps_ttm": 38.39, "pe": 12.9, "pb": 2.64 },
+    "scenarios": {
+      "bear": { "price_fy31": 446, "mcap_fy31_cr": 5914, "cagr": -2.1, "sales_cagr": 6, "sales_fy31_cr": 5912, "pat_margin_fy31": 10.0, "exit_pe": 10, "pat_fy31_cr": 591, "eps_fy31": 44.57 },
+      "base": { "price_fy31": 986, "mcap_fy31_cr": 13074, "cagr": 14.8, "sales_cagr": 12, "sales_fy31_cr": 7786, "pat_margin_fy31": 12.0, "exit_pe": 14, "pat_fy31_cr": 934, "eps_fy31": 70.46 },
+      "bull": { "price_fy31": 1784, "mcap_fy31_cr": 23656, "cagr": 29.2, "sales_cagr": 18, "sales_fy31_cr": 10107, "pat_margin_fy31": 13.0, "exit_pe": 18, "pat_fy31_cr": 1314, "eps_fy31": 99.08 }
+    },
+    "year_path": {
+      "price": {
+        "bear": [495, 478, 465, 456, 450, 446],
+        "base": [495, 575, 668, 775, 876, 986],
+        "bull": [495, 660, 880, 1160, 1450, 1784]
+      },
+      "mcap": {
+        "bear": [6561, 6338, 6166, 6047, 5967, 5914],
+        "base": [6561, 7625, 8858, 10277, 11616, 13074],
+        "bull": [6561, 8752, 11669, 15382, 19227, 23656]
+      }
+    },
+    "note": "Shares flat at ~13.26 Cr (FV ₹1) — net cash ~₹2,127 Cr, no dilution assumed. Bear = SMS price war + EBITDA <15% + stuck at 10x. Base = 12% sales CAGR (>10% guide) + 12% PAT margin + mild re-rate 12.9x→14x. Bull = ATP + OTT + international compounding at 18%, P/E held at 18x (still below 3Y avg 21.17x). Current 12.9x derate does the work in Base/Bull."
+  },
+  "takeaway": "Tanla Platforms doesn't sell SMS — it sells <strong>trusted digital interaction at billions-message scale</strong>, and the filings say the next chapter is <strong>AI-native Wisely + trust infrastructure (Trubloq/ATP) + international replication of the Indosat playbook</strong> — built in Hyderabad, running on 20+ telco rails, converting ~94-101% of PAT into cash.",
+  "method_footer": "Filings-only + AlphaSpread. Company docs: FY26 results 24-Apr-2026 (Revenue ₹4,418 Cr +9.7%, Gross ₹1,175 Cr, EBITDA ₹724 Cr 16.4%, PAT ₹509 Cr 11.5%, EPS ₹38.36, FCF ₹477 Cr 94% PAT) + Q1 FY27 22-Jul-2026 (Revenue ₹1,226 Cr +17.8% YoY, Gross ₹326 Cr +25.1%, EBITDA ₹201 Cr, PAT ₹142 Cr +20.1%, EPS ₹10.77, FCF ₹126 Cr 89% PAT) + FY25 (Revenue ₹4,028 Cr, PAT ₹507 Cr, FCF ₹514 Cr 101%, cash ₹1,009 Cr). TTM via screener.in/company/TANLA (Price ₹495, MCap ₹6,561 Cr, P/E 12.9x, P/B 2.64x, BV ₹187.6, 52W 365.9–766, ROE 21.41% ROCE 26.3%). Valuation via AlphaSpread (https://www.alphaspread.com/security/nse/tanla/dcf-valuation/base-case): DCF ₹689.56 (7yr Net Income, Rev 10.6%, Margin 11.5→12.1%, Discount 11%, 28% undervalued) + Multiples ₹714.85 (25% undervalued) → Intrinsic ₹597.69 (7% undervalued) → Buy 20% MOS ₹478.15. Earnings-yield cross-check: 7.76% (12.9x) vs 3.7% benchmark → EY-implied ₹1,037."
+}

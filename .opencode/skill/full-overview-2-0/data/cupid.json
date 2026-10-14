@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "company": "Cupid Limited",
+    "short": "Cupid",
+    "nse": "CUPID",
+    "bse": "530843",
+    "hq": "Sinnar, Nashik",
+    "kicker": "Filings-only · NSE: CUPID · BSE: 530843 · Sinnar, Nashik",
+    "render_date": "2026-09-25",
+    "source_note": "AR FY25 + BSE 21-May-2025 results + BSE 08-Aug-2025 investor deck + BSE 29-Jan-2026 Q3/Bonus + screener.in/company/CUPID (23 Sep 2026 close)"
+  },
+  "price": {
+    "current": 273.85,
+    "high_52w": 299.0,
+    "low_52w": 32.87,
+    "mcap_cr": 36819,
+    "shares_cr": 134.47,
+    "bv": 2.54,
+    "pe_ttm": 440.5,
+    "pb": 107.8,
+    "face_value": 1
+  },
+  "bank_kpis": {
+    "revenue_ttm_cr": 294,
+    "revenue_fy25_cr": 183.52,
+    "revenue_fy26e_cr": 335,
+    "total_income_fy25_cr": 203.18,
+    "opm": 22.7,
+    "roce": 14.2,
+    "roe": 12.8,
+    "countries": 125,
+    "capacity_male_mn": 480,
+    "capacity_female_mn": 52
+  },
+  "peers_sfb": {
+    "pot_cr": 18500,
+    "pot_label": "FY25 sexual wellness + diagnostics pot ~₹18,500 Cr (listed peers only)",
+    "peers": [
+      { "name": "Mankind Pharma", "hq": "New Delhi", "loan_book_cr": 10500, "share_pct": 56.8, "overlap": "Manforce condoms leader — scale + distribution benchmark" },
+      { "name": "TTK Healthcare", "hq": "Chennai", "loan_book_cr": 1850, "share_pct": 10.0, "overlap": "Skore condoms + Durex distribution — closest listed condom peer" },
+      { "name": "Zydus Wellness", "hq": "Ahmedabad", "loan_book_cr": 2700, "share_pct": 14.6, "overlap": "FMCG wellness + personal care — brand + GT distribution" },
+      { "name": "P&G Health (India)", "hq": "Mumbai", "loan_book_cr": 1450, "share_pct": 7.8, "overlap": "Wellness + FMCG — premium brand + pharmacy channel" },
+      { "name": "Cupid", "hq": "Nashik", "loan_book_cr": 294, "share_pct": 1.6, "overlap": "Niche — male + female condoms + lubricants + IVD + FMCG", "is_subject": true },
+      { "name": "HLL Lifecare*", "hq": "Thiruvananthapuram", "loan_book_cr": 820, "share_pct": 4.4, "overlap": "*Govt — Moods condoms — tender + institutional (unlisted, est.)" },
+      { "name": "Indoco Remedies", "hq": "Mumbai", "loan_book_cr": 950, "share_pct": 5.1, "overlap": "Pharma + OTC — diagnostics adjacency" }
+    ]
+  },
+  "products": {
+    "families": [
+      { "name": "Male Condoms", "icon": "shield", "ticket": "up to 480M pcs p.a.", "desc": "Latex condoms — flavours, colours, ultra-thin 50 microns, 100% electronic testing. 64% of FY25 revenue. WHO/UNFPA + USFDA 510(k) + CE.", "pill": "Core B2B · 64% FY25 · ~₹117 Cr" },
+      { "name": "Female Condoms", "icon": "favorite", "ticket": "52M pcs p.a.", "desc": "Latex FC-1 / Cupid Angel — cost-effective dual protection vs STI + pregnancy. Only Indian maker, 15% FY25 (~₹27.5 Cr). Palava +75M coming.", "pill": "Global niche · 15% FY25 · WHO prequalified" },
+      { "name": "Water-based Lubricant Jelly", "icon": "water_drop", "ticket": "210M sachets p.a.", "desc": "4.5ml sachets + tubes + bottles, CE self-certified (additional CE in progress). Exported to 30+ countries. Lubricants + condoms resumed with UNFPA FY26.", "pill": "Complement · reinstated UNFPA" },
+      { "name": "IVD Kits", "icon": "biotech", "ticket": "30M kits p.a.", "desc": "15 kits — Cupikit/Cupisure: HIV, Syphilis, Pregnancy, Hepatitis B, Malaria, Typhoid, Dengue. CE for 4 kits advanced + WHO malaria PQ expected. 14% FY25 (~₹25.7 Cr), PAT positive.", "pill": "New growth · 14% FY25 · PAT positive" },
+      { "name": "Deodorants & Perfumes", "icon": "perfume", "ticket": "B2C FMCG", "desc": "EDPs, deodorants, pocket perfumes — launched Mar-24, expanded FY25. Part of B2C basket that crossed ₹50 Cr FY25 → target ₹125 Cr FY26.", "pill": "FMCG thrust · 1L outlets" },
+      { "name": "Personal Care & Wellness", "icon": "spa", "ticket": "B2C FMCG", "desc": "Almond hair oil, body/massage oils, petroleum jelly, face wash, hair removal sprays — new launches FY25. Science + empathy + innovation.", "pill": "Basket expansion · D2C + GT" }
+    ],
+    "extras": [
+      { "name": "Menstrual & Hygiene Care", "icon": "sanitizer", "desc": "Menstrual cups, toilet seat sanitizers, bath oils — hygiene adjacency, chemist channel expansion." },
+      { "name": "Distribution & E-commerce", "icon": "storefront", "desc": "1,20,000+ touchpoints (target 1.8L FY26), 55+ super stockists, 850+ distributors — Amazon, Flipkart, BigBasket, 1mg, Blinkit, Zepto." },
+      { "name": "Palava Expansion", "icon": "factory", "desc": "170K sq ft Palava plant (₹ lineage) — +770M male +75M female capacity → total 1.25B male +125M female at full ramp." }
+    ],
+    "spectrum": {
+      "min": "₹10 sachet",
+      "mid1": "₹80 condom pack",
+      "mid2": "₹250 FMCG",
+      "max": "Institutional tenders → ₹4 Cr+"
+    }
+  },
+  "financial_snapshot": {
+    "mcap_cr": 36819,
+    "total_income_ttm_cr": 322,
+    "pat_ttm_cr": 83.5,
+    "ppop_cr": 110,
+    "provisions_cr": 0,
+    "net_worth_cr": 342,
+    "crar": 0,
+    "note": "TTM to 23 Sep 2026 — hyper-growth vs hyper-multiple: TTM total income ~₹322 Cr (+59% vs FY25) on 22.7% EBITDA margin. Net cash ~₹68 Cr, almost debt-free."
+  },
+  "vision": {
+    "quote": "We remain comfortably capitalized and are ready for the next era of profitable growth — spurred by our strong international business along with our cost-effective foray into India's B2C FMCG space.",
+    "quote_source": "Aditya Kumar Halwasiya, Chairman & MD, BSE Press Release 21-May-2025 (FY25 results) & Investor Deck Aug-2025. The filings frame it as 'building enduring consumer brands, grounded in science, built with empathy, and scaled with innovation.'",
+    "pillars": [
+      { "icon": "public", "label": "B2B international depth", "text": "Institutional + tender + OEM private label in 125+ countries. First co globally with WHO/UNFPA prequalification for both male & female condoms. Lubricants fully resumed with UNFPA from FY26.", "tag": "48% exports FY25 · tender + UNFPA" },
+      { "icon": "storefront", "label": "B2C India scale", "text": "B2C FMCG crossed ₹50 Cr FY25 (14% of revenue) → target ₹125 Cr FY26 → ₹122 Cr consumer FY26 est. 1.2L touchpoints → 1.8L FY26 via GT + chemists + MT + quick commerce.", "tag": "₹50 Cr → ₹125 Cr FY26 guide" },
+      { "icon": "science", "label": "Certifications → market access", "text": "CE Mark for 4 IVD kits (HIV, Syphilis, Pregnancy, Hep B) advanced; WHO PQ for Malaria kit expected; additional CE for lubricants; Brown Caramel FC prequalified, V3 Ring FC in progress.", "tag": "Regulatory unlocks Africa/EU tenders" },
+      { "icon": "factory", "label": "Capacity ahead of demand", "text": "Palava greenfield +70% capacity (Sinnar 480M→1.25B male, 52M→125M female). Nitrile platform — premium latex-free female condom for $1.2B+ global market by 2030.", "tag": "1.25B +125M at full ramp" }
+    ],
+    "oneline": "Cupid makes intimacy safe and diagnostics accessible where public health is non-negotiable — 'science + empathy + innovation' is the product promise; '125 countries + 1.2L Indian outlets' is the distribution promise."
+  },
+  "valuation": {
+    "trailing_pe": 440.5,
+    "forward_pe": 180,
+    "pb": 107.8,
+    "roa": 11.0,
+    "roe": 12.0,
+    "tiles": {
+      "residual": { "value": 112, "label": "DCF base", "note": "WACC 10.5% g 6% · FCF ₹32 Cr → ₹112 · -59% vs ₹274", "vs": "-59.1%" },
+      "forward_pe": { "value": 85, "label": "Forward P/E", "note": "30× × FY27E EPS ₹2.83* · -69% (bonus-adj)", "vs": "-69.0%" },
+      "forward_pb": { "value": 95, "label": "EV/EBITDA", "note": "35× × EBITDA ₹54 Cr · -65%", "vs": "-65.3%" },
+      "blended": { "value": 97, "label": "Blended → Buy", "note": "-64.6% · 20% MOS · 281% above buy", "buy_zone": 78 }
+    },
+    "methodology": "TTM PAT ~₹83.5 Cr on 134.47 Cr shares (post 4:1 bonus Mar-2026, FV ₹1) → EPS ~₹0.62 · P/E ~441× at ₹273.85. DCF 10Y fade 14%→6%, WACC 10.5% (Rf 6.8% ERP 6% Beta 1.1) terminal 6%, net cash +₹68 Cr. Fwd P/E 30× on FY27E EPS ₹2.83 (₹380 Cr PAT on ₹725 Cr rev at 29% guide mid). EV/EBITDA 35×. Blended = equal-weight. *FY27E EPS shown bonus-adjusted; pre-bonus equivalent ₹14.15. Shares 134.47 Cr, face ₹1."
+  },
+  "trends": [
+    { "kick": "Trend 1 · B2B rebound + UNFPA", "icon": "public", "title": "Institutional resumption + global tenders", "body": "9M FY26 op revenue <b>₹237.7 Cr (+87% YoY)</b> vs FY25 ₹183.5 Cr — full clearance of Cupid lubricants by UNFPA, sizeable condoms + lubricants resumption from FY26, plus WHO/UNFPA tenders (Tanzania ₹42 Cr Feb-2025). Exports 48% FY25.", "cta": "→ Watch UNFPA order flow + tender wins", "cls": "" },
+    { "kick": "Trend 2 · B2C FMCG hyper-scale", "icon": "storefront", "title": "1 lakh → 1.8 lakh touchpoints", "body": "B2C FMCG <b>₹50 Cr FY25 → ₹125 Cr FY26 guide</b> (+150%) — 55 super stockists, 850 distributors, 25k chemists → 1L+ targeted, Amazon/Flipkart/BigBasket/1mg + Blinkit/Zepto. Consumer biz ₹122 Cr FY26 est. incl. ₹84 Cr FMCG.", "cta": "→ GT throughput + same-store velocity", "cls": "purple" },
+    { "kick": "Trend 3 · IVD turnaround", "icon": "biotech", "title": "15-kit IVD now PAT positive", "body": "IVD <b>₹25.7 Cr FY25 (14%)</b> from ~₹5 Cr FY23 — 6 states → pan-India FY26, exports to Tanzania/Liberia/Ghana/Nepal/Philippines, 10+ registrations pipeline. CE for 4 kits + WHO Malaria PQ are near-term catalysts.", "cta": "→ CE/WHO approvals → tender eligibility", "cls": "amber" },
+    { "kick": "Trend 4 · hyper-multiple + bonus", "icon": "trending_up", "title": "550% in 1Y — PE 440× prices FY27 perfection", "body": "Price <b>₹43 (adj) → ₹274</b> (+550% 1Y, 52W 32.87–299), MCap <b>~₹36,800 Cr</b>. 4:1 bonus Mar-2026 + BSE Group A + FTSE EM All Cap Sep-21-2026. Top decile momentum — 10/15 months double-digit gains, Dec-2025 +57.5% best month.", "cta": "→ Watch FY27 guidance 725–750C / 210–225C delivery", "cls": "amber" },
+    { "kick": "Trend 5 · capacity nitrile optionality", "icon": "factory", "title": "Palava + nitrile — latex-free upside", "body": "Palava 170K sq ft commissioning next quarter → <b>1.25B male +125M female</b> at full capacity (was 480M +52M). Premium latex-free nitrile female condom in dev. for $1.2B+ global market by 2030 — first-mover if WHO-prequalified.", "cta": "→ Palava ramp + nitrile WHO clock", "cls": "amber" }
+  ],
+  "big_messages": [
+    { "icon": "target", "label": "Growth", "text": "“We are ready for the next era of profitable growth — <strong>₹335 Cr FY26 → ₹725–750 Cr FY27 → ₹1,085 Cr FY28 → ₹1,500 Cr FY29</strong> is the guide. International + B2C FMCG both engines firing.”", "source": "— BSE 21-May-2025 + Exchange filing 23-Sep-2026 (guidance upgrade)" },
+    { "icon": "handshake", "label": "Institutional trust", "text": "“First company globally with <strong>WHO/UNFPA prequalification for both male & female condoms</strong> — full resumption of lubricants + condoms business with UNFPA from FY26.”", "source": "— Investor Deck Aug-2025 + BSE outlook" },
+    { "icon": "savings", "label": "Capital allocation", "text": "“<strong>4:1 bonus Mar-2026</strong> to broaden retail participation + BSE Group A + FTSE EM All Cap — comfort-capitalized, dividend-light, reinvest for Palava + brand building.”", "source": "— BSE 29-Jan-2026 bonus filing" }
+  ],
+  "red_flags": {
+    "summary": "2 HIGH · 3 MEDIUM · 0 LOW",
+    "flags": [
+      { "id": "VALUATION PREMIUM", "severity": "HIGH", "evidence": "P/E ~440× TTM (₹274 / ₹0.62 EPS post-bonus) · P/S ~115× · 550% 1Y · prices FY27 PAT ₹210–225 Cr perfection; any guide slip derates multiple" },
+      { "id": "GUIDANCE EXECUTION", "severity": "HIGH", "evidence": "FY26 ₹335 Cr (+83%) → FY27 ₹725 Cr (+116%) step is 2× FY25 revenue; 9M FY26 ₹237.7 Cr leaves ₹97 Cr Q4 to hit FY26; FY27 needs 2.2× scale" },
+      { "id": "B2C WORKING CAPITAL", "severity": "MEDIUM", "evidence": "GT scaling 1L→1.8L outlets + QC/warehousing + EDP/deo inventory; Q1 EBITDA margin 27.5% vs FY25 22.7% — promo + receivables risk as FMCG mix climbs to 34% (₹125/₹335)" },
+      { "id": "TENDER LUMPINESS", "severity": "MEDIUM", "evidence": "48% exports + UNFPA/tender dependence (Tanzania ₹42 Cr order Feb-25); order cover not disclosed; FX + tariff + WHO funding cycle volatility" },
+      { "id": "PROMOTER PLEDGE", "severity": "MEDIUM", "evidence": "Promoter 46.2% Jun-26, pledge 8.03% of promoter (was 40–46% Jun-24/Mar-25, down sharply). Still watch pledging alongside capacity capex" }
+    ]
+  },
+  "bottom_line": {
+    "core_idea": "Not a commodity rubber factory — <strong>WHO-grade sexual wellness + diagnostics</strong> sold to 125 countries + 1L Indian outlets.",
+    "what_changed": "Domestic B2C 14% → <strong>34% FY26E</strong> + UNFPA resumption → 9M op revenue <b>+87%</b> hyper-growth.",
+    "hidden_insight": "Watch <strong>440× → 40× derate path</strong> — EPS must 5× before multiple compresses; price spread is multiple, not just earnings.",
+    "what_breaks": "<strong>FY27 guide miss (₹725C)</strong> + Palava delay + FMCG promo overshoot → margin + multiple both compress.",
+    "open_question": "Can Cupid land <strong>₹210–225 Cr PAT on ₹725 Cr</strong> (29% margin) while scaling GT 1.8L outlets and Palava?",
+    "takeaway": "Don't chase 440× — <strong>own the WHO moat, wait for execution price.</strong>"
+  },
+  "forecast": {
+    "anchor": { "price": 273.85, "mcap_cr": 36819, "shares_cr": 134.47, "total_income_ttm_cr": 322, "total_income_fy25_cr": 203.18, "eps_ttm": 0.62, "pe": 440.5, "pb": 107.8 },
+    "scenarios": {
+      "bear": { "price_fy31": 158, "mcap_fy31_cr": 21246, "cagr": -10.4, "total_income_cagr": 20, "total_income_fy31_cr": 802, "pat_margin_fy31": 14.0, "exit_pe": 45, "pat_fy31_cr": 112, "eps_fy31": 0.83 },
+      "base": { "price_fy31": 472, "mcap_fy31_cr": 63470, "cagr": 11.5, "total_income_cagr": 45, "total_income_fy31_cr": 1960, "pat_margin_fy31": 22.0, "exit_pe": 65, "pat_fy31_cr": 431, "eps_fy31": 3.21 },
+      "bull": { "price_fy31": 866, "mcap_fy31_cr": 116450, "cagr": 25.9, "total_income_cagr": 60, "total_income_fy31_cr": 3365, "pat_margin_fy31": 26.0, "exit_pe": 80, "pat_fy31_cr": 875, "eps_fy31": 6.51 }
+    },
+    "year_path": {
+      "price": {
+        "bear": [273.85, 216, 186, 169, 163, 158],
+        "base": [273.85, 299, 330, 364, 418, 472],
+        "bull": [273.85, 349, 447, 554, 693, 866]
+      },
+      "mcap": {
+        "bear": [36819, 29045, 25011, 22728, 21921, 21246],
+        "base": [36819, 40206, 44375, 48947, 56223, 63470],
+        "bull": [36819, 46928, 60105, 74496, 93207, 116450]
+      }
+    },
+    "note": "Shares flat at ~134.47 Cr post 4:1 bonus (Mar-2026, FV ₹1) — net cash +₹68 Cr, no dilution assumed (Bull 60% CAGR may need working capital). Bear = tender deferral + B2C promo drag + derate to 45×. Bull = Palava ramp + nitrile WHO + B2C 1.8L velocity, P/E held 80×. Even Bull derates from 440× → 80×; earnings must 10× to offset."
+  },
+  "takeaway": "Cupid doesn't sell rubbers — it sells <strong>certainty in intimate health where failure is not an option</strong>, and the filings say the next chapter is <strong>WHO-prequalified condoms + lubricants resumption + B2C FMCG at 1.8L outlets + Palava 1.25B capacity</strong> — WHO-certified in Nashik, built for 125 countries, scaling for India.",
+  "method_footer": "Filings-only portrait. AR FY24/25 + BSE 21-May-2025 (Total income ₹203.18 Cr, Op ₹183.52 Cr, EBITDA ₹41.73 Cr, PAT ₹40.89 Cr) + BSE 08-Aug-2025 investor deck + BSE 29-Jan-2026 Q3 (Total income ₹104.39 Cr, PAT ₹32.83 Cr) + BSE 30-Sep/31-Dec-2025 Q2/Q3 + guidance filings 21-May-2025 (₹335 Cr FY26) & 23-Sep-2026 (₹725–750 Cr FY27, ₹210–225 Cr PAT, ₹1,085 Cr FY28, ₹1,500 Cr FY29). TTM to 23 Sep 2026 ~₹322 Cr total income / ~₹83.5 Cr PAT on post-bonus 134.47 Cr shares (FV ₹1) → EPS ~₹0.62 · P/E ~441× · 52W 32.87–299. Post-bonus 4:1 record 09-Mar-2026. Peer pot illustrative (Mankind, TTK, Zydus Wellness, P&G Health, Indoco, HLL est.), share = revenue/pot, not TAM. Market cap at 23 Sep close ₹36,819 Cr."
+}

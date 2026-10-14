@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "company": "Pine Labs Limited",
+    "short": "Pine Labs",
+    "nse": "PINELABS",
+    "bse": "544543",
+    "hq": "Noida, Haryana",
+    "kicker": "Filings-only · NSE: PINELABS · BSE: 544543 · Noida (Registered: Haryana) · DRHP Jun-2025 + RHP Nov-2025",
+    "render_date": "2026-09-25",
+    "source_note": "DRHP 25-Jun-2025 + RHP Nov-2025 + BSE allotment 14-Nov-2025 + ET/Moneycontrol Sep-Nov 2025 (FY25 revenue ₹2,274 Cr, loss ₹145 Cr, Q1 FY26 profit ₹4.8 Cr, GTV ₹11.42 lakh Cr, 5.7B txns)"
+  },
+  "price": {
+    "current": 221,
+    "high_52w": 285,
+    "low_52w": 210,
+    "mcap_cr": 25654,
+    "shares_cr": 116.08,
+    "bv": 28.5,
+    "pe_ttm": -176,
+    "pb": 7.75,
+    "face_value": 1
+  },
+  "bank_kpis": {
+    "revenue_ttm_cr": 2274,
+    "revenue_fy25_cr": 2274,
+    "revenue_fy24_cr": 1769,
+    "revenue_fy23_cr": 1598,
+    "total_income_fy25_cr": 2420,
+    "gtv_lakh_cr": 11.42,
+    "transactions_bn": 5.7,
+    "ebitda_cr": 356,
+    "ebitda_margin": 15.7,
+    "pat_fy25_cr": -145.5,
+    "pat_q1fy26_cr": 4.8,
+    "merchants_lakh": 9.54,
+    "brands": 716,
+    "fis": 177,
+    "international_rev_share": 14.9
+  },
+  "peers_sfb": {
+    "pot_cr": 18500,
+    "pot_label": "FY25 India fintech/payments pot ~₹18,500 Cr (listed + Pine Labs)",
+    "peers": [
+      { "name": "Paytm (One97)", "hq": "Noida", "loan_book_cr": 9840, "share_pct": 35.2, "overlap": "Large payments + lending + wallet — POS 40% share rival" },
+      { "name": "PhonePe (private)", "hq": "Bengaluru", "loan_book_cr": 6200, "share_pct": 22.2, "overlap": "UPI + POS + cross-border — hybrid POS entrant (est.)" },
+      { "name": "Razorpay (private)", "hq": "Bengaluru", "loan_book_cr": 2800, "share_pct": 10.0, "overlap": "Gateway + PA + cross-border — enterprise gateway rival (est.)" },
+      { "name": "Pine Labs", "hq": "Noida", "loan_book_cr": 2274, "share_pct": 8.1, "overlap": "POS + gateway + PA + cross-border — full-stack, 5.7B txns", "is_subject": true },
+      { "name": "Zaggle Prepaid", "hq": "Mumbai", "loan_book_cr": 1200, "share_pct": 4.3, "overlap": "Prepaid + SaaS + expense — listed comps for multiple (P/E ~48×)" },
+      { "name": "MSwipe (private)", "hq": "Mumbai", "loan_book_cr": 650, "share_pct": 2.3, "overlap": "POS network — merchant acquirer (est.)" },
+      { "name": "BharatPe (private)", "hq": "New Delhi", "loan_book_cr": 850, "share_pct": 3.0, "overlap": "POS + lending — SME merchant (est.)" }
+    ]
+  },
+  "products": {
+    "families": [
+      { "name": "POS & In-store Payments", "icon": "point_of_sale", "ticket": "From ₹200/mo", "desc": "Go, Touch, Hub, Mini — Android POS + soundboxes. UPI, cards, wallets, Pluxee, CBDC, PaybyPoints, DCC. 954k merchants, 1.5M+ devices. Subscription + processing fees.", "pill": "Core · subscription + MDR" },
+      { "name": "Online Gateway & PA", "icon": "language", "ticket": "Multi-acquirer + UPI Switch", "desc": "Payment gateway + PA + UPI gateway + Bill Payments (BBPS). Proprietary UPI Switch, split settlements, subscriptions, links/QR. Higher success + retries.", "pill": "PA licence May-2025" },
+      { "name": "Cross-Border Payments", "icon": "public", "ticket": "RBI licence Nov-2025", "desc": "Export/import fintech rails for enterprise + exporters. One of first full-stack with PA + PG + Cross-border trio. Margin lever beyond domestic MDR.", "pill": "New · Nov-2025 licence" },
+      { "name": "Affordability Suite", "icon": "credit_card", "ticket": "40+ banks · 350+ brands", "desc": "No-cost EMI, BNPL, Pay Later, myEMI, Pay by Points, loyalty. Converts walk-ins + checkout drop-offs. 40+ credit partners, 10 lakh+ offers on terminals.", "pill": "Conversion lever · AOV ↑" },
+      { "name": "Issuing & Prepaid (Qwikcilver)", "icon": "card_giftcard", "ticket": "474M cards issued", "desc": "Prepaid cards, gift, incentives, loyalty, forex. Qwikcilver (2019), Setu (2023), Qfix (2022) acquisitions. Powers corporate spends + gifting.", "pill": "Qwikcilver + Setu" },
+      { "name": "Fintech Infrastructure", "icon": "api", "ticket": "BaaS + API banking", "desc": "API banking, payouts (IMPS/NEFT/UPI bulk), bill payments, banking-as-a-service for 177 FIs + 716 brands. 80% merchant retention.", "pill": "198 FIs · 716 brands" }
+    ],
+    "extras": [
+      { "name": "Value-Added Services (VAS)", "icon": "stars", "desc": "Loyalty, rewards, PaybyPoints, dynamic currency conversion, biometric + ERP/billing integrations (300+ apps)." },
+      { "name": "Enterprise & Govt Stack", "icon": "corporate_fare", "desc": "Petroleum outlet digitization, e-commerce payouts, BBPS BharatConnect — deep integrations with top 5 banks/retailers/e-com." },
+      { "name": "Global Footprint", "icon": "language", "desc": "Singapore HQ, subsidiaries in Malaysia, UAE, USA — 14.9% international revenue FY25 (8.5% FY23). ₹60 Cr IPO proceeds for global push." }
+    ],
+    "spectrum": {
+      "min": "₹200/mo Go POS",
+      "mid1": "₹350/mo Touch",
+      "mid2": "Gateway + PA volume",
+      "max": "Enterprise BBPS + cross-border → ₹ crores GTV"
+    }
+  },
+  "financial_snapshot": {
+    "mcap_cr": 25654,
+    "total_income_ttm_cr": 2274,
+    "pat_ttm_cr": -145,
+    "ppop_cr": 356,
+    "provisions_cr": 0,
+    "net_worth_cr": 3300,
+    "crar": 0,
+    "note": "FY25 restated consolidated — revenue ₹2,274 Cr (+28.5% YoY) on 15.7% adjusted EBITDA margin. Q1 FY26 profit ₹4.8 Cr (tax credit). GTV ₹11.42 lakh Cr (+36% YoY) on 5.7B txns."
+  },
+  "vision": {
+    "quote": "We are India’s first full-stack payments fintech for B2B and enterprise — offline, online, cross-border, infrastructure and value-added services on one integrated platform.",
+    "quote_source": "Pine Labs DRHP Jun-2025 + TechCrunch/ Inc42 Nov-2025 (post triple RBI licence). The filings frame the evolution from POS devices (1998) to Pine Labs 2.0 — full-stack fintech with 80% merchant retention.",
+    "pillars": [
+      { "icon": "verified", "label": "Triple RBI licences", "text": "PA (May-2025) + PG + Cross-Border (12-Nov-2025) — first full-stack among listed fintechs. De-risk regulatory + open cross-border margin lever.", "tag": "PA/PG/Cross-border in hand" },
+      { "icon": "storefront", "label": "Merchant scale + retention", "text": "954k merchants (FY25) + 1.5M+ devices, 5.7B txns, GTV ₹11.42 lakh Cr. 80% retention, top-5 bank/retailer/e-com relationships (Peak XV note).", "tag": "9.9L merchants · 198 FIs" },
+      { "icon": "public", "label": "Global B2B rails", "text": "14.9% international revenue FY25 (+75% vs FY23). IPO ₹60 Cr for Singapore/Malaysia/UAE subs. Export-focused enterprise + cross-border volume is the next leg.", "tag": "14.9% intl · growing 2× faster" },
+      { "icon": "automation", "label": "Affordability → conversion", "text": "40+ banks + 350 brands affordability suite (EMI/BNPL) integrated into POS + gateway + PaybyPoints. Drives AOV, retention, MDR share vs pure acquiring.", "tag": "40+ banks · 10L offers" }
+    ],
+    "oneline": "Pine Labs makes every rupee move — in-store, online and across borders — where acquiring, affordability and infrastructure converge; licences are the moat, retention is the signal."
+  },
+  "valuation": {
+    "trailing_pe": -176,
+    "forward_pe": 1335,
+    "pb": 7.75,
+    "roa": -4.2,
+    "roe": -4.4,
+    "tiles": {
+      "residual": { "value": 142, "label": "DCF base", "note": "WACC 11% g 5% · FCF -₹35 Cr → ₹142 · -36% vs ₹221", "vs": "-35.7%" },
+      "forward_pe": { "value": 115, "label": "Forward P/E", "note": "60× × FY27E EPS ₹1.92 · -48% (Q1 annualised bias)", "vs": "-48.0%" },
+      "forward_pb": { "value": 168, "label": "EV/Sales", "note": "8× × FY27E sales ₹3,500 Cr · -24%", "vs": "-24.0%" },
+      "blended": { "value": 142, "label": "Blended → Buy", "note": "-35.7% · 20% MOS · 82% above buy", "buy_zone": 114 }
+    },
+    "methodology": "FY25 consolidated restated (DRHP): revenue ₹2,274 Cr loss ₹145.5 Cr on ~106 Cr pre-IPO shares. Post-IPO 116.08 Cr shares at ₹221 = MCap ₹25,654 Cr. Adjusted EBITDA ₹356 Cr (15.7%). DCF 10Y fade -5%→25% margin, WACC 11% (Rf 6.8% ERP 6% Beta 1.3 given fintech vol), terminal 5% (higher than industrial), net debt ~₹400 Cr (post-IPO net cash). Blended = DCF / Fwd P/E 60× / EV/Sales 8× (Zaggle 9.5× EBITDA comps). Q1 FY26 PAT ₹4.8 Cr tax-credit driven; annualised P/E 1335× is illustrative, not target."
+  },
+  "trends": [
+    { "kick": "Trend 1 · triple licence", "icon": "verified", "title": "First full-stack PA/PG/Cross-border", "body": "RBI PA (May-2025) + PG + Cross-Border <b>12-Nov-2025</b> — only listed fintech with all three. Opens enterprise cross-border + BBPS + online PA volume beyond POS MDR.", "cta": "→ Watch cross-border GTV + PA TPV", "cls": "" },
+    { "kick": "Trend 2 · scale + retention", "icon": "storefront", "title": "954k merchants, 80% retention", "body": "Merchants <b>954k FY25 (+9.9L quoted)</b>, 198 FIs, 716 brands, 5.7B txns. GTV <b>₹11.42 lakh Cr (+36% YoY)</b>. Peak XV: relationships with top-5 banks/retailers/e-com — not just devices.", "cta": "→ GTV / txn + merchant net adds", "cls": "purple" },
+    { "kick": "Trend 3 · profitability turn", "icon": "trending_up", "title": "Loss ₹342 Cr → ₹145 Cr → Q1 profit", "body": "Net loss <b>₹342 Cr FY24 → ₹145.5 Cr FY25 (−57%)</b>, 9M FY25 profit ₹26.1 Cr (no ESOP). Q1 FY26 PAT <b>₹4.8 Cr</b> (tax credit) vs loss ₹27.9 Cr YoY. Adjusted EBITDA <b>₹356 Cr (15.7%)</b> vs ₹158 Cr FY24.", "cta": "→ ESOP + tax credit vs cash profit", "cls": "amber" },
+    { "kick": "Trend 4 · international 14.9%", "icon": "public", "title": "International 8.5% → 14.9% FY23→25", "body": "International revenue <b>14.9% FY25</b> (was 8.5% FY23) — Singapore/Malaysia/UAE subs + Qwikcilver. IPO allocates <b>₹60 Cr</b> to global. GTM for exporters is the lever.", "cta": "→ Intl revenue + cross-border licences", "cls": "amber" },
+    { "kick": "Trend 5 · valuation reset", "icon": "monitoring", "title": "$5B private → $2.9B IPO", "body": "Private $5B (2022) → IPO <b>$2.9B (₹25,654 Cr at ₹221)</b> (−40%). Fresh ₹2,080 Cr (was ₹2,600 Cr) + OFS 8.23 Cr (was 14.78 Cr) — size cut 20%/44%. Lists at <b>29% premium (₹285)</b> → mcap ₹32,800 Cr.", "cta": "→ Watch post-listing lock-ups + cash burn", "cls": "amber" }
+  ],
+  "big_messages": [
+    { "icon": "verified", "label": "Licences", "text": "“<strong>All three RBI licences</strong> — PA, PG, Cross-border — the first full-stack listed fintech. The moat is regulatory, the upside is cross-border GTV.”", "source": "— Inc42/TechCrunch Nov-2025 (licence triad)" },
+    { "icon": "storefront", "label": "Scale", "text": "“<strong>5.7 billion transactions</strong> on ₹11.42 lakh Cr GTV — 954k merchants at 80% retention. The platform, not the device, is the product.”", "source": "— DRHP FY25 + ET Nov-2025" },
+    { "icon": "trending_up", "label": "Path to profit", "text": "“Loss cut by <strong>57% to ₹145 Cr</strong> and first quarterly profit in Q1 FY26 — ESOP overhang, not ops, was the drag.”", "source": "— DRHP + Moneycontrol Jun-2025" }
+  ],
+  "red_flags": {
+    "summary": "2 HIGH · 3 MEDIUM · 0 LOW",
+    "flags": [
+      { "id": "CASH FLOW NEGATIVE", "severity": "HIGH", "evidence": "Ops cash -₹35.5 Cr FY24; free cash -₹35 Cr est. FY25 (post-ESOP). 3 years negative OCF — GTV scale ≠ cash until MDR/affordability monetizes" },
+      { "id": "VALUATION PREMIUM", "severity": "HIGH", "evidence": "IPO P/E ~1335× (annualised Q1), EV/Sales ~11× vs Zaggle P/E 48×. $5B→$2.9B cut signals market discipline; 29% listing pop stretches again" },
+      { "id": "ESOP OVERHANG", "severity": "MEDIUM", "evidence": "ESOP ₹234 Cr FY24 drove loss ₹187 Cr; ₹114.8 Cr FY25 still 79% of loss. RHP notes continuing share-based payments post-IPO" },
+      { "id": "CONCENTRATION", "severity": "MEDIUM", "evidence": "Top-5 banks/retailers + 198 FIs concentration; POS 40% held by Paytm; PhonePe/Razorpay hybrid POS rising — pricing pressure on MDR" },
+      { "id": "REGULATORY", "severity": "MEDIUM", "evidence": "PA/licence conditional; cross-border is new; fintech API/BBPS changes + data localisation add compliance cost" }
+    ]
+  },
+  "bottom_line": {
+    "core_idea": "Not a POS device seller — <strong>full-stack acquiring + gateway + cross-border rails</strong> for enterprise B2B.",
+    "what_changed": "Device-led → <strong>platform GTV ₹11.42 lakh Cr + affordability + API</strong> at 80% retention.",
+    "hidden_insight": "Watch <strong>GTV ₹11.42L Cr → revenue 2,274 Cr conversion (0.20%)</strong> — take-rate, not GTV, is the monetization.",
+    "what_breaks": "<strong>Cash burn + ESOP</strong> + MDR compression → 15.7% EBITDA slips before cross-border scales.",
+    "open_question": "Can Pine Labs hold <strong>15%+ EBITDA</strong> while cutting losses and lifting international 14.9% → 25% with ₹60 Cr?",
+    "takeaway": "Don't chase 1335× — <strong>own the licence triad, wait for cash-profit price.</strong>"
+  },
+  "forecast": {
+    "anchor": { "price": 221, "mcap_cr": 25654, "shares_cr": 116.08, "total_income_ttm_cr": 2274, "total_income_fy25_cr": 2274, "eps_ttm": -1.25, "pe": -176, "pb": 7.75 },
+    "scenarios": {
+      "bear": { "price_fy31": 142, "mcap_fy31_cr": 16484, "cagr": -8.5, "total_income_cagr": 15, "total_income_fy31_cr": 4584, "pat_margin_fy31": 5.0, "exit_pe": 35, "pat_fy31_cr": 229, "eps_fy31": 1.97 },
+      "base": { "price_fy31": 382, "mcap_fy31_cr": 44342, "cagr": 11.6, "total_income_cagr": 25, "total_income_fy31_cr": 6927, "pat_margin_fy31": 10.0, "exit_pe": 45, "pat_fy31_cr": 693, "eps_fy31": 5.97 },
+      "bull": { "price_fy31": 698, "mcap_fy31_cr": 81024, "cagr": 25.9, "total_income_cagr": 35, "total_income_fy31_cr": 10120, "pat_margin_fy31": 14.0, "exit_pe": 55, "pat_fy31_cr": 1417, "eps_fy31": 12.21 }
+    },
+    "year_path": {
+      "price": {
+        "bear": [221, 174, 150, 136, 132, 142],
+        "base": [221, 241, 267, 294, 337, 382],
+        "bull": [221, 282, 361, 447, 560, 698]
+      },
+      "mcap": {
+        "bear": [25654, 20202, 17412, 15819, 15265, 16484],
+        "base": [25654, 27975, 30990, 34122, 39116, 44342],
+        "bull": [25654, 32735, 41907, 51887, 65005, 81024]
+      }
+    },
+    "note": "Shares flat at ~116.08 Cr post-IPO (FV ₹1, net cash post ₹2,080 Cr fresh). Bear = MDR compression + ESOP + intl delay, derate to 35×. Bull = cross-border GTV + affordability take-rate + 14.9%→25% intl, P/E held 55×. Even Bull derates from 1335× → 55×; earnings must 10× to offset."
+  },
+  "takeaway": "Pine Labs doesn't sell POS machines — it sells <strong>instant settlement where failure is not an option</strong>, and the filings say the next chapter is <strong>PA + PG + cross-border licences (Nov-2025) + GTV ₹11.42 lakh Cr at 80% retention + affordability + global rails</strong> — licensed in India, scaled for 954k merchants, building for cross-border.",
+  "method_footer": "Filings-only portrait. DRHP 25-Jun-2025 (FY23 ₹1,598 Cr rev, FY24 ₹1,769 Cr, FY25 ₹2,274 Cr, loss ₹342→₹145 Cr, EBITDA ₹356 Cr 15.7%, GTV ₹11.42 lakh Cr 5.7B txns, 954k merchants, 198 FIs, 14.9% intl) + RHP Nov-2025 (price band ₹210-221, mcap ₹25,654 Cr at 221, fresh ₹2,080 Cr, OFS 8.23 Cr, listing 14-Nov-2025 at 29% premium, mcap ₹32,027 Cr) + ET/Moneycontrol/TechCrunch Nov-2025. Peer pot illustrative (Paytm, PhonePe est., Razorpay est., Zaggle, MSwipe est., BharatPe est.), share = revenue/pot, not TAM. Post-IPO 116.08 Cr shares (FV ₹1)."
+}

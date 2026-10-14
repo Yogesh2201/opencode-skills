@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Global Briefing — Company/Topic Data Schema",
+  "type": "object",
+  "required": ["meta", "stories", "notable", "top3", "caution_line", "macro_dashboard", "chart", "thirty_second_brief"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["date", "window_start_utc", "window_end_utc", "equities_status", "story_count", "variant", "render_date"],
+      "properties": {
+        "date": { "type": "string", "format": "date" },
+        "window_start_utc": { "type": "string" },
+        "window_end_utc": { "type": "string" },
+        "equities_status": { "type": "string" },
+        "story_count": { "type": "integer" },
+        "variant": { "type": "string", "enum": ["blue-black", "black-blue-orange"] },
+        "render_date": { "type": "string", "format": "date" }
+      }
+    },
+    "stories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rank", "headline", "what_happened", "why_matters", "market_impact", "watch_next", "confidence_facts", "confidence_traj"],
+        "properties": {
+          "rank": { "type": "integer" },
+          "id": { "type": "string" },
+          "headline": { "type": "string" },
+          "what_happened": { "type": "array", "items": { "type": "string" } },
+          "why_matters": { "type": "string" },
+          "market_impact": {
+            "type": "object",
+            "properties": {
+              "oil": { "type": "string" },
+              "equities": { "type": "string" },
+              "bonds": { "type": "string" },
+              "currency": { "type": "string" },
+              "sectors": { "type": "string" }
+            }
+          },
+          "watch_next": { "type": "array", "items": { "type": "string" }, "minItems": 5, "maxItems": 5 },
+          "confidence_facts": { "type": "string", "enum": ["high", "med", "low"] },
+          "confidence_traj": { "type": "string", "enum": ["high", "med", "low"] },
+          "confidence_note": { "type": "string" }
+        }
+      }
+    },
+    "notable": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tag": { "type": "string" },
+          "text": { "type": "string" }
+        }
+      }
+    },
+    "top3": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": { "type": "integer" },
+          "headline": { "type": "string" },
+          "why": { "type": "string" }
+        }
+      }
+    },
+    "caution_line": { "type": "string" },
+    "macro_dashboard": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "properties": {
+          "indicator": { "type": "string" },
+          "signal": { "type": "string" }
+        }
+      }
+    },
+    "chart": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "why": { "type": "string" },
+        "bullets": { "type": "array", "items": { "type": "string" } },
+        "secondary": { "type": "string" }
+      }
+    },
+    "thirty_second_brief": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": { "type": "string" }
+    }
+  }
+}

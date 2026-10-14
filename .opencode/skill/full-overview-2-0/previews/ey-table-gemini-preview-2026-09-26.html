@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earnings-yield tile — Gemini preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfbfd; --surface:#ffffff; --surface-2:#f0f4f9; --surface-3:#e9eef6;
+  --ink:#1f1f1f; --ink-2:#444746; --ink-3:#8f909c;
+  --line:#e3e3e3;
+  --ok:#1e8e3e; --warn:#b06000; --bad:#d93025;
+  --gemini-sweep:linear-gradient(90deg,#4285F4 0%,#5961F0 25%,#9B72CB 50%,#D96570 75%,#FFA756 100%);
+  --chart-blue:#4285F4; --chart-blue-deep:#1967d2;
+  --r-sm:12px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --font:"Google Sans","Outfit","Segoe UI Variable",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,0,0,1);
+  --sh-1:0 1px 2px rgba(60,64,67,.12);
+  --sh-2:0 4px 12px rgba(60,64,67,.12);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);padding:32px 16px;}
+.wrap{max-width:880px;margin:0 auto;}
+h1{font-size:24px;margin:0 0 4px;background:var(--gemini-sweep);
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+.sub{color:var(--ink-3);font-size:13px;margin:0 0 20px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:22px;margin:0 0 16px;box-shadow:var(--sh-1);}
+h2{font-size:17px;margin:0 0 4px;font-weight:600;}
+.note{font-size:13px;color:var(--ink-2);margin:0 0 14px;}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 16px;}
+.tile{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px;}
+.tile .k{font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px;}
+.tile .v{font-size:18px;font-weight:700;}
+.tile.hero{background:linear-gradient(var(--surface),var(--surface)) padding-box,var(--gemini-sweep) border-box;
+  border:2px solid transparent;}
+.tile.hero .v{color:var(--chart-blue-deep);}
+table{border-collapse:collapse;width:100%;font-size:14px;}
+th{color:var(--ink-2);border-bottom:2px solid var(--line);padding:10px 8px;text-align:left;
+  font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;background:var(--surface-2);}
+td{padding:10px 8px;border-bottom:1px solid var(--line);}
+td.num,th.num{text-align:right;}
+.neg{color:var(--bad);font-weight:600;}
+.ybar{height:10px;background:var(--surface-3);border-radius:var(--r-pill);position:relative;margin:16px 0 6px;}
+.ybar-fill{position:absolute;left:0;top:0;bottom:0;width:50%;background:var(--gemini-sweep);border-radius:var(--r-pill);}
+.ybar-marks{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-3);}
+.reading{background:var(--surface-2);border-left:3px solid #9B72CB;border-radius:0 var(--r-sm) var(--r-sm) 0;
+  padding:12px 16px;font-size:14px;margin:12px 0 0;}
+.reading strong{color:var(--chart-blue-deep);}
+.foot{font-size:11px;color:var(--ink-3);margin-top:14px;}
+@media(max-width:640px){.tiles{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>✦ Gemini preview — earnings-yield tile</h1>
+  <p class="sub">GNG Electronics (NSE: EBGNG) · 26 Sep 2026 · tokens: bg #fbfbfd · Outfit · sweep gradient (2 uses: H1 + hero ring)</p>
+  <div class="card">
+    <h2>04 — Valuation · Earnings-yield cross-check</h2>
+    <p class="note">Net profit as % of market cap. Yield = PAT / MCap · implied P/E = 1 / yield · benchmark 3.7% ↔ 27.027×.</p>
+    <div class="tiles">
+      <div class="tile"><div class="k">Price</div><div class="v">₹669</div></div>
+      <div class="tile"><div class="k">MCap</div><div class="v">₹7,627 Cr</div></div>
+      <div class="tile"><div class="k">PAT (TTM)</div><div class="v">₹142 Cr</div></div>
+      <div class="tile hero"><div class="k">Target @ 3.7%</div><div class="v">₹336.65</div></div>
+    </div>
+    <table>
+      <tr><th>Metric</th><th class="num">Current</th><th class="num">At 3.7% yield</th><th class="num">Difference</th></tr>
+      <tr><td>Earnings yield</td><td class="num">1.86%</td><td class="num">3.70%</td><td class="num">+1.84pp</td></tr>
+      <tr><td>Implied P/E</td><td class="num">53.71×</td><td class="num">27.03×</td><td class="num neg">−49.68%</td></tr>
+      <tr><td>Market cap</td><td class="num">₹7,627.00 Cr</td><td class="num">₹3,837.84 Cr</td><td class="num neg">−49.7%</td></tr>
+      <tr><td>Share price</td><td class="num">₹669.00</td><td class="num"><strong>₹336.65</strong></td><td class="num neg">−49.7%</td></tr>
+    </table>
+    <div class="ybar"><div class="ybar-fill"></div></div>
+    <div class="ybar-marks"><span>0%</span><span>current 1.86% (50% of benchmark)</span><span>benchmark 3.70%</span></div>
+    <p class="reading">Priced at 1.86% yield (53.7×), a 3.70% yield (27×) implies <strong>₹336.65</strong> — ≈49.7% below market. <span style="color:var(--ink-3)">Inputs: 11.40 Cr shares (FV ₹2), EPS ₹12.46.</span></p>
+  </div>
+  <p class="foot">Preview only — 4 tiles + comparison table + yield bar + reading.</p>
+</div>
+</body>
+</html>

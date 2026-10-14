@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Full Overview 2.0 — Company Data Schema",
+  "description": "LLM generates only this JSON (~600 tokens). Build script renders all 3 HTML/MD variants with 0 LLM tokens.",
+  "type": "object",
+  "required": ["meta", "price", "bank_kpis", "revenue_mix", "peers_sfb", "products", "vision", "valuation", "trends", "forecast", "takeaway"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "company": { "type": "string" },
+        "nse": { "type": "string" },
+        "bse": { "type": "string" },
+        "hq": { "type": "string" },
+        "kicker": { "type": "string" },
+        "render_date": { "type": "string", "format": "date" }
+      }
+    },
+    "price": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "number" },
+        "mcap_cr": { "type": "number" },
+        "shares_cr": { "type": "number" },
+        "pe_ttm": { "type": "number" },
+        "pb": { "type": "number" }
+      }
+    },
+    "ey": {
+      "type": "object",
+      "description": "Earnings-yield tile (optional) — net profit as % of market cap; benchmark 3.7% yield = 27.027x P/E. build.py swaps GNG reference values in templates/<version>.template.html per these fields; absent = tile keeps GNG reference numbers.",
+      "properties": {
+        "price": { "type": "number" },
+        "mcap_cr": { "type": "number" },
+        "pat_cr": { "type": "number" },
+        "shares_cr": { "type": "number" },
+        "eps": { "type": "number" },
+        "yield_pct": { "type": "number" },
+        "yield_target_pct": { "type": "number" },
+        "pe_current": { "type": "number" },
+        "pe_target": { "type": "number" },
+        "mcap_target_cr": { "type": "number" },
+        "price_target": { "type": "number" },
+        "forward_pe": { "type": "number" },
+        "avg5_pe": { "type": "number" },
+        "price_at_forward": { "type": "number" },
+        "price_at_avg5": { "type": "number" },
+        "mcap_at_forward_cr": { "type": "number" },
+        "mcap_at_avg5_cr": { "type": "number" },
+        "diff_pp": { "type": "string" },
+        "diff_pct": { "type": "string" },
+        "diff_pe_pct": { "type": "string" },
+        "low_price": { "type": "number" },
+        "iv": { "type": "number" }
+      }
+    },
+    "valuation": {
+      "type": "object",
+      "description": "AlphaSpread valuation — primary source https://www.alphaspread.com",
+      "properties": {
+        "source": { "type": "string", "enum": ["AlphaSpread"] },
+        "url": { "type": "string" },
+        "dcf_value": { "type": "number", "description": "DCF Value Base Case, live from AlphaSpread (template-dependent: banks/SFBs e.g. 7yr Bank, Discount 10%, Exit 1.8x P/S; hospitals/industrials e.g. 15yr Net Income, Discount 10.5%, Exit 36.4x P/E)" },
+        "multiples_value": { "type": "number", "description": "Multiples-Based Value Base Case" },
+        "intrinsic_value": { "type": "number", "description": "Intrinsic Value Base Case (DCF or blended as per AlphaSpread)" },
+        "buy_zone_20pct": { "type": "number", "description": "Intrinsic * 0.8 (20% MOS)" },
+        "dcf_assumptions": {
+          "type": "object",
+          "properties": {
+            "revenue_growth": { "type": "number" },
+            "net_margin": { "type": "number" },
+            "forecast_period_years": { "type": "number" },
+            "template": { "type": "string" },
+            "discount_rate": { "type": "number" },
+            "exit_multiple": { "type": "number" }
+          }
+        },
+        "multiples": { "type": "object" },
+        "tiles": { "type": "object" },
+        "methodology": { "type": "string" }
+      }
+    },
+    "revenue_mix": {
+      "type": "object",
+      "description": "Where money comes from + geographical footprint (Section 1 subsection)",
+      "properties": {
+        "disclosure": { "type": "string" },
+        "segments": { "type": "array" },
+        "geo": { "type": "array" },
+        "footprint": { "type": "string" }
+      }
+    },
+    "forecast": {
+      "type": "object",
+      "properties": {
+        "anchor": { "type": "object" },
+        "scenarios": {
+          "type": "object",
+          "properties": {
+            "bear": { "type": "object" },
+            "base": { "type": "object" },
+            "bull": { "type": "object" }
+          }
+        },
+        "year_path": { "type": "object" }
+      }
+    }
+  },
+  "token_budget": {
+    "llm_input_tokens_estimate": 1800,
+    "llm_output_tokens_estimate": 800,
+    "vs_current_input": 28000,
+    "vs_current_output": 20000,
+    "saving_percent": 92
+  }
+}

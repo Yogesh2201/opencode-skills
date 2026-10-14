@@ -16,7 +16,7 @@ Copy this order exactly. Only company data changes.
 8. **05 Key trends & big messages** — 5 trends (tabbed: `#trendTabs/#tpKicker/#tpTitle/#tpBody/#tpCta` + `#tpPrev/#tpNext`) → 3 management messages (`.msg-grid`) → **Red flags — 2 HIGH · 3 MEDIUM** (5-row table + `.flag-grid` 5× `flag` with `sev.high/med` → `2 HIGH · 3 MEDIUM · 0 LOW`) → **Bottom line — six lenses** (`.msg-grid` 6×: Core idea / What changed / Hidden insight / What breaks / Open question / Takeaway)
 9. **06 5-year forecast** (`#s06`) — outcomes (Bear/Base/Bull KPI row) → `fc-note` (export flow + PAT margin + P/E) → twin interactive charts (`[data-fc="price"]` / `[data-fc="mcap"]` with `fc-legend` `.fc-chip[data-s]` toggles, `fc-plot` SVG with `fc-line/fc-dot/fc-end/fc-guide/fc-tip`, header global toggle sync) → assumptions table → year path (price + MCap 6-col) → key insight quote (EPS spread vs price spread) → monitor axis-note
 10. **One-line takeaway** (`#s09`) — hero block (dark / `var(--orange)` rule in Plain, orb gradient in Gemini)
-11. **Footer** — method · palette · disclaimer (SEBI, illustrative) · render line
+11. **Footer** — method · palette (HTML) / format note (MD, no color) · disclaimer (SEBI, illustrative) · render line
 
 ## IDs / anchors (HTML versions)
 

@@ -1,0 +1,109 @@
+{
+  "company": "Max Healthcare Institute Ltd",
+  "short": "Max Healthcare",
+  "nse": "MAXHEALTH",
+  "render_date": "2026-09-25",
+  "anchor_price": 1046,
+  "shares_cr": 97.33,
+  "forecast": {
+    "anchor": {
+      "price": 1046,
+      "mcap_cr": 101808,
+      "shares_cr": 97.33,
+      "sales_ttm_cr": 8712,
+      "eps_ttm": 14.98,
+      "pe": 69.8,
+      "pb": 11.39
+    },
+    "scenarios": {
+      "bear": {
+        "price_fy31": 685,
+        "mcap_fy31_cr": 66671,
+        "cagr": -8.1,
+        "sales_cagr": 12,
+        "sales_fy31_cr": 15353,
+        "pat_margin_fy31": 14.0,
+        "exit_pe": 28,
+        "pat_fy31_cr": 2149,
+        "eps_fy31": 22.09
+      },
+      "base": {
+        "price_fy31": 1474,
+        "mcap_fy31_cr": 143464,
+        "cagr": 7.1,
+        "sales_cagr": 18,
+        "sales_fy31_cr": 19892,
+        "pat_margin_fy31": 17.0,
+        "exit_pe": 36.4,
+        "pat_fy31_cr": 3382,
+        "eps_fy31": 34.75
+      },
+      "bull": {
+        "price_fy31": 2120,
+        "mcap_fy31_cr": 206340,
+        "cagr": 15.2,
+        "sales_cagr": 24,
+        "sales_fy31_cr": 25620,
+        "pat_margin_fy31": 19.0,
+        "exit_pe": 45,
+        "pat_fy31_cr": 4868,
+        "eps_fy31": 50.01
+      }
+    },
+    "year_path": {
+      "price": {
+        "bear": [
+          1046,
+          912,
+          795,
+          732,
+          698,
+          685
+        ],
+        "base": [
+          1046,
+          1120,
+          1205,
+          1298,
+          1385,
+          1474
+        ],
+        "bull": [
+          1046,
+          1245,
+          1480,
+          1720,
+          1915,
+          2120
+        ]
+      },
+      "mcap": {
+        "bear": [
+          101808,
+          88764,
+          77379,
+          71250,
+          67935,
+          66671
+        ],
+        "base": [
+          101808,
+          109010,
+          117280,
+          126335,
+          134802,
+          143464
+        ],
+        "bull": [
+          101808,
+          121176,
+          144038,
+          167408,
+          186387,
+          206340
+        ]
+      }
+    },
+    "note": "Shares flat at ~97.33 Cr (FV ₹10) — D/E 0.27 gives headroom, no dilution assumed. Bear = occupancy <70% + ARPOB slip + derate to 28x. Base = AlphaSpread DCF (15.2% Rev, 16.8% margin, 10.5%, 36.4x) → ₹1,474 (+7.1% CAGR, +40.9% upside). Bull = payer mix intact + diagnostics flywheel, P/E held at 45x. Current P/E 69.8x; base derates to 36.4x — earnings must do work."
+  }
+}

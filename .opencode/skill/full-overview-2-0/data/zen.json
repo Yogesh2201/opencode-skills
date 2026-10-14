@@ -1,0 +1,305 @@
+{
+  "bank_kpis": {
+    "borrowings_cr": 19,
+    "borrowings_fy25_cr": 78,
+    "capex_note": "Hyderabad R&D + production (Ministry of Science recognised); 230+ patents filed; 1,000+ training systems shipped; Anawave 76% (naval sim), TISA (loitering), Vector Technics (propulsion)",
+    "cash_jun26_cr": 1217,
+    "cash_mar26_cr": 1308,
+    "cashflow_note": "CFO Rs +245 Cr FY26 (vs Rs +31 Cr FY25); FCF Rs +185 Cr (vs Rs -1 Cr); treasury income Rs 80.4 Cr (~30% of PBT)",
+    "debtor_days": 119,
+    "dividend_per_share": 1.0,
+    "dividend_yield_pct": 0.06,
+    "equity_cr": 9,
+    "face_value": 1,
+    "inventory_days": 415,
+    "net_profit_cr": 197,
+    "opm_ttm_pct": 33,
+    "opm_yoy": [
+      41,
+      39,
+      36
+    ],
+    "order_book_cr": 1239,
+    "order_book_split": "Equipment 920.6 (74.3%) + AMC 318.4 (25.7%); Mar-26 1,336.04 (incl subs 121.81); Jul-26 +177.5 MoD tank sim => ~1,417 executable",
+    "pat_yoy": [
+      130,
+      299,
+      218
+    ],
+    "promoter_pct": 48.51,
+    "reserves_cr": 1880,
+    "roce_pct": 16.2,
+    "roe_pct": 10.7,
+    "sales_yoy": [
+      440,
+      974,
+      688
+    ],
+    "sales_yoy_labels": [
+      "FY24",
+      "FY25",
+      "FY26"
+    ],
+    "wc_days": 543
+  },
+  "forecast": {
+    "anchor": {
+      "eps": 20.1,
+      "guidance": "Mgmt: Rs 4,000 Cr cumulative FY27+FY28; 35% op EBITDA; 25% PAT; end-FY27 book ~Rs 2,500 Cr",
+      "mcap_cr": 15190,
+      "opm": "33% TTM (FY26 36%; Q1 FY27 op 27.3%)",
+      "pe": 83.6,
+      "price": 1682,
+      "shares_cr": 9.03,
+      "ttm_sales": 671
+    },
+    "assumptions": {
+      "bear": {
+        "exit_pe": 35,
+        "fy31_eps": 21.0,
+        "fy31_sales": 1183,
+        "pat_margin": 16,
+        "sales_cagr_5y": 12
+      },
+      "base": {
+        "exit_pe": 55,
+        "fy31_eps": 66.2,
+        "fy31_sales": 2491,
+        "pat_margin": 24,
+        "sales_cagr_5y": 30
+      },
+      "bull": {
+        "exit_pe": 68,
+        "fy31_eps": 96.7,
+        "fy31_sales": 3358,
+        "pat_margin": 26,
+        "sales_cagr_5y": 38
+      }
+    },
+    "logic": [
+      "Base 30% CAGR off depressed TTM; trails Rs 4,000 Cr FY27+28 guide \u2014 needs Rs 2,500 Cr end-book + DAC counter-UAS conversion.",
+      "Bear = tender drought persists + op margin stuck ~27% + derate to 35x. Bull = DAC thousands-Cr anti-drone + Rs 700-800 Cr simulator pipeline converts, P/E held at 68x.",
+      "Key insight: EPS spread 21.0 -> 96.7 (~4.6x) is smaller than price spread 733 -> 6575 (~9.0x) \u2014 the multiple does the heavy lifting.",
+      "Monitor quarterly: order inflow vs Rs 2,500 Cr target, Q2/Q3 execution (12-mo cycle), op margin vs 35%, debtor/inventory days, DAC tenders, treasury share of PBT."
+    ],
+    "scenarios": {
+      "base": {
+        "cagr": 16.7,
+        "mcap_cr": 32886,
+        "price_fy31": 3642
+      },
+      "bear": {
+        "cagr": -15.3,
+        "mcap_cr": 6622,
+        "price_fy31": 733
+      },
+      "bull": {
+        "cagr": 31.3,
+        "mcap_cr": 59375,
+        "price_fy31": 6575
+      }
+    },
+    "year_path": {
+      "mcap": {
+        "base": [
+          15190,
+          17726,
+          20688,
+          24144,
+          28178,
+          32886
+        ],
+        "bear": [
+          15190,
+          12865,
+          10897,
+          9230,
+          7818,
+          6622
+        ],
+        "bull": [
+          15190,
+          19949,
+          26203,
+          34416,
+          45205,
+          59375
+        ]
+      },
+      "price": {
+        "base": [
+          1682,
+          1963,
+          2291,
+          2674,
+          3121,
+          3642
+        ],
+        "bear": [
+          1682,
+          1425,
+          1207,
+          1022,
+          866,
+          733
+        ],
+        "bull": [
+          1682,
+          2209,
+          2902,
+          3811,
+          5006,
+          6575
+        ]
+      }
+    }
+  },
+  "meta": {
+    "bse": "533339",
+    "company": "Zen Technologies",
+    "hq": "Hyderabad, Telangana",
+    "kicker": "Anti-drone + combat-training simulators \u2014 debt-free, order-booked, richly priced",
+    "nse": "ZENTEC",
+    "render_date": "2026-09-26"
+  },
+  "peers_sfb": {
+    "note": "Listed counter-UAS / simulator / defence-electronics pot (FY26 revenues); share = revenue / pot",
+    "peers": [
+      {
+        "hq": "India \u2014 Chennai",
+        "name": "Data Patterns",
+        "overlap": "Closest system \u2014 radars + EW + avionics, 40% EBITDA, Rs 926 Cr book + Rs 1,090 Cr negotiated",
+        "revenue_cr": 925,
+        "share_pct": 39.9
+      },
+      {
+        "hq": "India \u2014 Hyderabad",
+        "name": "Zen Technologies",
+        "overlap": "Niche \u2014 simulators + counter-UAS, 33% OPM, Rs 1,417 Cr executable book",
+        "revenue_cr": 688,
+        "share_pct": 29.7
+      },
+      {
+        "hq": "India \u2014 Mumbai",
+        "name": "Paras Defence",
+        "overlap": "Optics + defence engineering, 26% OPM, Rs 477 Cr FY26 (+31%)",
+        "revenue_cr": 477,
+        "share_pct": 20.6
+      },
+      {
+        "hq": "India \u2014 Navi Mumbai",
+        "name": "ideaForge",
+        "overlap": "UAV ISR + EW-resilient, Rs 530 Cr bookings, FY26 PAT -Rs 17 Cr vs Zen profitable",
+        "revenue_cr": 226,
+        "share_pct": 9.8
+      }
+    ],
+    "pot_cr": 2316
+  },
+  "price": {
+    "current": 1682,
+    "mcap_cr": 15190,
+    "pb": 8.04,
+    "pe_ttm": 83.6,
+    "shares_cr": 9.03
+  },
+  "products": {
+    "expansions": [
+      "Naval simulation via Anawave 76%",
+      "230+ patents filed \u00b7 1,000+ systems shipped \u00b7 Buy Indian-IDDM single-vendor edge",
+      "AMC lifecycle Rs 318 Cr (25.7% of book)"
+    ],
+    "families": [
+      "Tank + crew gunnery simulators (Rs 177.5 Cr MoD Jul-26)",
+      "Integrated Air Defence Combat Simulator (delivered 9 months early)",
+      "Anti-drone soft + hard kill (Rs 245 Cr upgrade + Rs 37 Cr hard-kill Q3)",
+      "AI-powered counter-UAS + Hyperstrike interceptor drone",
+      "Drones + loitering munitions (TISA) + propulsion (Vector)",
+      "Zen Vrishab UGV + automated weapon stations + Smart Border Suite"
+    ],
+    "spectrum": "Components -> Simulators (Army/Navy) -> Counter-UAS -> Autonomous strike (drones/UGV)"
+  },
+  "takeaway": "Zen Technologies doesn't sell boxes \u2014 it sells combat readiness where live-fire is not an option, and the filings say the next chapter is counter-UAS at scale plus tri-service simulation plus a Rs 2,500 Cr order book \u2014 designed in Hyderabad, proven post-Op Sindoor, executed from Q2 FY27.",
+  "trends": {
+    "big_messages": [
+      "FY26 highest-ever discipline on margins despite revenue dip: op EBITDA 35.95%, PAT 25% guide held",
+      "Rs 1,417 Cr executable book (Jun 1,239 + Jul 177.5) \u2014 majority converts from Q2 FY27 on 12-mo cycle",
+      "Five capabilities ready: simulation, counter-drone, weapon stations, robotics, drones \u2014 DAC + Buy IDDM tailwind"
+    ],
+    "red_flags": [
+      "Extreme premium 83.6x P/E, 8.04x P/B, 22.6x P/S \u2014 AlphaSpread -16% to -39% on all models",
+      "Revenue dip FY26 -29% + Q1 -10.5%; Q1 op margin 27.3% vs 35% guide \u2014 negative leverage",
+      "Working-capital load 543 days; CCC 425 days; inventory 415 days on 12-mo execution",
+      "Promoter 60.1% (FY23) -> 48.51% (-11.6pp); treasury Rs 80.4 Cr ~30% of PBT",
+      "Tender dependence \u2014 no anti-drone/sim tenders floated recently; single-vendor IDDM cuts both ways"
+    ],
+    "trends": [
+      "Executable book Rs 1,417 Cr with Q2/Q3 FY27 conversion on 12-month cycle",
+      "Counter-UAS surge post-Op Sindoor \u2014 Rs 800 Cr orders + DAC thousands-Cr pipeline",
+      "Simulator pipeline Rs 700-800 Cr + Air Force C295 entry via OEM talks",
+      "Margin defence \u2014 35% op EBITDA guide vs 27.3% Q1; scale must restore leverage",
+      "Cash war-chest Rs 1,217 Cr + acquisitions (TISA/Anawave/Vector) for drones/robotics"
+    ]
+  },
+  "valuation": {
+    "buy_zone_20pct": 1066,
+    "dcf_assumptions": {
+      "discount_rate": 11.4,
+      "exit_multiple": 3.8,
+      "exit_unit": "P/S",
+      "forecast_period_years": 15,
+      "net_margin": 25.1,
+      "net_margin_from": 31.7,
+      "revenue_growth": 17.8,
+      "template": "Net Income"
+    },
+    "dcf_value": 1422,
+    "intrinsic_value": 1028,
+    "methodology": "AlphaSpread primary live 26 Sep 2026 \u2014 DCF Rs 1,421.64 (Net Income template, 15yr, Rev 17.8% vs 5Y hist 65.9%, Net margin 31.7%->25.1% vs hist 21.7%, Discount 11.4%, Exit 3.8x P/S) + Multiples-Based Rs 1,242.52 -> equal-weight blended Rs 1,332, Buy Rs 1,066. Local cross-check: trailing 83.6x, EV/EBITDA ~57x on op Rs 247 Cr, P/B 8.04x, OPM 33% TTM.",
+    "multiples": {
+      "ev_ebitda": 57,
+      "opm_ttm": 33,
+      "pb": 8.04,
+      "pe_trailing": 83.6
+    },
+    "multiples_value": 1243,
+    "source": "AlphaSpread",
+    "tiles": {
+      "blended": 1332,
+      "buy": 1066,
+      "dcf": 1422,
+      "local_fwd": 1523,
+      "multiples": 1243
+    },
+    "url": "https://www.alphaspread.com/security/nse/zentec/dcf-valuation/base-case"
+  },
+  "vision": {
+    "pillars": [
+      {
+        "tag": "Growth bet",
+        "target": "Rs 4,000 Cr FY27+FY28",
+        "title": "Execute the book",
+        "why": "Rs 1,417 Cr executable (12-mo cycle) -> end-FY27 book Rs 2,500 Cr; majority converts from Q2 FY27"
+      },
+      {
+        "tag": "Moat",
+        "target": "Thousands-Cr DAC pipeline",
+        "title": "Scale counter-UAS",
+        "why": "Post-Op Sindoor Rs 800 Cr proof; AI + hard-kill + interceptor; Buy IDDM single-vendor edge"
+      },
+      {
+        "tag": "Network",
+        "target": "Army/Navy -> Air Force",
+        "title": "Tri-service simulation",
+        "why": "Leader Army/Navy; C295 flight sim R&D done, OEM talks advanced; Rs 700-800 Cr sim pipeline"
+      },
+      {
+        "tag": "Capex of trust",
+        "target": "Rs 1,217 Cr cash, zero debt",
+        "title": "Acquire + patent",
+        "why": "TISA/Anawave/Vector; 230+ patents; 1,000+ systems; 35% op margin + 25% PAT guide"
+      }
+    ],
+    "quote": "FY26 was muted vs FY25, but Zen ended FY26 with five capabilities ready \u2014 training simulation, counter-drone, automated weapons, combat robotics and drones \u2014 and FY27 execution is clearly visible on a Rs 1,336 Cr order book."
+  }
+}

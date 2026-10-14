@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "company": "Max Healthcare Institute Ltd",
+    "short": "Max Healthcare",
+    "nse": "MAXHEALTH",
+    "bse": "543220",
+    "hq": "New Delhi",
+    "kicker": "Filings-only · NSE: MAXHEALTH · BSE: 543220 · New Delhi",
+    "render_date": "2026-09-25",
+    "source_note": "AR FY25 + BSE filings + screener.in/company/MAXHEALTH/consolidated (TTM Sep 2026) + AlphaSpread DCF/Multiples (15yr Net Income, Discount 10.5%, Exit 36.4x)"
+  },
+  "price": {
+    "current": 1046,
+    "high_52w": 1221.9,
+    "low_52w": 903.0,
+    "mcap_cr": 101808,
+    "shares_cr": 97.33,
+    "bv": 91.83,
+    "pe_ttm": 69.8,
+    "pb": 11.39,
+    "face_value": 10,
+    "eps_ttm": 14.98,
+    "eps_fy25": 11.07,
+    "dividend_yield": 0.19
+  },
+  "company_kpis": {
+    "sales_ttm_cr": 8712,
+    "sales_fy25_cr": 7028,
+    "sales_fy24_cr": 5406,
+    "sales_growth_5y": 27,
+    "sales_growth_3y": 22,
+    "op_profit_ttm_cr": 2318,
+    "opm_ttm": 27,
+    "pat_ttm_cr": 1457,
+    "pat_fy25_cr": 1076,
+    "pat_fy24_cr": 1058,
+    "net_margin_ttm": 16.8,
+    "roe": 14.33,
+    "roce": 15.35,
+    "debt_to_equity": 0.27,
+    "beds": 5200,
+    "hospitals": 22,
+    "occupancy_fy25": 75,
+    "arpob_fy25": 77100,
+    "ebitda_margin_ttm": 28.52,
+    "ebitda_ttm_cr": 2318
+  },
+  "peers_hospitals": {
+    "pot_cr": 285000,
+    "pot_label": "Listed hospital pot ~₹2.85 lakh Cr (market cap, Sep 2026)",
+    "peers": [
+      { "name": "Apollo Hospitals", "hq": "Chennai", "mcap_cr": 85000, "share_pct": 29.8, "revenue_ttm_cr": 18000, "overlap": "Largest private chain — pan-India, pharmacy + AHLL; direct at tertiary" },
+      { "name": "Max Healthcare", "hq": "New Delhi", "mcap_cr": 101808, "share_pct": 35.7, "revenue_ttm_cr": 8712, "overlap": "North-heavy, high ARPOB, asset-light + Brownfield", "is_subject": true },
+      { "name": "Fortis Healthcare", "hq": "Gurugram", "mcap_cr": 32000, "share_pct": 11.2, "revenue_ttm_cr": 6500, "overlap": "NCR + South, diagnostics (SRL) — occupancy leverage" },
+      { "name": "Narayana Hrudayalaya", "hq": "Bengaluru", "mcap_cr": 28000, "share_pct": 9.8, "revenue_ttm_cr": 4800, "overlap": "Cardiac + low-cost model, Cayman + India" },
+      { "name": "Aster DM Healthcare", "hq": "Dubai/Bengaluru", "mcap_cr": 18000, "share_pct": 6.3, "revenue_ttm_cr": 12000, "overlap": "GCC + India, asset-heavy" },
+      { "name": "Global Health (Medanta)", "hq": "Gurugram", "mcap_cr": 15000, "share_pct": 5.3, "revenue_ttm_cr": 3200, "overlap": "Gurugram super-specialty, 1 hospital → chain" },
+      { "name": "Others (KIMS, Jupiter)", "hq": "India", "mcap_cr": 5500, "share_pct": 1.9, "revenue_ttm_cr": 2500, "overlap": "Regional — scale below Max/Apollo" }
+    ]
+  },
+  "products": {
+    "families": [
+      { "name": "Cardiac Sciences", "icon": "favorite", "desc": "Heart — transplants, interventions, electrophysiology. High occupancy, high ARPOB driver.", "pill": "CABG · Angioplasty · Heart transplant" },
+      { "name": "Oncology", "icon": "biotech", "desc": "Cancer — medical, surgical, radiation. ~30% of revenue, long stay + high diagnostics.", "pill": "Chemo · Radiation · Robotic surgery" },
+      { "name": "Neurosciences", "icon": "psychology", "desc": "Brain & spine — stroke, neuro-surgery, epilepsy. Tertiary, high realisation.", "pill": "Neuro-surgery · Stroke · Spine" },
+      { "name": "Renal Sciences & Transplant", "icon": "water_drop", "desc": "Kidney — dialysis, transplant. Recurring + high margin.", "pill": "Dialysis · Kidney transplant" },
+      { "name": "Orthopedics & Joint Replacement", "icon": "personal_injury", "desc": "Bones — joint replacement, sports medicine. Elective, high ARPOB.", "pill": "Knee · Hip · Sports injury" },
+      { "name": "Liver & Bariatric Sciences", "icon": "gastroenterology", "desc": "Liver transplant, GI, bariatric. Niche, high realisation.", "pill": "Liver transplant · GI · Bariatric" }
+    ],
+    "extras": [
+      { "name": "Diagnostics & Labs", "icon": "labs", "desc": "Max Lab — 300+ collection centres, 6 labs — captive + non-captive." },
+      { "name": "Home Care & Day Care", "icon": "home_health", "desc": "Max@Home, day-care chemo/dialysis — asset-light, recurring." },
+      { "name": "International Patients", "icon": "public", "desc": "~9% revenue — 14-country assistance centres, medical tourism." }
+    ],
+    "spectrum": {
+      "min": "Diagnostics",
+      "mid1": "Day Care · Home Care",
+      "mid2": "Elective (Ortho)",
+      "max": "Transplants → Cardiac/Onco/Neuro"
+    }
+  },
+  "financial_snapshot": {
+    "note": "TTM to 18 Sep 2026 — hospital growth vs premium: Sales +16% TTM on 27% OPM. ROCE 15.35% at premium multiple.",
+    "mcap_cr": 101808,
+    "sales_ttm_cr": 8712,
+    "op_profit_ttm_cr": 2318,
+    "pat_ttm_cr": 1457,
+    "net_worth_cr": 8936,
+    "debt_to_equity": 0.27
+  },
+  "vision": {
+    "quote": "To be the most well regarded healthcare provider in India committed to the highest standards of clinical excellence and patient care, supported by latest technology and cutting edge research.",
+    "quote_source": "Max Healthcare, Annual Report FY25, Corporate Overview (Vision & Mission). Mission: “To serve patients with best clinical outcomes and service experience.”",
+    "pillars": [
+      { "icon": "target", "label": "Clinical excellence", "text": "Quinary care — transplants, robotic surgery, genomics — ARPOB ₹77,100, occupancy 75% (+300 bps YoY).", "tag": "22 hospitals · 5,200 beds" },
+      { "icon": "apartment", "label": "Brownfield + Greenfield", "text": "Dwarka (235 beds, 73% occ, breakeven in 6M), Lucknow/Nagpur (+86–102% EBITDA YoY), Noida/JP ramp.", "tag": "Bed adds without ARPOB dilution" },
+      { "icon": "insights", "label": "Asset-light & diagnostics", "text": "Max Lab + @Home + partnerships — 300+ collection centres, non-captive growth, 9% international.", "tag": "Diagnostics + Home Care" },
+      { "icon": "shield", "label": "Capital discipline", "text": "ROCE 15.35%, D/E 0.27, occupancy leverage → EBITDA 28.5% — growth without leverage.", "tag": "Net Debt/EBITDA <1x" }
+    ],
+    "oneline": "Max makes quinary care accessible where trust is non-negotiable — “most well regarded provider” is the promise; brownfield beds + diagnostics is the delivery."
+  },
+  "valuation": {
+    "source": "AlphaSpread",
+    "url": "https://www.alphaspread.com/security/nse/maxhealth/dcf-valuation/base-case",
+    "price_current": 1046,
+    "dcf_value": 1465.53,
+    "dcf_undervaluation_pct": 29,
+    "multiples_value": 1026.34,
+    "multiples_overvaluation_pct": 2,
+    "intrinsic_value": 1474.24,
+    "intrinsic_undervaluation_pct": 29,
+    "buy_zone_20pct": 1179.39,
+    "buy_zone_note": "20% below Intrinsic Value (AlphaSpread) — ₹1,179.39",
+    "dcf_assumptions": {
+      "revenue_growth": 15.2,
+      "revenue_growth_5y_hist": 27.3,
+      "revenue_growth_wallst_3y": 24.1,
+      "net_margin": 16.8,
+      "net_margin_5y_hist": 18.3,
+      "net_margin_wallst_3y": 17.4,
+      "forecast_period_years": 15,
+      "template": "Net Income",
+      "discount_rate": 10.5,
+      "exit_multiple": 36.4,
+      "exit_multiple_type": "P/E"
+    },
+    "multiples": {
+      "pe_ttm": 69.8,
+      "pb": 11.39,
+      "ev_ebitda": 32,
+      "ps": 11.7
+    },
+    "tiles": {
+      "dcf": { "value": 1465.53, "label": "DCF Value", "note": "15yr Net Income · Rev 15.2% · Margin 16.8% · 10.5% · 36.4x · +40.1%", "vs": "+40.1%" },
+      "multiples": { "value": 1026.34, "label": "Multiples-Based", "note": "P/E, P/S, EV/EBIT etc. vs peers/history · -1.9%", "vs": "-1.9%" },
+      "intrinsic": { "value": 1474.24, "label": "Intrinsic Value", "note": "AlphaSpread blended (DCF primary) · +40.9%", "vs": "+40.9%" },
+      "blended": { "value": 1474.24, "label": "AlphaSpread Intrinsic → Buy", "note": "+40.9% · 20% MOS → Buy ₹1,179", "buy_zone": 1179.39 }
+    },
+    "methodology": "AlphaSpread DCF — 15-year forecast via Net Income, Revenue Growth 15.2% (vs 5Y hist 27.3%, Wall St 3Y 24.1%), Net Margin 15.5%→16.8% (vs 5Y 18.3%), Discount Rate 10.5% (WACC/Cost of Equity), Exit Multiple 36.4x P/E. Multiples-Based Value from P/S, P/E, P/OCF, P/B, EV/Sales/EBITDA/EBIT etc. vs peers/history. Intrinsic Value = AlphaSpread selected method (DCF primary for Max). Backtest: VIC 0.32, Quintile Spread 28.3%, Hit Rate 65.1% — systematically informative.",
+    "local_crosscheck": {
+      "forward_pe": 55,
+      "forward_pb": 30,
+      "ev_ebitda": 29,
+      "note": "Local screener cross-check: FY26E P/E ~55x, P/B ~37x, EV/EBITDA ~29x — AlphaSpread DCF still implies 40% upside; Multiples suggests fairly valued vs history."
+    }
+  },
+  "trends": [
+    { "kick": "Trend 1 · hospital ramp", "icon": "apartment", "title": "Brownfield ramp without ARPOB dilution", "body": "Dwarka 235 beds <b>73% occ in 6M, breakeven</b>; Lucknow +102% EBITDA, Nagpur +86% YoY — <b>~5,200 beds, 22 hospitals</b>, occupancy 75% (+300 bps).", "cta": "→ Watch occupancy + ARPOB ₹77,100", "cls": "" },
+    { "kick": "Trend 2 · asset-light", "icon": "labs", "title": "Diagnostics + @Home flywheel", "body": "Max Lab <b>300+ centres, 6 labs</b> + @Home + partnerships — non-captive patients, <b>9% international</b> (14 countries).", "cta": "→ Max Lab collection growth", "cls": "purple" },
+    { "kick": "Trend 3 · payer mix", "icon": "payments", "title": "Payer mix discipline", "body": "Self-pay + TPA ~66% vs institutional <b>34%→lower</b> (institutional ~30% below other channels) — protects ARPOB.", "cta": "→ Self-pay mix + ARPOB", "cls": "amber" },
+    { "kick": "Trend 4 · profitability", "icon": "trending_up", "title": "EBITDA 28.5% with new beds", "body": "Sales <b>₹8,712 Cr TTM (+16%)</b>, EBITDA <b>₹2,318 Cr (27% OPM)</b>, PAT <b>₹1,457 Cr (16.8% margin)</b> — stable despite Dwarka/Lucknow additions.", "cta": "→ EBITDA margin vs bed adds", "cls": "amber" },
+    { "kick": "Trend 5 · capital returns", "icon": "shield", "title": "Capital discipline at premium", "body": "ROCE <b>15.35%</b>, ROE <b>14.33%</b>, D/E <b>0.27</b>, Net Debt/EBITDA <1x — growth via <b>brownfield</b>, not leverage.", "cta": "→ ROCE vs bed capex", "cls": "amber" }
+  ],
+  "big_messages": [
+    { "icon": "target", "label": "Clinical", "text": "“Quinary care + robotic + genomics — <strong>ARPOB ₹77,100 flat, occupancy +300 bps</strong> — volume, not price.”", "source": "— AR FY25 + Q4 FY25 update" },
+    { "icon": "apartment", "label": "Expansion", "text": "“Dwarka breakeven in 6M, Lucknow/Nagpur double-digit EBITDA growth — <strong>brownfield first, greenfield selective</strong>.”", "source": "— Q4 FY25 investor presentation" },
+    { "icon": "savings", "label": "Efficiency", "text": "“EBITDA <strong>28.5% despite new beds</strong> — occupancy leverage + payer mix + diagnostics flywheel.”", "source": "— Screener TTM + AR FY25" }
+  ],
+  "red_flags": {
+    "summary": "1 HIGH · 3 MEDIUM · 1 LOW",
+    "flags": [
+      { "id": "VALUATION PREMIUM", "severity": "HIGH", "evidence": "P/E 69.8x (TTM) / 55x FY26E, P/B 11.4x, EV/EBITDA ~32x — premium to hospitals (Apollo ~40x) and to AlphaSpread Multiples fair value (1,026 vs 1,046)" },
+      { "id": "OCCUPANCY LEVERAGE", "severity": "MEDIUM", "evidence": "75% occ (+300 bps) — further ramp from Dwarka/Lucknow/Noida needs 70%+ to hold 28.5% EBITDA; ARPOB flat ₹77,100" },
+      { "id": "CAPEX / BED ADDS", "severity": "MEDIUM", "evidence": "22 hospitals → greenfield/brownfield capex — D/E 0.27 low but bed adds dilute ROCE if ARPOB/occupancy slip" },
+      { "id": "PAYER / CASE MIX", "severity": "MEDIUM", "evidence": "Institutional share cut to ~34% — watch self-pay/TPA vs international 9% (high realisation) mix" },
+      { "id": "REGULATORY", "severity": "LOW", "evidence": "Price caps, clinical regulation — CGHS/PMJAY pricing risk; Max low exposure but sector-wide" }
+    ]
+  },
+  "bottom_line": {
+    "core_idea": "Not a hospital — <strong>quinary care platform</strong> (cardiac/onco/neuro/transplant) with asset-light diagnostics + @Home.",
+    "what_changed": "Single hospital → <strong>22 hospitals, 5,200 beds</strong> — occupancy 75% + ARPOB ₹77,100 + 28.5% EBITDA with new beds.",
+    "hidden_insight": "Watch <strong>occupancy × ARPOB</strong> — Dwarka 73% in 6M proves ramp, but holds premium multiple.",
+    "what_breaks": "<strong>OCC <70% or ARPOB <75k</strong> with new beds → EBITDA <26% → P/E 70x compresses.",
+    "open_question": "Hold <strong>75% occ + 27% OPM</strong> while adding beds and keep ROCE 15%+?",
+    "takeaway": "Don't pay 70x for beds — <strong>own clinical, wait price near AlphaSpread buy zone ₹1,179.</strong>"
+  },
+  "forecast": {
+    "anchor": { "price": 1046, "mcap_cr": 101808, "shares_cr": 97.33, "sales_ttm_cr": 8712, "eps_ttm": 14.98, "pe": 69.8, "pb": 11.39 },
+    "scenarios": {
+      "bear": { "price_fy31": 685, "mcap_fy31_cr": 66671, "cagr": -8.1, "sales_cagr": 12, "sales_fy31_cr": 15353, "pat_margin_fy31": 14.0, "exit_pe": 28, "pat_fy31_cr": 2149, "eps_fy31": 22.09 },
+      "base": { "price_fy31": 1474, "mcap_fy31_cr": 143464, "cagr": 7.1, "sales_cagr": 18, "sales_fy31_cr": 19892, "pat_margin_fy31": 17.0, "exit_pe": 36.4, "pat_fy31_cr": 3382, "eps_fy31": 34.75 },
+      "bull": { "price_fy31": 2120, "mcap_fy31_cr": 206340, "cagr": 15.2, "sales_cagr": 24, "sales_fy31_cr": 25620, "pat_margin_fy31": 19.0, "exit_pe": 45, "pat_fy31_cr": 4868, "eps_fy31": 50.01 }
+    },
+    "year_path": {
+      "price": {
+        "bear": [1046, 912, 795, 732, 698, 685],
+        "base": [1046, 1120, 1205, 1298, 1385, 1474],
+        "bull": [1046, 1245, 1480, 1720, 1915, 2120]
+      },
+      "mcap": {
+        "bear": [101808, 88764, 77379, 71250, 67935, 66671],
+        "base": [101808, 109010, 117280, 126335, 134802, 143464],
+        "bull": [101808, 121176, 144038, 167408, 186387, 206340]
+      }
+    },
+    "note": "Shares flat at ~97.33 Cr (FV ₹10) — D/E 0.27 gives headroom, no dilution assumed. Bear = occupancy <70% + ARPOB slip + derate to 28x. Base = AlphaSpread DCF (15.2% Rev, 16.8% margin, 10.5%, 36.4x) → ₹1,474 (+7.1% CAGR, +40.9% upside). Bull = payer mix intact + diagnostics flywheel, P/E held at 45x. Current P/E 69.8x; base derates to 36.4x — earnings must do work."
+  },
+  "takeaway": "Max Healthcare doesn't sell beds — it sells <strong>clinical trust where failure is not an option</strong>, and filings + AlphaSpread say the next chapter is <strong>brownfield 5,200 beds + diagnostics flywheel at 75% occ + ARPOB ₹77,100</strong> — DCF ₹1,465 (+40%) vs Multiples ₹1,026 (fair) → Intrinsic ₹1,474 — fairly valued to 29% undervalued vs buy zone ₹1,179.",
+  "method_footer": "Filings-only + AlphaSpread. Company docs: AR FY25 (NSE/BSE PDFs) + Screener TTM (Sales ₹8,712 Cr, OPM 27%, PAT ₹1,457 Cr, EPS ₹14.98, P/E 69.8x, P/B 11.4x, ROE 14.33% ROCE 15.35%, D/E 0.27) + AlphaSpread DCF (15yr Net Income, Rev 15.2%, Net Margin 16.8%, Discount 10.5%, Exit 36.4x P/E → DCF ₹1,465.53, Multiples ₹1,026.34, Intrinsic ₹1,474.24, Buy 20% MOS ₹1,179.39). Price 18 Sep 2026 ₹1,046–1,049 (AlphaSpread ₹1,046). Peer pot ~₹2.85 lakh Cr (Apollo/Max/Fortis/Narayana/Aster/Medanta)."
+}

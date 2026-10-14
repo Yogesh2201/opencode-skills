@@ -17,6 +17,14 @@ into the next question. Reference files live in **this skill's own folders**:
 | `assets/` | `tokens.md` | Plain + Gemini token blocks, palette rules, SVG rule |
 | `assets/` | `forecast-model.md` | Section 06 numbers (anchor, outcomes, assumptions, year path) |
 | `assets/` | `verify-checklist.md` | Build + headless verification steps, reply format |
+| `templates/` | `gemini.template.html` | **Reusable** — verbatim copy of `examples/` for script rendering (0 LLM tokens) |
+| `templates/` | `plain.template.html` | same |
+| `templates/` | `markdown.template.md` | same |
+| `data/` | `schema.json` | JSON Schema for `data/<company>.json` (LLM generates only this, ~600 tokens) |
+| `data/` | `ujjivan.json` / `maxhealth.json` / `tdps.json` | Example data files — filings-traced, peer pot, forecast; `ujjivan.json` (SFB, AlphaSpread **Bank** template) + `maxhealth.json` (hospital, AlphaSpread **Net Income** template) are the two AlphaSpread references |
+| `scripts/` | `build.py` | Renderer: `templates/` + `data/<company>.json` → `Company_Overview/Final/` (0 LLM HTML tokens) |
+| `scripts/` | `verify.py` | Checklist as script (div balance, s04v, hdrFcToggle, val-visual, flag-grid) |
+| `scripts/` | `make_placeholders.py` | One-time: hardcoded values → `{{placeholders}}` for cleaner injection |
 
 `examples/` files are byte copies of the canonical trio in `Company_Overview/Final/`
 (`TDPS_Gemini-v4-forecast.html` -> `TDPS_Plain-v4-forecast.html` ->
@@ -37,7 +45,24 @@ Ask via the question tool with exactly these three options:
 
 Never assume a version. Only after the user picks, continue to Step 2.
 
-## Step 2 - Read the reference for the chosen version
+## Step 2 — Two paths (token-optimized preferred)
+
+### Path A — Token-optimized (preferred, ~91% saving)
+
+1. Read `data/schema.json` (structure, ~1.5 KB) + `assets/` for section order/tokens — **do NOT read `examples/` or `templates/` fully**.
+2. Generate **only** `data/<company>.json` per `schema.json` — filings-traced fields: `meta` (company, NSE/BSE, HQ, kicker), `price` (current, mcap, shares, BV, P/E, P/B), `bank_kpis` / `company_kpis` (revenue, OPM, etc.), `peers` (pot + peers with share), `products` (6 families + 3 extras + spectrum), `financial_snapshot` (5 rows), `vision` (quote + 4 pillars), **`valuation` (AlphaSpread live from https://www.alphaspread.com — DCF Value, Multiples-Based Value, Intrinsic Value, Buy Zone 20% MOS, 4-row multiples + 4 tiles + methodology; DCF params are template-dependent — banks/SFBs use Bank template e.g. Ujjivan 7yr, Discount 10%, Exit 1.8x P/S; hospitals/industrials use Net Income template e.g. Max 15yr, Discount 10.5%, Exit 36.4x P/E)**, `trends` (5 tabs) + `big_messages` + `red_flags` + `bottom_line`, `forecast` (anchor, 3 scenarios, year_path), `takeaway`. See `data/ujjivan.json` (AlphaSpread Bank-template) and `data/maxhealth.json` (AlphaSpread Net Income-template) as references. **~800 tokens, not 20K.**
+3. Render via script (0 LLM HTML tokens):
+   ```bash
+   python .opencode/skill/full-overview-2-0/scripts/build.py --company <slug> --version <gemini|plain|markdown|all> --date <YYYY-MM-DD>
+   ```
+   Script reads `templates/<version>.template.html` (static, never LLM) + `data/<slug>.json` and writes `Company_Overview/Final/<folder>/<Company>-<YYYY-MM-DD>.<ext>` — folders `MD-YYYY-MM/` · `Gemini-YYYY-MM/` · `Plain-YYYY-MM/` (folder carries the version; no `forecast` infix, no version tag).
+4. Verify via script:
+   ```bash
+   python .opencode/skill/full-overview-2-0/scripts/verify.py Company_Overview/Final/Gemini-<YYYY-MM>/<Company>-<YYYY-MM-DD>.html
+   ```
+   Checks: no PART_, div balanced, exactly one </body></html>, s01/s02/s03/s04/s04v/s05/s06/s09 + seg/donut/leg/hdrFcToggle/val-visual/flag-grid present, SVG style="fill:var(--)".
+
+### Path B — Heavy (fallback, legacy)
 
 Paths are relative to this skill folder:
 
@@ -53,6 +78,8 @@ For HTML versions, read in chunks (head/CSS first, then body, then scripts) and
 rebuild the file in parts using a `<!--PART_B-->`-style marker if a single write
 would exceed ~50 KB. Never leave a build marker in the delivered file.
 
+Use Path B only if the data schema is insufficient for a custom company. Path A covers all standard SFB/industrial cases (Ujjivan + TDPS examples prove it).
+
 ## Step 3 — Structure shared by all three versions
 
 Section order and anchors are fixed (identical across the trio — Sep 26 2026 update adds Financial snapshot, Valuation, Red flags, header FC toggle):
@@ -64,7 +91,7 @@ header meta-chips → kicker → H1 → subtitle → lede → 5-tile KPI row
 02 Geographical competitors (peer share bars + HQ geography + accessibility table)
 03 Key products             (6 generator families + 3 extras + MVA spectrum + Financial snapshot & quality read — 5-row MCap/Revenue/NP/Op Profit+FCF/Net Cash + warning)
 04 Company vision           (verbatim quote + 4 funded pillars)
-04 Valuation + DCF  (#s04v) (multiples 4 rows + 4 tiles DCF 812/Fwd 637/EV 694 → Blended 714→Buy 571 + blended table + methodology + val-visual bar)
+04 Valuation + DCF  (#s04v) — **AlphaSpread** (4-row multiples + 4 tiles DCF/Multiples/Intrinsic/Buy + blended table + methodology + val-visual bar; params are template-dependent — hospital e.g. DCF 1,465.53 / Multiples 1,026.34 → Intrinsic 1,474.24 → Buy 1,179.39 with 15yr Net Income template, Rev 15.2%, Net Margin 16.8%, Discount 10.5%, Exit 36.4x P/E; SFB e.g. DCF 120.48 / Multiples 64.69 → Intrinsic 120.48 → Buy 96.38 with 7yr Bank template, Rev 14.3%, Net Margin 21.8→19.9%, Discount 10%, Exit 1.8x P/S)
 05 Key trends & big messages (5 trends tabbed + 3 management messages + Red flags 2H·3M + flag-grid + Bottom line six lenses)
 06 5-year forecast  (#s06)  (Bear/Base/Bull outcomes + assumptions + year path + insight; twin interactive charts [data-fc=price|mcap] with per-panel .fc-chip + global header hfc-chip sync)
 one-line takeaway  (#s09)   (dark/orange hero block)
@@ -97,8 +124,8 @@ footer                      (method, palette, disclaimer, render date)
 
 ## Content rules (all versions)
 
-- **Filings-only**: every figure traced (AR FY25, BSE filings, `screener.in`, peer 10-K/AR/NOR). Peer % = share of one listed peer-group pot, never a TAM claim.
-- Forecast discipline is **Revenue → PAT margin → EPS → P/E → Price → MCap** (bank path does not apply). Anchor ₹764 / ₹23,864 Cr / ~31.24 Cr shares; outcomes Bear ₹444 (−10.3%) · Base ₹1,315 (+11.5%) · Bull ₹2,407 (+25.8%) — keep identical unless the user supplies new data.
+- **Filings-only + AlphaSpread**: every figure traced (AR FY25, BSE filings, `screener.in`, peer 10-K/AR/NOR) **and valuation pulled live from AlphaSpread** (https://www.alphaspread.com/security/nse/<ticker>/dcf-valuation/base-case + /relative-valuation + /summary — DCF Value, Multiples-Based Value, Intrinsic Value, Buy Zone 20% MOS; DCF params follow AlphaSpread's template for that company — Bank template for SFBs/banks e.g. Ujjivan 7yr, 10%, 1.8x P/S; Net Income template for hospitals/industrials e.g. Max 15yr, 10.5%, 36.4x P/E). Peer % = share of one listed peer-group pot, never a TAM claim.
+- Forecast discipline is **Revenue → PAT margin → EPS → P/E → Price → MCap** (bank path does not apply). Anchor ₹764 / ₹23,864 Cr / ~31.24 Cr shares; outcomes Bear ₹444 (−10.3%) · Base ₹1,315 (+11.5%) · Bull ₹2,407 (+25.8%) — keep identical unless the user supplies new data. **Valuation section uses live AlphaSpread DCF + Multiples → Intrinsic as primary, with local model as cross-check** (hospital e.g. DCF Rev 15.2%, Net Margin 16.8%, 15yr, 10.5%, 36.4x → 1,465.53 / Multiples 1,026.34 → Intrinsic 1,474.24; SFB e.g. DCF Rev 14.3%, Net Margin 21.8→19.9%, 7yr Bank, 10%, 1.8x P/S → 120.48 / Multiples 64.69 → Intrinsic 120.48).
 - Always mark section 06 **illustrative, not a price target**, and keep the SEBI disclaimer.
 - If the user names a different company, keep the structure/tokens and replace only the data (ask for the source figures if they are missing).
 - Responsive: KPI/vision/message grids collapse at 900/640px; seg pills scroll; print hides nav/totop.
@@ -107,16 +134,21 @@ footer                      (method, palette, disclaimer, render date)
 
 ## Output
 
-Save the new file next to the trio, in `Company_Overview/Final/`:
+Save the new file in `Company_Overview/Final/` **grouped by type + month**
+(via script or direct write):
 
-| Chosen version | File name |
-|---|---|
-| Markdown | `<Company>_forecast-<YYYY-MM-DD>.md` |
-| Gemini | `<Company>_Gemini-forecast-<YYYY-MM-DD>.html` |
-| Plain | `<Company>_Plain-forecast-<YYYY-MM-DD>.html` |
+| Chosen version | Folder | File name |
+|---|---|---|
+| Markdown | `MD-<YYYY-MM>/` | `<Company>-<YYYY-MM-DD>.md` |
+| Gemini | `Gemini-<YYYY-MM>/` | `<Company>-<YYYY-MM-DD>.html` |
+| Plain | `Plain-<YYYY-MM>/` | `<Company>-<YYYY-MM-DD>.html` |
 
-Single file, CSS/JS inlined (HTML versions). Reply with the path + one line on what
+Every file is `Stock-date` — the folder carries the version. No `forecast` infix anywhere. Reply with the path + one line on what
 was built, then **always** go to Step 4.
+
+**Token budget:**
+- Path A (preferred): LLM ~1.8K input (schema + filings excerpt) + ~0.8K output (JSON) = **~2.6K** for all 3 versions (2nd/3rd = 0). Was **~35K** per version (113 KB example + 20K HTML generation) → **~91% saving**.
+- Path B (legacy): ~28K input (example) + ~20K output per version.
 
 ## Step 4 — Follow-up question (always last)
 

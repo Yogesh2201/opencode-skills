@@ -1,0 +1,327 @@
+{
+  "bank_kpis": {
+    "book_standalone_cr": 1800,
+    "book_yoy": "+31% YoY (Q1 FY27); FY26 close Rs 1,645 Cr (+23%)",
+    "borrowings_cr": 123,
+    "borrowings_fy25_cr": 187,
+    "bts_book_cr": 864,
+    "bts_book_yoy": "+28%",
+    "bts_revenue_cr": 277,
+    "bts_revenue_yoy": "+35%",
+    "capex_note": "Rs 45 Cr FY26 (EMS capacity + advanced SMT line); Rs 50-70 Cr guided for new Bengaluru facility; SAMAR Maturity Level 5",
+    "cashflow_note": "CFO Rs +60 Cr FY26 (vs Rs -29 Cr FY25); FCF Rs +20 Cr (vs Rs -48 Cr); Q1 FY27 consol PAT Rs 106 Cr incl ~Rs 94 Cr one-time deconsolidation gain (continuing PAT Rs 11 Cr)",
+    "debtor_days": 115,
+    "dividend_per_share": 5.0,
+    "dividend_yield_pct": 0.1,
+    "ems_revenue_cr": 696,
+    "ems_revenue_yoy": "+22%",
+    "equity_cr": 15,
+    "exceptional_note": "Rs 203 Cr FY26 provisions/impairments on overseas subs (standalone); Centum T&S deconsolidated 4-Jun-2026, balance under liquidation",
+    "face_value": 10,
+    "inflow_q1_cr": 360,
+    "inflow_yoy": "+70% YoY (BTS Rs 120 Cr, +150%)",
+    "inventory_days": 268,
+    "net_profit_continuing_cr": 101,
+    "net_profit_tTM_cr": 49,
+    "opm_ttm_pct": 12,
+    "opm_yoy": [
+      8,
+      13,
+      14
+    ],
+    "pat_continuing_yoy": "doubled YoY (Rs 50 Cr -> Rs 101 Cr)",
+    "promoter_pct": 46.82,
+    "reserves_cr": 328,
+    "roce_pct": 25.5,
+    "roe_pct": -12.5,
+    "sales_yoy": [
+      1091,
+      740,
+      953
+    ],
+    "sales_yoy_labels": [
+      "FY24*",
+      "FY25 continuing",
+      "FY26 continuing"
+    ],
+    "wc_days": 49
+  },
+  "forecast": {
+    "anchor": {
+      "eps": 59.2,
+      "eps_note": "Screener P/E 81.1x basis; reported TTM EPS Rs 33.36 distorted by exceptionals; continuing FY26 diluted EPS Rs 68.19",
+      "guidance": "Full-year growth objectives; BTS book-to-bill healthy; Rs 50-70 Cr Bengaluru capex",
+      "mcap_cr": 7089,
+      "opm": "12% TTM (FY26 continuing 14%; Q1 FY27 11.6%)",
+      "pe": 81.1,
+      "price": 4802,
+      "shares_cr": 1.476,
+      "ttm_sales": 1059
+    },
+    "assumptions": {
+      "bear": {
+        "exit_pe": 35,
+        "fy31_eps": 69.3,
+        "fy31_sales": 1706,
+        "pat_margin": 6,
+        "sales_cagr_5y": 10
+      },
+      "base": {
+        "exit_pe": 55,
+        "fy31_eps": 160.7,
+        "fy31_sales": 2635,
+        "pat_margin": 9,
+        "sales_cagr_5y": 20
+      },
+      "bull": {
+        "exit_pe": 70,
+        "fy31_eps": 271.1,
+        "fy31_sales": 3639,
+        "pat_margin": 11,
+        "sales_cagr_5y": 28
+      }
+    },
+    "logic": [
+      "Base 20% CAGR tracks BTS-led book growth (entity book 1.7x in 3 yrs, 20% CAGR) + Rs 1,800 Cr (+31%) visibility.",
+      "Bear = BTS phasing persists + EMS mix drags margin + derate to 35x. Bull = HAL AESA + semiconductor-equipment scale + defence pipeline converts, P/E held at 70x.",
+      "Key insight: EPS spread 69.3 -> 271.1 (~3.9x) is smaller than price spread 2426 -> 18979 (~7.8x) \u2014 the multiple does the heavy lifting.",
+      "Monitor quarterly: BTS inflow vs Rs 120 Cr/Q run-rate, book vs Rs 1,800 Cr, EBITDA margin vs 12-14%, overseas liquidation closure, DII/FII flows."
+    ],
+    "scenarios": {
+      "base": {
+        "cagr": 13.0,
+        "mcap_cr": 13044,
+        "price_fy31": 8836
+      },
+      "bear": {
+        "cagr": -12.8,
+        "mcap_cr": 3582,
+        "price_fy31": 2426
+      },
+      "bull": {
+        "cagr": 31.6,
+        "mcap_cr": 28018,
+        "price_fy31": 18979
+      }
+    },
+    "year_path": {
+      "mcap": {
+        "base": [
+          7089,
+          8008,
+          9047,
+          10221,
+          11546,
+          13044
+        ],
+        "bear": [
+          7089,
+          6184,
+          5395,
+          4706,
+          4106,
+          3582
+        ],
+        "bull": [
+          7089,
+          9332,
+          12284,
+          16169,
+          21285,
+          28018
+        ]
+      },
+      "price": {
+        "base": [
+          4802,
+          5425,
+          6128,
+          6923,
+          7821,
+          8836
+        ],
+        "bear": [
+          4802,
+          4189,
+          3654,
+          3188,
+          2781,
+          2426
+        ],
+        "bull": [
+          4802,
+          6321,
+          8321,
+          10953,
+          14418,
+          18979
+        ]
+      }
+    }
+  },
+  "meta": {
+    "bse": "517544",
+    "company": "Centum Electronics",
+    "hq": "Bengaluru, Karnataka",
+    "kicker": "ESDM at scale \u2014 BTS programmes + EMS lines, cleaned-up book, demanding multiple",
+    "nse": "CENTUM",
+    "render_date": "2026-09-26"
+  },
+  "peers_sfb": {
+    "note": "Listed mid-cap defence-electronics pot (FY26 continuing revenues); share = revenue / pot",
+    "peers": [
+      {
+        "hq": "India \u2014 Hyderabad",
+        "name": "Astra Microwave Products",
+        "overlap": "RF/microwave sub-systems, Uttam AESA Rs 2,205 Cr order, 28% margin \u2014 programme-depth leader",
+        "revenue_cr": 1156,
+        "share_pct": 32.0
+      },
+      {
+        "hq": "India \u2014 Bengaluru",
+        "name": "Centum Electronics",
+        "overlap": "Niche \u2014 BTS + EMS + ER&D, HAL AESA win, 12-14% margin, Rs 1,800 Cr book",
+        "revenue_cr": 969,
+        "share_pct": 26.8
+      },
+      {
+        "hq": "India \u2014 Chennai",
+        "name": "Data Patterns",
+        "overlap": "Closest system \u2014 radars + EW + avionics, ~40% EBITDA, Rs 926 Cr book + Rs 1,090 Cr negotiated",
+        "revenue_cr": 925,
+        "share_pct": 25.6
+      },
+      {
+        "hq": "India \u2014 Hyderabad",
+        "name": "Apollo Micro Systems",
+        "overlap": "Custom electronics + electromechanical \u2014 below-band overlap",
+        "revenue_cr": 562,
+        "share_pct": 15.6
+      }
+    ],
+    "pot_cr": 3612
+  },
+  "price": {
+    "current": 4802,
+    "mcap_cr": 7089,
+    "pb": 20.6,
+    "pe_ttm": 81.1,
+    "shares_cr": 1.476
+  },
+  "products": {
+    "expansions": [
+      "Advanced SMT line commissioned + Rs 50-70 Cr new Bengaluru facility",
+      "600+ design engineers, India + Europe design centres (ER&D)",
+      "SAMAR Maturity Level 5 certification"
+    ],
+    "families": [
+      "BTS strategic electronics \u2014 HAL AESA radar programme win",
+      "EMS lines \u2014 industrial + semiconductor-equipment build (Rs 696 Cr, +22%)",
+      "Space systems \u2014 satellite + launch electronics",
+      "Embedded computing + flight control & actuation",
+      "Defence + aerospace sub-systems (radar, EW adjacencies)",
+      "Industrial + transportation + medical electronics"
+    ],
+    "spectrum": "Design (ER&D) -> BTS programmes -> EMS volume -> Lifecycle service"
+  },
+  "takeaway": "Centum Electronics doesn't sell components \u2014 it sells qualified ESDM certainty where mission failure is not an option, and the filings say the next chapter is BTS programme scale plus EMS semiconductor-equipment lines plus a Rs 1,800 Cr order book \u2014 designed in Bengaluru, flown, orbited and radar-proven.",
+  "trends": {
+    "big_messages": [
+      "Record standalone revenue Rs 973 Cr (+25.4%); consol continuing Rs 969 Cr (+29.7%), PBT +73%, continuing PAT doubled to Rs 101 Cr",
+      "Standalone book Rs 1,800 Cr (+31%); Q1 inflow Rs 360 Cr (+70%), BTS Rs 120 Cr (+150%) \u2014 book-to-bill healthy",
+      "Overseas cleanup done: Centum T&S deconsolidated 4-Jun-2026 (~Rs 94 Cr one-time gain); focus sharpened on core India"
+    ],
+    "red_flags": [
+      "Extreme premium 81.1x P/E, 20.6x P/B \u2014 AlphaSpread -53% to -63% on all models",
+      "Reported losses: consol net -Rs 52 Cr FY26; standalone PAT -Rs 117 Cr on Rs 203 Cr overseas provisions",
+      "Overseas liquidation tail \u2014 remaining T&S entities under liquidation proceedings",
+      "Thin EMS margins 12-14% vs 28-40% programme peers; BTS phasing muted Q1",
+      "Promoter 58.80% -> 46.82% (-12pp in 3 yrs); 5-yr sales CAGR only 3.11%"
+    ],
+    "trends": [
+      "Record FY26: standalone Rs 973 Cr (+25%), consol continuing Rs 969 Cr (+30%), continuing PAT doubled",
+      "BTS scale: Rs 277 Cr (+35%), book Rs 864 Cr (+28%), HAL AESA win; book 2.3x in 3 yrs",
+      "EMS compounding: Rs 696 Cr (+22%), new SMT line, semiconductor-equipment demand",
+      "Cleanup complete: T&S deconsolidation (~Rs 94 Cr gain Q1), borrowings cut Rs 187 -> Rs 123 Cr",
+      "Demand visibility: defence + space + radar + EW + semi-equipment; Rs 360 Cr quarterly inflow (+70%)"
+    ]
+  },
+  "valuation": {
+    "buy_zone_20pct": 1660,
+    "dcf_assumptions": {
+      "discount_rate": 11.5,
+      "exit_multiple": 33.3,
+      "exit_unit": "P/E",
+      "forecast_period_years": 5,
+      "net_margin": 10.4,
+      "revenue_growth": 4.3,
+      "template": "FCFE"
+    },
+    "dcf_value": 1907,
+    "intrinsic_value": 1761,
+    "methodology": "AlphaSpread primary live 26 Sep 2026 \u2014 DCF Rs 1,906.60 (FCFE template, 5yr, Rev 4.3% vs 5Y hist 3.1% and WS 19.3%, Net margin 10.4% vs hist -1.5%, Discount 11.5%, Exit 33.3x P/E) + Multiples-Based Rs 2,242.39 -> equal-weight blended Rs 2,074, Buy Rs 1,660. Official Intrinsic Rs 1,760.61 (-63.3% at Rs 4,802). Local cross-check: Screener P/E 81.1x, EV/EBITDA ~58x on TTM op Rs 125 Cr, P/B 20.6x, OPM 12% TTM.",
+    "multiples": {
+      "ev_ebitda": 58,
+      "opm_ttm": 12,
+      "pb": 20.6,
+      "pe_trailing": 81.1
+    },
+    "multiples_value": 2242,
+    "source": "AlphaSpread",
+    "tiles": {
+      "blended": 2074,
+      "buy": 1660,
+      "dcf": 1907,
+      "local_fwd": 4678,
+      "multiples": 2242
+    },
+    "url": "https://www.alphaspread.com/security/nse/centum/dcf-valuation/base-case"
+  },
+  "vision": {
+    "pillars": [
+      {
+        "tag": "Growth bet",
+        "target": "BTS 2.3x in 3 yrs (32% CAGR)",
+        "title": "Programme depth",
+        "why": "Rs 400 Cr+ BTS bookings FY26 on Rs 250 Cr execution; Rs 800 Cr+ segment book; HAL AESA template for more"
+      },
+      {
+        "tag": "Moat",
+        "target": "SAMAR-5 + SMT + ER&D",
+        "title": "Qualification stack",
+        "why": "600+ engineers, India + Europe centres; highest maturity grade; semiconductor-equipment entry"
+      },
+      {
+        "tag": "Network",
+        "target": "Rs 1,800 Cr book (+31%)",
+        "title": "Domestic defence + space",
+        "why": "Defence, space, radar, EW, semi-equipment demand; Rs 360 Cr quarterly inflow (+70%)"
+      },
+      {
+        "tag": "Capex of trust",
+        "target": "Rs 50-70 Cr Bengaluru facility",
+        "title": "EMS capacity",
+        "why": "Rs 45 Cr FY26 capex; EMS Rs 696 Cr (+22%); borrowings cut Rs 187 -> Rs 123 Cr; Rs 5 dividend held"
+      }
+    ],
+    "quote": "We continued to see strong execution across both our BTS and EMS businesses... We closed the year with a standalone order book of approximately Rs 1,645 Crores, representing a growth of around 23% year-on-year and providing strong visibility for the coming years."
+  },
+  "ey": {
+    "price": 4802,
+    "mcap_cr": 7089,
+    "pat_cr": 49,
+    "shares_cr": 1.476,
+    "eps": 33.19,
+    "yield_pct": 0.69,
+    "yield_target_pct": 3.7,
+    "pe_current": 144.67,
+    "pe_target": 27.027,
+    "mcap_target_cr": 1324.32,
+    "price_target": 897.08,
+    "diff_pp": "+3.01pp",
+    "diff_pct": "-81.3%",
+    "diff_pe_pct": "-81.3%",
+    "low_price": 2044,
+    "iv": 2074
+  }
+}

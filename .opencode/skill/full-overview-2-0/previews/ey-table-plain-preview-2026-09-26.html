@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earnings-yield tile — Plain preview</title>
+<style>
+:root{
+  --page:#f9f9f7; --surface:#fcfcfb; --surface-2:#f1efe9;
+  --ink:#1a1a1a; --ink-2:#3d3d3d; --muted:#898781;
+  --accent:#2a78d6; --accent-deep:#1c5cab;
+  --crit:#d03b3b; --good:#008300;
+  --hairline:rgba(11,11,11,.10); --grid:#e1e0d9;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  padding:32px 16px;}
+.wrap{max-width:860px;margin:0 auto;}
+h1{font-size:22px;margin:0 0 4px;}
+.sub{color:var(--muted);font-size:13px;margin:0 0 20px;}
+.card{background:var(--surface);border:1px solid var(--hairline);border-radius:var(--radius);padding:20px;margin:0 0 16px;}
+h2{font-size:16px;margin:0 0 4px;}
+.note{font-size:13px;color:var(--ink-2);margin:0 0 14px;}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 16px;}
+.tile{background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:10px 12px;}
+.tile .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px;}
+.tile .v{font-size:17px;font-weight:700;}
+.tile.hero .v{color:var(--accent-deep);}
+table{border-collapse:collapse;width:100%;font-size:14px;}
+th{color:var(--accent);border-bottom:2px solid var(--accent);padding:8px;text-align:left;
+  background:rgba(42,120,214,.05);font-size:12px;text-transform:uppercase;letter-spacing:.03em;}
+td{padding:8px;border-bottom:1px solid var(--grid);}
+td.num,th.num{text-align:right;}
+.neg{color:var(--crit);font-weight:600;}
+.bar{height:10px;background:var(--surface-2);border:1px solid var(--hairline);border-radius:999px;position:relative;margin:16px 0 6px;}
+.bar-fill{position:absolute;left:0;top:0;bottom:0;width:34%;background:var(--accent);border-radius:999px;}
+.bar-marks{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);}
+.reading{border-left:3px solid var(--accent);background:rgba(42,120,214,.05);
+  padding:10px 14px;font-size:14px;border-radius:0 10px 10px 0;margin:12px 0 0;}
+.reading strong{color:var(--accent-deep);}
+.foot{font-size:11px;color:var(--muted);margin-top:14px;}
+@media(max-width:640px){.tiles{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Plain preview — earnings-yield tile</h1>
+  <p class="sub">GNG Electronics (NSE: EBGNG) · 26 Sep 2026 · tokens: page #f9f9f7 · accent #2a78d6 · system font, no gradients</p>
+  <div class="card">
+    <h2>04 — Valuation · Earnings-yield cross-check</h2>
+    <p class="note">Net profit as % of market cap. Yield = PAT / MCap · implied P/E = 1 / yield · benchmark 3.7% ↔ 27.027×.</p>
+    <div class="tiles">
+      <div class="tile"><div class="k">Price</div><div class="v">₹669</div></div>
+      <div class="tile"><div class="k">MCap</div><div class="v">₹7,627 Cr</div></div>
+      <div class="tile"><div class="k">PAT (TTM)</div><div class="v">₹142 Cr</div></div>
+      <div class="tile hero"><div class="k">Target @ 3.7%</div><div class="v">₹336.65</div></div>
+    </div>
+    <table>
+      <tr><th>Metric</th><th class="num">Current</th><th class="num">At 3.7% yield</th><th class="num">Difference</th></tr>
+      <tr><td>Earnings yield</td><td class="num">1.86%</td><td class="num">3.70%</td><td class="num">+1.84pp</td></tr>
+      <tr><td>Implied P/E</td><td class="num">53.71×</td><td class="num">27.03×</td><td class="num neg">−49.68%</td></tr>
+      <tr><td>Market cap</td><td class="num">₹7,627.00 Cr</td><td class="num">₹3,837.84 Cr</td><td class="num neg">−49.7%</td></tr>
+      <tr><td>Share price</td><td class="num">₹669.00</td><td class="num"><strong>₹336.65</strong></td><td class="num neg">−49.7%</td></tr>
+    </table>
+    <div class="bar"><div class="bar-fill"></div></div>
+    <div class="bar-marks"><span>LOW ₹239</span><span>IV ₹385</span><span>CURRENT ₹669</span></div>
+    <p class="reading">Priced at 1.86% yield (53.7×), a 3.70% yield (27×) implies <strong>₹336.65</strong> — ≈49.7% below market. <span style="color:var(--muted)">Inputs: 11.40 Cr shares (FV ₹2), EPS ₹12.46.</span></p>
+  </div>
+  <p class="foot">Preview only — 4 tiles + comparison table + bar + reading. Orange intentionally unused (one-hinge rule).</p>
+</div>
+</body>
+</html>

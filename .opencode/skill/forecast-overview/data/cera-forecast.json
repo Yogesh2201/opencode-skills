@@ -1,0 +1,97 @@
+{
+  "company": "Cera Sanitaryware Ltd",
+  "short": "Cera Sanitaryware",
+  "nse": "CERA",
+  "render_date": "2026-09-30",
+  "anchor_price": 5088,
+  "shares_cr": 1.299,
+  "revenue_label": "revenue",
+  "method": "FY26 filings (revenue from operations ₹2,050 Cr, diluted EPS ₹158.31, PAT margin ~10%) + Q1 FY27 investor communication Aug-2026 (revenue ₹486 Cr, +19.5% YoY; EBITDA ex-other income ₹492 mn, 10.1%; PAT ₹45.3 mn, 9.3%; FY27 guidance: revenue +18–20%, EBITDA margin 13.5–14%). TTM revenue ₹2,103 Cr, EPS ₹158.47. Market data as of 30-Sep-2026 close ₹5,088 (MCap ₹6,609 Cr, P/E 32.1×, P/B 4.0×, ROE 14.5%, D/E 0.03). Shares 13.0 mn (1.299 Cr, FV ₹1) held flat — no dilution.",
+  "forecast": {
+    "anchor": {
+      "price": 5088,
+      "mcap_cr": 6609,
+      "shares_cr": 1.299,
+      "revenue_ttm_cr": 2103,
+      "revenue_fy26_cr": 2050,
+      "eps_ttm": 158.47,
+      "pe": 32.1,
+      "pb": 3.99,
+      "roe": 14.47,
+      "de": 0.03,
+      "guidance_fy27": "Revenue +18–20%, EBITDA margin 13.5–14%"
+    },
+    "scenarios": {
+      "bear": {
+        "price_fy31": 3630,
+        "mcap_fy31_cr": 4715,
+        "cagr": -6.5,
+        "sales_cagr": 7,
+        "sales_fy31_cr": 2950,
+        "pat_margin_fy31": 8.0,
+        "exit_pe": 20,
+        "pat_fy31_cr": 236,
+        "eps_fy31": 181.7
+      },
+      "base": {
+        "price_fy31": 8196,
+        "mcap_fy31_cr": 10647,
+        "cagr": 10.0,
+        "sales_cagr": 12,
+        "sales_fy31_cr": 3706,
+        "pat_margin_fy31": 11.5,
+        "exit_pe": 25,
+        "pat_fy31_cr": 426,
+        "eps_fy31": 327.9
+      },
+      "bull": {
+        "price_fy31": 16986,
+        "mcap_fy31_cr": 22065,
+        "cagr": 27.3,
+        "sales_cagr": 18,
+        "sales_fy31_cr": 4811,
+        "pat_margin_fy31": 13.5,
+        "exit_pe": 34,
+        "pat_fy31_cr": 649,
+        "eps_fy31": 499.6
+      }
+    },
+    "year_path": {
+      "price": {
+        "bear": [5088, 4186, 4135, 3883, 3742, 3630],
+        "base": [5088, 4911, 5648, 6380, 7199, 8196],
+        "bull": [5088, 5926, 7953, 10482, 13437, 16986]
+      },
+      "mcap": {
+        "bear": [6609, 5438, 5371, 5044, 4861, 4715],
+        "base": [6609, 6379, 7337, 8288, 9352, 10647],
+        "bull": [6609, 7699, 10329, 13616, 17455, 22065]
+      }
+    },
+    "note": "Shares flat at ~1.299 Cr (13.0 mn, FV ₹1 post-bonus); promoter 54.4%, D/E 0.03 → no dilution assumed. Bear = FY27 guidance missed, input costs hold PAT margin at 8%, derate to 20×. Base = 12% sales CAGR (below the 18–20% guide, as the base effect fades and tiles/wellness commoditise) + PAT margin back to 11.5%, derate 32×→25×. Bull = guidance sustained at 18% + CERA Luxe / Jacuzzi mix lifting margin to 13.5%, P/E held at 34×."
+  },
+  "chart": {
+    "price_ymax": 18000,
+    "price_ticks": [0, 4500, 9000, 13500, 18000],
+    "mcap_ymax": 24000,
+    "mcap_ticks": [0, 6000, 12000, 18000, 24000]
+  },
+  "section_text": {
+    "section_note": "Revenue → PAT margin → EPS → P/E → Price → MCap (sanitaryware path; promoter 54.4%, D/E 0.03, shares flat — no dilution assumed). Anchor is TTM Sep-26. Hover a chart to read any year. Illustrative · not advice / not a price target.",
+    "anchor_sub": "Anchor: ₹5,088 · MCap ₹6,609 Cr · shares ~1.30 Cr · Revenue ₹2,103 Cr TTM (FY26 ₹2,050 Cr) · EPS ₹158.5 · P/E 32.1× · P/B 4.0× · ROE 14.5%",
+    "fc_note": "Building-products analogue: <strong style=\"color:var(--ink)\">volume growth + the PAT margin CERA holds through the input-cost cycle + the P/E the market grants a discretionary bath brand</strong>. Q1 FY27 revenue grew 19.5% to ₹486 Cr while PAT margin slipped 210 bps to 9.3% on elevated inputs — so the near-term call is margin, not topline. Base 12% sits below the company's 18–20% FY27 revenue guide because FY27 laps a soft base and tiles/wellness are commoditising; guidance holding is the Bull case.",
+    "price_sub": "TTM ₹5,088 → FY31E · hover for a year readout",
+    "mcap_sub": "TTM ₹6,609 Cr → FY31E · hover for a year readout",
+    "foot_price": [
+      "₹ per share · shares flat ~1.30 Cr (no dilution)",
+      "dashed = today ₹5,088"
+    ],
+    "foot_mcap": [
+      "MCap = price × ~1.30 Cr shares",
+      "Base 1.6× in 5y on earnings, derate 32×→25×"
+    ],
+    "shares_note": "Shares flat at ~1.30 Cr (13.0 mn, FV ₹1 post-bonus); promoter 54.4%, D/E 0.03 → no dilution assumed. Bear = FY27 guidance missed + input costs hold PAT margin at 8%, derate to 20×. Bull = guidance sustained at 18% + CERA Luxe / Jacuzzi mix lifts margin to 13.5%, P/E held at 34×.",
+    "insight": "Key insight: the EPS spread (₹181.7 → ₹499.6, ~2.7×) is narrower than the price spread (₹3,630 → ₹16,986, ~4.7×). <strong>Here the multiple does the heavy lifting.</strong> A Bear EPS at Base multiple (₹181.7 × 25× ≈ ₹4,543) still trails a Base EPS at Bear multiple (₹327.9 × 20× ≈ ₹6,558) — margin recovery first, re-rating second.<span class=\"who\">— Method note: watch PAT margin against 11.5%, not just the 19.5% topline print.</span>",
+    "monitor": "Monitor quarterly: PAT margin vs 9.3% in Q1 FY27 · EBITDA margin vs the 13.5–14% guide · faucetware +25.3% vs sanitaryware +14.1% growth · retail vs project mix · tile ASPs · P/E vs exit · promoter / FII holding."
+  }
+}

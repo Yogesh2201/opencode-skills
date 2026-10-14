@@ -50,7 +50,7 @@ Revenue by region not disclosed — these are order/installed proxies (not reven
 
 ## 02 — Peers + moat (revenue % wise)
 
-One peer-group pot (~$82B). Share = TTM revenue ÷ sum of this table. All revenues from filings. FX: €1 = $1.08 · R$1 = $0.18 · ₹83 = $1. Generator slice inside each giant differs — see overlap. **Orange = TDPS hinge only.**
+One peer-group pot (~$82B). Share = TTM revenue ÷ sum of this table. All revenues from filings. FX: €1 = $1.08 · R$1 = $0.18 · ₹83 = $1. Generator slice inside each giant differs — see overlap.
 
 | Peer | HQ Geography | TTM Revenue | Share | Overlap with TDPS |
 |---|---|---:|---:|---|
@@ -59,7 +59,7 @@ One peer-group pot (~$82B). Share = TTM revenue ÷ sum of this table. All revenu
 | **WEG** | Brazil — Jaraguá do Sul | $6.8B | 8.3% | **Closest direct — alternators, spares, delivery** |
 | **Cummins Power** | USA — Columbus, IN | ~$5.2B | 6.3% | *Diesel/gas gensets — engine-adjacent demand* |
 | **BHEL** | India — New Delhi | $3.4B | 4.1% | *India tenders / localization* |
-| **TD Power Systems** 🟠 | India — Bengaluru | **$0.24B** | **0.29%** | *Niche — 1–250 MVA custom* |
+| **TD Power Systems ★** | India — Bengaluru | **$0.24B** | **0.29%** | *Niche — 1–250 MVA custom* |
 
 **HQ geography share of the pot:** USA 52.6% · Germany 45.3% · Brazil 8.3% · India 4.4%
 
@@ -132,10 +132,10 @@ Plus: **⚡ Induction Motors** (industrial drives, custom-built) · **🚄 Synch
 
 | Metric | Value | Benchmark* | Read |
 |---|---|---|---|
-| **Trailing P/E** | **86.8×** | Quality ~28–32×* · WEG ~25×* | 🔴 Growth priced |
-| **Forward P/E** | ~78× | 65× exit* · +18.5% FY27E | 🟡 Elevated |
-| **EV/EBITDA** | ~60.7× | Quality ~28× / PSU ~14×* | 🔴 Premium to quality |
-| **OPM** | 18% TTM | 3yr ~17–19%* · Industrials ~18–22%* | 🟢 At plan — must hold |
+| **Trailing P/E** | **86.8×** | Quality ~28–32×* · WEG ~25×* | Growth priced |
+| **Forward P/E** | ~78× | 65× exit* · +18.5% FY27E | Elevated |
+| **EV/EBITDA** | ~60.7× | Quality ~28× / PSU ~14×* | Premium to quality |
+| **OPM** | 18% TTM | 3yr ~17–19%* · Industrials ~18–22%* | At plan — must hold |
 
 ### DCF + multiples — 4 tiles
 
@@ -148,10 +148,10 @@ Plus: **⚡ Induction Motors** (industrial drives, custom-built) · **🚄 Synch
 
 | Approach | IV / Share | vs ₹764 |
 |---|---|---|
-| **DCF Base (WACC 10.5%, g 6.0%)** | ₹812 | 🟢 +6.3% |
-| **Forward P/E (65× × ₹9.8)** | ₹637 | 🔴 -16.6% |
-| **EV/EBITDA (55× × ₹383 Cr)** | ₹694 | 🔴 -9.2% |
-| **Blended IV** | **₹714** | 🔴 -6.5% |
+| **DCF Base (WACC 10.5%, g 6.0%)** | ₹812 | +6.3% |
+| **Forward P/E (65× × ₹9.8)** | ₹637 | -16.6% |
+| **EV/EBITDA (55× × ₹383 Cr)** | ₹694 | -9.2% |
+| **Blended IV** | **₹714** | -6.5% |
 | **Buy Zone (20% MOS)** | ₹571 | 🎯 33.8% above |
 
 > 📌 **METHODOLOGY:** Independently modelled — base FCF ~₹192 Cr (OPM 18% → PAT 13% fade), 14%→6% fade 10Y (14/13/12, 11/10/9/8, 6%), WACC 10.50% (Rf 6.80%, ERP 6.00%, Beta 1.10), terminal 6.00%, net cash +₹612 Cr. Blended = equal-weight DCF / Fwd P/E / EV/EBITDA.
@@ -207,14 +207,14 @@ What AR FY25 and BSE filings say is moving the market — and what management re
 
 | # | Red flag | Severity | Evidence |
 |---|---|---|---|
-| **1** | **Export concentration** | 🔴 High | 68% FY25 → 93% Q1 FY27 · US/EU tariff + FX · ₹14,783M inflow (+41%) |
-| **2** | **Valuation premium** | 🔴 High | 86.8× P/E · 11.24× P/S · 60.7× EV/EBITDA vs WEG ~25×* |
-| **3** | **Order lumpiness** | 🟡 Med | Project rev · 3.4× cover (₹2,208 Cr) but Q1 domestic 135→51 Cr (-62%) · 93% swing |
-| **4** | **Margin / execution** | 🟡 Med | 18% OPM must hold as 3rd plant ramps Q4 FY26 + UK centre spend ahead |
-| **5** | **Working capital stretch** | 🟡 Med | 45 OEMs diversified but top-5 concentration · receivables on long-cycle builds |
+| **1** | **Export concentration** | High | 68% FY25 → 93% Q1 FY27 · US/EU tariff + FX · ₹14,783M inflow (+41%) |
+| **2** | **Valuation premium** | High | 86.8× P/E · 11.24× P/S · 60.7× EV/EBITDA vs WEG ~25×* |
+| **3** | **Order lumpiness** | Med | Project rev · 3.4× cover (₹2,208 Cr) but Q1 domestic 135→51 Cr (-62%) · 93% swing |
+| **4** | **Margin / execution** | Med | 18% OPM must hold as 3rd plant ramps Q4 FY26 + UK centre spend ahead |
+| **5** | **Working capital stretch** | Med | 45 OEMs diversified but top-5 concentration · receivables on long-cycle builds |
 
 ```
-EXPORT CONCEN  🔴 HIGH | VALUAT PREMIUM 🔴 HIGH | ORDER LUMPY 🟡 MEDIUM | MARGIN EXECUTN 🟡 MEDIUM | WORK CAP STRETCH 🟡 MEDIUM
+EXPORT CONCEN  HIGH | VALUAT PREMIUM HIGH | ORDER LUMPY MEDIUM | MARGIN EXECUTN MEDIUM | WORK CAP STRETCH MEDIUM
 2 HIGH · 3 MEDIUM · 0 LOW
 ```
 
@@ -292,8 +292,10 @@ Shares flat at ~31.24 Cr — almost debt-free, no dilution assumed (Bull at 25% 
 
 Filings-only portrait. Structure: 01 what they do → 02 competitors → 03 products (+ Financial snapshot) → 04 vision → **04 Valuation + DCF** → 05 trends (+ Red flags + Bottom line) → **06 five-year forecast (with header FC toggle)** → takeaway. Overview + products + vision + trends from AR FY25 (BSE PDF), BSE filings 2026-01-29 (Business Outlook, guidance ₹18B→₹22B) and 2026-05-20 (Q4), `tdps.co.in/generators`. TTM figures from `screener.in/company/TDPOWERSYS/consolidated` (TTM sales ₹2,124 Cr, FY26 ₹1,856 Cr, OPM 18%, ROCE 34%). Peer revenues from filings: GE Vernova 10-K 2025 ($38.1B), Siemens Energy AR24 (€34.465B), WEG 2024 NOR (R$37.987B), BHEL FY25 supplemental (₹28,339 Cr), Cummins group filing.
 
-### Palette
+### Format — plain markdown (no color)
 
+- **No color styling** — headings, tables, bold and blockquotes carry the hierarchy; Bull/Bear/Base read as words, not hues.
+- **Markdown:** structure from headings, tables, blockquotes and fenced ASCII bars only.
 - **Gemini:** orb field (`#fbfbfd` / `#4285F4` → `#FFA756`), blue = TDPS subject, gray = context.
 - **Plain:** Neutral light surface (`#fcfcfb` on `#f9f9f7`) — blue `#2a78d6` carries TDPS, warm gray `#898781` context; orange `#eb6834` is the one hinge. Forecast: bear `#d03b3b` · base `#2a78d6` · bull `#008300`.
 

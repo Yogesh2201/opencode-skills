@@ -4,7 +4,7 @@
 
 - [ ] Version chosen via the Step 1 question (never assumed)
 - [ ] The matching `examples/` reference read (Gemini / Plain / Markdown)
-- [ ] Output path decided: `Company_Overview/Final/<Company>[_Gemini|_Plain]-forecast-<YYYY-MM-DD>.<ext>`
+- [ ] Output path decided: `Company_Overview/Final/<folder>/<Company>-<YYYY-MM-DD>.<ext>` (folders `MD-YYYY-MM/` · `Gemini-YYYY-MM/` · `Plain-YYYY-MM/` carry the version; no `forecast` infix, no version tag)
 - [ ] New company? user-supplied figures gathered — else use the reference data verbatim
 
 ## While writing

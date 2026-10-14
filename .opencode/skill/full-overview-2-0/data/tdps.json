@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "company": "TD Power Systems",
+    "short": "TDPS",
+    "nse": "TDPOWERSYS",
+    "bse": "533553",
+    "hq": "Dabaspet, Bengaluru",
+    "kicker": "Filings-only · NSE: TDPOWERSYS · BSE: 533553 · Dabaspet, Bengaluru",
+    "render_date": "2026-09-20",
+    "source_note": "AR FY25 + BSE 29-Jan-2026 outlook + screener.in/company/TDPOWERSYS (18 Sep 2026 close)"
+  },
+  "price": { "current": 764, "mcap_cr": 23864, "shares_cr": 31.24, "pe_ttm": 86.8, "pb": 11.24 },
+  "bank_kpis": { "revenue_ttm_cr": 2124, "revenue_fy26_cr": 1856, "opm": 18.0, "roce": 34.0, "roe": 24.7, "order_book_cr": 2208, "countries": 111 },
+  "note": "Minimal TDPS data kept as second example to prove multi-company reuse. Full fields mirror ujjivan.json schema; add peers/products/forecast as needed."
+}

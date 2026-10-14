@@ -1,0 +1,110 @@
+{
+  "company": "Ujjivan Small Finance Bank",
+  "short": "Ujjivan SFB",
+  "nse": "UJJIVANSFB",
+  "render_date": "2026-09-25",
+  "anchor_price": 62.7,
+  "shares_cr": 194.8,
+  "forecast": {
+    "anchor": {
+      "price": 62.7,
+      "mcap_cr": 12215,
+      "shares_cr": 194.8,
+      "total_income_ttm_cr": 8453,
+      "total_income_fy25_cr": 7201,
+      "eps_ttm": 4.67,
+      "pe": 13.5,
+      "pb": 1.79
+    },
+    "scenarios": {
+      "bear": {
+        "price_fy31": 36.4,
+        "mcap_fy31_cr": 7094,
+        "cagr": -10.3,
+        "total_income_cagr": 10,
+        "total_income_fy31_cr": 11597,
+        "pat_margin_fy31": 9.0,
+        "exit_pe": 6.8,
+        "pat_fy31_cr": 1044,
+        "eps_fy31": 5.36
+      },
+      "base": {
+        "price_fy31": 107.9,
+        "mcap_fy31_cr": 21029,
+        "cagr": 11.5,
+        "total_income_cagr": 18,
+        "total_income_fy31_cr": 16476,
+        "pat_margin_fy31": 13.0,
+        "exit_pe": 9.8,
+        "pat_fy31_cr": 2142,
+        "eps_fy31": 11.0
+      },
+      "bull": {
+        "price_fy31": 197.6,
+        "mcap_fy31_cr": 38493,
+        "cagr": 25.8,
+        "total_income_cagr": 25,
+        "total_income_fy31_cr": 21976,
+        "pat_margin_fy31": 14.5,
+        "exit_pe": 12.1,
+        "pat_fy31_cr": 3187,
+        "eps_fy31": 16.36
+      }
+    },
+    "year_path": {
+      "price": {
+        "bear": [
+          62.7,
+          49.4,
+          42.5,
+          38.6,
+          37.3,
+          36.4
+        ],
+        "base": [
+          62.7,
+          68.4,
+          75.7,
+          83.5,
+          95.6,
+          107.9
+        ],
+        "bull": [
+          62.7,
+          80.0,
+          102.5,
+          126.9,
+          158.9,
+          197.6
+        ]
+      },
+      "mcap": {
+        "bear": [
+          12215,
+          9624,
+          8279,
+          7520,
+          7258,
+          7094
+        ],
+        "base": [
+          12215,
+          13332,
+          14752,
+          16260,
+          18629,
+          21029
+        ],
+        "bull": [
+          12215,
+          15586,
+          19970,
+          24723,
+          30953,
+          38493
+        ]
+      }
+    },
+    "note": "Shares flat at ~194.8 Cr (BV ₹35.1) — CRAR 23.1% gives buffer, no dilution assumed (Bull at 25% growth could need capital if loan-book CAGR >20%). Bear = MFI credit cost stays high + NIM compresses to ~8% + derate to 6.8×. Bull = secured 50%+ + CGFMU cushion + Universal Bank licence optionality, P/E held at 12.1×."
+  }
+}

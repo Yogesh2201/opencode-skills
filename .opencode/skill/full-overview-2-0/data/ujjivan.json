@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "company": "Ujjivan Small Finance Bank",
+    "short": "Ujjivan SFB",
+    "nse": "UJJIVANSFB",
+    "bse": "542904",
+    "hq": "Bengaluru",
+    "kicker": "Filings-only · NSE: UJJIVANSFB · BSE: 542904 · Bengaluru",
+    "render_date": "2026-09-25",
+    "source_note": "AR FY25 + BSE 30-Apr-2025 results + screener.in/company/UJJIVANSFB (24 Sep 2026 close)"
+  },
+  "price": {
+    "current": 62.7,
+    "high_52w": 73.9,
+    "low_52w": 43.8,
+    "mcap_cr": 12215,
+    "shares_cr": 194.8,
+    "bv": 35.1,
+    "pe_ttm": 13.5,
+    "pb": 1.79,
+    "face_value": 10
+  },
+  "bank_kpis": {
+    "loan_book_cr": 32122,
+    "loan_book_growth_yoy": 8,
+    "secured_pct": 43.5,
+    "secured_pct_prev": 30.2,
+    "deposits_cr": 37630,
+    "deposits_growth_yoy": 20,
+    "casa_cr": 9595,
+    "casa_pct": 25.5,
+    "total_income_fy25_cr": 7201,
+    "total_income_ttm_cr": 8453,
+    "ppop_cr": 1690,
+    "pat_fy25_cr": 726,
+    "pat_ttm_cr": 906,
+    "eps_fy25": 3.75,
+    "eps_ttm": 4.67,
+    "nim_fy25": 8.8,
+    "roa_fy25": 1.6,
+    "roe_fy25": 12.4,
+    "gnpa": 2.18,
+    "nnpa": 0.49,
+    "pcr": 78,
+    "floating_prov_cr": 181,
+    "crar": 23.1,
+    "credit_cost_fy25": 2.45,
+    "branches": 753,
+    "districts": 326,
+    "states_uts": 27,
+    "lcr": 120
+  },
+  "peers_sfb": {
+    "pot_cr": 275000,
+    "pot_label": "FY25 gross loan book pot ~₹2.75 lakh Cr",
+    "peers": [
+      { "name": "AU SFB", "hq": "Jaipur", "loan_book_cr": 115704, "share_pct": 42.0, "overlap": "Largest SFB — secured vehicle + MSME; universal bank applicant" },
+      { "name": "Equitas SFB", "hq": "Chennai", "loan_book_cr": 42751, "share_pct": 15.5, "overlap": "Vehicle + micro + housing; secured pivot similar" },
+      { "name": "Ujjivan SFB", "hq": "Bengaluru", "loan_book_cr": 32122, "share_pct": 11.7, "overlap": "Mass-market — JLG + Vikas + housing pivot", "is_subject": true },
+      { "name": "Jana SFB", "hq": "Bengaluru", "loan_book_cr": 30000, "share_pct": 10.9, "overlap": "AFH + Micro LAP 13k Cr; secured 72.5%" },
+      { "name": "Utkarsh SFB", "hq": "Varanasi", "loan_book_cr": 21566, "share_pct": 7.8, "overlap": "Varanasi — micro + housing" },
+      { "name": "ESAF SFB", "hq": "Thrissur", "loan_book_cr": 20000, "share_pct": 7.3, "overlap": "Thrissur — micro banking" },
+      { "name": "Suryoday SFB", "hq": "Navi Mumbai", "loan_book_cr": 11124, "share_pct": 4.0, "overlap": "Inclusive finance + FIG; CGFMU covered" }
+    ]
+  },
+  "products": {
+    "families": [
+      { "name": "Group Loans (JLG)", "icon": "groups", "ticket": "₹51k–₹60k", "desc": "joint-liability micro credit, 12–24M tenor, 25–26.5% p.a. The inclusion engine at scale.", "pill": "Core micro-banking · CGFMU covered" },
+      { "name": "Individual & Vikas Loans", "icon": "person", "ticket": "₹55k–₹2L", "desc": "individual micro-business, 24–36M, for graduated JLG borrowers building enterprise.", "pill": "Vikas ₹65k–2L · Small-ticket enterprise" },
+      { "name": "Affordable Housing", "icon": "home", "ticket": "₹2–20L", "desc": "micro-LAP + housing, up to 180M tenor. Secured anchor driving the book pivot.", "pill": "Micro-housing + LAP · secured" },
+      { "name": "MSME", "icon": "storefront", "ticket": "Working capital & term", "desc": "enterprise loans to small traders, services, manufacturing. Cashflow-based.", "pill": "Trader · services · small mfg" },
+      { "name": "Vehicle Finance", "icon": "two_wheeler", "ticket": "₹15k–1.5L", "desc": "two-wheeler, 18% p.a. onward, up to 48M. Mobility to income link.", "pill": "2W · dealer + direct" },
+      { "name": "Gold Loans", "icon": "diamond", "ticket": "Secured & liquid", "desc": "against jewellery, short tenor, quick disbursal. Low credit cost, LTV-driven.", "pill": "Gold-backed · short tenor" }
+    ],
+    "extras": [
+      { "name": "Agriculture & Allied", "icon": "agriculture", "desc": "KCC, allied agri, rural inclusion — seasonal cashflow products." },
+      { "name": "Deposits & CASA", "icon": "account_balance", "desc": "CASA, retail TD, TASC, NRI — granular funding with LCR 120%." },
+      { "name": "Third-Party & FIG", "icon": "handshake", "desc": "Insurance, cross-sell, FIG & treasury — fee and float beyond NII." }
+    ],
+    "spectrum": {
+      "min": "₹51k JLG min",
+      "mid1": "2W + Gold ₹15k–1.5L",
+      "mid2": "Vikas ₹2L",
+      "max": "MSME + Housing → ₹20L"
+    }
+  },
+  "financial_snapshot": {
+    "mcap_cr": 12215,
+    "total_income_ttm_cr": 8453,
+    "pat_ttm_cr": 906,
+    "ppop_cr": 1690,
+    "provisions_cr": 1017,
+    "net_worth_cr": 6838,
+    "crar": 23.1,
+    "note": "TTM to 24 Sep 2026 — inclusion growth vs cycle: Total Income ~₹8,453 Cr TTM on 8.8% NIM. CRAR 23.1% funds the pivot."
+  },
+  "vision": {
+    "quote": "We are deeply committed to empowering India’s un-served and under-served communities… our mission is to promote inclusive growth through accessible, need-based financial solutions.",
+    "quote_source": "Ujjivan Small Finance Bank, Annual Report FY25, Corporate Overview. The bank phrases it as “Seizing Tomorrow” — building a mass-market bank that earns trust consistently (MD & CEO letter, AR FY25).",
+    "pillars": [
+      { "icon": "target", "label": "Secured pivot", "text": "Grow secured to 50%+ — housing, MSME, vehicle, gold — to de-risk MFI cycles and lower credit cost.", "tag": "43.5% in Mar-25 vs 30.2% a year ago" },
+      { "icon": "phone_iphone", "label": "Phygital inclusion", "text": "Hello Ujjivan (India’s 1st voice-visual-vernacular app) + video KYC + WhatsApp + UPI — high-touch + low-cost.", "tag": "Applied for Universal Bank licence" },
+      { "icon": "shield", "label": "Resilience first", "text": "GNPA 2.18% NNPA 0.49% PCR 78% + floating provision ₹181 Cr + CRAR 23.1% — buffers before growth.", "tag": "Credit cost 2.45% FY25 incl. ₹46 Cr accel." },
+      { "icon": "savings", "label": "Granular funding", "text": "Deposits ₹37,630 Cr (+20% YoY) — CASA 25.5%, retail + CASA ₹26,676 Cr, LCR 120%.", "tag": "700+ outlets · 27 states/UTs" }
+    ],
+    "oneline": "Ujjivan makes aspiration bankable where formal credit was absent — “the bank for the aspiring Indians” is the promise; phygital distribution is the delivery."
+  },
+  "valuation": {
+    "source": "AlphaSpread",
+    "url": "https://www.alphaspread.com/security/nse/ujjivansfb/dcf-valuation/base-case",
+    "relative_url": "https://www.alphaspread.com/security/nse/ujjivansfb/relative-valuation",
+    "summary_url": "https://www.alphaspread.com/security/nse/ujjivansfb/summary",
+    "price_current": 64.21,
+    "price_anchor": 62.7,
+    "dcf_value": 120.48,
+    "dcf_undervaluation_pct": 47,
+    "multiples_value": 64.69,
+    "multiples_undervaluation_pct": 1,
+    "intrinsic_value": 120.48,
+    "intrinsic_undervaluation_pct": 47,
+    "buy_zone_20pct": 96.38,
+    "buy_zone_note": "20% below Intrinsic Value (AlphaSpread) — ₹96.38",
+    "dcf_assumptions": {
+      "revenue_growth": 14.3,
+      "revenue_growth_5y_hist": 19.5,
+      "revenue_growth_wallst_3y": 17.9,
+      "net_margin": 19.9,
+      "net_margin_start": 21.8,
+      "net_margin_5y_hist": 14.8,
+      "net_margin_wallst_3y": 21.5,
+      "forecast_period_years": 7,
+      "template": "Bank",
+      "discount_rate": 10.0,
+      "exit_multiple": 1.8,
+      "exit_multiple_type": "P/S"
+    },
+    "multiples": {
+      "pe_ttm": 13.5,
+      "pb": 1.79,
+      "ps": 1.44,
+      "price_to_deposits": 0.32
+    },
+    "tiles": {
+      "dcf": { "value": 120.48, "label": "DCF Value", "note": "7yr Bank · Rev 14.3% · Margin 21.8→19.9% · 10% · 1.8x P/S · +92.1% vs ₹62.7", "vs": "+92.1%" },
+      "multiples": { "value": 64.69, "label": "Multiples-Based", "note": "P/S, P/E, P/B, Price/Deposits vs peers/history · +3.2%", "vs": "+3.2%" },
+      "intrinsic": { "value": 120.48, "label": "Intrinsic Value", "note": "AlphaSpread selected method (DCF) · +92.1% · 47% undervalued", "vs": "+92.1%" },
+      "blended": { "value": 120.48, "label": "AlphaSpread Intrinsic → Buy", "note": "+92.1% · 20% MOS → Buy ₹96.38", "buy_zone": 96.38 }
+    },
+    "methodology": "AlphaSpread DCF — 7-year forecast via Bank template, Revenue Growth 14.3% (vs 5Y hist 19.5%, Wall St 3Y 17.9%), Net Margin 21.8%→19.9% (vs 5Y 14.8%, Wall St 3Y 21.5%), Discount Rate 10.0%, Exit Multiple 1.8x P/S. Multiples-Based Value from P/S, P/E, P/B, Price/Deposits etc. vs peers/history. Intrinsic Value = AlphaSpread selected method (DCF for Ujjivan SFB). History: typically traded at 41–59% undervaluation over 5Y vs 47% today — in line with history.",
+    "local_crosscheck": {
+      "residual_income": 78,
+      "forward_pe": 68,
+      "forward_pb": 64,
+      "blended_local": 70,
+      "buy_zone_local": 56,
+      "note": "Local filings cross-check (residual income Ke 12.5% → ₹78; Fwd P/E 14× → ₹68; Fwd P/B 1.6× → ₹64; blended ₹70 → buy ₹56) sits well below AlphaSpread DCF ₹120.48 — local model is more conservative on NIM compression + credit cost; AlphaSpread Bank template assumes margin holds near 20%."
+    },
+    "trailing_pe": 13.5,
+    "forward_pe": 12,
+    "pb": 1.79,
+    "roa": 1.6,
+    "roe": 12.4
+  },
+  "trends": [
+    { "kick": "Trend 1 · secured pivot", "icon": "shield", "title": "Secured pivot de-risks the book", "body": "Secured share <b>30.2% → 43.5% in one year</b> (+13.3 ppt) — housing + MSME + vehicle + gold. Target 50%+ — the filings call this “resilience before growth”.", "cta": "→ Watch secured % + GNPA in micro buckets", "cls": "" },
+    { "kick": "Trend 2 · deposit franchise", "icon": "savings", "title": "Granular deposits fund the pivot", "body": "Deposits <b>₹37,630 Cr (+20% YoY)</b> — CASA 25.5% + retail TD — LCR <b>120%</b> + CRAR <b>23.1%</b>. Jun-26 deposits ₹45,668 Cr (+21% YoY) show stickiness.", "cta": "→ CASA + retail TD + LCR", "cls": "purple" },
+    { "kick": "Trend 3 · MFI stress cycle", "icon": "warning", "title": "MFI stress & CGFMU cushion", "body": "GNPA <b>2.18% / NNPA 0.49%</b> PCR 78% + floating ₹181 Cr — but FY25 credit cost <b>2.45%</b> (incl. ₹46 Cr accelerated). ~49% of micro book under CGFMU guarantee.", "cta": "→ Credit cost + PCR + CGFMU cover", "cls": "amber" },
+    { "kick": "Trend 4 · digital inclusion", "icon": "phone_iphone", "title": "Phygital at scale", "body": "Hello Ujjivan (voice-visual-vernacular) + video KYC + WhatsApp + UPI — serving 700+ outlets, 24,903 staff, 27 states. Applied for <b>Universal Bank licence (2025)</b>.", "cta": "→ Hello Ujjivan adoption + cost-to-income", "cls": "amber" },
+    { "kick": "Trend 5 · inclusion runway", "icon": "trending_up", "title": "Inclusion runway + Secured TAM", "body": "India — mass-market credit + affordable housing + MSME: Ujjivan’s TAM is domestic, not export. FY25 disbursements ₹23,464 Cr (flat) but Q1 FY27 ₹7,444 Cr (+39% QoQ) shows secured-led bounce.", "cta": "→ Disbursements + secured mix + RoA", "cls": "amber" }
+  ],
+  "big_messages": [
+    { "icon": "target", "label": "Diversification", "text": "“Secured book at <strong>43.5% from 30.2%</strong> in a year — the de-risking is deliberate. Growth without resilience is not growth.”", "source": "— MD & CEO letter AR FY25 + BSE Apr-25" },
+    { "icon": "savings", "label": "Funding", "text": "“Deposits <strong>+20% YoY, CASA +15%</strong>, LCR 120%, CRAR 23.1% — the balance sheet funds the pivot.”", "source": "— BSE 30-Apr-2025 results" },
+    { "icon": "handshake", "label": "Universal bank", "text": "“Applied for <strong>Universal Bank licence</strong> (2025) — phygital + trust + track record as the application.”", "source": "— AR FY25 corporate overview" }
+  ],
+  "red_flags": {
+    "summary": "2 HIGH · 3 MEDIUM · 0 LOW",
+    "flags": [
+      { "id": "MICRO CREDIT", "severity": "HIGH", "evidence": "GNPA 2.18% / NNPA 0.49% PCR 78% · credit cost 2.45% FY25 (incl. 46 Cr accel.) · 56% unsecured" },
+      { "id": "NIM COMPRESS", "severity": "HIGH", "evidence": "NIM 8.8% FY25 -> 7% steady-state as secured 50%+; yield 18.5% -> 17.4% mix-driven" },
+      { "id": "COST ELEVATED", "severity": "MEDIUM", "evidence": "C/I 62% FY25 -> 67% Q1 FY27 · phygital + 700+ outlets + Hello Ujjivan investment" },
+      { "id": "CASA FRANCHISE", "severity": "MEDIUM", "evidence": "CASA 25.5% (₹9,595 Cr) vs AU ~35%* · bulk TD 29% · retail + CASA 70%+ needed" },
+      { "id": "PCR BUFFER", "severity": "MEDIUM", "evidence": "PCR 78% + floating ₹181 Cr (1% of loans) · ~49% micro under CGFMU · watch SMA / PAR 4.5%" }
+    ]
+  },
+  "bottom_line": {
+    "core_idea": "Not a corporate bank — <strong>mass-market inclusion</strong> with phygital distribution at ₹51k ticket.",
+    "what_changed": "Unsecured-led -> <strong>secured 43.5%</strong> + CASA 25.5% -> resilience before growth.",
+    "hidden_insight": "Watch <strong>credit cost vs NIM</strong> — disbursement growth is vanity, PCR is sanity.",
+    "what_breaks": "<strong>GNPA >2.5% + C/I >67%</strong> with NIM <8% -> RoA slips under 1%.",
+    "open_question": "Hold <strong>NIM 8%+ and credit cost <2%</strong> through secured 50% and still land 15% ROE?",
+    "takeaway": "Don't chase 13x -> <strong>own inclusion, wait cycle price.</strong>"
+  },
+  "forecast": {
+    "anchor": { "price": 62.7, "mcap_cr": 12215, "shares_cr": 194.8, "total_income_ttm_cr": 8453, "total_income_fy25_cr": 7201, "eps_ttm": 4.67, "pe": 13.5, "pb": 1.79 },
+    "scenarios": {
+      "bear": { "price_fy31": 36.4, "mcap_fy31_cr": 7094, "cagr": -10.3, "total_income_cagr": 10, "total_income_fy31_cr": 11597, "pat_margin_fy31": 9.0, "exit_pe": 6.8, "pat_fy31_cr": 1044, "eps_fy31": 5.36 },
+      "base": { "price_fy31": 107.9, "mcap_fy31_cr": 21029, "cagr": 11.5, "total_income_cagr": 18, "total_income_fy31_cr": 16476, "pat_margin_fy31": 13.0, "exit_pe": 9.8, "pat_fy31_cr": 2142, "eps_fy31": 11.0 },
+      "bull": { "price_fy31": 197.6, "mcap_fy31_cr": 38493, "cagr": 25.8, "total_income_cagr": 25, "total_income_fy31_cr": 21976, "pat_margin_fy31": 14.5, "exit_pe": 12.1, "pat_fy31_cr": 3187, "eps_fy31": 16.36 }
+    },
+    "year_path": {
+      "price": {
+        "bear": [62.7, 49.4, 42.5, 38.6, 37.3, 36.4],
+        "base": [62.7, 68.4, 75.7, 83.5, 95.6, 107.9],
+        "bull": [62.7, 80.0, 102.5, 126.9, 158.9, 197.6]
+      },
+      "mcap": {
+        "bear": [12215, 9624, 8279, 7520, 7258, 7094],
+        "base": [12215, 13332, 14752, 16260, 18629, 21029],
+        "bull": [12215, 15586, 19970, 24723, 30953, 38493]
+      }
+    },
+    "note": "Shares flat at ~194.8 Cr (BV ₹35.1) — CRAR 23.1% gives buffer, no dilution assumed (Bull at 25% growth could need capital if loan-book CAGR >20%). Bear = MFI credit cost stays high + NIM compresses to ~8% + derate to 6.8×. Bull = secured 50%+ + CGFMU cushion + Universal Bank licence optionality, P/E held at 12.1×."
+  },
+  "takeaway": "Ujjivan doesn't sell loans — it sells <strong>aspiration made bankable where formal credit was absent</strong>, and the filings say the next chapter is <strong>secured 50%+ (housing + MSME + vehicle + gold) + phygital distribution + Universal Bank optionality</strong> — originated in 700+ outlets, underwritten in Bengaluru, serving the aspiring Indians.",
+  "method_footer": "Filings-only portrait + AlphaSpread valuation. AR FY25 + BSE 30-Apr-2025 results (Total income ₹7,201 Cr, PAT ₹726 Cr, GNPA 2.18%/0.49%, CRAR 23.1%, deposits ₹37,630 Cr, loan book ₹32,122 Cr, NIM 8.8%, RoA 1.6% RoE 12.4%) plus Q1 FY27 disbursements ₹7,444 Cr (+39% QoQ). TTM figures from screener.in/company/UJJIVANSFB/ (Price ₹62.7, MCap ₹12,215 Cr, P/E 13.5×, P/B 1.79×, BV ₹35.1, 52W 43.8–73.9, TTM PAT ₹906 Cr). Valuation via AlphaSpread (https://www.alphaspread.com/security/nse/ujjivansfb/dcf-valuation/base-case): DCF ₹120.48 (7yr Bank template, Rev 14.3%, Margin 21.8→19.9%, Discount 10%, Exit 1.8x P/S, 47% undervalued vs ₹64.21) + Multiples ₹64.69 (1% undervalued) → Intrinsic ₹120.48 → Buy 20% MOS ₹96.38."
+}

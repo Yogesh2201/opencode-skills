@@ -36,10 +36,15 @@
 - Orb field: 48s cycle, `data-aurora="flat"` and `prefers-reduced-motion` disable it.
 - Themes: `:root[data-t="green-white"|"green"|"sunrise"|"dusk"|"none"]`.
 
-## Markdown
+## Markdown — plain, no color (2026-09-30 rule)
 
-No tokens — hierarchy comes from `#`/`##`/`###`, tables, `>` blockquotes, fenced ASCII bars.
-Palette only appears in the footer's **Palette** paragraph (hexes listed as inline `code`).
+No `<style>` block, no inline color spans, no red/yellow/green dot markers.
+Severity reads as words (High/Medium), Bull/Bear/Base read as words, subject
+marked with ★ — never color.
+
+- **No color styling** — headings, tables, bold and blockquotes carry the hierarchy.
+- **Markdown:** structure from `#`/`##`/`###`, tables, `>` blockquotes, fenced ASCII bars only.
+- Footer carries a **Format — plain markdown (no color)** note instead of a palette paragraph.
 
 ## New components (added Sep 26, 2026 — same in both HTML versions)
 

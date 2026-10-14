@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "company": "Indian Railway Catering & Tourism Corporation",
+    "nse": "IRCTC",
+    "bse": "542830",
+    "hq": "New Delhi, India",
+    "kicker": "Railway monopoly — ticketing, catering, tourism, Rail Neer — debt-light, high-return, richly priced",
+    "render_date": "2026-10-15"
+  },
+  "price": {
+    "current": 477,
+    "mcap_cr": 38168,
+    "shares_cr": 80,
+    "pe_ttm": 27.6,
+    "pb": 8.86
+  },
+  "bank_kpis": {
+    "borrowings_cr": 81,
+    "borrowings_fy25_cr": 90,
+    "capex_note": "4 new Rail Neer plants (Mysore, Prayagraj land secured; 2 existing plants doubling capacity); 260 Vande Bharat trains catering; Payment Aggregator licence target Aug-26",
+    "cash_jun26_cr": 1500,
+    "cash_mar26_cr": 1500,
+    "cashflow_note": "CFO ₹1,273 Cr FY26 (vs ₹833 Cr FY25); FCF ₹1,196 Cr; treasury income minimal; dividend ₹720 Cr FY26 (52% payout)",
+    "debtor_days": 132,
+    "dividend_per_share": 9,
+    "dividend_yield_pct": 1.89,
+    "equity_cr": 160,
+    "face_value": 2,
+    "inventory_days": 15,
+    "net_profit_cr": 1393,
+    "opm_ttm_pct": 31,
+    "opm_yoy": [36, 34, 33, 32, 31],
+    "order_book_cr": 0,
+    "order_book_split": "No traditional order book — recurring monopoly revenue streams",
+    "pat_yoy": [518, 1006, 1111, 1315, 1393],
+    "promoter_pct": 62.4,
+    "reserves_cr": 4149,
+    "roce_pct": 46.1,
+    "roe_pct": 34.4,
+    "sales_yoy": [1879, 3541, 4260, 4675, 5215],
+    "sales_yoy_labels": ["FY22", "FY23", "FY24", "FY25", "FY26"],
+    "wc_days": 40
+  },
+  "revenue_mix": {
+    "disclosure": "Four segments disclosed in AR FY26; ticketing margin ~83%, catering ~10-13%, tourism volatile, Rail Neer ~16%",
+    "footprint": "New Delhi HQ; PAN-India operations — 70.6M users, 1.56M tickets/day, 20 Rail Neer plants, 260+ Vande Bharat trains catering",
+    "geo": [
+      {"region": "India (domestic)", "share": "100%", "note": "Monopoly railway ticketing + catering + tourism; export negligible"}
+    ],
+    "segments": [
+      {"stream": "Catering Services", "share": "46%", "note": "₹2,399 Cr FY26; +12.9% YoY; ~10-13% margin; 260 Vande Bharat trains"},
+      {"stream": "Internet Ticketing", "share": "29%", "note": "₹1,536 Cr FY26; +7.7% YoY; ~83% margin; 89% market share"},
+      {"stream": "Tourism & Travel", "share": "17%", "note": "₹890 Cr FY26; +19.5% YoY; volatile margins; packages, hotels, pilgrimage"},
+      {"stream": "Rail Neer (Packaged Water)", "share": "8%", "note": "₹407 Cr FY26; +20.7% YoY; ~16% margin; 20 plants, 4 new planned"}
+    ]
+  },
+  "products": {
+    "expansions": [
+      "Payment Aggregator licence (target Aug-26) — own payment gateway, save MDR",
+      "Rail Neer capacity +4 plants + 2 expansions — target 30% EBITDA margin",
+      "260 new Vande Bharat trains catering contract",
+      "Tourism diversification — pilgrimage, packages, hotels, State Teertha"
+    ],
+    "families": [
+      "Internet Ticketing — IRCTC website/app, 89% reserved ticket share, 70.6M users",
+      "Rail Catering — static units, pantry cars, e-catering, Vande Bharat meals",
+      "Tourism — Bharat Darshan, pilgrimage, air packages, hotels, State Teertha",
+      "Rail Neer — 20 packaged water plants, 4 new + 2 expansions underway",
+      "E-Catering — food delivery to seats via app/partner restaurants",
+      "Advertising & Data — platform advertising, data monetisation (nascent)"
+    ],
+    "spectrum": "Monopoly ticketing (83% margin) → Catering scale (10-13%) → Tourism growth (volatile) → Rail Neer stability (16%)"
+  },
+  "peers_sfb": {
+    "note": "Listed leisure-services / tourism pot (FY26 revenue); IRCTC is a monopoly — peers only for relative size, not competitive overlap",
+    "peers": [
+      {
+        "hq": "India — Mumbai",
+        "name": "Indian Hotels (TAJ)",
+        "overlap": "Hospitality leader; ₹6,200 Cr FY26; 28% EBITDA; premium hotels vs IRCTC budget tourism",
+        "revenue_cr": 6200,
+        "share_pct": 35.1
+      },
+      {
+        "hq": "India — Mumbai",
+        "name": "Thomas Cook India",
+        "overlap": "Travel services + forex; ₹4,800 Cr FY26; loss-making; B2B/B2C travel vs IRCTC railway monopoly",
+        "revenue_cr": 4800,
+        "share_pct": 27.1
+      },
+      {
+        "hq": "India — Noida",
+        "name": "Easy Trip Planners",
+        "overlap": "Online travel booking; ₹650 Cr FY26; 40% EBITDA; pure-play OTA vs IRCTC ticketing monopoly",
+        "revenue_cr": 650,
+        "share_pct": 3.7
+      },
+      {
+        "hq": "India — Mumbai",
+        "name": "Mahindra Holidays",
+        "overlap": "Timeshare resorts; ₹1,100 Cr FY26; 25% EBITDA; vacation ownership vs IRCTC packages",
+        "revenue_cr": 1100,
+        "share_pct": 6.2
+      },
+      {
+        "hq": "India — New Delhi",
+        "name": "IRCTC",
+        "overlap": "Railway monopoly — ticketing, catering, tourism, water; ₹5,215 Cr FY26; 32% OPM; 46% ROCE",
+        "revenue_cr": 5215,
+        "share_pct": 29.5
+      }
+    ],
+    "pot_cr": 17665
+  },
+  "vision": {
+    "pillars": [
+      {
+        "tag": "Margin",
+        "target": "30% EBITDA margin",
+        "title": "Margin defence + mix shift",
+        "why": "Ticketing 83% margin funds low-margin catering; Rail Neer 16% → 30% target via scale"
+      },
+      {
+        "tag": "Monopoly",
+        "target": "Payment Aggregator licence",
+        "title": "Own the payment layer",
+        "why": "Save MDR on ₹5,000+ Cr ticketing volume; new revenue stream from merchant acquiring"
+      },
+      {
+        "tag": "Capacity",
+        "target": "4 new Rail Neer plants + 2 expansions",
+        "title": "Water capacity doubling",
+        "why": "Rail Neer ₹407 Cr at 16% margin; scale to ₹600+ Cr at 30% EBITDA; captive railway demand"
+      },
+      {
+        "tag": "Diversification",
+        "target": "260 Vande Bharat trains + tourism scale",
+        "title": "Premium catering + tourism",
+        "why": "Vande Bharat catering higher margin; tourism +19.5% YoY; State Teertha pilgrimage expansion"
+      }
+    ],
+    "quote": "IRCTC delivered record revenue and profitability in FY26 with revenue from operations up 11.55% YoY to ₹5,215 Cr and PAT up 6% to ₹1,393 Cr. The company is targeting 30% EBITDA margin through Rail Neer expansion, Payment Aggregator licence, and premium Vande Bharat catering — diversifying the revenue mix while protecting the monopoly moat."
+  },
+  "valuation": {
+    "source": "AlphaSpread",
+    "url": "https://www.alphaspread.com/security/nse/irctc/dcf-valuation/base-case",
+    "dcf_value": 629.91,
+    "multiples_value": 181.83,
+    "intrinsic_value": 629.91,
+    "buy_zone_20pct": 503.93,
+    "dcf_assumptions": {
+      "revenue_growth": 9.6,
+      "net_margin": 27.0,
+      "forecast_period_years": 15,
+      "template": "via FCFE",
+      "discount_rate": 10.4,
+      "exit_multiple": 25.9
+    },
+    "multiples": {
+      "pe_trailing": 27.6,
+      "pb": 8.86,
+      "ev_ebitda": 18.5,
+      "opm_ttm": 31
+    },
+    "tiles": {
+      "dcf": 629.91,
+      "multiples": 181.83,
+      "blended": 629.91,
+      "buy": 503.93,
+      "local_fwd": 550
+    },
+    "methodology": "AlphaSpread live 15 Oct 2026 — DCF ₹629.91 (via FCFE template, 15yr, Rev growth 9.6% vs 5Y hist 46.4%, Net margin 27.0% vs hist 28.9%, Discount 10.4%, Exit 25.9x P/E) + Multiples-Based ₹181.83 → Intrinsic = DCF (AlphaSpread selects best-fit method). Local cross-check: trailing 27.6× P/E, 8.86× P/B, EV/EBITDA ~18.5×, OPM 31% TTM, ROCE 46%."
+  },
+  "trends": {
+    "trends": [
+      "Monopoly ticketing cash cow — 89% share, 83% margin, 70.6M users, 1.56M tickets/day",
+      "Catering scale inflection — Vande Bharat 260 trains + e-catering + static units drive 13% growth",
+      "Rail Neer capacity doubling — 4 new plants + 2 expansions target ₹600+ Cr at 30% EBITDA",
+      "Payment Aggregator licence imminent — own gateway saves MDR, opens merchant acquiring revenue",
+      "Tourism +19.5% YoY — Bharat Darshan, pilgrimage, State Teertha diversifying beyond railway"
+    ],
+    "big_messages": [
+      "FY26 record revenue ₹5,215 Cr (+11.6%) and PAT ₹1,393 Cr (+6%); dividend ₹9/sh (52% payout, highest ever)",
+      "Q1 FY27 revenue ₹1,370 Cr (+18% YoY) but PAT flat at ₹330 Cr — margin compression from catering mix shift",
+      "Rail Neer capacity expansion on track — Mysore, Prayagraj land secured; 2 plants doubling capacity",
+      "Payment Aggregator licence application filed — target August 2026 approval; own payment stack"
+    ],
+    "red_flags": [
+      "Q1 FY27 margin compression — OPM 28% vs 34% YoY; catering mix shift dilutes blended margin",
+      "Tourism volatility — 17% of revenue but swing factor; PAT flat despite 18% revenue growth in Q1",
+      "Valuation premium — 27.6× P/E, 8.86× P/B vs leisure peers 15-20×; AlphaSpread multiples model ₹182 (62% overvalued)",
+      "Promoter (GoI) 62.4% — divestment overhang; FII holding fell 7.4% → 3.5% in 12 months",
+      "Single-client concentration — Indian Railways >95% of revenue; policy/regulatory risk"
+    ]
+  },
+  "forecast": {
+    "anchor": {
+      "price": 477,
+      "mcap_cr": 38168,
+      "shares_cr": 80,
+      "ttm_sales": 5425,
+      "eps": 17.42,
+      "pe": 27.6,
+      "opm": "31% TTM (FY26 32%; Q1 FY27 28%)",
+      "guidance": "Mgmt: 30% EBITDA target; Rail Neer ₹600+ Cr; Payment Aggregator Aug-26; 260 Vande Bharat catering"
+    },
+    "assumptions": {
+      "bear": {
+        "sales_cagr_5y": 8,
+        "fy31_sales": 7980,
+        "pat_margin": 22,
+        "exit_pe": 18,
+        "fy31_eps": 22.0
+      },
+      "base": {
+        "sales_cagr_5y": 12,
+        "fy31_sales": 9560,
+        "pat_margin": 25,
+        "exit_pe": 22,
+        "fy31_eps": 29.9
+      },
+      "bull": {
+        "sales_cagr_5y": 16,
+        "fy31_sales": 11400,
+        "pat_margin": 27,
+        "exit_pe": 28,
+        "fy31_eps": 38.5
+      }
+    },
+    "logic": [
+      "Base 12% CAGR tracks 5Y history (14% 3Y) slowing as monopoly saturates; Rail Neer + Payment Aggregator + Vande Bharat provide uplift",
+      "Bear = margin compression persists (catering/tourism mix) + P/E derates to 18× (sector avg) + no Payment Aggregator uplift",
+      "Bull = Payment Aggregator + Rail Neer 30% EBITDA + tourism scale + Vande Bharat premium catering + P/E holds 28×",
+      "Key insight: EPS spread ₹22 → ₹38.5 (~1.75×) smaller than price spread — multiple does heavy lifting; ROCE 46% supports premium",
+      "Monitor quarterly: blended OPM vs 30% target, Rail Neer revenue/margin, Payment Aggregator launch, tourism PAT contribution, FII flow"
+    ],
+    "scenarios": {
+      "bear": {
+        "price_fy31": 396,
+        "cagr": -3.6,
+        "mcap_cr": 31680
+      },
+      "base": {
+        "price_fy31": 658,
+        "cagr": 6.6,
+        "mcap_cr": 52640
+      },
+      "bull": {
+        "price_fy31": 1078,
+        "cagr": 17.7,
+        "mcap_cr": 86240
+      }
+    },
+    "year_path": {
+      "price": {
+        "bear": [477, 448, 421, 408, 402, 396],
+        "base": [477, 505, 535, 570, 612, 658],
+        "bull": [477, 542, 618, 712, 846, 1078]
+      },
+      "mcap": {
+        "bear": [38168, 35840, 33680, 32640, 32160, 31680],
+        "base": [38168, 40400, 42800, 45600, 48960, 52640],
+        "bull": [38168, 43360, 49440, 56960, 67680, 86240]
+      }
+    }
+  },
+  "takeaway": "IRCTC doesn't sell train tickets — it sells the only gateway to India's railway network, and the filings say the next chapter is monetising that monopoly through payments, premium catering, and packaged water at scale — engineered in New Delhi, mandated by Parliament, compounding at 46% ROCE.",
+  "ey": {
+    "price": 477,
+    "mcap_cr": 38168,
+    "pat_cr": 1393,
+    "shares_cr": 80,
+    "eps": 17.42,
+    "yield_pct": 3.65,
+    "yield_target_pct": 3.7,
+    "pe_current": 27.6,
+    "pe_target": 27.027,
+    "mcap_target_cr": 37649,
+    "price_target": 470.6,
+    "forward_pe": 22.5,
+    "avg5_pe": 35.2,
+    "price_at_forward": 392,
+    "price_at_avg5": 613,
+    "mcap_at_forward_cr": 31360,
+    "mcap_at_avg5_cr": 49040,
+    "diff_pp": "-0.05pp",
+    "diff_pct": "-1.4%",
+    "diff_pe_pct": "-2.1%",
+    "low_price": 446,
+    "iv": 629.91
+  },
+  "ir": {
+    "reports_library": "https://www.irctc.com/about-us/investor-relations/annual-reports",
+    "ir_calendar": "https://www.irctc.com/about-us/investor-relations",
+    "events": [
+      {"date": "14 Nov 2026", "event": "Q2 FY27 Results", "detail": "Board meeting approved; pattern: 2nd week November"},
+      {"date": "15 Dec 2026", "event": "2nd Interim Dividend Ex-Date", "detail": "Pattern: mid-December; FY26 paid ₹3.50 in Nov + ₹3.50 in Feb"},
+      {"date": "17 Dec 2026", "event": "2nd Interim Dividend Record Date", "detail": "T+2 settlement"},
+      {"date": "12 Feb 2027", "event": "Q3 FY27 Results", "detail": "Board meeting; pattern: 2nd week February"},
+      {"date": "29 Sep 2027", "event": "28th AGM", "detail": "Pattern: last week September; FY26 AGM held 29 Sep 2026"}
+    ]
+  }
+}
