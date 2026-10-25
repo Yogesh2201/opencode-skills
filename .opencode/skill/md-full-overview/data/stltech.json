@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "company": "Sterlite Technologies",
+    "nse": "STLTECH",
+    "bse": "532374",
+    "hq": "Pune",
+    "kicker": "Pune · optical fibre, cables & connectivity for AI-ready data centres",
+    "render_date": "2026-10-25"
+  },
+  "price": {
+    "current": 827,
+    "mcap_cr": 42495,
+    "shares_cr": 51.4,
+    "pe_ttm": 56.2,
+    "pb": 9.4,
+    "high_52w": 1054,
+    "low_52w": 84.6
+  },
+  "ey": {
+    "price": 827,
+    "mcap_cr": 42495,
+    "pat_cr": 756,
+    "shares_cr": 51.4,
+    "eps": 14.71,
+    "yield_pct": 1.78,
+    "yield_target_pct": 3.7,
+    "pe_current": 56.21,
+    "pe_target": 27.03,
+    "mcap_target_cr": 20432,
+    "price_target": 397.5,
+    "forward_pe": 35.2,
+    "avg5_pe": null,
+    "price_at_forward": 517.7,
+    "mcap_at_forward_cr": 26611,
+    "mcap_at_avg5_cr": null,
+    "price_at_avg5": null,
+    "diff_pp": "+1.92pp",
+    "diff_pct": "-51.9%",
+    "diff_pe_pct": "-37.4%",
+    "low_price": 84.6,
+    "iv": 110.31,
+    "continuing_pat_cr": 635,
+    "continuing_yield_pct": 1.49,
+    "continuing_pe": 66.9,
+    "continuing_price": 334,
+    "note": "Reported TTM PAT includes a ~₹121 Cr post-tax one-time US tariff refund (₹161 Cr pre-tax); continuing PAT ~₹635 Cr."
+  },
+  "bank_kpis": {
+    "face_value": 2,
+    "equity_cr": 4543,
+    "promoter_pct": 42.29,
+    "fii_pct": 17.76,
+    "dii_pct": 13.73,
+    "promoter_history": "53.98% (Mar-24) → 44.44% (Mar-26) → 42.29% (Sep-26) incl. ₹1,500 Cr QIP",
+    "opm_ttm_pct": 21.2,
+    "opm_labels": ["FY21", "FY22", "FY23", "FY24", "FY25", "FY26"],
+    "opm_yoy": [17, 12, 13, 12, 10, 13.2],
+    "sales_labels": ["FY21", "FY22", "FY23", "FY24", "FY25", "FY26"],
+    "sales_yoy": [4825, 5437, 6925, 4083, 3996, 4745],
+    "pat_yoy": [265, 45, 127, -57, -123, 56],
+    "sales_growth_ar": {"fy26": 18.8, "fy25": -2.1, "fy24": -41.0, "fy23": 27.4, "fy22": 12.7},
+    "net_profit_cr": 756,
+    "cash_cr": 1692,
+    "borrowings_cr": 989,
+    "borrowings_mar26_cr": 1942,
+    "net_cash_cr": 703,
+    "d_e": 0.22,
+    "finance_cost_fy26_cr": 224,
+    "ratings": "ICRA AA (stable)",
+    "roce_pct": 7.65,
+    "roe_pct": 1.24,
+    "order_book_cr": 35274,
+    "backlog_cr": 32253,
+    "book_cover_x": 4.9,
+    "order_book_split": "₹3,021 Cr scheduled Q3 FY27 + ₹32,253 Cr Q4 FY27-onward; Mar-26 ₹7,309 Cr; Jun-26 ₹18,618 Cr; Sep-26 ₹35,274 Cr; H1 FY27 intake ₹32,026 Cr (6.7× FY26 revenue)",
+    "debtor_days": 82,
+    "inventory_days": 139,
+    "wc_days": 221,
+    "dividend_per_share": 0,
+    "capex_note": "₹3,000 Cr approved at ₹1,000 Cr/yr through FY29 — ~50% capacity expansion across preform/fibre/cable plus a greenfield pre-termination plant",
+    "equity_raise": "₹1,500 Cr QIP completed; ₹498.30 Cr of promoter warrants pending",
+    "patents": 785,
+    "employees": 3800,
+    "plants": 10,
+    "countries": 100
+  },
+  "revenue_mix": {
+    "disclosure": "One audited segment — Optical networking 97% of FY26 revenue, Digital 3%. The vertical split below is management's Q2 FY27 disclosure, not an audited segment note.",
+    "footprint": "HQ Pune (Godrej Millennium, Koregaon Road) · 10 plants — Chhatrapati Sambhaji Nagar, Pune, Silvassa, Haridwar (India), plus Italy, China and the USA · offices in 16 countries · customers in 100+ · ~3,800 employees",
+    "segments": [
+      {"stream": "Data centres (hyperscalers, AI networks)", "share": "~53%", "note": "Q2 FY27 vertical mix · US$1.11bn LTA plus US$100 Mn+ Neuralis orders"},
+      {"stream": "Telecom & citizen networks", "share": "~33%", "note": "India Tier-1 telco LTAs, BharatNet J&K ₹2,600 Cr, export telcos"},
+      {"stream": "Large enterprises", "share": "~14%", "note": "Defence, utilities, railways, campuses, cable TV"}
+    ],
+    "geo": [
+      {"region": "Americas", "share": "~39% FY26 · 54% Q1 FY27", "note": "US hyperscaler ramp — the growth engine and the concentration risk"},
+      {"region": "Europe", "share": "~39% FY26 · 25% Q1 FY27", "note": "Italy plant; telecom plus data-centre customers"},
+      {"region": "India + rest of world", "share": "~22% FY26 · 22% Q1 FY27", "note": "BharatNet, domestic telcos, Middle East and Africa"}
+    ]
+  },
+  "peers_sfb": {
+    "disclosure": "Relative-size pot on FY26 revenue of four listed optical/cable players (₹81,225 Cr); a size comparison, not a market-share claim.",
+    "pot_cr": 81225,
+    "peers": [
+      {"name": "Corning Optical Communications", "hq": "Corning, NY", "revenue_fy26_cr": 55211, "share": "68.0%", "profile": "The global reference — preform, fibre, cable and connectivity; $6.27bn FY26; the US hyperscaler incumbent STL is displacing"},
+      {"name": "Prysmian Digital Solutions", "hq": "Milan", "revenue_fy26_cr": 16320, "share": "20.1%", "profile": "Cable-first European giant; €1.6bn FY26; deep telecom and utility cable, thinner in preform"},
+      {"name": "HFCL", "hq": "Gurugram", "revenue_fy26_cr": 4949, "share": "6.1%", "profile": "India's #2 fibre-cable maker; telecom equipment and turnkey; domestic-heavy, little hyperscaler exposure"},
+      {"name": "Sterlite Technologies", "hq": "Pune", "revenue_fy26_cr": 4745, "share": "5.8%", "profile": "Integrated preform → fibre → cable; the only one in this set pivoting to AI data centres at scale"}
+    ]
+  },
+  "products": [
+    {"line": "🔦 Optical fibre", "what": "Single-mode, bend-insensitive and multicore fibre drawn from own preform", "proof": "~8–9% of global ex-China capacity · 785+ patents · 50% capacity expansion funded"},
+    {"line": "🧵 Optical fibre cable", "what": "Armoured, duct, aerial and high-density micro-cable for long-haul and access", "proof": "Long-haul dark-fibre HD micro-cable order · the US$1.11bn LTA is largely cable"},
+    {"line": "🖧 Data-centre connectivity (Neuralis)", "what": "High-density fibre, MPO trunks and AI network fabric", "proof": "US$100 Mn+ of orders · data centres ~53% of Q2 FY27 revenue"},
+    {"line": "🏗️ Network integration", "what": "Turnkey rollout, civil works, commissioning and O&M", "proof": "India Tier-1 telco LTA · BharatNet J&K ₹2,600 Cr"},
+    {"line": "🔌 Pre-termination / pre-connectorised", "what": "Plug-and-play fibre terminals that cut install time", "proof": "Greenfield plant announced under Lakshya"},
+    {"line": "💻 Digital (3% of revenue)", "what": "OSS/BSS, network automation software", "proof": "Small and being de-emphasised as capital rotates to fibre"}
+  ],
+  "vision": {
+    "quotes": [
+      "\"Lakshya FY29 targets ₹20,000 Cr of revenue with a 27%-plus EBITDA margin — more than four times FY26 — funded by ₹1,000 Cr of capex a year, with the margin guide raised above 30% at the Q2 FY27 call.\" — Lakshya investor event, 3 Sep 2026 (paraphrased from the transcript)"
+    ],
+    "pillars": [
+      {"priority": "Scale revenue", "target": "₹20,000 Cr by FY29, >4× FY26", "why": "From an FY27 run-rate near ₹10,000 Cr that is ~2× in two years — steep, but no longer fantasy"},
+      {"priority": "Lift margin", "target": "EBITDA >27%, raised to >30% at the Q2 call", "why": "Comes from preform integration and data-centre mix, not from cable pricing"},
+      {"priority": "Expand capacity", "target": "+50% preform/fibre/cable; ₹3,000 Cr approved; ₹1,000 Cr/yr", "why": "Demand is contracted; capacity is the binding constraint"},
+      {"priority": "Localise deep", "target": "Greenfield pre-termination plant in India", "why": "Higher value-add per metre, faster install, export-ready"}
+    ],
+    "chart": "FY24–25 price-taker ₹3,996 Cr / −₹123 Cr / 10% → Lakshya: ₹3,000 Cr capex, preform → fibre → cable, +50% capacity → ₹20,000 Cr FY29 · >30% EBITDA · data centres ~53% of revenue"
+  },
+  "moat": {
+    "score": 3.3,
+    "weighted_exact": 3.25,
+    "band": "Narrow moat",
+    "parameters": [
+      {"name": "Does something genuinely unique", "weight": 15, "score": 4.5, "evidence": "Owns the full preform → fibre → cable chain; hollow-core fibre cutting latency up to 47% for AI links; G.654.E fibre with 30% lower signal loss; 785+ patents", "read": "🟢"},
+      {"name": "Can't easily copy", "weight": 15, "score": 3.5, "evidence": "Preform lines take years and heavy capex to build, and hyperscaler qualification is a multi-year audit — but cable itself is copyable and Chinese supply is long", "read": "🟡"},
+      {"name": "Quality over quantity", "weight": 10, "score": 3.0, "evidence": "Optical-connectivity attach rate targeted above 20% now and 25% by FY27 — more value per metre, not more metres; data centres ~53% of revenue", "read": "🟡"},
+      {"name": "Discipline on volume", "weight": 5, "score": 2.0, "evidence": "The plan is explicitly volume: ₹20,000 Cr by FY29 and +50% capacity. What changed is that the volume is contracted, not tendered", "read": "🔴"},
+      {"name": "Customer satisfaction / retention", "weight": 10, "score": 3.5, "evidence": "A hyperscaler qualified STL as a second source — a multi-year audit — plus repeat Neuralis orders of US$100 Mn+ and a further US$288 Mn high-density cable agreement on 29 Aug 2026. No churn or NPS data is disclosed", "read": "🟡"},
+      {"name": "R&D investment", "weight": 10, "score": 3.5, "evidence": "785+ patents, five laboratories, hollow-core and G.654.E commercialised, and an EPO appeal that revoked Fujikura's EP3796060 outright. R&D is not a separately disclosed P&L line", "read": "🟡"},
+      {"name": "Free cash flow", "weight": 15, "score": 1.5, "evidence": "Not disclosed as a line item; capex is ₹1,000 Cr/yr against ₹756 Cr TTM PAT; the ₹703 Cr net cash came from a ₹1,500 Cr QIP, not from operations", "read": "🔴"},
+      {"name": "Debt management", "weight": 10, "score": 4.0, "evidence": "Net cash ₹703 Cr, borrowings ₹989 Cr, and the equity was raised before the capex; ICRA AA (stable)", "read": "🟢"},
+      {"name": "Management stability", "weight": 5, "score": 3.5, "evidence": "Ankit Agarwal has been at STL since 2007, CEO since 2021 and MD since 2024; the promoter family chairs the board; Lakshya has been consistent across three calls", "read": "🟡"},
+      {"name": "Capital allocation", "weight": 5, "score": 3.0, "evidence": "Right sequence this cycle (QIP → deleverage → capex), but the last five years delivered −0.3% revenue CAGR and two loss years", "read": "🟡"}
+    ],
+    "binding_constraint": "Free cash flow (1.5) and volume discipline (2.0) — a technical moat that has not yet converted into cash",
+    "verdict": "STL owns a real piece of the optical chain — the preform, the fibre recipe and the patents around them — and that is worth a narrow moat, not a wide one. At 3.3/5 the franchise is better than its five-year record; ₹827 assumes the record has already caught up."
+  },
+  "valuation": {
+    "source": "AlphaSpread",
+    "url": "https://www.alphaspread.com/security/nse/stltech/summary",
+    "dcf_value": 110.31,
+    "multiples_value": 278.66,
+    "intrinsic_value": 110.31,
+    "buy_zone_20pct": 88.24,
+    "blended_value": 194.49,
+    "blended_buy_zone": 155.59,
+    "fy29_eps": 51.0,
+    "price_at_18x_fy29": 918,
+    "dcf_assumptions": {
+      "template": "AlphaSpread base case (price-independent); DCF is the official intrinsic value",
+      "discount_rate": null,
+      "exit_multiple": null
+    },
+    "multiples": {
+      "pe_ttm": 56.2,
+      "pe_fy27e": 38.3,
+      "pe_fy28e": 22.9,
+      "pe_fy29e": 16.2,
+      "consensus_pat_fy27_cr": 1110,
+      "consensus_pat_fy28_cr": 1860,
+      "consensus_pat_fy29_cr": 2620,
+      "ev_ebitda_ttm": 27.6,
+      "ev_cr": 41792,
+      "pb": 9.4,
+      "ps": 5.95
+    },
+    "methodology": "AlphaSpread, accessed 25 Oct 2026: DCF ₹110.31, multiples ₹278.66, official intrinsic ₹110.31, buy zone ₹88.24 (IV − 20% MOS). Blended = equal weight of DCF and multiples = ₹194.49; blended buy zone ₹155.59. Forward cross-check: FY29E EPS ₹51.0 × 18× = ₹918. The spread is the bet: trailing cash flow says −87%, the FY29 plan says +11%."
+  },
+  "trends": {
+    "sales_5y_cagr": -0.3,
+    "sales_3y_cagr": -11.8,
+    "profit_3y_cagr_fy23_fy26": -23.9,
+    "profit_5y_cagr_fy21_fy26": -26.7,
+    "price_1y_cagr_pct": 588,
+    "roe_ttm_pct": 1.24,
+    "roce_fy26_pct": 7.65,
+    "reconciliation": "Screener's −43% 3-yr profit box uses its own trailing windows; the clean FY23→FY26 print CAGR (₹127 Cr → ₹56 Cr) is −23.9%. The +18,631% TTM profit box is an off-tiny-base artifact (−₹123 Cr FY25 → +₹756 Cr TTM).",
+    "boxes": {
+      "sales": {"10Y": 8, "5Y": 0, "3Y": -12, "TTM": 74},
+      "profit": {"10Y": -16, "5Y": -37, "3Y": -43, "TTM": 18631},
+      "price": {"10Y": 27, "5Y": 32, "3Y": 97, "TTM": 588}
+    }
+  },
+  "forecast": {
+    "anchor": {
+      "price": 827,
+      "mcap_cr": 42495,
+      "shares_cr": 51.4,
+      "ttm_sales": 7137,
+      "opm": "21.2% TTM (Q2 FY27 operational EBITDA 27.1%, reported 33.5% incl. ₹161 Cr tariff refund)",
+      "eps": 14.71,
+      "pe": 56.2,
+      "guidance": "₹20,000 Cr revenue by FY29 (4× FY26) · >30% EBITDA margin FY29 · capex ₹1,000 Cr/yr · ₹32,253 Cr of book scheduled Q4 FY27 onward"
+    },
+    "assumptions": {
+      "bear": {"sales_cagr_5y": 15, "fy31_sales": 14355, "pat_margin": 10.0, "fy31_eps": 27.9, "exit_pe": 15, "price_fy31": 419, "annual_return_pct": -12.7, "mcap_fy31_cr": 21537},
+      "base": {"sales_cagr_5y": 27, "fy31_sales": 23579, "pat_margin": 16.5, "fy31_eps": 75.7, "exit_pe": 22, "price_fy31": 1665, "annual_return_pct": 15.0, "mcap_fy31_cr": 85581},
+      "bull": {"sales_cagr_5y": 38, "fy31_sales": 35720, "pat_margin": 19.0, "fy31_eps": 132.0, "exit_pe": 28, "price_fy31": 3697, "annual_return_pct": 34.9, "mcap_fy31_cr": 190026}
+    },
+    "year_path": {
+      "price": {
+        "bear": [827, 722, 630, 550, 480, 419],
+        "base": [827, 951, 1094, 1258, 1448, 1665],
+        "bull": [827, 1116, 1505, 2031, 2740, 3697]
+      },
+      "mcap_cr": {
+        "bear": [42495, 37111, 32382, 28270, 24672, 21537],
+        "base": [42495, 48881, 56232, 64661, 74427, 85581],
+        "bull": [42495, 57362, 77357, 104393, 140836, 190026]
+      }
+    },
+    "logic": [
+      "Base tracks Lakshya, delivered about two years late: revenue ₹23,579 Cr by FY31 at a 16.5% PAT margin, profit grows 5.1× while the multiple compresses 56× → 22× — and the stock still pays 15% a year.",
+      "Bear is a disappointment case, not a collapse: the US LTA runs without a second win, telecom tender pricing returns, margin settles near 15%, and the market pays 15× for a cable maker — revenue still compounds at 15%.",
+      "Bull: data-centre demand outruns capacity, a second and third hyperscaler qualify STL, preform stays tight, and the market keeps 28× on ₹132 of EPS.",
+      "Earnings do more work than the multiple: FY31 EPS spans 4.7× while price spans 8.8×. Base EPS at 15× still gives ₹1,136; Bear EPS at 22× gives ₹614 — conviction about volume, not the exit multiple, decides the stock."
+    ]
+  },
+  "takeaway": {
+    "core_idea": "An integrated optical-fibre maker — one of the few outside China that draws its own preform — that has re-based itself onto AI data-centre demand",
+    "what_changed": "From a telecom tender-taker that lost ₹180 Cr across FY24–25 to a hyperscaler supplier with a ₹35,274 Cr book and a 27% operational margin",
+    "hidden_signal": "The mix did it, not the price: data centres at ~53% of revenue and preform integration are what turned a 10% margin into 27% in five quarters",
+    "what_breaks": "One customer, one award, ₹1,000 Cr/yr of capex and a 56× trailing multiple — four ways for the same story to stall",
+    "open_question": "Can STL convert a ₹35,274 Cr book into 27%+ margins and a second hyperscaler before the multiple normalises?",
+    "moat": "3.3/5 — narrow, not wide. The edge is technical (preform, hollow-core, 785+ patents); the weaknesses are cash conversion and volume discipline",
+    "verdict": "Own the turn, not the price. The operating story is real; ₹827 already assumes it lands — and prices a narrow moat as if it were wide.",
+    "one_line": "STL spent three years losing money in a tendered telecom market and one year winning hyperscaler contracts — the ₹35,274 Cr book says the demand is real, and ₹827 says you are paying today for FY29 execution."
+  }
+}

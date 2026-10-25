@@ -2,17 +2,21 @@
 
 ## Before writing
 
-- [ ] Version chosen via the Step 1 question (never assumed)
-- [ ] The matching `examples/` reference read (Gemini / Plain / Markdown)
-- [ ] Output path decided: `Company_Overview/Final/<Company>[_Gemini|_Plain]-forecast-<YYYY-MM-DD>.<ext>`
+- [ ] No version question — this skill is Markdown-only (never offer Gemini / Plain)
+- [ ] `examples/demo-01.md` + `assets/moat-scorecard.md` read before writing
+- [ ] Output path decided: `MD-Full-Overview/<YYYY-MM>/<Stock>-<YYYY-MM-DD>.md` (never `Company_Overview/Final/`)
 - [ ] New company? user-supplied figures gathered — else use the reference data verbatim
 
 ## While writing (MD plain — no color layer)
 
 - [ ] No `<style>` block, no `<span`, no pills, no band markup anywhere in the file
 - [ ] Hero figures plain `**bold**` · emoji Read/Severity cells (`🔴`/`🟡`/`🟢`) · plain `>` quality-watch quote in Section 5
-- [ ] Valuation ASCII bar (BUY/DCF/IV/LOW/CURRENT/HIGH + fill %) in Section 7 · flags summary code block in Section 8
+- [ ] Headings run `## 1.` … `## 11.` then `## Bottom Line` — moat 7 · valuation 8 · risks 9 · scenarios 10 · watch 11
+- [ ] Section 7 **Moat Scorecard**: 10 rows in fixed order, weights sum to 100, one evidence line per row, weighted (never simple) total to one decimal + band + `Up:`/`Down:` + `> **Moat verdict:**`
+- [ ] Valuation ASCII bar (BUY/DCF/IV/LOW/CURRENT/HIGH + fill %) in Section 8 · flags summary code block in Section 9
 - [ ] One-line takeaway (`> **One line:**`) + Sources + SEBI disclaimer footer; no `### Palette`, no rendered-color line
+
+## HTML checks (legacy — this skill is Markdown-only; ignore unless asked for HTML)
 
 - [ ] HTML files above ~50 KB are built in parts with a `<!--PART_B-->` marker (write → edit chain)
 - [ ] Single file: CSS and JS inlined, no external assets except Google Fonts (Gemini only)
@@ -23,7 +27,7 @@
 - [ ] SVG uses `style="fill:var(--…)"`, never presentation-attribute `var()`
 - [ ] Emoji/flags: Windows does not render flag emoji — use styled `<span class="cc">US</span>` country codes instead
 
-## After writing (run these)
+## After writing — HTML render checks (legacy; MD verification lives in SKILL.md)
 
 ```powershell
 # 1. no leftover build markers, balanced tags, single close

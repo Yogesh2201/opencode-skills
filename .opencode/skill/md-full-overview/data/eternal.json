@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "company": "Eternal Ltd",
+    "nse": "ETERNAL",
+    "bse": "543320",
+    "hq": "Gurugram",
+    "kicker": "Zomato food delivery, Blinkit quick commerce, Hyperpure restaurant supply, District going-out",
+    "render_date": "2026-10-25"
+  },
+  "price": { "current": 317, "mcap_cr": 306302, "shares_cr": 966.3, "pe_ttm": 621, "pb": 9.79 },
+  "bank_kpis": {
+    "sales_ttm_cr": 77956, "opm_ttm_pct": 2.8, "pat_ttm_cr": 493, "eps_ttm": 0.51,
+    "sales_history": { "FY21": 1994, "FY22": 4192, "FY23": 7079, "FY24": 12114, "FY25": 20243, "FY26": 54364 },
+    "pat_history": { "FY21": -816, "FY22": -1222, "FY23": -971, "FY24": 351, "FY25": 527, "FY26": 366 },
+    "opm_history": { "FY21": -23, "FY22": -44, "FY23": -17, "FY24": 0.3, "FY25": 3.1, "FY26": 2.2 },
+    "growth_boxes": { "sales": { "5y": "94%", "3y": "97%", "ttm": "144%" }, "profit": { "5y": "17%", "3y": "28%", "ttm": "162%" }, "price": { "5y": "19%", "3y": "44%", "1y": "-3%" } },
+    "q2fy27": { "revenue_cr": 24138, "pat_cr": 125, "nov_cr": 35644, "blinkit_rev_cr": 19152, "blinkit_nov_cr": 20940, "blinkit_stores": 2751, "blinkit_adj_ebitda_cr": 184, "food_nov_cr": 11445, "food_adj_ebitda_cr": 627, "hyperpure_rev_cr": 1154, "adj_ebitda_cr": 666, "cash_cr": 16475, "mtc_mn": 28, "restaurants": 85000 },
+    "roce_pct": 2.5, "roe_pct": 0.4, "borrowings_cr": 5757, "fcf_fy26_cr": -1114, "cfo_fy26_cr": 632, "other_income_ttm_cr": 1416, "pbt_ttm_cr": 993,
+    "dividend": "none (0% payout)", "shareholding": "FII 33.0% · DII 36.2% · Public 26.3% · Others 4.5% (Sep-26)"
+  },
+  "peers_sfb": [
+    { "name": "Eternal", "hq": "Gurugram", "revenue_cr": 54364, "overlap": "Food delivery + quick commerce + restaurant supply; the listed scale leader" },
+    { "name": "Swiggy", "hq": "Bengaluru", "revenue_cr": 23053, "overlap": "Direct rival in food delivery and Instamart quick commerce; still narrowing losses" },
+    { "name": "Nykaa (FSN E-Commerce)", "hq": "Mumbai", "revenue_cr": 10022, "overlap": "Marketplace + inventory e-commerce; profitable benchmark (FY26 EBITDA ~₹752 Cr)" }
+  ],
+  "products": [
+    { "line": "Blinkit (quick commerce)", "proof": "2,751 dark stores (Sep-26); NOV ₹20,940 Cr +79%; adj EBITDA ₹184 Cr — 6th straight margin-improving quarter" },
+    { "line": "Zomato (food delivery)", "proof": "NOV ₹11,445 Cr +21.5% (5th accelerating quarter); 28M monthly customers; adj EBITDA ₹627 Cr (5.5% of NOV)" },
+    { "line": "Hyperpure (restaurant supplies)", "proof": "Revenue ₹1,154 Cr +22.7%; ~85,000 restaurants (vs 62,000); adj EBITDA ₹10 Cr" },
+    { "line": "Going out (District)", "proof": "Dining/events discovery; NOV tracked separately in filings" },
+    { "line": "Dark AI", "proof": "Launched Q2 FY27 — privacy-first assistant on open-weight models; 'zero-one bet, global if it works' (Dhindsa)" },
+    { "line": "Treasury", "proof": "₹16,475 Cr cash & investments → ₹1,416 Cr TTM investment income" }
+  ],
+  "revenue_mix": {
+    "disclosure": "No formal product-segment P&L in filings; split uses company-disclosed quarterly segment revenue with a labelled residual",
+    "segments": [
+      { "stream": "Quick commerce (Blinkit)", "share": "~79%", "note": "₹19,152 Cr of ₹24,138 Cr Q2 FY27 revenue; inventory-led, booked gross" },
+      { "stream": "Hyperpure", "share": "~5%", "note": "₹1,154 Cr Q2 FY27 (+22.7%)" },
+      { "stream": "Food delivery + Going out + other", "share": "~16%", "note": "Residual ₹3,832 Cr — not separately disclosed; food-delivery NOV ₹11,445 Cr implies delivery revenue ~₹3,000 Cr" }
+    ],
+    "geo": [
+      { "region": "India", "presence": "~100%", "note": "All four businesses domestic; no material international revenue disclosed" }
+    ],
+    "footprint": "HQ Gurugram · ~6,900 employees · 2,751 Blinkit dark stores; ~85,000 restaurant partners on Hyperpure"
+  },
+  "vision": {
+    "quotes": [
+      "How we grow matters as much as how fast — Albinder Dhindsa, Group CEO, Q2 FY27",
+      "Our long-term expectation for food delivery has always beon 20%+ annual growth — Deepinder Goyal, Founder, Q2 FY27",
+      "Two quarters into the three-year period covered by our 60% CAGR guidance… tracking ahead — Akshant Goyal, CFO, Q2 FY27"
+    ],
+    "pillars": [
+      { "priority": "Scale Blinkit", "target": "3,500 stores by Mar-27 (from 3,000); ~5,000 by Mar-28" },
+      { "priority": "Re-accelerate food delivery", "target": "20%+ annual NOV growth, invest over margin" },
+      { "priority": "Grow Hyperpure", "target": "85,000+ restaurants; two-hour procurement delivery" },
+      { "priority": "Zero-one bets", "target": "Dark AI + District (Going out)" }
+    ]
+  },
+  "moat": {
+    "score": 3.1,
+    "band": "Narrow moat",
+    "parameters": [
+      { "name": "Unique capability", "weight": 15, "score": 4.0, "evidence": "Only Indian platform at national scale across food + dark-store grid + restaurant supply: B2C NOV ₹35,644 Cr/qtr, 28M monthly customers (Q2 FY27)" },
+      { "name": "Copy resistance", "weight": 15, "score": 3.0, "evidence": "Grid took ~4 years and thousands of crores — but Swiggy Instamart/Zepto match city-by-city; consumer switching cost ~zero" },
+      { "name": "Quality over quantity", "weight": 10, "score": 3.5, "evidence": "Adj EBITDA +197% to ₹666 Cr vs NOV +54%; Blinkit margin up 6 straight quarters to 0.9% of NOV" },
+      { "name": "Volume discipline", "weight": 5, "score": 2.0, "evidence": "Growth chosen over margin: food adj EBITDA margin slipped to 5.5% of NOV; store target raised twice (3,000→3,500→5,000)" },
+      { "name": "Customer satisfaction/retention", "weight": 10, "score": 2.5, "evidence": "No churn/NPS/renewal metric disclosed; only proxies — MTC 28M (+16%), 5 quarters of accelerating order growth" },
+      { "name": "R&D investment", "weight": 10, "score": 3.0, "evidence": "No R&D line disclosed; product proof: Dark AI launch, District app, ads platform" },
+      { "name": "Free cash flow", "weight": 15, "score": 2.0, "evidence": "CFO +₹632 Cr FY26 but capex ~₹1,746 Cr → FCF −₹1,114 Cr, second negative year; funded by treasury" },
+      { "name": "Debt management", "weight": 10, "score": 4.0, "evidence": "Cash & investments ₹16,475 Cr vs borrowings ₹5,757 Cr (incl. leases); net cash ~₹10,718 Cr; no dilution" },
+      { "name": "Management stability", "weight": 5, "score": 3.0, "evidence": "Founder-CEO Goyal stepped down Feb-2026 after 18 years (vice-chairman now); Blinkit co-founder Dhindsa promoted from within; CFO continues" },
+      { "name": "Capital allocation", "weight": 5, "score": 3.0, "evidence": "Treasury earns ₹1,416 Cr/yr, but ROE 0.4% and ROCE 2.5% sit far below cost of capital" }
+    ]
+  },
+  "valuation": {
+    "source": "AlphaSpread",
+    "url": "https://www.alphaspread.com/security/nse/eternal",
+    "dcf_value": 67.78,
+    "multiples_value": 460.25,
+    "intrinsic_value": 460.25,
+    "buy_zone_20pct": 368.2,
+    "dcf_assumptions": { "revenue_growth": 32.1, "net_margin": 3.7, "forecast_period_years": 5, "template": "FCFE", "discount_rate": 10.3, "exit_multiple": 0 },
+    "multiples": { "pe_current": 672.5, "pe_3y_avg": 449.7, "pe_5y_avg": 287.7, "pe_fwd_fy27": 172.4, "pe_fwd_fy28": 78.1 },
+    "methodology": "FCFE DCF (5yr, 10.3% discount, 0% terminal) + multiples-based intrinsic; buy zone = 20% MOS"
+  },
+  "ey": {
+    "price": 317, "mcap_cr": 306302, "pat_cr": 493, "shares_cr": 966.3, "eps": 0.51,
+    "yield_pct": 0.16, "yield_target_pct": 3.7, "pe_current": 621.3, "pe_target": 27.03,
+    "mcap_target_cr": 13324, "price_target": 13.79,
+    "forward_pe": 172.4, "avg5_pe": 287.7, "price_at_forward": 87.96, "price_at_avg5": 146.79,
+    "mcap_at_forward_cr": 84996, "mcap_at_avg5_cr": 141836,
+    "diff_pp": "+3.54pp", "diff_pct": "-95.6%", "diff_pe_pct": "-97.4%",
+    "low_price": 135.31, "iv": 460.25
+  },
+  "forecast": {
+    "anchor": { "price": 317, "mcap_cr": 306302, "shares_cr": 966.3, "ttm_sales_cr": 77956, "eps": 0.51, "pe": 621, "opm": 2.8, "guidance": "B2C NOV 60% CAGR over 3 yrs; Blinkit 3,500 stores by Mar-27; food delivery 20%+" },
+    "scenarios": {
+      "bear": { "sales_cagr": 20, "fy31_sales_cr": 193960, "pat_margin": 0.8, "fy31_eps": 1.61, "exit_pe": 90, "price": 145, "cagr": -14.5, "mcap_cr": 140100 },
+      "base": { "sales_cagr": 35, "fy31_sales_cr": 349600, "pat_margin": 3.0, "fy31_eps": 10.86, "exit_pe": 55, "price": 597, "cagr": 13.5, "mcap_cr": 576900 },
+      "bull": { "sales_cagr": 48, "fy31_sales_cr": 553600, "pat_margin": 4.5, "fy31_eps": 25.78, "exit_pe": 70, "price": 1805, "cagr": 41.6, "mcap_cr": 1744100 }
+    },
+    "year_path": {
+      "bear_price": [317, 271, 232, 198, 169, 145],
+      "base_price": [317, 360, 408, 463, 526, 597],
+      "bull_price": [317, 449, 636, 900, 1274, 1805],
+      "bear_mcap": [306302, 261600, 224100, 191300, 163600, 140100],
+      "base_mcap": [306302, 347800, 394200, 447400, 508300, 576900],
+      "bull_mcap": [306302, 433900, 614500, 869700, 1231400, 1744100]
+    }
+  },
+  "takeaway": "India's fastest-scaling consumer platform with a ₹16,475 Cr treasury behind it — but the 'profit' is interest income, and ₹317 is a 621× bet that growth arrives before the multiple does.",
+  "ir": {
+    "reports_url": "https://eternal.com/investor-relations",
+    "calendar_url": "https://eternal.com/investor-relations/results",
+    "events": [
+      { "date": "21-22 Jan 2027 (pattern)", "event": "Q3 FY27 results + earnings call", "detail": "Q1 was 22 Jul 2026, Q2 21 Oct 2026 — quarterly board-meet + call cadence" },
+      { "date": "Quarterly", "event": "Shareholders' letter", "detail": "Q2 FY27 letter published on eternal.com/investor-relations" },
+      { "date": "None", "event": "Dividend", "detail": "0% payout since listing; no dividend announced" },
+      { "date": "Mid-May 2027 (pattern)", "event": "Q4 & full-year FY27 results", "detail": "Full-year results declared in May in recent years" },
+      { "date": "Sep 2027 (pattern)", "event": "Annual general meeting", "detail": "Pattern-derived; confirm on exchange notices" }
+    ]
+  }
+}

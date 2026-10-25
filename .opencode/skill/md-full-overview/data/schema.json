@@ -3,7 +3,7 @@
   "title": "Full Overview 2.0 — Company Data Schema",
   "description": "LLM generates only this JSON (~600 tokens). Build script renders all 3 HTML/MD variants with 0 LLM tokens.",
   "type": "object",
-  "required": ["meta", "price", "bank_kpis", "revenue_mix", "peers_sfb", "products", "vision", "valuation", "trends", "forecast", "takeaway"],
+  "required": ["meta", "price", "bank_kpis", "revenue_mix", "peers_sfb", "products", "vision", "moat", "valuation", "trends", "forecast", "takeaway"],
   "properties": {
     "meta": {
       "type": "object",
@@ -52,6 +52,29 @@
         "diff_pe_pct": { "type": "string" },
         "low_price": { "type": "number" },
         "iv": { "type": "number" }
+      }
+    },
+    "moat": {
+      "type": "object",
+      "description": "Section 7 Moat Scorecard — ten parameters, weighted average, band (spec: assets/moat-scorecard.md)",
+      "properties": {
+        "score": { "type": "number", "description": "weighted average, one decimal" },
+        "band": { "type": "string", "enum": ["Wide moat", "Narrow moat", "Eroding advantage", "No moat"] },
+        "parameters": {
+          "type": "array",
+          "minItems": 10,
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "weight": { "type": "number", "description": "percent; the ten weights must sum to 100" },
+              "score": { "type": "number", "minimum": 0, "maximum": 5 },
+              "evidence": { "type": "string", "description": "one line, filings-traced" },
+              "read": { "type": "string", "enum": ["🟢", "🟡", "🔴"] }
+            }
+          }
+        }
       }
     },
     "valuation": {

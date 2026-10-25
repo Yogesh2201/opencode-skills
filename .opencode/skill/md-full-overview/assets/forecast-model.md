@@ -1,6 +1,10 @@
-# Forecast & Valuation models — sections 04 + 06 (identical numbers in every version)
+# Forecast & Valuation models — sections 8 + 10 (worked TDPS example)
 
-## Valuation — section 04 (independently modelled, filings-only)
+*Number-shape reference only. In the current skill, Section 8 anchors on **AlphaSpread**
+(DCF + multiples → intrinsic + buy zone) with a local forward/EV cross-check; the
+independent DCF below is the legacy worked example, kept for arithmetic shape.*
+
+## Valuation — section 8 (worked example, independent model)
 
 **Anchor:** same as forecast (₹764 / ₹23,864 Cr / 31.24 Cr shares). Base FCF ~₹192 Cr (OPM 18% → PAT 13% fade).
 
@@ -23,7 +27,7 @@
 
 ---
 
-# Forecast model — section 06 (identical numbers in every version)
+# Forecast model — section 10 (worked TDPS example)
 
 **Path:** Revenue → PAT margin → EPS → P/E → Price → MCap.
 (The bank path Loans → ROE → BVPS → P/B does **not** apply to a manufacturer.)
@@ -77,4 +81,4 @@
 - **Key insight:** EPS spread ₹9.9→₹30.1 (~3×) is smaller than price spread ₹444→₹2,407 (~5.4×) — *the multiple does the heavy lifting*. Bear EPS at Base multiple (₹9.9 × 65× ≈ ₹640) still trails Base EPS at Bear multiple (₹20.2 × 45× ≈ ₹910).
 - **Monitor quarterly:** export inflow % · order book cover · OPM vs 18% · PAT margin vs 13% · P/E vs exit · third-plant ramp · UK centre spend.
 
-Always label section 06 **Illustrative · not advice / not a price target**.
+Always label section 10 **Illustrative · not advice / not a price target**.

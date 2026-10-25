@@ -47,7 +47,11 @@ emoji and fenced ASCII bars only:
   in `Read` / `Severity` cells only, exactly as in `examples/demo-01.md`.
 - **Quotes carry callouts** — `>` filings-only blockquote, `>` quality-watch quote (Section 5),
   `>` reading paragraphs, `>` one-line takeaway (Bottom Line).
-- **Fenced code = bars** — valuation bar (Section 7) and flags summary (Section 8).
+- **Fenced code = bars** — valuation bar (Section 8) and flags summary (Section 9).
+- **Moat table = five columns, no color** — `Parameter | Weight | Score /5 | Evidence | Read`;
+  emoji (`🟢`/`🟡`/`🔴`) in the `Read` column only, never in Evidence; weights sum to 100 and
+  the total is a **weighted average to one decimal** (`**Total: 3.3 / 5 — narrow moat.**`),
+  closed by a `> **Moat verdict:**` quote. Spec: `assets/moat-scorecard.md`.
 - Footer is **`### Sources`** + the SEBI disclaimer. No `### Palette`, no rendered-color line.
 
 ## New components (added Sep 26, 2026 — same in both HTML versions)

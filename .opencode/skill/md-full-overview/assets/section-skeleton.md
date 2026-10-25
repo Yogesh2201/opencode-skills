@@ -58,3 +58,12 @@ Nav labels: `01 What they do · 02 Competitors · 03 Products · 04 Vision · 04
   table `Revenue stream | Share | Note`, table `Region | Share / Presence | Note`,
   one-line footprint (HQ + offices + locations + headcount). Rendered from `revenue_mix`
   in `data/<company>.json`; proxy labelled as proxy, never invented.
+
+- As `## 7. Moat Scorecard` — between Strategy & Management Vision (6) and Valuation (8) —
+  always render the ten-parameter scorecard: table
+  `Parameter | Weight | Score /5 | Evidence | Read` (weights sum to 100, one evidence line
+  per row, emoji only in `Read`), then `**Total: X.X / 5 — <band>.**`, the band table,
+  **What the score says** bullets, **What would move the score** (`Up:` / `Down:`), and a
+  `> **Moat verdict:**` quote. Rendered from `moat` in `data/<company>.json`; spec and
+  worked render in `assets/moat-scorecard.md`. The Bottom Line gains a **Moat** lens
+  between Open question and Verdict.

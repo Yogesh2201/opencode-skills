@@ -174,6 +174,22 @@
     "nse": "ZENTEC",
     "render_date": "2026-09-26"
   },
+  "moat": {
+    "band": "Narrow moat",
+    "parameters": [
+      { "name": "Does something genuinely unique", "weight": 15, "score": 4.5, "evidence": "Owns the simulator designs, code and drawings; Buy Indian-IDDM single-vendor qualification; IADCS delivered 9 months early", "read": "🟢" },
+      { "name": "Can't easily copy", "weight": 15, "score": 4.0, "evidence": "30 years of IP and 230+ patents; defence qualification and single-vendor status take years to replicate", "read": "🟢" },
+      { "name": "Quality over quantity", "weight": 10, "score": 4.0, "evidence": "~73% gross margin and 33% OPM on niche systems, not commodity hardware", "read": "🟢" },
+      { "name": "Discipline on volume", "weight": 5, "score": 3.5, "evidence": "Selective tender participation; FY26 revenue fell 29% rather than buying volume with price", "read": "🟡" },
+      { "name": "Customer satisfaction / retention", "weight": 10, "score": 3.5, "evidence": "AMC 26% of book; repeat MoD orders (₹177.5 Cr tank sim, ₹245 Cr counter-drone upgrade); no churn data disclosed", "read": "🟡" },
+      { "name": "R&D investment", "weight": 10, "score": 4.0, "evidence": "230+ patents, C295 flight-simulator R&D complete, five offerable capabilities; R&D not a separate P&L line", "read": "🟢" },
+      { "name": "Free cash flow", "weight": 15, "score": 3.5, "evidence": "CFO ₹245 Cr vs PAT ₹193 Cr in FY26; FCF ~₹185 Cr — but working capital is 543 days", "read": "🟡" },
+      { "name": "Debt management", "weight": 10, "score": 5.0, "evidence": "Debt-free: ₹1,217 Cr cash against ₹19 Cr borrowings, ~8% of market cap", "read": "🟢" },
+      { "name": "Management stability", "weight": 5, "score": 2.5, "evidence": "Operating team stable, but promoter holding fell 60.1% (FY23) to 48.5% (-11.6 pp)", "read": "🔴" },
+      { "name": "Capital allocation", "weight": 5, "score": 3.0, "evidence": "TISA/Anawave/Vector bought without dilution, but ₹80.4 Cr treasury income is ~30% of PBT — cash is not fully deployed", "read": "🟡" }
+    ],
+    "score": 3.9
+  },
   "peers_sfb": {
     "note": "Listed counter-UAS / simulator / defence-electronics pot (FY26 revenues); share = revenue / pot",
     "peers": [
